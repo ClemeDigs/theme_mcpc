@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/becmaweb/mcpc.becmaweb.ca/wp-content/themes/theme_mcpc
+    - /bin/cp -R /home/becmaweb/repositories/theme_mcpc/* $DEPLOYPATH
