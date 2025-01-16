@@ -34,3 +34,4 @@ Call Stack:
 01/16/25 3:58:35: main.scss - `outils/variables` file not found for @import: main.scss on line 1, at column 0
 01/16/25 3:59:36: main.scss - `outils/variables` file not found for @import: main.scss on line 1, at column 0
 01/16/25 4:01:37: main.scss - parse error: failed at `@use "partials/variables" as var;` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/16/25 4:03:38: main.scss - parse error: failed at `@use "partials/variables" as var;` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
