@@ -1,6 +1,6 @@
-@import "outils/variables";
-@import "outils/mixins";
-@import "outils/typographie";
+@use "partials/variables" as var;
+@use "partials/mixins" as mixins;
+@use "partials/typographie" as typo;
 
 @import "layout/layout";
 

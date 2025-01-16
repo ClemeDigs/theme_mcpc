@@ -1,4 +1,6 @@
-@import "mixins";
+@use "partials/variables" as var;
+@use "partials/mixins" as mixins;
+@use "partials/typographie" as typo;
 
 .container {
   @include container;
