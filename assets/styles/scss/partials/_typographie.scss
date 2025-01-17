@@ -1,4 +1,5 @@
-@import "variables";
+@import "partials/variables" as var;
+@import "partials/mixins" as mixins;
 
 body {
   font-family: $font-sans;
@@ -40,8 +41,36 @@ h5 {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0%;
+}
 
-  &.icon-text {
-    font-size: 12px;
-  }
+.corps-texte {
+  font-family: $font-sans;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.5;
+}
+
+.corps-texte-gras {
+  font-family: $font-sans;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.5;
+}
+
+.legende {
+  font-family: $font-sans;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.4;
+}
+
+.texte-icone {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0%;
+  line-height: 1.2;
 }

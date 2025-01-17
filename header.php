@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://kit.fontawesome.com/4360743ebd.js" crossorigin="anonymous"></script>
     <title>La Maison de la Culture du Pic Champlain</title>
     <link rel="stylesheet" href="<?php bloginfo('template_url')  ?>/style.css">
     <link rel="stylesheet" href="./assets/styles/scss/main.scss" />
