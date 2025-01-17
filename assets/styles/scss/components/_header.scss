@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  background-color: #fcfcfc80;
+
+  .logo {
+    background-color: white;
+    border: 1px solid map-get($colors, noir);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 1rem;
+  }
+
+  a {
+    color: map-get($colors, noir);
+  }
+
+  .header-content {
+    display: flex;
+
+    .header__nav {
+      display: flex;
+    }
+  }
+}

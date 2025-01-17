@@ -21,19 +21,19 @@
 </head>
 <body>
 
-    <header>
+    <header class="header">
         <nav class="header-content">
             <div class="logo">
                 <a href="<?php echo site_url(); ?>">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg" alt="Logo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo_header.svg" alt="Logo">
                 </a>
             </div>
             <?php
-                /* wp_nav_menu( $arg = array (
+                wp_nav_menu( $arg = array (
                 'menu' => 'Header',
-                'menu_class' => 'main-navigation',
+                'menu_class' => 'header__nav',
                 'theme_location' => 'primary'
-                )); */
+                )); 
             ?>
         </nav>
     </header>
