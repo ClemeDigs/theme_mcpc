@@ -1,7 +1,7 @@
-@use "partials/variables" as var;
-@use "partials/mixins" as mixins;
-@use "partials/typographie" as typo;
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
 
-@import "layout/layout";
+@import "layout/_layout";
 
-@import "components/buttons";
+@import "components/_buttons";

@@ -1,11 +1,53 @@
 $colors: (
-  soufre: #f7dd81,
-  mais: #f2ba02,
-  aqua-pale: #bbd3f2,
-  bleu-plat: #3c73a9,
+  rouge: #ed513a,
+  rouge-fonce: #68221d,
+  rouge-pale: #ff8775,
+  bleu-violet: #4426db,
+  bleu-violet-pale: #ad81ef,
+  bleu: #34c5e0,
+  bleu-pale: #91d3df,
+  vert-primaire: #c3e098,
+  vert-secondaire: #bfe77c,
+  vert-tertiaire: #414b33,
+  vert-logo: #66ad00,
   blanc: #fcfcfc,
-  gris-fonce: #aeaeae,
-  gris-pale: #ebebeb,
+  noir: #202020,
 );
 
 $font-sans: "Montserrat", sans-serif;
+
+@mixin button-base {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: map-get($colors, vert-primaire);
+  box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: map-get($colors, vert-primaire);
+    border: 2px solid map-get($colors, vert-tertiaire);
+    color: map-get($colors, noir);
+  }
+
+  &:active {
+    background: map-get($colors, vert-tertiaire);
+  }
+
+  &:disabled {
+    background: map-get($colors, gris-pale);
+    border: 2px solid map-get($colors, gris-pale);
+    color: map-get($colors, noir);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
