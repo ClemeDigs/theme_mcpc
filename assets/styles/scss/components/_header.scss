@@ -1,6 +1,13 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
 .header {
   display: flex;
   background-color: #fcfcfc80;
+  height: 100px;
+  width: 100%;
+  padding: 0 1rem;
 
   .logo {
     background-color: white;
@@ -8,6 +15,12 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
+    height: 80px;
+    box-sizing: border-box;
+
+    .nav__logo {
+      height: 50px;
+    }
   }
 
   a {
