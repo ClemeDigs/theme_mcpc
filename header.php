@@ -25,7 +25,7 @@
         <nav class="header-content">
             <div class="logo">
                 <a href="<?php echo site_url(); ?>">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo_header.svg" alt="Logo">
+                    <img class="nav__logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo_header.svg" alt="Logo">
                 </a>
             </div>
             <?php
