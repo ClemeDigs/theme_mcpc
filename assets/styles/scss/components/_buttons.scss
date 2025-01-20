@@ -1,0 +1,20 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
+.button-dons {
+  @include button-base;
+  background: map-get($colors, vert-primaire);
+  border: 2px solid map-get($colors, vert-tertiaire);
+
+  &:hover {
+    background: map-get($colors, soufre);
+    border-color: map-get($colors, soufre);
+    color: map-get($colors, noir);
+  }
+
+  &:active {
+    background: map-get($colors, soufre);
+    border-color: map-get($colors, soufre);
+  }
+}

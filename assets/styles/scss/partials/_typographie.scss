@@ -1,0 +1,76 @@
+@import "partials/variables" as var;
+@import "partials/mixins" as mixins;
+
+body {
+  font-family: $font-sans;
+  margin: 0;
+  padding: 0;
+  //   box-sizing: border-box;
+}
+
+h1 {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 1.5%;
+}
+
+h2 {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 1%;
+}
+
+h3 {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0%;
+}
+
+h4 {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0%;
+}
+
+h5 {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0%;
+}
+
+.corps-texte {
+  font-family: $font-sans;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.5;
+}
+
+.corps-texte-gras {
+  font-family: $font-sans;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.5;
+}
+
+.legende {
+  font-family: $font-sans;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1.4;
+}
+
+.texte-icone {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0%;
+  line-height: 1.2;
+}
