@@ -4,14 +4,16 @@
 
   .logo {
     background-color: white;
-    border: 1px solid map-get($colors, noir);
+    // border: 1px solid map-get($colors, noir);
+    border: 1px solid $color-noir;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
   }
 
   a {
-    color: map-get($colors, noir);
+    // color: map-get($colors, noir);
+    color: $color-noir;
   }
 
   .header-content {

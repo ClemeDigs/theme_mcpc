@@ -40,4 +40,104 @@ Call Stack:
 01/16/25 11:34:55: main.scss - parse error: failed at `@use "partials/variables" as var;
 ` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
 01/16/25 11:34:56: main.scss - parse error: failed at `@use "partials/variables" as var;
-` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 001/19/25 4:31:52: main.scss - Undefined variable $noir: components/_footer.scss on line 6, at column 5
+Call Stack:
+#0 import components/_footer.scss main.scss on line 9
+01/19/25 4:35:54: main.scss - Undefined variable $background-color: components/_footer.scss on line 7, at column 5
+Call Stack:
+#0 import components/_footer.scss main.scss on line 9
+01/19/25 4:37:55: main.scss - Undefined variable $background-color: components/_footer.scss on line 7, at column 5
+Call Stack:
+#0 import components/_footer.scss main.scss on line 9
+01/19/25 4:39:56: main.scss - Undefined variable $background-color: components/_footer.scss on line 7, at column 5
+Call Stack:
+#0 import components/_footer.scss main.scss on line 9
+01/20/25 4:01:40: main.scss - parse error: failed at `&` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_footer.scss on line 76, at column 13
+01/20/25 4:43:16: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:43:18: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:43:19: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:43:29: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:43:39: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:43:49: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:44:48: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:44:58: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:45:12: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:45:23: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:47:24: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:48:44: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:48:55: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:50:56: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:52:57: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:53:08: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:55:09: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:57:10: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:57:12: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 4:59:11: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 5:01:12: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6
+01/20/25 5:03:13: main.scss - Undefined variable $colors: partials/_mixins.scss on line 45, at column 3
+Call Stack:
+#0 mixin button-base components/_buttons.scss on line 6
+#1 import components/_buttons.scss main.scss on line 6

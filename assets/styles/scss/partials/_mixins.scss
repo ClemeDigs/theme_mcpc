@@ -8,7 +8,6 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
 
   @include media-query("tablet") {
     padding: 0 40px;
@@ -42,7 +41,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background: map-get($colors, vert-primaire);
+  background: $vert-primaire;
   box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
   font-family: $font-sans;
   font-weight: bold;
@@ -53,20 +52,41 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background: map-get($colors, vert-primaire);
-    border: 2px solid map-get($colors, vert-tertiaire);
-    color: map-get($colors, noir);
+    background: $vert-primaire;
+    border: 2px solid $vert-secondaire;
+    color: $color-noir;
   }
 
   &:active {
-    background: map-get($colors, vert-tertiaire);
+    background: $vert-secondaire;
+    color: $color-blanc;
   }
 
   &:disabled {
-    background: map-get($colors, gris-pale);
-    border: 2px solid map-get($colors, gris-pale);
-    color: map-get($colors, noir);
+    background: $color-grey-p;
+    border: 2px solid $color-grey;
+    color: $color-grey;
     cursor: not-allowed;
     box-shadow: none;
+  }
+}
+
+@mixin liens {
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:link {
+      color: $color-noir;
+      padding: 1rem;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $vert-secondaire;
+    }
+
+    &:visited {
+      color: $vert-primaire;
+    }
   }
 }
