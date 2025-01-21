@@ -2,19 +2,23 @@
 @import "partials/mixins";
 @import "partials/typographie";
 
-.button-dons {
+button {
   @include button-base;
-  background: map-get($colors, vert-primaire);
-  border: 2px solid map-get($colors, vert-tertiaire);
+}
+
+.button-radio {
+  @include button-base;
+  background: $rouge-secondaire;
+  color: $color-blanc;
 
   &:hover {
-    background: map-get($colors, soufre);
-    border-color: map-get($colors, soufre);
-    color: map-get($colors, noir);
+    background: $rouge-secondaire;
+    border: 2px solid $rouge-primaire;
+    color: $color-blanc;
   }
 
   &:active {
-    background: map-get($colors, soufre);
-    border-color: map-get($colors, soufre);
+    background: $color-noir;
+    color: $color-blanc;
   }
 }

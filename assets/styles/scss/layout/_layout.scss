@@ -22,8 +22,14 @@ body {
   margin: 0;
 }
 
-footer {
-  background-color: map-get($colors, gris-pale);
-  padding: 20px;
-  text-align: center;
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+
+// footer {
+//   background-color: map-get($colors, noir);
+//   padding: 20px;
+//   text-align: center;
+// }
