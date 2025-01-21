@@ -10,7 +10,6 @@
   padding: 0 1rem;
   box-sizing: border-box;
 
-
   .logo {
     background-color: white;
     // border: 1px solid map-get($colors, noir);
@@ -27,7 +26,6 @@
   }
 
   a {
-
     color: $color-noir;
 
     text-decoration: none;
@@ -69,9 +67,9 @@
         top: 100%;
         left: -1px;
         background-color: #fcfcfc80;
-        border-left: 1px solid map-get($colors, noir);
-        border-right: 1px solid map-get($colors, noir);
-        border-bottom: 1px solid map-get($colors, noir);
+        border-left: 1px solid $color-noir;
+        border-right: 1px solid $color-noir;
+        border-bottom: 1px solid $color-noir;
         padding: 1rem 0.2rem 0;
         list-style: none;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
