@@ -10,6 +10,7 @@
   padding: 0 1rem;
   box-sizing: border-box;
 
+
   .logo {
     background-color: white;
     border: 1px solid map-get($colors, noir);
@@ -26,6 +27,7 @@
 
   a {
     color: map-get($colors, noir);
+
     text-decoration: none;
   }
 
