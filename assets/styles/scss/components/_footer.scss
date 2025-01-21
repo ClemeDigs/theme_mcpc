@@ -103,15 +103,16 @@
 @import "../partials/mixins";
 
 .footer {
-  @include container;
+  @include container();
   width: 100%;
   bottom: 0px;
   left: 0px;
-  background-color: $noir;
-  color: $blanc;
+  background-color: $color-noir;
+  color: $color-blanc;
 
   &__content {
     @include grid-column(1);
+
     padding: 20px;
 
     .footer__logo {
