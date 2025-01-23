@@ -22,19 +22,33 @@
 </head>
 <body>
 
-    <header class="header">
-        <nav class="header-content">
-            <div class="logo">
-                <a href="<?php echo site_url(); ?>">
-                    <img class="nav__logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo_header.svg" alt="Logo">
+    <header>
+        <div class="header">
+            <nav class="header__content">
+                <div class="header__logo">
+                    <a href="<?php echo site_url(); ?>">
+                        <img class="header__image" src="<?php bloginfo('template_url'); ?>/assets/img/logo_header.svg" alt="Logo">
+                    </a>
+                </div>
+                <?php
+                    wp_nav_menu( $arg = array (
+                    'menu' => 'Header',
+                    'menu_class' => 'header__nav',
+                    'theme_location' => 'primary'
+                    )); 
+                ?>
+            </nav>
+            <div class="header__btns">
+                <button class="header__dons">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                </button>
+                <button class="header__connexion">
+                    <i class="fa-regular fa-user"></i>Connexion
+                </button>
+                <a class="header__mobile-icon">
+                    <i class="fa-solid fa-bars"></i>
                 </a>
             </div>
-            <?php
-                wp_nav_menu( $arg = array (
-                'menu' => 'Header',
-                'menu_class' => 'header__nav',
-                'theme_location' => 'primary'
-                )); 
-            ?>
-        </nav>
+        </div>
+        
     </header>

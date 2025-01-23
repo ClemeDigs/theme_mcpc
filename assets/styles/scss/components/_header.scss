@@ -1,109 +1,150 @@
-@import "partials/variables";
-@import "partials/mixins";
-@import "partials/typographie";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+header {
+  background-color: #fcfcfc90;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .header {
   display: flex;
-  background-color: #fcfcfc80;
+  justify-content: space-between;
   height: 100px;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
   box-sizing: border-box;
+  z-index: 100;
+  @include container;
 
-  .logo {
+  &__logo {
     background-color: white;
-    // border: 1px solid map-get($colors, noir);
     border: 1px solid $color-noir;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
     height: 80px;
     box-sizing: border-box;
+  }
 
-    .nav__logo {
-      height: 50px;
-    }
+  &__image {
+    height: 50px;
   }
 
   a {
     color: $color-noir;
-
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.menu-header-container {
+  align-content: center;
+}
+
+.header__content {
+  display: flex;
+
+  .header__nav {
+    display: none;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .header-content {
-    display: flex;
-
+  @include media-query("desktop") {
     .header__nav {
       display: flex;
       list-style: none;
 
       > .menu-item {
         position: relative;
-        border-left: 1px solid black;
+        border-left: 1px solid $color-noir;
         width: 142px;
         text-align: center;
-      }
+        box-sizing: border-box;
 
-      > .menu-item:hover > a {
-        text-decoration: underline;
-      }
-
-      > .menu-item:first-child {
-        border-left: none;
-        &:hover {
-          border-left: 1px solid black;
+        &:hover > a {
+          text-decoration: underline;
         }
-      }
 
-      .sub-menu {
-        width: 144px;
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: -1px;
-        background-color: #fcfcfc80;
-        border-left: 1px solid $color-noir;
-        border-right: 1px solid $color-noir;
-        border-bottom: 1px solid $color-noir;
-        padding: 1rem 0.2rem 0;
-        list-style: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
+        &:first-child {
+          border-left: none;
 
-        & li {
-          width: 100%;
-          border-top: 1px solid black;
-
-          &:first-child {
-            border-top: none;
+          &:hover {
+            border-left: 1px solid $color-noir;
           }
+        }
 
-          a {
-            text-decoration: none;
-            transition: all 0.3s;
-            text-align: center;
-            display: block;
-            padding: 1rem 0;
+        .sub-menu {
+          width: 143px;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+          position: absolute;
+          top: 100%;
+          left: -1px;
+          border-left: 1px solid $color-noir;
+          border-right: 1px solid $color-noir;
+          border-bottom: 1px solid $color-noir;
+          padding: 2.5rem 0 0;
+          list-style: none;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-            &:hover {
-              text-decoration: underline;
+          li {
+            width: 100%;
+            border-top: 1px solid $color-noir;
+            background-color: #fcfcfc90;
+            backdrop-filter: blur(20px);
+
+            &:first-child {
+              border-top: none;
+            }
+
+            &:last-child {
+              border-bottom-left-radius: 8px;
+              border-bottom-right-radius: 8px;
+            }
+
+            a {
+              text-decoration: none;
+              transition: all 0.3s;
+              text-align: center;
+              display: block;
+              padding: 1rem 0;
+              margin: 0 0.2rem;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
         }
-      }
 
-      li:hover > .sub-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        &:hover > .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }
+}
+
+@include media-query("desktop") {
+  .button-mobile-icon {
+    display: none;
+  }
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
