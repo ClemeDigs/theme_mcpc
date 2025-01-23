@@ -41,6 +41,13 @@ h5 {
   letter-spacing: 0%;
 }
 
+.header__nav {
+  font-family: $font-sans;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0px 0px 3px $color-blanc;
+}
+
 .corps-texte {
   font-family: $font-sans;
   font-weight: 400;
