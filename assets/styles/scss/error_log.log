@@ -42,3 +42,45 @@ Call Stack:
 ` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
 01/16/25 11:34:56: main.scss - parse error: failed at `@use "partials/variables" as var;
 ` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/23/25 3:21:50: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:21:59: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:04: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:11: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:17: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:25: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:23:29: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:25:27: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:26:28: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:27:28: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:29:30: main.scss - Undefined mixin flex-center: components/_hero.scss on line 14, at column 13
+Call Stack:
+#0 import components/_hero.scss main.scss on line 9
+01/23/25 7:08:16: main.scss - Undefined variable $green-primary: partials/_variables.scss on line 19, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1
+01/23/25 7:10:18: main.scss - Undefined variable $green-secondary: partials/_variables.scss on line 21, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1
+01/23/25 7:12:19: main.scss - Undefined variable $noir: partials/_variables.scss on line 27, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1

@@ -8,6 +8,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 
 .header {
@@ -17,12 +18,11 @@ header {
   width: 100%;
   padding: 0 2rem;
   box-sizing: border-box;
-  z-index: 100;
   @include container;
 
   &__logo {
     background-color: white;
-    border: 1px solid $color-noir;
+    border: 1px solid $color-black;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
@@ -35,7 +35,7 @@ header {
   }
 
   a {
-    color: $color-noir;
+    color: $color-black;
     text-decoration: none;
 
     &:hover {
@@ -55,14 +55,14 @@ header {
     display: none;
   }
 
-  @include media-query("desktop") {
+  @include desktop {
     .header__nav {
       display: flex;
       list-style: none;
 
       > .menu-item {
         position: relative;
-        border-left: 1px solid $color-noir;
+        border-left: 1px solid $color-black;
         width: 142px;
         text-align: center;
         box-sizing: border-box;
@@ -75,7 +75,7 @@ header {
           border-left: none;
 
           &:hover {
-            border-left: 1px solid $color-noir;
+            border-left: 1px solid $color-black;
           }
         }
 
@@ -87,16 +87,16 @@ header {
           position: absolute;
           top: 100%;
           left: -1px;
-          border-left: 1px solid $color-noir;
-          border-right: 1px solid $color-noir;
-          border-bottom: 1px solid $color-noir;
+          border-left: 1px solid $color-black;
+          border-right: 1px solid $color-black;
+          border-bottom: 1px solid $color-black;
           padding: 2.5rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
           li {
             width: 100%;
-            border-top: 1px solid $color-noir;
+            border-top: 1px solid $color-black;
             background-color: #fcfcfc90;
             backdrop-filter: blur(20px);
 
@@ -137,7 +137,7 @@ header {
   }
 }
 
-@include media-query("desktop") {
+@include desktop {
   .button-mobile-icon {
     display: none;
   }

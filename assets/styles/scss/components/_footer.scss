@@ -2,7 +2,7 @@
 @import "../partials/mixins";
 
 footer {
-  background-color: $color-noir;
+  background-color: $color-black;
 
   .footer {
     &__container {
@@ -10,7 +10,7 @@ footer {
       @include flex(column, $align: space-between);
       bottom: 0px;
       left: 0px;
-      color: $color-blanc;
+      color: $color-white;
       padding: 50px;
     }
 
@@ -93,7 +93,7 @@ footer {
       list-style: none;
 
       & a {
-        color: $color-blanc;
+        color: $color-white;
 
         &:hover {
           color: $color-primary;
