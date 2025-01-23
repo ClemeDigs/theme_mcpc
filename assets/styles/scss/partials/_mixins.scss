@@ -12,27 +12,24 @@
 
 @mixin tablet {
   @media (min-width: $medium) {
-    // padding: $p-tablet;
     @content;
   }
 }
 
-
 @mixin desktop {
   @media (min-width: $large) {
-    // padding: $p-desktop;
     @content;
- }
+  }
 }
 
-@mixin button-base {
+@mixin button-base($color: $color-primary) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background: $vert-primaire;
+  background: $color;
   box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
   font-family: $font-sans;
   font-weight: bold;
@@ -44,14 +41,14 @@
   border: none;
 
   &:hover {
-    background: $vert-primaire;
-    border: 2px solid $vert-secondaire;
-    color: $color-noir;
+    background: $green-primary;
+    border: 2px solid $green-secondary;
+    color: $color-black;
   }
 
   &:active {
-    background: $vert-secondaire;
-    color: $color-blanc;
+    background: $green-secondary;
+    color: $color-white;
   }
 
   &:disabled {
@@ -69,17 +66,17 @@
     color: inherit;
 
     &:link {
-      color: $color-noir;
+      color: $color-black;
       padding: 1rem;
     }
 
     &:hover,
     &:active {
-      background-color: $vert-secondaire;
+      background-color: $green-secondary;
     }
 
     &:visited {
-      color: $vert-primaire;
+      color: $green-primary;
     }
   }
 }

@@ -4,22 +4,21 @@
 
 button {
   @include button-base;
-
 }
 
 .button-radio {
   @include button-base;
-  background: $rouge-secondaire;
-  color: $color-blanc;
+  background: $red-secondary;
+  color: $color-white;
 
   &:hover {
-    background: $rouge-secondaire;
-    border: 2px solid $rouge-primaire;
-    color: $color-blanc;
+    background: $red-secondary;
+    border: 2px solid $red-primary;
+    color: $color-white;
   }
 
   &:active {
-    background: $color-noir;
-    color: $color-blanc;
+    background: $color-black;
+    color: $color-white;
   }
 }

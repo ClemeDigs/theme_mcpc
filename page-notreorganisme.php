@@ -11,7 +11,7 @@ Template Name: Notre organisme
 <main>
     <h2>Les membres du CA</h2>
     <?php 
-        get_template_part('/templates/components/ca_member');
+        get_template_part('/templates/components/ca-members');
     ?>
 </main>
 
