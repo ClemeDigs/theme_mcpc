@@ -1,205 +1,108 @@
-// @import "partials/variables";
-// @import "partials/mixins";
-
-// footer {
-//   @include container;
-//   bottom: 0px;
-//   left: 0px;
-//   background-color: $color-noir;
-//   color: $color-blanc;
-
-//   .footer__content {
-//     flex-direction: column;
-//     margin: 20px;
-
-//     .footer__logo {
-//       img {
-//         max-width: 100%;
-//         height: auto;
-//       }
-//       @include media-query("tablet") {
-//         grid-column: 1 / span 4;
-//       }
-
-//       @include media-query("desktop") {
-//         grid-column: 1 / span 4;
-//       }
-//     }
-
-//     .footer__div {
-//       width: 100%;
-//       display: flex;
-//       justify-content: space-between;
-//       flex-direction: column;
-//       align-items: flex-start;
-//       margin-bottom: 20px;
-
-//       @include media-query("tablet") {
-//         grid-column: 6 / 12;
-//       }
-
-//       @include media-query("desktop") {
-//         grid-column: 6 / 12;
-//       }
-
-//       .infolettre {
-//         margin-bottom: 20px;
-//       }
-//       @include media-query("desktop") {
-//         flex-direction: row;
-//       }
-//     }
-
-//     @include media-query("tablet") {
-//       @include grid-column;
-//       width: 100%;
-//       flex-direction: row;
-//       justify-content: space-between;
-//     }
-
-//     @include media-query("desktop") {
-//       @include grid-column;
-//       flex-direction: row;
-//       justify-content: space-between;
-//     }
-//   }
-//   .footer {
-//     &__menu {
-//       display: flex;
-//       margin: 20px;
-//       flex-direction: column;
-//     }
-//     &__nav {
-//       display: flex;
-//       gap: 20px;
-//       list-style: none;
-//       padding: 0;
-//       text-transform: uppercase;
-//       & a {
-//         text-decoration: none;
-//         color: inherit;
-//         &:hover {
-//           color: $color-primary;
-//         }
-//       }
-//     }
-
-//     @include media-query("desktop") {
-//       flex-direction: row;
-//       justify-content: space-between;
-//       ul {
-//         display: flex;
-//         gap: 20px;
-//       }
-//     }
-//     .footer-social {
-//       display: flex;
-//       justify-content: space-between;
-//     }
-//   }
-// }
-
 @import "../partials/variables";
 @import "../partials/mixins";
 
-.footer {
-  @include container();
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
+footer {
   background-color: $color-noir;
-  color: $color-blanc;
 
-  &__content {
-    @include grid-column(1);
+  .footer {
+    &__container {
+      @include container;
+      @include flex(column, $align: space-between);
+      bottom: 0px;
+      left: 0px;
+      color: $color-blanc;
+      padding: 50px;
+    }
 
-    padding: 20px;
+    &__logo {
+      @include flex;
 
-    .footer__logo {
       img {
-        max-width: 100%;
-        width: 100%;
         height: auto;
       }
     }
 
-    .footer__div {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      align-items: flex-start;
-
-      .infolettre,
-      .footer-social {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  &__menu {
-    display: flex;
-    margin: 20px;
-  }
-
-  &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    text-transform: uppercase;
-
-    & a {
-      text-decoration: none;
-      color: inherit;
-
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  @include media-query("tablet") {
     &__content {
-      grid-template-columns: repeat(12, 1fr);
+      padding-bottom: 110px;
+
+      @include tablet {
+        @include flex($direction: row, $align: flex-start);
+      }
     }
-  }
 
-  @include media-query("desktop") {
-    &__content {
-      @include grid-column(12);
+    &__contact {
+      @include flex(column, $align: flex-start);
+      gap: 32px;
+    }
 
-      .footer__logo {
-        grid-column: 1 / 4;
+    &__infos {
+      @include flex(column, $align: flex-start);
+      gap: 20px;
+    }
+
+    &__telephone-mcpc,
+    &__adresse-mcpc,
+    &__courriel-mcpc {
+      @include flex(flex-start);
+      gap: 20px;
+    }
+
+    &__newsletter {
+      @include flex(column, $align: flex-start);
+      gap: 32px;
+      transform: translateX(-40px);
+
+      &-form {
+        @include flex(column, $align: flex-start);
+        gap: 20px;
+      }
+    }
+
+    &__bottom {
+      @include flex;
+    }
+
+    &__nav {
+      gap: 20px;
+      list-style: none;
+      text-transform: uppercase;
+      padding: 0;
+
+      @include tablet {
+        @include flex($direction: row, $justify: flex-start, $align: center);
       }
 
-      .footer__div {
-        grid-column: 6 / span 6;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-content: stretch;
+      & a {
+        text-decoration: none;
+        color: inherit;
 
-        .infolettre,
-        .footer-social {
-          margin-bottom: 20px;
+        &:hover {
+          color: $color-primary;
         }
       }
     }
 
-    &__menu {
-      display: flex;
+    &__social {
+      @include flex;
+      gap: 40px;
     }
 
-    &__nav {
-      flex-direction: row;
+    &__social-icons {
+      @include flex;
+      gap: 20px;
+      list-style: none;
+
+      & a {
+        color: $color-blanc;
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        & i {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }

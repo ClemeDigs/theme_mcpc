@@ -3,49 +3,48 @@
 ?>
 
 <footer class="footer">
-    <div class="footer__content">
-        <div class="footer__logo">
-            <a href="<?php echo home_url(); ?>">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/logo_footer_02.svg" alt="Logo">
-            </a>
-        </div>
-        <div class="footer__div">
-            <div>
-                <h2>CONTACT</h2>
-                <p><i class="fa-solid fa-location-dot"></i>126, rue du Mont-Saint-Louis<br>
-                    Rimouski (Québec) G0L 1B0</p>
-                <p><i class="fa-solid fa-phone"></i>418 736-5237</p>
-                <p><i class="fa-regular fa-envelope"></i><a href="mailto:maisonculturebic@gmail.com">maisonculturebic@gmail.com</a></p>
+    <div class="footer__container">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo_footer_02.svg" alt="Logo">
+                </a>
             </div>
+            <?php
+            get_template_part('/templates/components/footer');
+            ?>
             <div>
-                <div class="infolettre">
+                <div class="footer__newsletter">
                     <h2>INFOLETTRE</h2>
-                    <p><i class="icon-mail"></i> Inscris-toi à notre infolettre !</p>
-                    <form action="" method="post" class="newsletter-form">
-                        <input type="email" name="newsletter_email" placeholder="Adresse courriel">
-                        <button type="submit">Soumettre</button>
+                    <form action="" method="post" class="footer__newsletter-form">
+                        <label for="email"><i class="fa-regular fa-envelope"></i> Inscris-toi à notre infolettre !</label>
+                        <div>
+                            <input type="email" name="newsletter_email" placeholder="exemple@exemple.com">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <!-- <button type="submit">Soumettre</button> -->
+                        </div>
                     </form>
                 </div>
-                <div class="footer-social">
-                    <h2>NOUS SUIVRE</h2>
-                    <p>
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </p>
-                </div>
             </div>
         </div>
-    </div>
-    <div class="footer__menu">
-
-        <?php
-        wp_nav_menu(array(
-            'menu' => 'Footer',
-            'menu_class' => 'footer__nav',
-            'theme_location' => 'primary'
-        ));
-        ?>
-
+        <div class="footer__bottom">
+            <div>
+                <?php
+                wp_nav_menu(array(
+                    'menu' => 'Footer',
+                    'menu_class' => 'footer__nav',
+                    'theme_location' => 'primary'
+                ));
+                ?>
+            </div>
+            <div class="footer__social">
+                <h2>NOUS SUIVRE</h2>
+                <ul class="footer__social-icons">
+                    <li> <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li> <a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
 

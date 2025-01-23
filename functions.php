@@ -18,15 +18,7 @@ function create_posttype()
             'supports' => array('title', 'image'),
         )
     );
-}
 
-add_action('init', 'create_posttype');
-
-?>
-
-<?php
-function create_posttype()
-{
     register_post_type(
         'contact',
         array(
@@ -45,4 +37,3 @@ function create_posttype()
 }
 
 add_action('init', 'create_posttype');
-?>

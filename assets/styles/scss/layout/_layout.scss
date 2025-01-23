@@ -2,6 +2,15 @@
 @import "partials/mixins";
 @import "partials/typographie";
 
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   @include container;
 }
@@ -18,8 +27,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
 #main {
