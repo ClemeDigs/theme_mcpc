@@ -42,3 +42,6 @@ Call Stack:
 ` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
 01/16/25 11:34:56: main.scss - parse error: failed at `@use "partials/variables" as var;
 ` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/22/25 1:30:37: main.scss - Undefined variable $white: components/_hero.scss on line 15, at column 5
+Call Stack:
+#0 import components/_hero.scss main.scss on line 10
