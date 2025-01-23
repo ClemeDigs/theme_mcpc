@@ -1,11 +1,11 @@
-<?php 
-/* 
+<?php
+/*
 Template Name: Accueil
 */
 ?>
 
 <?php
-    get_header();
+get_header();
 ?>
 
 <main>
@@ -17,5 +17,5 @@ Template Name: Accueil
 </main>
 
 <?php
-    get_footer();
+get_footer();
 ?>
