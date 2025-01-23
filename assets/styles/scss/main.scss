@@ -5,5 +5,8 @@
 @import "layout/layout";
 @import "components/_buttons";
 @import "components/header";
-@import 'components/footer';
+@import "components/footer";
 
+.selected-image {
+  width: 600px;
+}
