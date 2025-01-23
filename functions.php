@@ -51,8 +51,6 @@ function create_posttype()
         )
     );
 }
-
-add_action('init', 'create_posttype');
 ?>
 
 <?php
@@ -87,4 +85,8 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 
     echo '<img src="' . esc_url($selected_image) . '" alt="Illustration d\'un bonhomme">';
 }
+?>
+
+<?php
+add_action('init', 'create_posttype');
 ?>
