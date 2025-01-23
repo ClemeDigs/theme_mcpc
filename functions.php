@@ -60,19 +60,19 @@ add_action('init', 'create_posttype');
  * @param string $field_name Nom du champ ACF.
  * @param string $default_image Chemin de l'image par défaut.
  */
-function afficher_bonhomme($field_name, $default_image = '/assets/img/bonhomme-classique.svg') {
+function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme-classic.svg') {
     $image_choice = get_field($field_name);
 
     $image_choices = [
-        'Théâtre' => get_template_directory_uri() . '/assets/img/bonhomme-theatre.svg',
-        'Peinture' => get_template_directory_uri() . '/assets/img/bonhomme-painting.svg',
-        'Musique' => get_template_directory_uri() . '/assets/img/bonhomme-music.svg',
-        'Radio' => get_template_directory_uri() . '/assets/img/bonhomme-radio.svg',
-        'Danse' => get_template_directory_uri() . '/assets/img/bonhomme-dance.svg',
-        'Hip-hop' => get_template_directory_uri() . '/assets/img/bonhomme-hiphop.svg',
-        'Classique' => get_template_directory_uri() . '/assets/img/bonhomme-classique.svg',
-        'Parle' => get_template_directory_uri() . '/assets/img/bonhomme-parle.svg',
-        'Pense' => get_template_directory_uri() . '/assets/img/bonhomme-pense.svg',
+        'Théâtre' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-acting.svg',
+        'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-painting.svg',
+        'Musique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-guitar.svg',
+        'Radio' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-radio.svg',
+        'Danse' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-balet.svg',
+        'Hip-hop' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-hiphop.svg',
+        'Classique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-classic.svg',
+        'Parle' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-talking.svg',
+        'Pense' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-thinking.svg',
     ];
 
     if ($image_choice === 'Aucun') {

@@ -9,11 +9,11 @@ get_header();
 ?>
 
 <main>
-
-    <?php
+ 
+<?php
     get_template_part('/templates/components/hero');
-    ?>
-
+?>
+ 
 </main>
 
 <?php

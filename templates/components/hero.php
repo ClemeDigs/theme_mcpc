@@ -6,7 +6,8 @@
             $image_url = $image['url'];
             $image_alt = $image['alt'];
         ?>
-            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+        <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt;?>">
+
         <?php endif; ?>
         <div class="hero__content">
             <h1 class="hero__title--white"><?php the_field('hero_title_1'); ?></h1>
