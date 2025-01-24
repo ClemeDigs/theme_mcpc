@@ -1,18 +1,28 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
 .bloc-slider {
-  @include container;
+  max-width: 1600px;
   @include flex(column, center, flex-start);
   margin-top: 9.7rem;
-  gap: 3rem;
-  padding: 4rem;
+  gap: 2rem;
+  padding: 1rem;
   border: 1px solid $color-black;
   border-radius: 30px;
   position: relative;
   box-sizing: border-box;
+  @include desktop {
+    padding: 4rem;
+    gap: 3rem;
+  }
 
   &__bonhomme {
     position: absolute;
     top: -9.7rem;
-    right: 3rem;
+    right: 2rem;
+    @include desktop {
+      right: 3rem;
+    }
   }
 
   .slider__text {
@@ -32,12 +42,18 @@
 
 .slider {
   @include flex(row, center, center);
-  gap: 2rem;
+  gap: 1rem;
   max-width: 100%;
   box-sizing: border-box;
+  @include desktop {
+    gap: 3rem;
+  }
 
   i {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 
   &__images {
@@ -57,11 +73,15 @@
     gap: 0.5rem;
 
     img {
-      width: 400px;
-      height: 280px;
+      width: 260px;
+      height: 180px;
       object-fit: cover;
       border-radius: 30px;
       margin: 0;
+      @include desktop {
+        width: 400px;
+        height: 280px;
+      }
     }
   }
 

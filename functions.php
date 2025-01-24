@@ -103,8 +103,22 @@ function enqueue_slider_script() {
     );
 }
 
+// ! SCRIPT DIALOG //
+
+function enqueue_dialog_script() {
+    wp_enqueue_script(
+        'dialog', 
+        get_template_directory_uri() . '/assets/js/dialog.js', 
+        array(), 
+        null, 
+        true
+    );
+}
+
 // ! HOOKS WORDPRESS //
 
 add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('init', 'create_posttype');
+add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
+
 ?>

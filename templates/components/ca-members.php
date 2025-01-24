@@ -10,9 +10,6 @@ if ($ca_member->have_posts()) :
     while ($ca_member->have_posts()) : $ca_member->the_post();
     ?>
 
-<section class="bloc-ca-members">
-    <h2>Les membres du CA</h2>
-    <div class="ca-members">
     <div class="ca-member">
         <div class="ca-member__bloc-image">
         <?php 
@@ -29,9 +26,8 @@ if ($ca_member->have_posts()) :
             <p class="corps-texte-gras"><?php the_field('member_name');?></p>
             <p><?php the_field('member_role');?></p>
         </div>
-    </div>
-    </div>
-</section>
+        </div>
+
 
 <?php
 endwhile;

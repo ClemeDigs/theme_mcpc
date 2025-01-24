@@ -39,16 +39,35 @@
                 ?>
             </nav>
             <div class="header__btns">
-                <button class="header__dons">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                <div class="header__btns-cta">
+                    <button class="header__dons">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                    </button>
+                    <button class="header__connexion">
+                        <i class="fa-regular fa-user"></i>Connexion
+                    </button>
+                </div>
+                <button class="header__mobile-icon">
+                    <i data-dialog="#mobile-menu" class="fa-solid fa-bars"></i>
                 </button>
-                <button class="header__connexion">
-                    <i class="fa-regular fa-user"></i>Connexion
-                </button>
-                <a class="header__mobile-icon">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
             </div>
         </div>
         
+        <div id="mobile-menu" class="dialog mobile-menu__dialog">
+            <div class="mobile-menu">
+                <div class="mobile-menu__header">
+                    <h2>Menu</h2>
+                    <button class="btn-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <?php
+                    wp_nav_menu( $arg = array (
+                    'menu' => 'Header',
+                    'menu_class' => 'mobile-menu__nav',
+                    'theme_location' => 'primary'
+                    )); 
+                ?>
+            </div>
+        </div>
     </header>
