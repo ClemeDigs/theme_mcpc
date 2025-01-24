@@ -19,6 +19,15 @@
     @include flex(column, center, flex-start);
     gap: 1rem;
   }
+
+  .slider__title {
+    @include flex(row, flex-start, center);
+    gap: 0.5rem;
+
+    :first-child {
+      font-weight: 400;
+    }
+  }
 }
 
 .slider {
@@ -44,6 +53,8 @@
 
   &__image {
     scroll-snap-align: start;
+    @include flex(column, center, center);
+    gap: 0.5rem;
 
     img {
       width: 400px;

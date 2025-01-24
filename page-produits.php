@@ -8,6 +8,12 @@ Template Name: Produits et marchandises
     get_header();
 ?>
 
+<main>
+    <?php
+        get_template_part('/templates/components/hero');
+    ?>
+</main>
+
 <?php
     get_footer();
 ?>

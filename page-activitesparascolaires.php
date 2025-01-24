@@ -9,6 +9,11 @@ Template Name: Activités parascolaires
 ?>
 
 <main>
+
+    <?php
+        get_template_part('/templates/components/hero');
+    ?>
+
     <?php 
         get_template_part('/templates/components/slider_images');
     ?>

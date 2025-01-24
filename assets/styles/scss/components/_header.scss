@@ -50,6 +50,7 @@ header {
 
 .header__content {
   display: flex;
+  gap: 1rem;
 
   .header__nav {
     display: none;
@@ -93,11 +94,13 @@ header {
           padding: 2.5rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
 
           li {
             width: 100%;
             border-top: 1px solid $color-black;
-            background-color: #fcfcfc90;
+            background-color: $color-white;
             backdrop-filter: blur(20px);
 
             &:first-child {
