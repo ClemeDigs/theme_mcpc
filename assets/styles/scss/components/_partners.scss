@@ -1,0 +1,60 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.partner {
+    overflow: hidden;
+    position: relative;
+    margin: $p-mobile;
+
+    @include tablet {
+        margin: $p-tablet;
+    }
+
+    @include desktop {
+        margin: $p-desktop;
+    }
+
+    .partner__slider {
+        @include flex;
+        gap: 20px;
+        max-width: 100%;
+        animation: scroll 20s linear infinite;
+
+        @include tablet {
+            gap: 40px;
+        }
+    }
+
+    .partner__logo {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            max-width: 150px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            box-sizing: border-box;
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+
+            @include tablet {
+                max-width: 250px;
+            }
+        }
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
