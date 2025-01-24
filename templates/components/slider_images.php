@@ -1,34 +1,33 @@
-<section class="slider">
+<section class="bloc-slider">
+    <div class="bloc-slider__bonhomme">
         <?php afficher_bonhomme('slider_choix_du_bonhomme'); ?>
-        <div>
-            <h3><?php the_field('slider_title');?></h3>
-            <p><?php the_field('slider_text');?></p>
-        </div>
+    </div>
+    <div class="slider__text">
+        <h3><?php the_field('slider_title');?></h3>
+        <p><?php the_field('slider_text');?></p>
+    </div>
+    <div class="slider">
+        <button class="slider__btn slider__btn--previous" aria-label="Slide précédent">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
         <div class="slider__images">
-        <?php 
-        $image1 = get_field('slider_image_1'); // Récupère la valeur du champ ACF
-        if ($image1) :
-            // Vérifie si c'est un tableau (au cas où le format de retour est un tableau)
-            $image1_url = is_array($image1) ? $image1['url'] : $image1;
-        ?>
-            <img src="<?php echo esc_url($image1_url); ?>" alt="<?php the_title(); ?>">
-        <?php endif; ?>
-
-        <?php 
-        $image2 = get_field('slider_image_2'); // Récupère la valeur du champ ACF
-        if ($image2) :
-            // Vérifie si c'est un tableau (au cas où le format de retour est un tableau)
-            $image2_url = is_array($image2) ? $image2['url'] : $image2;
-        ?>
-            <img src="<?php echo esc_url($image2_url); ?>" alt="<?php the_title(); ?>">
-        <?php endif; ?>3
-        <?php 
-        $image3 = get_field('slider_image_3'); // Récupère la valeur du champ ACF
-        if ($image3) :
-            // Vérifie si c'est un tableau (au cas où le format de retour est un tableau)
-            $image3_url = is_array($image3) ? $image3['url'] : $image3;
-        ?>
-            <img src="<?php echo esc_url($image3_url); ?>" alt="<?php the_title(); ?>">
-        <?php endif; ?>
+            <?php 
+            // Boucle pour afficher toutes les images dynamiquement
+            for ($i = 1; $i <= 5; $i++) :
+                $image = get_field('slider_image_' . $i);
+                if ($image) :
+                $image_url = is_array($image) ? $image['url'] : $image;
+            ?>
+                <div class="slider__image">
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                </div>
+            <?php endif; endfor; ?>
         </div>
-    </section>
+        <button class="slider__btn slider__btn--next" aria-label="Slide suivant">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    <div class="slider__progress">
+        <div class="slider__progress-bar"></div>
+    </div>
+</section>

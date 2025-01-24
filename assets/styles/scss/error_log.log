@@ -84,3 +84,6 @@ Call Stack:
 01/23/25 7:12:19: main.scss - Undefined variable $noir: partials/_variables.scss on line 27, at column 1
 Call Stack:
 #0 import partials/_variables.scss main.scss on line 1
+01/24/25 12:00:04: main.scss - Undefined variable $slider-gap: components/_slider_images.scss on line 27, at column 3
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11

@@ -1,0 +1,71 @@
+.bloc-slider {
+  @include container;
+  @include flex(column, center, flex-start);
+  margin-top: 9.7rem;
+  gap: 3rem;
+  padding: 4rem;
+  border: 1px solid $color-black;
+  border-radius: 30px;
+  position: relative;
+  box-sizing: border-box;
+
+  &__bonhomme {
+    position: absolute;
+    top: -9.7rem;
+    right: 3rem;
+  }
+
+  .slider__text {
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+  }
+}
+
+.slider {
+  @include flex(row, center, center);
+  gap: 2rem;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  i {
+    font-size: 2rem;
+  }
+
+  &__images {
+    @include flex(row, flex-start, center);
+    gap: 3rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    scroll-snap-align: start;
+
+    img {
+      width: 400px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 30px;
+      margin: 0;
+    }
+  }
+
+  &__progress {
+    background-color: $color-primary;
+    border: 1px solid $color-tertiary;
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+
+    &-bar {
+      background-color: $color-tertiary;
+      height: 10px;
+      border-radius: 50px;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+}

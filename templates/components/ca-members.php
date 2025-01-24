@@ -10,7 +10,10 @@ if ($ca_member->have_posts()) :
     while ($ca_member->have_posts()) : $ca_member->the_post();
     ?>
 
-    <section class="ca-member">
+<section class="bloc-ca-members">
+    <h2>Les membres du CA</h2>
+    <div class="ca-members">
+    <div class="ca-member">
         <div class="ca-member__bloc-image">
         <?php 
         $image = get_field('member_photo'); // Récupère la valeur du champ ACF
@@ -20,12 +23,15 @@ if ($ca_member->have_posts()) :
         ?>
             <img class="ca-member__image" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
             <?php endif; ?>
-            <div class="ca-member__content">
-                <p><?php the_field('member_name');?></p>
-                <p><?php the_field('member_role');?></p>
-            </div>
+            
         </div>
-    </section>
+        <div class="ca-member__content">
+            <p class="corps-texte-gras"><?php the_field('member_name');?></p>
+            <p><?php the_field('member_role');?></p>
+        </div>
+    </div>
+    </div>
+</section>
 
 <?php
 endwhile;

@@ -34,7 +34,14 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
   @include container;
   padding: 0 2rem;
   max-width: 100vw;
 }
+

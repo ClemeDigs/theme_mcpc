@@ -81,15 +81,15 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     $image_choice = get_field($field_name);
 
     $image_choices = [
-        'Théâtre' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-acting.svg',
-        'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-painting.svg',
-        'Musique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-guitar.svg',
-        'Radio' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-radio.svg',
-        'Danse' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-balet.svg',
-        'Hip-hop' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-hiphop.svg',
-        'Classique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-classic.svg',
-        'Parle' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-talking.svg',
-        'Pense' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme-thinking.svg',
+        'Théâtre' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_acting.svg',
+        'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_painting.png',
+        'Musique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_guitar.svg',
+        'Radio' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_radio.svg',
+        'Danse' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_balet.svg',
+        'Hip-hop' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_hiphop.svg',
+        'Classique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_classic.svg',
+        'Parle' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_talking.svg',
+        'Pense' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_thinking.svg',
     ];
 
     if ($image_choice === 'Aucun') {
@@ -104,6 +104,18 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 
     echo '<img src="' . esc_url($selected_image) . '" alt="Illustration d\'un bonhomme">';
 }
+
+
+function enqueue_slider_script() {
+    wp_enqueue_script(
+        'slider', 
+        get_template_directory_uri() . '/assets/js/slider.js', 
+        array(), 
+        null, 
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 ?>
 
 <?php
