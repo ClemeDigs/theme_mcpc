@@ -19,6 +19,10 @@ get_header();
     get_template_part('/templates/components/cta');
     ?>
 
+<?php 
+        get_template_part('/templates/components/slider_images');
+    ?>
+
 </main>
 
 <?php

@@ -42,15 +42,15 @@ function hideBtns() {
   const visibleSlides = getVisibleSlidesCount();
 
   if (currentSlideIndex === 0) {
-    btnPrevious.classList.add("hidden");
+    btnPrevious.setAttribute("disabled", "");
   } else {
-    btnPrevious.classList.remove("hidden");
+    btnPrevious.removeAttribute("disabled");
   }
 
   if (currentSlideIndex >= slides.length - visibleSlides) {
-    btnNext.classList.add("hidden");
+    btnNext.setAttribute("disabled", "");
   } else {
-    btnNext.classList.remove("hidden");
+    btnNext.removeAttribute("disabled");
   }
 }
 

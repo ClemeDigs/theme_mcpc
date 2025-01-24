@@ -3,7 +3,7 @@
 @import "partials/typographie";
 
 button {
-  @include button-base;
+  @include button-reset;
 }
 
 .button-radio {

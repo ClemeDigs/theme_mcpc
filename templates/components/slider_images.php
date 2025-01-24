@@ -3,7 +3,10 @@
         <?php afficher_bonhomme('slider_choix_du_bonhomme'); ?>
     </div>
     <div class="slider__text">
-        <h3><?php the_field('slider_title');?></h3>
+        <div class="slider__title">
+            <h2><?php the_field('slider_title1');?></h2>
+            <h2><?php the_field('slider_title2');?></h2>
+        </div>
         <p><?php the_field('slider_text');?></p>
     </div>
     <div class="slider">
@@ -12,14 +15,15 @@
         </button>
         <div class="slider__images">
             <?php 
-            // Boucle pour afficher toutes les images dynamiquement
             for ($i = 1; $i <= 5; $i++) :
                 $image = get_field('slider_image_' . $i);
+                $legend = get_field('slider_image_legend_' . $i);
                 if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
             ?>
                 <div class="slider__image">
                 <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <p><?php echo $legend; ?></p>
                 </div>
             <?php endif; endfor; ?>
         </div>

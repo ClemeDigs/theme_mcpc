@@ -39,9 +39,3 @@ body {
 .hidden {
   display: none;
 }
-
-  @include container;
-  padding: 0 2rem;
-  max-width: 100vw;
-}
-

@@ -87,3 +87,17 @@ Call Stack:
 01/24/25 12:00:04: main.scss - Undefined variable $slider-gap: components/_slider_images.scss on line 27, at column 3
 Call Stack:
 #0 import components/_slider_images.scss main.scss on line 11
+01/24/25 1:28:18: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:25: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:33: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:41: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:48: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:55: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:02: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:09: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:15: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:22: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:29: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:35: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:41: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:47: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
