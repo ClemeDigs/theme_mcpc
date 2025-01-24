@@ -36,6 +36,10 @@ body {
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+}
+
 // footer {
 //   background-color: map-get($colors, black);
 //   padding: 20px;

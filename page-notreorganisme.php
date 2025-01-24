@@ -9,10 +9,18 @@ Template Name: Notre organisme
 ?>
 
 <main>
-    <h2>Les membres du CA</h2>
-    <?php 
-        get_template_part('/templates/components/ca-members');
-    ?>
+
+<?php
+    get_template_part('/templates/components/hero');
+?>
+
+<?php 
+    get_template_part('/templates/components/ca-members');
+?>
+
+<?php
+    get_template_part('/templates/components/slider_images');
+?>
 </main>
 
 <?php
