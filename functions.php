@@ -1,5 +1,7 @@
 <?php
 
+// ! CUSTOM POST TYPES //
+
 function create_posttype()
 {
 
@@ -53,9 +55,9 @@ function create_posttype()
         )
     );
 }
-?>
 
-<?php
+// ! BANQUE IMAGES BONHOMMES //
+
 /**
  * @param string $field_name Nom du champ ACF.
  * @param string $default_image Chemin de l'image par défaut.
@@ -89,6 +91,7 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     echo '<img src="' . esc_url($selected_image) . '" alt="Illustration d\'un bonhomme">';
 }
 
+// ! SCRIPT SLIDER //
 
 function enqueue_slider_script() {
     wp_enqueue_script(
@@ -99,9 +102,9 @@ function enqueue_slider_script() {
         true
     );
 }
-add_action('wp_enqueue_scripts', 'enqueue_slider_script');
-?>
 
-<?php
+// ! HOOKS WORDPRESS //
+
+add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('init', 'create_posttype');
 ?>
