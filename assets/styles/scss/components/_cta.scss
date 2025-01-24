@@ -5,16 +5,18 @@
     &__section {
         @include flex(column);
         gap: 20px;
-        padding: 20px;
         background-color: $color-white;
         max-width: 100%;
+        margin: $p-mobile;
 
         @include tablet {
             max-width: 50%;
+            margin: $p-tablet;
         }
 
         @include desktop {
             max-width: 50%;
+            margin: $p-desktop;
         }
 
         &-photo {
