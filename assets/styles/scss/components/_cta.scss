@@ -1,0 +1,40 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.cta {
+    &__section {
+        @include flex(column);
+        gap: 20px;
+        padding: 20px;
+        background-color: $color-white;
+        max-width: 100%;
+
+        @include tablet {
+            max-width: 50%;
+        }
+
+        @include desktop {
+            max-width: 50%;
+        }
+
+        &-photo {
+            width: 100%;
+            height: auto;
+        }
+
+        &-content {
+            @include flex(column, $align: flex-start);
+            gap: 10px;
+
+            &-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $color-black;
+            }
+
+            &-button {
+                @include button-base;
+            }
+        }
+    }
+}

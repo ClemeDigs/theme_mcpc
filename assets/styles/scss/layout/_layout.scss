@@ -40,8 +40,8 @@ body {
   display: none;
 }
 
-// footer {
-//   background-color: map-get($colors, black);
-//   padding: 20px;
-//   text-align: center;
-// }
+  @include container;
+  padding: 0 2rem;
+  max-width: 100vw;
+}
+
