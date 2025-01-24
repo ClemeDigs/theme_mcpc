@@ -31,22 +31,40 @@ function create_posttype()
             'menu_icon' => 'dashicons-info',
             'rewrite' => array('slug' => 'contact'),
             'show_in_rest' => true,
-            'supports' => array('title', 'id'),  
+            'supports' => array('title', 'id'),
         )
     );
 
-    register_post_type( 'ca_member',
+    register_post_type(
+        'ca_member',
         array(
             'labels' => array(
-                'name' => __( 'Conseil d\'administration' ),
-                'singular_name' => __( 'Conseil d\'administration' )
+                'name' => __('Conseil d\'administration'),
+                'singular_name' => __('Conseil d\'administration')
             ),
             'public' => true,
             'has_archive' => true,
             'menu_icon' => 'dashicons-buddicons-buddypress-logo',
             'rewrite' => array('slug' => 'ca_member'),
             'show_in_rest' => true,
-            'supports' => array('title', 'id'),   
+            'supports' => array('title', 'id'),
+
+        )
+    );
+
+    register_post_type(
+        'cta_section',
+        array(
+            'labels' => array(
+                'name' => __('Section CTA'),
+                'singular_name' => __('Sections CTA\'s')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+            'rewrite' => array('slug' => 'cta_section'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id'),
 
         )
     );
@@ -58,7 +76,8 @@ function create_posttype()
  * @param string $field_name Nom du champ ACF.
  * @param string $default_image Chemin de l'image par défaut.
  */
-function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme-classic.svg') {
+function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme-classic.svg')
+{
     $image_choice = get_field($field_name);
 
     $image_choices = [
