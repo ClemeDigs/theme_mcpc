@@ -11,28 +11,53 @@ footer {
       bottom: 0px;
       left: 0px;
       color: $color-white;
-      padding: 50px;
+      padding: 2rem 1.25rem;
+
+      @include tablet {
+        padding: 4rem 2.50rem;
+      }
+
+      @include desktop {
+        padding: 4rem 4.38rem;
+      }
     }
 
     &__logo {
-      @include flex;
+      a {
+        @include flex($justify: center);
+      }
 
       img {
+        max-width: 80%;
         height: auto;
+        margin-top: 50px;
+
+        @include tablet {
+          max-width: 100%;
+          margin-top: 0px;
+        }
       }
     }
 
     &__content {
-      padding-bottom: 110px;
+      @include flex(column, $justify: center, $align: center);
+      gap: 50px;
+      padding-bottom: 50px;
 
       @include tablet {
+        padding-bottom: 110px;
         @include flex($direction: row, $align: flex-start);
       }
     }
 
     &__contact {
-      @include flex(column, $align: flex-start);
-      gap: 32px;
+      @include flex(column, $align: center);
+      gap: 20px;
+
+      @include tablet {
+        @include flex(column, $align: flex-start);
+        gap: 32px;
+      }
     }
 
     &__infos {
@@ -40,35 +65,82 @@ footer {
       gap: 20px;
     }
 
-    &__telephone-mcpc,
-    &__adresse-mcpc,
-    &__courriel-mcpc {
+    &__phone-mcpc,
+    &__address-mcpc,
+    &__email-mcpc {
       @include flex(flex-start);
-      gap: 20px;
+      gap: 10px;
+
+      @include tablet {
+        gap: 20px;
+      }
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
     }
 
     &__newsletter {
-      @include flex(column, $align: flex-start);
-      gap: 32px;
-      transform: translateX(-40px);
+      @include flex(column, $align: center);
+      gap: 20px;
+
+      @include tablet {
+        @include flex(column, $align: flex-start);
+        gap: 32px;
+      }
+
+      @include desktop {
+        transform: translateX(-40px);
+      }
 
       &-form {
         @include flex(column, $align: flex-start);
         gap: 20px;
       }
+
+      &-email {
+        @include textFieldWithButton;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        input {
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            color: $color-grey;
+            opacity: 1;
+          }
+        }
+      }
     }
 
     &__bottom {
-      @include flex;
+      @include flex(column-reverse);
+      gap: 40px;
+
+      @include desktop {
+        @include flex;
+      }
     }
 
     &__nav {
+      @include flex(column);
+      font-size: .8rem;
       gap: 20px;
       list-style: none;
       text-transform: uppercase;
       padding: 0;
 
       @include tablet {
+        gap: 20px;
         @include flex($direction: row, $justify: flex-start, $align: center);
       }
 
@@ -83,8 +155,13 @@ footer {
     }
 
     &__social {
-      @include flex;
-      gap: 40px;
+      @include flex(column, $align: center);
+      gap: 20px;
+
+      @include tablet {
+        @include flex;
+        gap: 40px;
+      }
     }
 
     &__social-icons {
@@ -100,7 +177,11 @@ footer {
         }
 
         & i {
-          font-size: 2rem;
+          font-size: 1.5rem;
+
+          @include tablet {
+            font-size: 2rem;
+          }
         }
       }
     }

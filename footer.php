@@ -18,10 +18,9 @@
                     <h2>INFOLETTRE</h2>
                     <form action="" method="post" class="footer__newsletter-form">
                         <label for="email"><i class="fa-regular fa-envelope"></i> Inscris-toi à notre infolettre !</label>
-                        <div>
+                        <div class="footer__newsletter-email corps-texte">
                             <input type="email" name="newsletter_email" placeholder="exemple@exemple.com">
                             <i class="fa-regular fa-paper-plane"></i>
-                            <!-- <button type="submit">Soumettre</button> -->
                         </div>
                     </form>
                 </div>
@@ -40,8 +39,20 @@
             <div class="footer__social">
                 <h2>NOUS SUIVRE</h2>
                 <ul class="footer__social-icons">
-                    <li> <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li> <a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li>
+                        <a href="https://www.facebook.com/culturebic/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/radiobic925/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

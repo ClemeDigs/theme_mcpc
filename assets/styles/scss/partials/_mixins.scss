@@ -5,7 +5,7 @@
 }
 
 @mixin container {
-  width: 100%;
+  // width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -33,7 +33,7 @@
   box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
   font-family: $font-sans;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 2%;
   text-transform: uppercase;
   cursor: pointer;
@@ -86,4 +86,18 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin textFieldWithButton {
+  display: flex;
+  max-width: 100%;
+  padding: .5rem 1rem;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 2px solid $color-grey;
+  background: $color-white;
+  color: $color-black;
 }
