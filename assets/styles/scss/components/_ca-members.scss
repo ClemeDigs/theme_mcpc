@@ -1,6 +1,12 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
 .bloc-ca-members {
   @include flex($direction: column, $justify: center);
-  gap: 1rem;
+  gap: 2rem;
+  @include desktop {
+    gap: 4rem;
+  }
 
   h2 {
     text-align: center;
@@ -10,8 +16,13 @@
 .ca-members {
   @include container;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
 }
 
 .ca-member {

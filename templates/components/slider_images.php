@@ -15,18 +15,31 @@
         </button>
         <div class="slider__images">
             <?php 
-            for ($i = 1; $i <= 5; $i++) :
+            $images = [];
+            for ($i = 1; $i <= 8; $i++) { // Boucle jusqu'à 8
                 $image = get_field('slider_image_' . $i);
                 $legend = get_field('slider_image_legend_' . $i);
-                if ($image) :
-                $image_url = is_array($image) ? $image['url'] : $image;
+                if ($image) {
+                    $images[] = [
+                        'url' => is_array($image) ? $image['url'] : $image,
+                        'legend' => $legend
+                    ];
+                }
+            }
+
+            if (!empty($images)) :
+                foreach ($images as $image) :
             ?>
-                <div class="slider__image">
-                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
-                <p><?php echo $legend; ?></p>
-                </div>
-            <?php endif; endfor; ?>
+                    <div class="slider__image">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php the_title(); ?>">
+                        <p><?php echo esc_html($image['legend']); ?></p>
+                    </div>
+            <?php 
+                endforeach;
+            endif;
+            ?>
         </div>
+
         <button class="slider__btn slider__btn--next" aria-label="Slide suivant">
             <i class="fa-solid fa-chevron-right"></i>
         </button>

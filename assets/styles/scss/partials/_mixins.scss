@@ -22,6 +22,12 @@
   }
 }
 
+@mixin desktop-xl {
+  @media (min-width: $xlarge) {
+    @content;
+  }
+}
+
 @mixin button-base($color: $color-primary) {
   display: inline-flex;
   padding: 10px 16px;
@@ -38,7 +44,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: none;
+  border: 1px solid transparent;
 
   &:hover {
     background: $green-primary;
