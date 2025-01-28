@@ -9,13 +9,19 @@ Template Name: Ruche d'art
 ?>
 
 <main>
+    
     <?php
         get_template_part('/templates/components/hero');
     ?>
 
-<?php 
+    <?php
+    get_template_part('/templates/components/subtitle');
+    ?>
+
+    <?php 
         get_template_part('/templates/components/slider_images');
     ?>
+
 </main>
 
 <?php

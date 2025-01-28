@@ -1,0 +1,78 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+@import "../partials/typographie";
+
+.subtitle {
+  &__large {
+    width: 860px;
+  }
+
+  &__petit {
+    width: 640px;
+  }
+  &__container {
+    // min-height: 265px;
+    margin: 0 auto;
+    @include flex(column, center, center);
+    gap: 1rem;
+    padding: 2.5rem 0 2rem 0;
+    position: relative;
+    @include round-border;
+    @include shadow;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include flex(row, flex-start, center);
+    gap: 0.5rem;
+    padding: 1rem 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    :first-child {
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    padding: 1.5rem 0 1rem 0;
+    max-width: 500px;
+  }
+
+  &__learn-more {
+    @include button-secondary;
+  }
+
+  &__hand {
+    position: absolute;
+    width: 30%;
+    bottom: 0rem;
+    transform: translateX(-160%);
+
+    &-gros_pinceau {
+      bottom: 10%;
+      left: 10%;
+    }
+
+    &-palette {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // transform: translateX(-160%);
+    }
+
+    &-petit_pinceau {
+      top: 0;
+      transform: translateX(-125%);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 1rem;
+    @include flex(column, center, center);
+    gap: 1rem;
+  }
+}

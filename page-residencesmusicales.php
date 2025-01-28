@@ -9,6 +9,7 @@ Template Name: Résicences musicales
 ?>
 
 <main>
+
     <?php
         get_template_part('/templates/components/hero');
     ?>
@@ -20,6 +21,7 @@ Template Name: Résicences musicales
 <?php 
         get_template_part('/templates/components/slider_images');
     ?>
+    
 </main>
 
 <?php

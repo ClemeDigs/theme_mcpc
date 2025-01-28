@@ -109,6 +109,91 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     echo '<img src="' . esc_url($selected_image) . '" alt="Illustration d\'un bonhomme">';
 }
 
+// ! LARGEUR DU SOUS-TITRE //
+
+function afficher_largeur_sous_titre($field_name)
+{
+    $width_choice = get_field($field_name);
+
+    if ($width_choice === 'large') {
+        return 'subtitle__large';
+    } else {
+        return 'subtitle__small';
+    }
+}
+
+// ! BANQUE IMAGES HINGES //
+
+/**
+ * @param string $field_name Nom du champ ACF.
+ * @param string $default_image Chemin de l'image par défaut.
+ * @return string URL de l'image sélectionnée.
+ */
+function get_hinge_image_url($field_name, $default_image = '/assets/img/illustrations/hinge/hinge_02.svg')
+{
+    $hinge_choice = get_field($field_name);
+
+    $hinge_options = [
+        'hinge_1' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_01.svg',
+        'hinge_2' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_02.svg',
+        'hinge_3' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_03.svg',
+    ];
+
+    $selected_hinge = get_template_directory_uri() . $default_image;
+
+    if ($hinge_choice && array_key_exists($hinge_choice, $hinge_options)) {
+        $selected_hinge = $hinge_options[$hinge_choice];
+    }
+
+    return esc_url($selected_hinge);
+}
+
+// ! BANQUE IMAGES HANDS //
+
+/**
+ * @param string $field_name Nom du champ ACF.
+ * @param string $default_image Chemin de l'image par défaut.
+ */
+function afficher_hand($field_name, $default_image = '/assets/img/illustrations/hands/hand_big_paintbrush.svg')
+{
+    $hand_choice = get_field($field_name);
+
+    $hand_options = [
+        'gros_pinceau' => get_template_directory_uri() . '/assets/img/illustrations/hands/hand_big_paintbrush.svg',
+        'palette' => get_template_directory_uri() . '/assets/img/illustrations/hands/hand_color_pallete.svg',
+        'petit_pinceau' => get_template_directory_uri() . '/assets/img/illustrations/hands/hand_small_paintbrush.svg',
+    ];
+
+    $selected_hand = get_template_directory_uri() . $default_image;
+
+    if ($hand_choice && array_key_exists($hand_choice, $hand_options)) {
+        $selected_hand = $hand_options[$hand_choice];
+        $hand_class = 'subtitle__hand-' . $hand_choice;
+    }
+
+    echo '<img src="' . esc_url($selected_hand) . '" class="' . esc_attr($hand_class) . '" alt="Illustration d\'une main d\'artiste">';
+}
+
+// ! BOUTON EN SAVOIR PLUS... //
+
+/**
+ * Affiche un bouton "En savoir plus" si un lien est défini dans le champ ACF 'learn_more'.
+ *
+ * @param string $field_name Nom du champ ACF.
+ */
+function afficher_bouton_en_savoir_plus($field_name)
+{
+    $link = get_field($field_name);
+
+    if ($link) {
+        $url = $link['url'];
+        $title = $link['title'] ? $link['title'] : 'En savoir plus';
+        $target = $link['target'] ? $link['target'] : '_self';
+
+        echo '<a href="' . esc_url($url) . '" class="" target="' . esc_attr($target) . '">' . esc_html($title) . '</a>';
+    }
+}
+
 // ! SCRIPT SLIDER //
 
 function enqueue_slider_script() {

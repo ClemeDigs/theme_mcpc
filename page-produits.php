@@ -9,9 +9,15 @@ Template Name: Produits et marchandises
 ?>
 
 <main>
+    
     <?php
         get_template_part('/templates/components/hero');
     ?>
+
+<?php
+    get_template_part('/templates/components/subtitle');
+    ?>
+
 </main>
 
 <?php

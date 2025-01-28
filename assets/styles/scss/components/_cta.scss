@@ -2,41 +2,41 @@
 @import "../partials/mixins";
 
 .cta {
-    &__section {
-        @include flex(column);
-        gap: 20px;
-        background-color: $color-white;
-        max-width: 100%;
-        margin: $p-mobile;
+  &__section {
+    @include flex(column);
+    gap: 20px;
+    background-color: $color-white;
+    max-width: 100%;
+    margin: $p-mobile;
 
-        @include tablet {
-            max-width: 50%;
-            margin: $p-tablet;
-        }
-
-        @include desktop {
-            max-width: 50%;
-            margin: $p-desktop;
-        }
-
-        &-photo {
-            width: 100%;
-            height: auto;
-        }
-
-        &-content {
-            @include flex(column, $align: flex-start);
-            gap: 10px;
-
-            &-title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: $color-black;
-            }
-
-            &-button {
-                @include button-base;
-            }
-        }
+    @include tablet {
+      max-width: 50%;
+      margin: $p-tablet;
     }
+
+    @include desktop {
+      max-width: 50%;
+      margin: $p-desktop;
+    }
+
+    &-photo {
+      width: 100%;
+      height: auto;
+    }
+
+    &-content {
+      @include flex(column, $align: flex-start);
+      gap: 10px;
+
+      &-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-black;
+      }
+
+      &-button {
+        @include button-base;
+      }
+    }
+  }
 }
