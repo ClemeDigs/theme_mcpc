@@ -1,11 +1,21 @@
 document.querySelectorAll(".slider").forEach((slider) => {
-  const btnPrevious = slider.querySelector(".slider__btn--previous");
-  const btnNext = slider.querySelector(".slider__btn--next");
-  const slidesContainer = slider.querySelector(".slider__images");
-  const slides = slider.querySelectorAll(".slider__image");
-  const progressBar = slider.querySelector(".slider__progress-bar");
+  // Cible uniquement les éléments à l'intérieur du slider actuel
+  const btnPrevious = slider.querySelector(":scope > .slider__btn--previous");
+  const btnNext = slider.querySelector(":scope > .slider__btn--next");
+  const slidesContainer = slider.querySelector(":scope > .slider__images");
+  const slides = slider.querySelectorAll(
+    ":scope > .slider__images > .slider__image"
+  );
+
+  // Recherche globale dans la même section parent si progressBar n'est pas dans la div .slider
+  const progressBar = slider
+    .closest(".residence")
+    ?.querySelector(".slider__progress-bar");
 
   let currentSlideIndex = 0;
+
+  // Vérifie si le slider contient des images
+  if (slides.length === 0) return;
 
   function getVisibleSlidesCount() {
     const containerWidth = slidesContainer.offsetWidth;
@@ -28,14 +38,14 @@ document.querySelectorAll(".slider").forEach((slider) => {
       currentSlideIndex + 1
     );
     updateSlidePosition();
-    /*     changeProgress(); */
+    changeProgress();
     hideBtns();
   }
 
   function previousSlide() {
     currentSlideIndex = Math.max(0, currentSlideIndex - 1);
     updateSlidePosition();
-    /*     changeProgress(); */
+    changeProgress();
     hideBtns();
   }
 
@@ -43,39 +53,39 @@ document.querySelectorAll(".slider").forEach((slider) => {
     const visibleSlides = getVisibleSlidesCount();
 
     if (currentSlideIndex === 0) {
-      btnPrevious.setAttribute("disabled", "");
+      btnPrevious?.setAttribute("disabled", "");
     } else {
-      btnPrevious.removeAttribute("disabled");
+      btnPrevious?.removeAttribute("disabled");
     }
 
     if (currentSlideIndex >= slides.length - visibleSlides) {
-      btnNext.setAttribute("disabled", "");
+      btnNext?.setAttribute("disabled", "");
     } else {
-      btnNext.removeAttribute("disabled");
+      btnNext?.removeAttribute("disabled");
     }
   }
 
-  /*   function changeProgress() {
+  function changeProgress() {
+    if (!progressBar) return; // Vérifie si progressBar existe
     const visibleSlides = getVisibleSlidesCount();
     const progressValue =
       ((currentSlideIndex + visibleSlides) / slides.length) * 100;
     progressBar.style.width = Math.min(progressValue, 100) + "%";
-  } */
+  }
 
-  btnPrevious.addEventListener("click", () => {
-    previousSlide();
-  });
+  // Ajoute les écouteurs d'événements
+  btnPrevious?.addEventListener("click", previousSlide);
+  btnNext?.addEventListener("click", nextSlide);
 
-  btnNext.addEventListener("click", () => {
-    nextSlide();
-  });
-
+  // Réagit au redimensionnement de la fenêtre
   window.addEventListener("resize", () => {
     updateSlidePosition();
     hideBtns();
+    changeProgress();
   });
 
+  // Initialisation
+  changeProgress();
   hideBtns();
-  /*   changeProgress(); */
   updateSlidePosition();
 });

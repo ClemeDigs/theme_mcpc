@@ -1,5 +1,124 @@
-.residence-modal__content {
-  width: 75%;
-  height: 75%;
-  background-color: $color-white;
+.residence {
+  @include container;
+  @include flex(column, center, center);
+  gap: 2rem;
+  max-width: 360px;
+  @include desktop {
+    max-width: 560px;
+  }
+
+  .slider {
+    &__image {
+      @include flex(column, center, center);
+      gap: 1rem;
+
+      h3 {
+        text-align: center;
+      }
+
+      img {
+        height: 456px;
+        width: 300px;
+        object-fit: cover;
+
+        @include desktop {
+          height: 640px;
+          width: 420px;
+        }
+      }
+    }
+  }
+
+  .residence-modal__content {
+    @include flex(column, flex-start, flex-start);
+    width: 90%;
+    height: 75%;
+    background-color: $color-white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 2rem;
+    @include round-border;
+    @include desktop {
+      width: 75%;
+    }
+  }
+
+  .residence-modal__header {
+    @include flex(column, center, flex-end);
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .residence-modal__infos {
+    width: 100%;
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    @include desktop {
+      @include flex(row, space-between, center);
+    }
+
+    &-date {
+      @include flex(row, center, center);
+      gap: 1rem;
+      div {
+        @include flex(column, center, flex-start);
+      }
+    }
+  }
+
+  .residence-modal__resume {
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .residence-modal__slider {
+    @include flex(column, center, center);
+    gap: 1rem;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+    .slider {
+      .slider__images {
+        .slider__image {
+          img {
+            width: 300px;
+            height: 200px;
+            @include desktop {
+              width: 380px;
+              height: 280px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .residence-modal__article {
+    background-color: $color-grey-p;
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 2rem;
+    }
+
+    a {
+      @include liens;
+    }
+  }
 }

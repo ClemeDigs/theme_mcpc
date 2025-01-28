@@ -50,6 +50,44 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_67993d1f983fc",
+            "label": "Date de début",
+            "name": "residence_musicale_start_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "j F Y",
+            "return_format": "j F Y",
+            "first_day": 1,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_67993d5a983fd",
+            "label": "Date de fin",
+            "name": "residence_musicale_end_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "j F Y",
+            "return_format": "j F Y",
+            "first_day": 1,
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_6797df3c32a55",
             "label": "Résumé de l'évènement",
             "name": "residence_musicale_resume",
@@ -284,5 +322,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738006902
+    "modified": 1738095988
 }
