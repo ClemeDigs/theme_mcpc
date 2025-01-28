@@ -54,6 +54,24 @@ function create_posttype()
 
         )
     );
+
+    register_post_type(
+        'residence_musicale',
+        array(
+            'labels' => array(
+                'name' => __('Résidences musicales'),
+                'singular_name' => __('Résidence musicale')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-format-audio',
+            'rewrite' => array('slug' => 'residence_musicale'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id'),
+
+        )
+    );
+
 }
 
 // ! BANQUE IMAGES BONHOMMES //

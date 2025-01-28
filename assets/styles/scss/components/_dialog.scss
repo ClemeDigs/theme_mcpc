@@ -8,11 +8,14 @@
   width: 100dvw;
   height: 100dvh;
   margin: 0;
+  z-index: 100;
 }
 
 .dialog[open] {
   animation: fadeIn 0.5s forwards;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dialog[closing] {

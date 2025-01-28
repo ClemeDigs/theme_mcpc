@@ -14,6 +14,10 @@ Template Name: Résicences musicales
     ?>
 
 <?php 
+        get_template_part('/templates/components/residence_musicale');
+    ?>
+
+<?php 
         get_template_part('/templates/components/slider_images');
     ?>
 </main>

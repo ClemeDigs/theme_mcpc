@@ -38,6 +38,9 @@ main {
   @include container;
   max-width: 100vw;
   box-sizing: border-box;
+  padding-bottom: 100px;
+  padding: $p-mobile;
+  background-color: white;
   margin-bottom: 100px;
   padding: $p-mobile;
 
@@ -47,10 +50,9 @@ main {
 
   @include desktop {
     padding: $p-desktop;
-    margin-bottom: 250px;
+    padding-bottom: 250px;
   }
 }
-
 
 .hidden {
   display: none;
