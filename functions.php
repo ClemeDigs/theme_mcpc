@@ -36,7 +36,7 @@ function create_posttype()
             'supports' => array('title', 'id'),
         )
     );
-  
+
     register_post_type(
         'partners',
         array(
@@ -48,8 +48,8 @@ function create_posttype()
             'has_archive' => true,
             'menu_icon' => 'dashicons-groups',
             'rewrite' => array('slug' => 'partners'),
-            )
-        );
+        )
+    );
 
     register_post_type(
         'residence_musicale',
@@ -81,7 +81,6 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
-
 }
 
 
@@ -176,7 +175,9 @@ function afficher_hand($field_name, $default_image = '/assets/img/illustrations/
         'petit_pinceau' => get_template_directory_uri() . '/assets/img/illustrations/hands/hand_small_paintbrush.svg',
     ];
 
+    // Initialisation des variables par défaut
     $selected_hand = get_template_directory_uri() . $default_image;
+    $hand_class = ''; // Classe par défaut vide
 
     if ($hand_choice && array_key_exists($hand_choice, $hand_options)) {
         $selected_hand = $hand_options[$hand_choice];
@@ -185,6 +186,7 @@ function afficher_hand($field_name, $default_image = '/assets/img/illustrations/
 
     echo '<img src="' . esc_url($selected_hand) . '" class="' . esc_attr($hand_class) . '" alt="Illustration d\'une main d\'artiste">';
 }
+
 
 // ! BOUTON EN SAVOIR PLUS... //
 
