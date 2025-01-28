@@ -34,7 +34,6 @@ function create_posttype()
             'rewrite' => array('slug' => 'ca_member'),
             'show_in_rest' => true,
             'supports' => array('title', 'id'),
-
         )
     );
   
@@ -49,6 +48,8 @@ function create_posttype()
             'has_archive' => true,
             'menu_icon' => 'dashicons-groups',
             'rewrite' => array('slug' => 'partners'),
+            )
+        );
 
     register_post_type(
         'residence_musicale',
@@ -63,7 +64,6 @@ function create_posttype()
             'rewrite' => array('slug' => 'residence_musicale'),
             'show_in_rest' => true,
             'supports' => array('title', 'id'),
-
         )
     );
     register_post_type(
