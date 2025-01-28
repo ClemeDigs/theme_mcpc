@@ -90,6 +90,7 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+<<<<<<< HEAD
         },
         {
             "key": "field_6797e71eab62c",
@@ -107,6 +108,8 @@
             },
             "return_format": "array",
             "allow_in_bindings": 1
+=======
+>>>>>>> 72f74fc92569234a4aa14690cbf830707977bbe1
         }
     ],
     "location": [
@@ -127,5 +130,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+<<<<<<< HEAD
     "modified": 1738072099
+=======
+    "modified": 1737666921
+>>>>>>> 72f74fc92569234a4aa14690cbf830707977bbe1
 }

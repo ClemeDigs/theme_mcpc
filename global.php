@@ -1,3 +1,2 @@
 <?php
 $contact = 75;
-?>
