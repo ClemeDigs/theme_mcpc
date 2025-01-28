@@ -8,7 +8,7 @@ Template Name: Accueil
 get_header();
 ?>
 
-<main id="main" class="main">
+<main>
 
     <?php
     get_template_part('/templates/components/hero');
