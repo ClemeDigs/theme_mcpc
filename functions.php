@@ -37,23 +37,7 @@ function create_posttype()
 
         )
     );
-
-    register_post_type(
-        'cta_section',
-        array(
-            'labels' => array(
-                'name' => __('Section CTA'),
-                'singular_name' => __('Sections CTA\'s')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-welcome-view-site',
-            'rewrite' => array('slug' => 'cta_section'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id'),
-
-        )
-    );
+  
     register_post_type(
         'partners',
         array(
@@ -65,6 +49,18 @@ function create_posttype()
             'has_archive' => true,
             'menu_icon' => 'dashicons-groups',
             'rewrite' => array('slug' => 'partners'),
+
+    register_post_type(
+        'residence_musicale',
+        array(
+            'labels' => array(
+                'name' => __('Résidences musicales'),
+                'singular_name' => __('Résidence musicale')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-format-audio',
+            'rewrite' => array('slug' => 'residence_musicale'),
             'show_in_rest' => true,
             'supports' => array('title', 'id'),
 
@@ -85,6 +81,7 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
+
 }
 
 

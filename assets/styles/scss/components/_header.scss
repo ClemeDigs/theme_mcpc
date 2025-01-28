@@ -176,6 +176,10 @@ header {
   top: 0;
   right: 0;
 
+  @include tablet {
+    width: 35vw;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
