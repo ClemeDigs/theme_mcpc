@@ -1,24 +1,28 @@
-<?php 
+<?php
 /* 
 Template Name: Galerie photo
 */
 ?>
 
 <?php
-    get_header();
+get_header();
 ?>
 
-<main>
+<main id="main" class="main">
+
     <?php
-        get_template_part('/templates/components/hero');
+    get_template_part('/templates/components/hero');
     ?>
 
     <?php
     get_template_part('/templates/components/subtitle');
     ?>
 
-</main>
+    <?php
+    get_template_part('/templates/components/photo_gallery');
+    ?>
 
+</main>
 <?php
-    get_footer();
+get_footer();
 ?>
