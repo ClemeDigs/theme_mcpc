@@ -7,7 +7,11 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <h2>TEST MCPC</h2>
+    <h1>TEST MCPC</h1>
+
+        <button class="button-dons">
+        <i class="fa-solid fa-hand-holding-dollar"></i> Faire un Don
+    </button>
 </main>
 
 <?php get_footer(); ?>

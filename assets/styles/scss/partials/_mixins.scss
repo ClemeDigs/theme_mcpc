@@ -1,0 +1,135 @@
+@mixin grid-column($columns: 12) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 20px;
+}
+
+@mixin container {
+  // width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@mixin tablet {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $xlarge) {
+    @content;
+  }
+}
+
+@mixin button-base($color: $color-primary) {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: $color;
+  box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $green-primary;
+    border: 2px solid $green-secondary;
+    color: $color-black;
+  }
+
+  &:active {
+    background: $green-secondary;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background: $color-grey-p;
+    border: 2px solid $color-grey;
+    color: $color-grey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $green-primary;
+  }
+
+  &:active {
+    color: $green-secondary;
+  }
+
+  &:disabled {
+    color: $dark-grey;
+    cursor: not-allowed;
+  }
+}
+
+@mixin liens {
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:link {
+      color: $color-black;
+      padding: 1rem;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $green-secondary;
+    }
+
+    &:visited {
+      color: $green-primary;
+    }
+  }
+}
+
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin textFieldWithButton {
+  display: flex;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 2px solid $color-grey;
+  background: $color-white;
+  color: $color-black;
+}

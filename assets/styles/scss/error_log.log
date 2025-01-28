@@ -1,0 +1,103 @@
+
+01/16/25 3:42:57: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:43:07: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:43:17: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:43:26: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:43:32: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:44:33: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:45:33: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:47:34: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:49:35: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:51:36: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:53:37: main.scss - `mixins` file not found for @import: layout/_layout.scss on line 1, at column 0
+Call Stack:
+#0 import layout/_layout.scss main.scss on line 5
+01/16/25 3:58:35: main.scss - `outils/variables` file not found for @import: main.scss on line 1, at column 0
+01/16/25 3:59:36: main.scss - `outils/variables` file not found for @import: main.scss on line 1, at column 0
+01/16/25 4:01:37: main.scss - parse error: failed at `@use "partials/variables" as var;
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/16/25 11:34:52: main.scss - parse error: failed at `@use "partials/variables" as var;
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/16/25 11:34:55: main.scss - parse error: failed at `@use "partials/variables" as var;
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/16/25 11:34:56: main.scss - parse error: failed at `@use "partials/variables" as var;
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 1, at column 0
+01/23/25 3:21:50: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:21:59: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:04: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:11: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:17: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:22:25: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:23:29: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:25:27: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:26:28: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:27:28: main.scss - Undefined mixin media-query: components/_header.scss on line 137, at column 3
+Call Stack:
+#0 import components/_header.scss main.scss on line 7
+01/23/25 3:29:30: main.scss - Undefined mixin flex-center: components/_hero.scss on line 14, at column 13
+Call Stack:
+#0 import components/_hero.scss main.scss on line 9
+01/23/25 7:08:16: main.scss - Undefined variable $green-primary: partials/_variables.scss on line 19, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1
+01/23/25 7:10:18: main.scss - Undefined variable $green-secondary: partials/_variables.scss on line 21, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1
+01/23/25 7:12:19: main.scss - Undefined variable $noir: partials/_variables.scss on line 27, at column 1
+Call Stack:
+#0 import partials/_variables.scss main.scss on line 1
+01/24/25 12:00:04: main.scss - Undefined variable $slider-gap: components/_slider_images.scss on line 27, at column 3
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+01/24/25 1:28:18: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:25: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:33: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:41: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:48: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:28:55: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:02: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:09: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:15: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:22: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:29: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:35: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:41: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/24/25 1:29:47: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
