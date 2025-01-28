@@ -14,10 +14,11 @@ get_header();
     get_template_part('/templates/components/hero');
     ?>
 
-
-    <?php
-    get_template_part('/templates/components/cta');
-    ?>
+    <div class="ctaSection__container">
+        <?php
+        get_template_part('/templates/components/cta');
+        ?>
+    </div>
 
     <?php
     get_template_part('/templates/components/slider_images');
@@ -26,7 +27,6 @@ get_header();
     <?php
     get_template_part('/templates/components/partners');
     ?>
-
 
 </main>
 

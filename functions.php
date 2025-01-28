@@ -37,23 +37,18 @@ function create_posttype()
 
         )
     );
-
+  
     register_post_type(
-        'cta_section',
+        'partners',
         array(
             'labels' => array(
-                'name' => __('Section CTA'),
-                'singular_name' => __('Sections CTA\'s')
+                'name' => __('Partners'),
+                'singular_name' => __('Partner')
             ),
             'public' => true,
             'has_archive' => true,
-            'menu_icon' => 'dashicons-buddicons-buddypress-logo',
-            'rewrite' => array('slug' => 'cta_section'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id'),
-
-        )
-    );
+            'menu_icon' => 'dashicons-groups',
+            'rewrite' => array('slug' => 'partners'),
 
     register_post_type(
         'residence_musicale',
@@ -71,8 +66,25 @@ function create_posttype()
 
         )
     );
+    register_post_type(
+        'gallery',
+        array(
+            'labels' => array(
+                'name' => __('Galerie photo'),
+                'singular_name' => __('Galerie photo'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-camera',
+            'rewrite' => array('slug' => 'gallery'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
 
 }
+
+
 
 // ! BANQUE IMAGES BONHOMMES //
 
@@ -111,24 +123,26 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 
 // ! SCRIPT SLIDER //
 
-function enqueue_slider_script() {
+function enqueue_slider_script()
+{
     wp_enqueue_script(
-        'slider', 
-        get_template_directory_uri() . '/assets/js/slider.js', 
-        array(), 
-        null, 
+        'slider',
+        get_template_directory_uri() . '/assets/js/slider.js',
+        array(),
+        null,
         true
     );
 }
 
 // ! SCRIPT DIALOG //
 
-function enqueue_dialog_script() {
+function enqueue_dialog_script()
+{
     wp_enqueue_script(
-        'dialog', 
-        get_template_directory_uri() . '/assets/js/dialog.js', 
-        array(), 
-        null, 
+        'dialog',
+        get_template_directory_uri() . '/assets/js/dialog.js',
+        array(),
+        null,
         true
     );
 }
@@ -138,5 +152,3 @@ function enqueue_dialog_script() {
 add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
-
-?>

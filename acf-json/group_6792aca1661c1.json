@@ -90,6 +90,26 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+<<<<<<< HEAD
+        },
+        {
+            "key": "field_6797e71eab62c",
+            "label": "Button link",
+            "name": "button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Ajoutez le lien du button de la page souhaité.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+=======
+>>>>>>> 72f74fc92569234a4aa14690cbf830707977bbe1
         }
     ],
     "location": [
@@ -110,5 +130,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+<<<<<<< HEAD
+    "modified": 1738072099
+=======
     "modified": 1737666921
+>>>>>>> 72f74fc92569234a4aa14690cbf830707977bbe1
 }

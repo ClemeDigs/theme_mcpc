@@ -2,7 +2,7 @@
     <div class="partner__slider">
         <?php
         $partner = new WP_Query([
-            'post_type' => 'partner',
+            'post_type' => 'partners',
             'posts_per_page' => -1,
         ]);
 
@@ -22,6 +22,7 @@
                 endif;
             endwhile;
         endif;
+        wp_reset_postdata();
         ?>
         <?php if ($partner->have_posts()) :
             while ($partner->have_posts()) : $partner->the_post();
@@ -38,6 +39,8 @@
         <?php
                 endif;
             endwhile;
-        endif; ?>
+        endif;
+        wp_reset_postdata(); ?>
+
     </div>
 </section>
