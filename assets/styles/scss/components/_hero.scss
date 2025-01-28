@@ -7,8 +7,7 @@
     margin: 0;
 
     img {
-      width: 100%;
-      max-width: 1740px;
+      @include container;
       max-height: 647px;
       margin: 0 auto;
       @include flex;
@@ -19,9 +18,19 @@
 
   &__content {
     @include container;
-    padding: 0 0 0 140px;
-
-    transform: translateY(-57px);
+    padding: $p-mobile;
+    transform: translateY(-18px);
+    @include tablet {
+      padding: $p-tablet;
+      transform: translateY(-36px);
+    }
+    @include desktop {
+      padding: $p-desktop;
+      transform: translateY(-38px);
+    }
+    @include desktop-xl {
+      transform: translateY(-51px);
+    }
   }
 
   &__title {

@@ -2,11 +2,27 @@
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
   gap: 20px;
+
+  // Générer les classes de colonnes
+  // @for $i from 1 through $columns {
+  //   .col-#{$i} {
+  //     grid-column: span $i;
+  //   }
+  // }
+
+  // Générer les classes de décalage
+  // @for $i from 1 through $columns {
+  //   .offset-#{$i} {
+  //     grid-column-start: $i + 1;
+  //   }
+  // }
 }
 
 @mixin container {
-  // width: 100%;
+  // J'ai changé le container pour que les blocs, dont la galeries photos, soient corrects dans le navigateur
+  width: 100%;
   max-width: 1600px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -28,7 +44,10 @@
   }
 }
 
-@mixin button-base($color: $color-primary) {
+@mixin button-base(
+  $color: $color-primary,
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
+) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -36,9 +55,8 @@
   gap: 10px;
   border-radius: 8px;
   background: $color;
-  box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25);
+  box-shadow: $box-shadow;
   font-family: $font-sans;
-  font-weight: bold;
   font-size: 14px;
   letter-spacing: 2%;
   text-transform: uppercase;
@@ -60,6 +78,31 @@
   &:disabled {
     background: $color-grey-p;
     border: 2px solid $color-grey;
+    color: $color-grey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@mixin button-secondary {
+  @include button-base($color: none, $box-shadow: none);
+
+  &:hover {
+    font-size: 900;
+    background: none;
+    border: none;
+    color: $color-black;
+  }
+
+  &:active {
+    font-size: 900;
+    background: none;
+    color: $color-primary;
+  }
+
+  &:disabled {
+    background: none;
+    border: nonw;
     color: $color-grey;
     cursor: not-allowed;
     box-shadow: none;
@@ -132,4 +175,19 @@
   border: 2px solid $color-grey;
   background: $color-white;
   color: $color-black;
+}
+
+// Ajout d'une transition smooth pour le responsive : eve
+@mixin transition($duration: 0.25s, $easing: ease) {
+  transition: all 0.25s ease;
+}
+
+// Ajout d'un border-radius pour les images : eve
+@mixin round-border($radius: 30px) {
+  border-radius: $radius;
+}
+
+// Ajout d'un box-shadow de base: eve
+@mixin shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
