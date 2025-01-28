@@ -71,6 +71,7 @@ function create_posttype()
 
         )
     );
+
 }
 
 // ! BANQUE IMAGES BONHOMMES //
