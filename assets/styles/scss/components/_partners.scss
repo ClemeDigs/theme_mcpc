@@ -2,61 +2,59 @@
 @import "../partials/mixins";
 
 .partner {
-    overflow: hidden;
-    position: relative;
-    padding-top: 5rem;
+  overflow: hidden;
+  position: relative;
+  padding-top: 5rem;
+
+  @include tablet {
+    padding-top: 8rem;
+  }
+
+  // @include desktop {
+  //     margin: $p-desktop;
+  // }
+
+  .partner__slider {
+    @include flex;
+    gap: 20px;
+    max-width: 100%;
+    animation: scroll 20s linear infinite;
 
     @include tablet {
-        padding-top: 8rem;
+      gap: 40px;
+    }
+  }
+
+  .partner__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      max-width: 150px;
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+      box-sizing: border-box;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+
+      @include tablet {
+        max-width: 250px;
+      }
+    }
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
     }
 
-    // @include desktop {
-    //     margin: $p-desktop;
-    // }
-
-    .partner__slider {
-        @include flex;
-        gap: 20px;
-        max-width: 100%;
-        animation: scroll 20s linear infinite;
-
-        @include tablet {
-            gap: 40px;
-        }
+    to {
+      transform: translateX(-50%);
     }
-
-    .partner__logo {
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        & img {
-            max-width: 150px;
-            height: auto;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-            box-sizing: border-box;
-
-            &:hover {
-                filter: grayscale(0%);
-            }
-
-            @include tablet {
-                max-width: 250px;
-            }
-        }
-    }
-
-    @keyframes scroll {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            <<<<<<< HEAD transform: translateX(-50%);
-            =======transform: translateX(-100%);
-            >>>>>>>72f74fc92569234a4aa14690cbf830707977bbe1
-        }
-    }
+  }
 }
