@@ -39,17 +39,16 @@ main {
   max-width: 100vw;
   box-sizing: border-box;
   padding-bottom: 100px;
-  padding: $p-mobile;
   background-color: white;
   margin-bottom: 100px;
-  padding: $p-mobile;
+  /*   padding: $p-mobile;
 
   @include tablet {
     padding: $p-tablet;
-  }
+  } */
 
   @include desktop {
-    padding: $p-desktop;
+    /*     padding: $p-desktop; */
     padding-bottom: 250px;
   }
 }
