@@ -1,0 +1,49 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.bloc-ca-members {
+  @include flex($direction: column, $justify: center);
+  gap: 2rem;
+  @include desktop {
+    gap: 4rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.ca-members {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
+.ca-member {
+  @include flex($direction: column, $justify: center);
+  gap: 1rem;
+
+  &__bloc-image {
+    @include flex($direction: column, $justify: center);
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 30px;
+  }
+
+  &__image {
+    height: 220px;
+    width: 200px;
+    border-radius: 30px;
+  }
+
+  &__content {
+    @include flex($direction: column, $justify: center);
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,24 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
+button {
+  @include button-reset;
+}
+
+.button-radio {
+  @include button-base;
+  background: $red-secondary;
+  color: $color-white;
+
+  &:hover {
+    background: $red-secondary;
+    border: 2px solid $red-primary;
+    color: $color-white;
+  }
+
+  &:active {
+    background: $color-black;
+    color: $color-white;
+  }
+}

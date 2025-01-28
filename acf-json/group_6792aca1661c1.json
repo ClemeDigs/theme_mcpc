@@ -1,0 +1,131 @@
+{
+    "key": "group_6792aca1661c1",
+    "title": "CTA section",
+    "fields": [
+        {
+            "key": "field_6792aca1ebc69",
+            "label": "Section photo",
+            "name": "cta_section_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Ajoutez une image liée à l'activité.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6792ad2005d37",
+            "label": "Title",
+            "name": "cta_section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Entrez le titre de l'atelier, par exemple : 'Atelier de peinture' ou 'Cours de danse'.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Titre de la section",
+            "maxlength": 100,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6792ad4ea27c5",
+            "label": "Description",
+            "name": "cta_section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Ajoutez une courte description de l'atelier,",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Apprenez les bases de la peinture.",
+            "maxlength": 250,
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6792ae7380a8e",
+            "label": "Button text",
+            "name": "cta_section_button",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Entrez le texte que vous souhaitez afficher sur le bouton. Par exemple : 'Inscrire mon enfant' ou 'En savoir plus'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Inscrire mon enfant",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6797e71eab62c",
+            "label": "Button link",
+            "name": "button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Ajoutez le lien du button de la page souhaité.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cta_section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738072099
+}

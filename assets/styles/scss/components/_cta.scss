@@ -1,0 +1,57 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+section {
+    display: flex;
+}
+
+.cta {
+    &__section {
+        @include flex(column);
+        gap: 20px;
+        background-color: $color-white;
+        max-width: 100%;
+        align-items: flex-start;
+
+        &-photo {
+            width: 100%;
+            object-fit: cover;
+            max-height: 350px;
+            height: auto;
+            border-radius: 30px;
+        }
+
+        &-content {
+            @include flex(column, $align: flex-start);
+            align-content: space-between;
+            gap: 10px;
+
+
+            &-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $color-black;
+            }
+
+            &-button {
+                @include button-base;
+            }
+        }
+    }
+}
+
+.ctaSection__container {
+    @include flex(column);
+    gap: 50px;
+
+    @include tablet {
+        @include grid-column(2);
+        align-items: baseline;
+    }
+
+    @include desktop {
+        @include grid-column(2);
+        align-items: baseline;
+        row-gap: 90px;
+    }
+}

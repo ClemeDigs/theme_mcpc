@@ -1,0 +1,32 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
+.hero {
+  &__image {
+    margin: 0;
+
+    img {
+      width: 100%;
+      max-width: 1740px;
+      max-height: 647px;
+      margin: 0 auto;
+      @include flex;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    @include container;
+    padding: 0 0 0 140px;
+
+    transform: translateY(-57px);
+  }
+
+  &__title {
+    &--white {
+      color: $color-white;
+    }
+  }
+}

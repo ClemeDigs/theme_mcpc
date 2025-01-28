@@ -1,0 +1,83 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+body {
+  font-family: $font-sans;
+}
+
+h1 {
+  font-family: $font-sans;
+  font-weight: bold;
+  line-height: 4.1875rem;
+  font-size: 4.1865rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1%;
+}
+
+h3 {
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+}
+
+h4 {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: 0%;
+}
+
+h5 {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0%;
+}
+
+.header__nav {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-shadow: 0px 0px 3px $color-white;
+}
+
+.corps-texte {
+  font-family: $font-sans;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0%;
+  line-height: 1.5;
+  color: $color-black;
+}
+
+.corps-texte-gras {
+  font-family: $font-sans;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0%;
+  line-height: 1.5;
+}
+
+.legende {
+  font-family: $font-sans;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0%;
+  line-height: 1.4;
+}
+
+.texte-icone {
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0%;
+  line-height: 1.2;
+}

@@ -1,0 +1,215 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+header {
+  background-color: #fcfcfce0;
+  /*   backdrop-filter: blur(20px); */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  @include container;
+
+  &__logo {
+    background-color: white;
+    border: 1px solid $color-black;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 1rem;
+    height: 80px;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    height: 50px;
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.menu-header-container {
+  align-content: center;
+}
+
+.header__content {
+  display: flex;
+  gap: 1rem;
+
+  .header__nav {
+    display: none;
+  }
+
+  @include desktop-xl {
+    .header__nav {
+      display: flex;
+      list-style: none;
+
+      > .menu-item {
+        position: relative;
+        border-left: 1px solid $color-black;
+        width: 142px;
+        text-align: center;
+        box-sizing: border-box;
+
+        &:hover > a {
+          font-weight: 700;
+        }
+
+        &:first-child {
+          border-left: none;
+
+          &:hover {
+            border-left: 1px solid $color-black;
+          }
+        }
+
+        .sub-menu {
+          width: 143px;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+          position: absolute;
+          top: 100%;
+          left: -1px;
+          border-left: 1px solid $color-black;
+          border-right: 1px solid $color-black;
+          border-bottom: 1px solid $color-black;
+          padding: 2.5rem 0 0;
+          list-style: none;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          li {
+            width: 100%;
+            border-top: 1px solid $color-black;
+            background-color: #fcfcfce0;
+            backdrop-filter: blur(20px);
+
+            &:first-child {
+              border-top: none;
+            }
+
+            &:last-child {
+              border-bottom-left-radius: 8px;
+              border-bottom-right-radius: 8px;
+            }
+
+            a {
+              text-decoration: none;
+              transition: all 0.3s;
+              text-align: center;
+              display: block;
+              padding: 1rem 0;
+              margin: 0 0.2rem;
+
+              &:hover {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        &:hover > .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &-cta {
+    display: none;
+
+    @include tablet {
+      @include flex(row, center, center);
+      gap: 1rem;
+    }
+
+    button {
+      @include button-base;
+    }
+  }
+}
+
+.header__mobile-icon {
+  font-size: 2rem;
+  @include desktop-xl {
+    display: none;
+  }
+}
+
+/*------------------------ MENU MOBILE ------------------------ */
+.mobile-menu {
+  width: 80vw;
+  height: 100vh;
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid $color-black;
+
+    button {
+      @include button-base;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__nav {
+    @include flex(column, center, flex-start);
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  .sub-menu {
+    padding-left: 2rem;
+  }
+}
