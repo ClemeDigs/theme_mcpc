@@ -1,11 +1,11 @@
 {
-    "key": "group_6797dedac22d8",
-    "title": "Résidences musicales",
+    "key": "group_679977fd79ace",
+    "title": "Expositions",
     "fields": [
         {
-            "key": "field_6797deda32a53",
-            "label": "Année de la résidence musicale",
-            "name": "residence_musicale_year",
+            "key": "field_679977fde3c44",
+            "label": "Nom de l'artiste",
+            "name": "exposition_artist_name",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -24,11 +24,11 @@
             "append": ""
         },
         {
-            "key": "field_6797df1632a54",
-            "label": "Image de l'affiche",
-            "name": "residence_musicale_affiche",
+            "key": "field_67997827e3c45",
+            "label": "Nom de l'exposition",
+            "name": "exposition_name",
             "aria-label": "",
-            "type": "image",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,22 +37,17 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
+            "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_67993d1f983fc",
+            "key": "field_6799783ce3c46",
             "label": "Date de début",
-            "name": "residence_musicale_start_date",
+            "name": "exposition_start_date",
             "aria-label": "",
             "type": "date_picker",
             "instructions": "",
@@ -69,9 +64,9 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_67993d5a983fd",
+            "key": "field_67997873e3c48",
             "label": "Date de fin",
-            "name": "residence_musicale_end_date",
+            "name": "exposition_end_date",
             "aria-label": "",
             "type": "date_picker",
             "instructions": "",
@@ -88,9 +83,30 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_6797df3c32a55",
-            "label": "Résumé de l'évènement",
-            "name": "residence_musicale_resume",
+            "key": "field_6799789be3c4a",
+            "label": "Adresse de l'exposition",
+            "name": "exposition_adress",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "À la Maison de la Culture du Pic Champlain",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6799787fe3c49",
+            "label": "Résumé de l'exposition",
+            "name": "exposition_resume",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -109,9 +125,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_6797df7732a56",
-            "label": "Photo 1",
-            "name": "residence_musicale_image1",
+            "key": "field_679978f3e3c4b",
+            "label": "Image 1",
+            "name": "exposition_image1",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -135,9 +151,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797df9732a57",
-            "label": "Photo 2",
-            "name": "residence_musicale_image2",
+            "key": "field_6799791ee3c4c",
+            "label": "Image 2",
+            "name": "exposition_image2",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -161,9 +177,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797dfac32a58",
-            "label": "Photo 3",
-            "name": "residence_musicale_image3",
+            "key": "field_67997924e3c4d",
+            "label": "Image 3",
+            "name": "exposition_image3",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -187,9 +203,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797dfc432a5a",
-            "label": "Photo 4",
-            "name": "residence_musicale_image4",
+            "key": "field_6799792de3c4e",
+            "label": "Image 4",
+            "name": "exposition_image4",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -213,9 +229,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797dfde32a5b",
-            "label": "Photo 5",
-            "name": "residence_musicale_image5",
+            "key": "field_67997934e3c4f",
+            "label": "Image 5",
+            "name": "exposition_image5",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -239,9 +255,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797e01532a5c",
-            "label": "Photo 6",
-            "name": "residence_musicale_image6",
+            "key": "field_6799793be3c50",
+            "label": "Image 6",
+            "name": "exposition_image6",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -265,30 +281,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6797dfbd32a59",
-            "label": "Revue de presse texte",
-            "name": "residence_musicale_press_text",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6797e05132a5d",
-            "label": "URL de l'article de presse",
-            "name": "residence_musicale_press_url",
+            "key": "field_67997942e3c51",
+            "label": "Lien vers le site de l'artiste",
+            "name": "exposition_artist_link",
             "aria-label": "",
             "type": "url",
             "instructions": "",
@@ -309,7 +304,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "residence_musicale"
+                "value": "exposition"
             }
         ]
     ],
@@ -322,5 +317,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738095988
+    "modified": 1738115329
 }

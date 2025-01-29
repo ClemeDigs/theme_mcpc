@@ -1,14 +1,42 @@
-.residence {
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.expositions {
   @include container;
   @include flex(column, center, center);
   gap: 2rem;
-  max-width: 360px;
-  @include desktop {
-    max-width: 560px;
-  }
+  background-color: $color-grey-p;
 
   .slider {
+    @include flex(column, center, center);
+    max-width: 100%;
+
+    &__title {
+      @include flex(row, space-between, center);
+      width: 50%;
+    }
+
+    &__item {
+      @include flex(row, flex-start, center);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      flex-direction: row;
+    }
+
+    &__images {
+      @include flex(row, flex-start, center);
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      flex-wrap: nowrap;
+      box-sizing: border-box;
+      scrollbar-width: none;
+    }
+
     &__image {
+      scroll-snap-align: start;
       @include flex(column, center, center);
       gap: 1rem;
 
@@ -17,33 +45,33 @@
       }
 
       img {
-        height: 456px;
-        width: 300px;
+        max-width: 100%;
+        height: auto;
         object-fit: cover;
 
         @include desktop {
-          height: 640px;
-          width: 420px;
+          width: 700px;
+          height: 600px;
         }
       }
     }
   }
 
-  .residence-modal__content {
+  .exposition__content {
     @include flex(column, flex-start, flex-start);
     width: 90%;
     height: 75%;
     background-color: $color-white;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 2.1rem;
+    gap: 2rem;
     @include round-border;
     @include desktop {
       width: 75%;
     }
   }
 
-  .residence-modal__header {
+  .exposition-modal__header {
     @include flex(column, center, flex-end);
     gap: 1rem;
     width: 100%;
@@ -54,7 +82,7 @@
     }
   }
 
-  .residence-modal__infos {
+  .exposition-modal__infos {
     width: 100%;
     @include flex(column, center, center);
     gap: 1rem;
@@ -66,37 +94,42 @@
     &-date {
       @include flex(row, center, center);
       gap: 1rem;
+
       div {
         @include flex(column, center, flex-start);
       }
     }
   }
 
-  .residence-modal__resume {
+  .exposition-modal__resume {
     @include flex(column, flex-start, flex-start);
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
+
     @include desktop {
       padding: 1rem 2rem;
     }
   }
 
-  .residence-modal__slider {
+  .exposition-modal__slider {
     @include flex(column, center, center);
     gap: 1rem;
     max-width: 100%;
     padding: 1rem;
     box-sizing: border-box;
+
     @include desktop {
       padding: 1rem 2rem;
     }
+
     .slider {
       .slider__images {
         .slider__image {
           img {
             width: 300px;
             height: 200px;
+
             @include desktop {
               width: 380px;
               height: 280px;
@@ -107,18 +140,19 @@
     }
   }
 
-  .residence-modal__article {
+  .exposition-modal__artist {
     background-color: $color-grey-p;
     @include flex(column, flex-start, flex-start);
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
+
     @include desktop {
       padding: 2rem;
     }
 
     a {
-      @include liens;
+      @include button-base;
     }
   }
 }

@@ -17,6 +17,10 @@ Template Name: Expositions
     get_template_part('/templates/components/subtitle');
     ?>
 
+<?php
+    get_template_part('/templates/components/exposition');
+    ?>
+
 </main>
 
 <?php
