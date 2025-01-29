@@ -114,3 +114,5 @@
             <div class="slider__progress-bar"></div>
         </div>
 </section>
+
+
