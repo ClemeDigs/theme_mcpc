@@ -49,7 +49,7 @@
             "label": "Téléphone",
             "name": "phone",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "Entrez le numéro de téléphone principal de votre organisation. Veuillez utiliser un format valide pour assurer une communication efficace.",
             "required": 1,
             "conditional_logic": 0,
@@ -58,12 +58,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "418 000-0000",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_67926f6432ebb",
@@ -105,5 +105,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737664363
+    "modified": 1738120476
 }

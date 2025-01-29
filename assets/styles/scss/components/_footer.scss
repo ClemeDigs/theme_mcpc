@@ -4,6 +4,16 @@
 footer {
   background-color: $color-black;
 
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
   .footer {
     &__container {
       @include container;
@@ -11,14 +21,14 @@ footer {
       bottom: 0px;
       left: 0px;
       color: $color-white;
-      padding: 2rem 1.25rem;
+      padding: 20px;
 
       @include tablet {
-        padding: 4rem 2.50rem;
+        padding: 30px 40px;
       }
 
       @include desktop {
-        padding: 4rem 4.38rem;
+        padding: 50px 70px;
       }
     }
 
@@ -70,18 +80,14 @@ footer {
     &__email-mcpc {
       @include flex(flex-start);
       gap: 10px;
+      color: $color-white;
+
+      &:hover {
+        color: $color-primary;
+      }
 
       @include tablet {
         gap: 20px;
-      }
-
-      a {
-        color: $color-white;
-        text-decoration: none;
-
-        &:hover {
-          color: $color-primary;
-        }
       }
     }
 
@@ -98,26 +104,23 @@ footer {
         transform: translateX(-40px);
       }
 
-      &-form {
-        @include flex(column, $align: flex-start);
-        gap: 20px;
-      }
+      &-btn {
+        @include button-base;
+        @include flex;
+        gap: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 100%;
+        max-width: 400px;
+        min-width: 100px;
+        background-color: $color-white;
+        color: $color-black;
+        font-weight: 600;
+        transition: max-width 0.3s ease-in-out;
 
-      &-email {
-        @include textFieldWithButton;
-
-        @include tablet {
-          width: 100%;
-        }
-
-        input {
-          border: none;
-          outline: none;
-
-          &::placeholder {
-            color: $color-grey;
-            opacity: 1;
-          }
+        i {
+          font-size: 1.2rem;
         }
       }
     }
@@ -160,7 +163,6 @@ footer {
 
       @include tablet {
         @include flex;
-        gap: 40px;
       }
     }
 

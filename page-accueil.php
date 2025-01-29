@@ -18,11 +18,11 @@ get_header();
     get_template_part('/templates/components/subtitle');
     ?>
 
-    <div class="ctaSection__container">
-        <?php
-        get_template_part('/templates/components/cta');
-        ?>
-    </div>
+
+    <?php
+    get_template_part('/templates/components/cta');
+    ?>
+
 
     <?php
     get_template_part('/templates/components/slider_images');

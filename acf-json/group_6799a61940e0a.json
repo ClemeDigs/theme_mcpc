@@ -1,0 +1,612 @@
+{
+    "key": "group_6799a61940e0a",
+    "title": "Section cta",
+    "fields": [
+        {
+            "key": "field_6799becfe9208",
+            "label": "Choix du bonhome",
+            "name": "cta_choix_du_bonhome",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Classique",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6799a619fff15",
+            "label": "cta_section_1",
+            "name": "cta_section_1",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6799a639fff16",
+                    "label": "cta_section_photo",
+                    "name": "cta_section_photo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Ajoutez l'image souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6799a674fff17",
+                    "label": "cta_section_title",
+                    "name": "cta_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799a6c9fff18",
+                    "label": "cta_section_description",
+                    "name": "cta_section_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799a730fff1a",
+                    "label": "cta_section_button_label",
+                    "name": "cta_section_button_label",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Inscrire mon enfant": "Inscrire mon enfant",
+                        "Devenir bénévole": "Devenir bénévole",
+                        "Devenir membre": "Devenir membre",
+                        "En savoir plus...": "En savoir plus...",
+                        "Poser ma candidature": "Poser ma candidature",
+                        "Regarder le documentaire": "Regarder le documentaire",
+                        "Voir sur Facebook": "Voir sur Facebook",
+                        "Contact": "Contact",
+                        "Je fais un don": "Je fais un don",
+                        "Contactez-nous": "Contactez-nous"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6799a6e6fff19",
+                    "label": "cta_section_button_link",
+                    "name": "cta_section_button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Ajoutez le chemin du bouton souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6799b6c6da050",
+            "label": "cta_section_2",
+            "name": "cta_section_2",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6799b6c6da051",
+                    "label": "cta_section_photo",
+                    "name": "cta_section_photo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Ajoutez l'image souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "library": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6799b6c6da052",
+                    "label": "cta_section_title",
+                    "name": "cta_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6c6da053",
+                    "label": "cta_section_description",
+                    "name": "cta_section_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6c6da054",
+                    "label": "cta_section_button_label",
+                    "name": "cta_section_button_label",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Inscrire mon enfant": "Inscrire mon enfant",
+                        "Devenir bénévole": "Devenir bénévole",
+                        "Devenir membre": "Devenir membre",
+                        "En savoir plus...": "En savoir plus...",
+                        "Poser ma candidature": "Poser ma candidature",
+                        "Regarder le documentaire": "Regarder le documentaire",
+                        "Voir sur Facebook": "Voir sur Facebook",
+                        "Contact": "Contact",
+                        "Je fais un don": "Je fais un don",
+                        "Contactez-nous": "Contactez-nous"
+                    },
+                    "default_value": false,
+                    "return_format": "",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6799b6c6da055",
+                    "label": "cta_section_button_link",
+                    "name": "cta_section_button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Ajoutez le chemin du bouton souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "allow_in_bindings": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6799b6c8da056",
+            "label": "cta_section_3",
+            "name": "cta_section_3",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6799b6c8da057",
+                    "label": "cta_section_photo",
+                    "name": "cta_section_photo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Ajoutez l'image souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "library": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6799b6c8da058",
+                    "label": "cta_section_title",
+                    "name": "cta_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6c8da059",
+                    "label": "cta_section_description",
+                    "name": "cta_section_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6c8da05a",
+                    "label": "cta_section_button_label",
+                    "name": "cta_section_button_label",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Inscrire mon enfant": "Inscrire mon enfant",
+                        "Devenir bénévole": "Devenir bénévole",
+                        "Devenir membre": "Devenir membre",
+                        "En savoir plus...": "En savoir plus...",
+                        "Poser ma candidature": "Poser ma candidature",
+                        "Regarder le documentaire": "Regarder le documentaire",
+                        "Voir sur Facebook": "Voir sur Facebook",
+                        "Contact": "Contact",
+                        "Je fais un don": "Je fais un don",
+                        "Contactez-nous": "Contactez-nous"
+                    },
+                    "default_value": false,
+                    "return_format": "",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6799b6c8da05b",
+                    "label": "cta_section_button_link",
+                    "name": "cta_section_button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Ajoutez le chemin du bouton souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "allow_in_bindings": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6799b6cada05c",
+            "label": "cta_section_4",
+            "name": "cta_section_4",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6799b6cada05d",
+                    "label": "cta_section_photo",
+                    "name": "cta_section_photo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Ajoutez l'image souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6799b6cada05e",
+                    "label": "cta_section_title",
+                    "name": "cta_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6cada05f",
+                    "label": "cta_section_description",
+                    "name": "cta_section_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6799b6cada060",
+                    "label": "cta_section_button_label",
+                    "name": "cta_section_button_label",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Inscrire mon enfant": "Inscrire mon enfant",
+                        "Devenir bénévole": "Devenir bénévole",
+                        "Devenir membre": "Devenir membre",
+                        "En savoir plus...": "En savoir plus...",
+                        "Poser ma candidature": "Poser ma candidature",
+                        "Regarder le documentaire": "Regarder le documentaire",
+                        "Voir sur Facebook": "Voir sur Facebook",
+                        "Contact": "Contact",
+                        "Je fais un don": "Je fais un don",
+                        "Contactez-nous": "Contactez-nous"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6799b6cada061",
+                    "label": "cta_section_button_link",
+                    "name": "cta_section_button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Ajoutez le chemin du bouton souhaitée.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "50"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738129463
+}
