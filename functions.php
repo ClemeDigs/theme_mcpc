@@ -9,8 +9,8 @@ function create_posttype()
         'contact',
         array(
             'labels' => array(
-                'name' => __('contact'),
-                'singular_name' => __('contact')
+                'name' => __('Contacts'),
+                'singular_name' => __('Contact')
             ),
             'public' => true,
             'has_archive' => true,
@@ -41,8 +41,8 @@ function create_posttype()
         'partners',
         array(
             'labels' => array(
-                'name' => __('Partners'),
-                'singular_name' => __('Partner')
+                'name' => __('Partenaires'),
+                'singular_name' => __('Partenaire')
             ),
             'public' => true,
             'has_archive' => true,
@@ -207,6 +207,28 @@ function afficher_bouton_en_savoir_plus($field_name)
         echo '<a href="' . esc_url($url) . '" class="" target="' . esc_attr($target) . '">' . esc_html($title) . '</a>';
     }
 }
+
+/**
+ * Affiche un bouton CTA avec un lien et un texte personnalisé défini dans ACF.
+ *
+ * @param array $link Tableau contenant les infos du lien.
+ * @param string|null $label Texte du bouton choisi par le client.
+ */
+function afficher_bouton_cta($link, $label = null)
+{
+    if ($link) {
+        $url = esc_url($link['url']);
+        $target = esc_attr($link['target'] ?: '_self');
+
+        // Vérifie si un label est défini, sinon utilise le titre du lien ACF
+        $button_text = !empty($label) ? esc_html($label) : esc_html($link['title']);
+
+        echo '<a href="' . $url . '" class="cta__section-content-button" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+
+
 
 // ! SCRIPT SLIDER //
 

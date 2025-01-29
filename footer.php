@@ -16,13 +16,13 @@
             <div>
                 <div class="footer__newsletter">
                     <h2>INFOLETTRE</h2>
-                    <form action="" method="post" class="footer__newsletter-form">
-                        <label for="email"><i class="fa-regular fa-envelope"></i> Inscris-toi à notre infolettre !</label>
-                        <div class="footer__newsletter-email corps-texte">
-                            <input type="email" name="newsletter_email" placeholder="exemple@exemple.com">
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                    </form>
+                    <span>Inscris-toi à notre infolettre !</span>
+                    <a href="https://app.cyberimpact.com/clients/39645/subscribe-forms/83ED11E9-8819-4F3A-9C8A-86BC5C978CF3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__newsletter-btn">
+                        S'inscrire <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
