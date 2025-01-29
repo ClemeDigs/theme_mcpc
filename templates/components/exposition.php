@@ -46,32 +46,7 @@ function sanitize_exposition_name($name) {
                     </div>
                     <div class="slider__infos">
                         <h2><?php the_field('exposition_name'); ?> - <?php the_field('exposition_artist_name'); ?></h2>
-                        <div class="exposition__infos-date">
-                            <i class="fa-regular fa-calendar"></i>
-                            <div>
-                                <p>Du <span><?php the_field('exposition_start_date'); ?></span></p>
-                                <p>au <span><?php the_field('exposition_end_date'); ?></span></p>
-                            </div>
-                        </div>
-                        <div class="exposition__infos-place">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p><?php the_field('exposition_adress'); ?></p>
-                        </div>
-                        <p><?php the_field('exposition_resume'); ?></p>
-                        <a class="btn-open-modal" data-dialog="#exposition-modal-<?php echo $exposition_id; ?>" href="#">En savoir plus</a>
-                    </div>
-                </div>
-
-                <!-- Modale correspondante -->
-                <div class="dialog" id="exposition-modal-<?php echo $exposition_id; ?>">
-                    <div class="exposition__content">
-                        <div class="exposition__header">
-                            <button class="btn-close">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                            <h2><?php the_field('exposition_name'); ?> - <?php the_field('exposition_artist_name'); ?></h2>
-                        </div>
-                        <div class="exposition__infos">
+                        <div class='exposition__infos-acces'>
                             <div class="exposition__infos-date">
                                 <i class="fa-regular fa-calendar"></i>
                                 <div>
@@ -84,7 +59,34 @@ function sanitize_exposition_name($name) {
                                 <p><?php the_field('exposition_adress'); ?></p>
                             </div>
                         </div>
-                        <div class="exposition__resume">
+                        <p><?php the_field('exposition_resume'); ?></p>
+                        <a class="btn-open-modal" data-dialog="#exposition-modal-<?php echo $exposition_id; ?>" href="#">En savoir plus</a>
+                    </div>
+                </div>
+
+                <!-- Modale correspondante -->
+                <div class="dialog" id="exposition-modal-<?php echo $exposition_id; ?>">
+                    <div class="exposition-modal__content">
+                        <div class="exposition-modal__header">
+                            <button class="btn-close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <h2><?php the_field('exposition_name'); ?> - <?php the_field('exposition_artist_name'); ?></h2>
+                        </div>
+                        <div class="exposition-modal__infos">
+                            <div class="exposition-modal__infos-date">
+                                <i class="fa-regular fa-calendar"></i>
+                                <div>
+                                    <p>Du <span><?php the_field('exposition_start_date'); ?></span></p>
+                                    <p>au <span><?php the_field('exposition_end_date'); ?></span></p>
+                                </div>
+                            </div>
+                            <div class="exposition-modal__infos-place">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p><?php the_field('exposition_adress'); ?></p>
+                            </div>
+                        </div>
+                        <div class="exposition-modal__resume">
                             <h3>Résumé</h3>
                             <p><?php the_field('exposition_resume'); ?></p>
                         </div>
@@ -117,7 +119,7 @@ function sanitize_exposition_name($name) {
                                 <div class="slider__progress-bar"></div>
                             </div>
                         </div>
-                        <div class="exposition__artist">
+                        <div class="exposition-modal__artist">
                             <a href="<?php echo esc_url(get_field('exposition_artist_link')); ?>" target="_blank">Visitez le site de l'artiste</a>
                         </div>
                     </div>

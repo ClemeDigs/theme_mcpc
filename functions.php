@@ -81,6 +81,22 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
+
+    register_post_type(
+        'exposition',
+        array(
+            'labels' => array(
+                'name' => __('Expositions'),
+                'singular_name' => __('Exposition'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-art',
+            'rewrite' => array('slug' => 'exposition'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
 }
 
 

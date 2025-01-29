@@ -1,10 +1,14 @@
 document.querySelectorAll(".slider").forEach((slider) => {
   // Cible uniquement les éléments à l'intérieur du slider actuel
-  const btnPrevious = slider.querySelector(":scope > .slider__btn--previous");
-  const btnNext = slider.querySelector(":scope > .slider__btn--next");
+  const btnPrevious = slider.querySelector(
+    ":scope > .slider__btn--previous, :scope > .slider__title .slider__btn--previous"
+  );
+  const btnNext = slider.querySelector(
+    ":scope > .slider__btn--next, :scope > .slider__title .slider__btn--next"
+  );
   const slidesContainer = slider.querySelector(":scope > .slider__images");
   const slides = slider.querySelectorAll(
-    ":scope > .slider__images > .slider__image"
+    ":scope > .slider__images > .slider__image, :scope > .slider__images > .slider__item"
   );
 
   // Recherche globale dans la même section parent si progressBar n'est pas dans la div .slider

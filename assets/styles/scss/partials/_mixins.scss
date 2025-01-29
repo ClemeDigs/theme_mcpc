@@ -187,6 +187,17 @@
   border-radius: $radius;
 }
 
+// Ajout d'un border-radius pour les images collées sur un côté : Cleme
+@mixin round-border-right($radius: 30px) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin round-border-left($radius: 30px) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
 // Ajout d'un box-shadow de base: eve
 @mixin shadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;

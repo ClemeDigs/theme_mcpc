@@ -6,24 +6,23 @@
   @include flex(column, center, center);
   gap: 2rem;
   background-color: $color-grey-p;
+  padding: 4rem 2rem;
+
+  @include desktop {
+    padding: 4rem 2rem 4rem 0;
+  }
 
   .slider {
     @include flex(column, center, center);
     max-width: 100%;
+    gap: 2rem;
 
     &__title {
       @include flex(row, space-between, center);
-      width: 50%;
-    }
-
-    &__item {
-      @include flex(row, flex-start, center);
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      flex: 0 0 100%;
-      scroll-snap-align: start;
-      box-sizing: border-box;
-      flex-direction: row;
+      width: 100%;
+      @include desktop {
+        width: 50%;
+      }
     }
 
     &__images {
@@ -35,36 +34,79 @@
       scrollbar-width: none;
     }
 
+    &__item {
+      display: grid;
+      gap: 2rem;
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      flex-direction: row;
+
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     &__image {
       scroll-snap-align: start;
       @include flex(column, center, center);
       gap: 1rem;
+      border: 1px solid $color-black;
+      @include round-border;
+      padding: 0.5rem;
+      @include desktop {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        border-radius: 0;
+        @include round-border-right;
+      }
 
       h3 {
         text-align: center;
       }
 
-      img {
-        max-width: 100%;
-        height: auto;
+      > img {
+        width: 100%;
+        height: 300px;
         object-fit: cover;
 
         @include desktop {
-          width: 700px;
-          height: 600px;
+          width: 100%;
+          height: 500px;
+          border-radius: 0;
+          @include round-border-right;
+        }
+      }
+    }
+
+    &__infos {
+      @include flex(column, center, flex-start);
+      gap: 2rem;
+
+      .exposition {
+        &__infos-acces {
+          @include flex(row, space-between, center);
+          gap: 2rem;
+
+          > div {
+            @include flex(row, center, center);
+            gap: 1rem;
+            div {
+              @include flex(column, center, flex-start);
+            }
+          }
         }
       }
     }
   }
 
-  .exposition__content {
+  .exposition-modal__content {
     @include flex(column, flex-start, flex-start);
     width: 90%;
     height: 75%;
     background-color: $color-white;
     overflow-y: scroll;
     overflow-x: hidden;
-    gap: 2rem;
+    gap: 1rem;
     @include round-border;
     @include desktop {
       width: 75%;
@@ -80,15 +122,21 @@
     @include desktop {
       padding: 1rem 2rem;
     }
+
+    h2 {
+      width: 100%;
+    }
   }
 
   .exposition-modal__infos {
+    padding: 1rem;
     width: 100%;
-    @include flex(column, center, center);
-    gap: 1rem;
+    @include flex(row, flex-end, center);
+    gap: 0.5rem;
+    box-sizing: border-box;
 
     @include desktop {
-      @include flex(row, space-between, center);
+      width: 100%;
     }
 
     &-date {
@@ -124,13 +172,24 @@
     }
 
     .slider {
+      padding: 0.5rem;
+      gap: 0.5rem;
+      @include flex(row, center, center);
+      @include desktop {
+        gap: 1.5rem;
+      }
+
       .slider__images {
         .slider__image {
+          @include round-border;
+          padding: 0.5rem;
+
           img {
-            width: 300px;
-            height: 200px;
+            width: 250px;
+            height: 180px;
 
             @include desktop {
+              @include round-border;
               width: 380px;
               height: 280px;
             }
@@ -141,14 +200,16 @@
   }
 
   .exposition-modal__artist {
+    width: 100%;
     background-color: $color-grey-p;
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, flex-start, center);
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
 
     @include desktop {
       padding: 2rem;
+      @include flex(column, flex-start, flex-start);
     }
 
     a {
