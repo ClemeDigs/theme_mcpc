@@ -62,7 +62,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 
   &:hover {
     background: $green-primary;
@@ -102,7 +102,7 @@
 
   &:disabled {
     background: none;
-    border: nonw;
+    border: none;
     color: $color-grey;
     cursor: not-allowed;
     box-shadow: none;
@@ -185,6 +185,17 @@
 // Ajout d'un border-radius pour les images : eve
 @mixin round-border($radius: 30px) {
   border-radius: $radius;
+}
+
+// Ajout d'un border-radius pour les images collées sur un côté : Cleme
+@mixin round-border-right($radius: 30px) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin round-border-left($radius: 30px) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
 // Ajout d'un box-shadow de base: eve

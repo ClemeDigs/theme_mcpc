@@ -1,16 +1,18 @@
 document.querySelectorAll(".slider").forEach((slider) => {
   // Cible uniquement les éléments à l'intérieur du slider actuel
-  const btnPrevious = slider.querySelector(":scope > .slider__btn--previous");
-  const btnNext = slider.querySelector(":scope > .slider__btn--next");
+  const btnPrevious = slider.querySelector(
+    ":scope > .slider__btn--previous, :scope > .slider__title .slider__btn--previous"
+  );
+  const btnNext = slider.querySelector(
+    ":scope > .slider__btn--next, :scope > .slider__title .slider__btn--next"
+  );
   const slidesContainer = slider.querySelector(":scope > .slider__images");
   const slides = slider.querySelectorAll(
-    ":scope > .slider__images > .slider__image"
+    ":scope > .slider__images > .slider__image, :scope > .slider__images > .slider__item"
   );
-
-  // Recherche globale dans la même section parent si progressBar n'est pas dans la div .slider
-  const progressBar = slider
-    .closest(".residence")
-    ?.querySelector(".slider__progress-bar");
+  const progressBar = slider.querySelectorAll(
+    ":scope > .slider__progress > .slider__progress-bar"
+  );
 
   let currentSlideIndex = 0;
 
@@ -66,6 +68,8 @@ document.querySelectorAll(".slider").forEach((slider) => {
   }
 
   function changeProgress() {
+    console.log(progressBar);
+    console.log("hello");
     if (!progressBar) return; // Vérifie si progressBar existe
     const visibleSlides = getVisibleSlidesCount();
     const progressValue =

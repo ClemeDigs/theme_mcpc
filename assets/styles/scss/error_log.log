@@ -101,3 +101,55 @@ Call Stack:
 01/24/25 1:29:35: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
 01/24/25 1:29:41: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
 01/24/25 1:29:47: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 46, at column 2
+01/29/25 4:38:54: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:01: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:08: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:15: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:22: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:29: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:36: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:43: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:50: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:39:57: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:40:04: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:40:11: main.scss - Undefined mixin round-border-right: components/_exposition.scss on line 55, at column 7
+Call Stack:
+#0 import components/_exposition.scss main.scss on line 18
+01/29/25 4:44:34: main.scss - Undefined mixin border-radius: components/_exposition.scss on line 183, at column 15
+Call Stack:
+#0 mixin desktop components/_exposition.scss on line 186
+#1 import components/_exposition.scss main.scss on line 18
+01/29/25 4:44:41: main.scss - Undefined mixin border-radius: components/_exposition.scss on line 183, at column 15
+Call Stack:
+#0 mixin desktop components/_exposition.scss on line 186
+#1 import components/_exposition.scss main.scss on line 18
+01/29/25 4:44:48: main.scss - Undefined mixin border-radius: components/_exposition.scss on line 183, at column 15
+Call Stack:
+#0 mixin desktop components/_exposition.scss on line 186
+#1 import components/_exposition.scss main.scss on line 18
+01/29/25 4:44:55: main.scss - Undefined mixin border-radius: components/_exposition.scss on line 183, at column 15
+Call Stack:
+#0 mixin desktop components/_exposition.scss on line 186
+#1 import components/_exposition.scss main.scss on line 18
