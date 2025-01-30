@@ -18,7 +18,6 @@ get_header();
     get_template_part('/templates/components/subtitle');
     ?>
 
-
     <?php
     get_template_part('/templates/components/cta');
     ?>
@@ -29,8 +28,13 @@ get_header();
     ?>
 
     <?php
+    get_template_part('/templates/components/basic_block');
+    ?>
+
+    <?php
     get_template_part('/templates/components/partners');
     ?>
+
 
 </main>
 

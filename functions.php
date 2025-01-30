@@ -300,4 +300,3 @@ add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
-add_action('init', 'remove_wysiwyg');

@@ -1,6 +1,6 @@
 {
     "key": "group_67965c16b9dfc",
-    "title": "Sous-titre de page - Petit",
+    "title": "Sous-titre de page",
     "fields": [
         {
             "key": "field_67965d8f8cbd4",
@@ -189,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738073044
+    "modified": 1738199725
 }
