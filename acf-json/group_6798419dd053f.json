@@ -3,6 +3,41 @@
     "title": "Galerie photo",
     "fields": [
         {
+            "key": "field_679bddc79af1d",
+            "label": "Choix du bonhome",
+            "name": "choix_du_bonhome",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Hip-hop",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6798419d53a2c",
             "label": "Photo",
             "name": "photo",
@@ -81,9 +116,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "9"
+                "value": "gallery"
             }
         ]
     ],
@@ -96,5 +131,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738076422
+    "modified": 1738268374
 }
