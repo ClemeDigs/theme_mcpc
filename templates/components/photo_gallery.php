@@ -1,4 +1,13 @@
 <section class="gallery-container">
+    <?php
+    // Récupérer le choix du bonhomme
+    $choix_bonhomme = get_field('gallery_choix_du_bonhome');
+    ?>
+
+    <div class="ctaSection__bonhomme">
+        <?php afficher_bonhomme('cta_choix_du_bonhome'); ?>
+    </div>
+
     <div class="gallery">
         <?php
         $gallery = new WP_Query([
@@ -15,7 +24,7 @@
                 if ($photo) :
                     $photo_url = is_array($photo) ? $photo['url'] : $photo;
         ?>
-                    <div class="gallery__item <?php echo esc_attr($size_class); ?>">
+                    <div class="gallery__item <?php echo esc_attr($size_class); ?>" data-photo-url="<?php echo esc_url($photo_url); ?>" data-legende="<?php echo esc_html($legende); ?>">
                         <div class="gallery__image-container">
                             <img
                                 src="<?php echo esc_url($photo_url); ?>"
@@ -35,15 +44,23 @@
         wp_reset_postdata();
         ?>
     </div>
+
+
 </section>
 
 
 
+<div id="galleryModal" class="modal hidden">
+    <span class="modal__close">&times;</span>
+    <img class="modal__image" src="" alt="">
+    <p class="modal__caption"></p>
+    <button class="modal__arrow modal__arrow--prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="modal__arrow modal__arrow--next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
 
-<!-- <div id="galleryModal" class="modal hidden">
-        <span class="modal__close">&times;</span>
-        <img class="modal__image" src="" alt="">
-        <p class="modal__caption"></p>
-        <button class="modal__arrow modal__arrow--prev">&lt;</button>
-        <button class="modal__arrow modal__arrow--next">&gt;</button>
-    </div> -->
+<!-- CODE POUR LIER LA GALERIE DU PLUGIN PHOTO GALLERY -->
+<!-- <section>
+<?php if (function_exists('photo_gallery')) {
+    photo_gallery(1);
+} ?>
+</section> -->
