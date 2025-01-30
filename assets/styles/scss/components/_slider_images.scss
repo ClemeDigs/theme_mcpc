@@ -1,18 +1,23 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-.bloc-slider {
-  // J'au supprimer le max-width et mis le mixin container et tout fonctionne pour la galerie photos
-  // max-width: 1600px;
+.bloc-slider-parent {
   @include container;
+  padding: 0 1rem;
+
+  @include desktop {
+    padding: 0 2rem;
+  }
+}
+
+.bloc-slider {
   @include flex(column, center, flex-start);
   margin-top: 9.7rem;
   gap: 2rem;
   padding: 1rem;
-  border: 1px solid $color-black;
+  border: 2px solid $color-black;
   border-radius: 30px;
   position: relative;
-  // box-sizing: border-box;
   @include desktop {
     padding: 4rem;
     gap: 3rem;
@@ -60,7 +65,7 @@
 
   &__images {
     @include flex(row, flex-start, center);
-    gap: 3rem;
+    gap: 2.2rem;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;

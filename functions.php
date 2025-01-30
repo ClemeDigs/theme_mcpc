@@ -243,6 +243,11 @@ function afficher_bouton_cta($link, $label = null)
     }
 }
 
+// ! FUNCTION PAGE NON PERSONNALISABLE //
+
+function remove_wysiwyg() {
+    remove_post_type_support('page', 'editor');
+}
 
 
 
@@ -295,3 +300,4 @@ add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
+add_action('init', 'remove_wysiwyg');

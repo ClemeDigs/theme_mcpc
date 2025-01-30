@@ -23,7 +23,9 @@ header {
 
   &__logo {
     background-color: white;
-    border: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    border-left: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
@@ -64,7 +66,7 @@ header {
 
       > .menu-item {
         position: relative;
-        border-left: 1px solid $color-black;
+        border-left: 2px solid $color-black;
         width: 142px;
         text-align: center;
         box-sizing: border-box;
@@ -77,7 +79,7 @@ header {
           border-left: none;
 
           &:hover {
-            border-left: 1px solid $color-black;
+            border-left: 2px solid $color-black;
           }
         }
 
@@ -89,9 +91,9 @@ header {
           position: absolute;
           top: 100%;
           left: -1px;
-          border-left: 1px solid $color-black;
-          border-right: 1px solid $color-black;
-          border-bottom: 1px solid $color-black;
+          border-left: 2px solid $color-black;
+          border-right: 2px solid $color-black;
+          border-bottom: 2px solid $color-black;
           padding: 2.5rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,9 +102,9 @@ header {
 
           li {
             width: 100%;
-            border-top: 1px solid $color-black;
+            border-top: 2px solid $color-black;
             background-color: #fcfcfce0;
-            backdrop-filter: blur(20px);
+            /*             backdrop-filter: blur(20px); */
 
             &:first-child {
               border-top: none;
@@ -175,6 +177,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
+  overflow-y: scroll;
 
   @include tablet {
     width: 35vw;
@@ -185,10 +188,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem 1rem;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 2px solid $color-black;
 
     button {
-      @include button-base;
+      @include button-reset;
       font-size: 1.5rem;
     }
   }
@@ -196,20 +199,38 @@ header {
   &__nav {
     @include flex(column, center, flex-start);
     padding: 1rem;
-    gap: 1rem;
-  }
-
-  ul {
+    gap: 2.5rem;
     list-style: none;
+
+    > li {
+      @include flex(column, center, flex-start);
+      gap: 0.8rem;
+
+      > a {
+        font-weight: 800;
+      }
+    }
+
+    ul {
+      list-style: none;
+      @include flex(column, center, flex-start);
+      gap: 0.8rem;
+
+      li {
+        @include flex(column, center, flex-start);
+        gap: 0.8rem;
+      }
+    }
   }
 
   a {
+    font-size: 1.1rem;
     color: $color-black;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 
     &:hover {
-      font-weight: 700;
+      font-weight: 800;
     }
   }
 

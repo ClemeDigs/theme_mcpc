@@ -62,7 +62,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 
   &:hover {
     background: $green-primary;
@@ -102,7 +102,7 @@
 
   &:disabled {
     background: none;
-    border: nonw;
+    border: none;
     color: $color-grey;
     cursor: not-allowed;
     box-shadow: none;

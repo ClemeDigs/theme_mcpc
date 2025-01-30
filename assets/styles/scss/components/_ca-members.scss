@@ -2,6 +2,8 @@
 @import "../partials/mixins";
 
 .bloc-ca-members {
+  @include container;
+  padding: 2rem 0;
   @include flex($direction: column, $justify: center);
   gap: 2rem;
   @include desktop {
@@ -14,7 +16,6 @@
 }
 
 .ca-members {
-  @include container;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
@@ -32,7 +33,7 @@
   &__bloc-image {
     @include flex($direction: column, $justify: center);
     padding: 1rem;
-    border: 1px solid;
+    border: 2px solid $color-black;
     border-radius: 30px;
   }
 

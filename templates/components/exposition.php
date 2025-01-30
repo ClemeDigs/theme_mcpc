@@ -34,6 +34,7 @@ function sanitize_exposition_name($name) {
                         $image_url = is_array($image) ? $image['url'] : $image;
                         $exposition_name = get_field('exposition_name');
                         $exposition_id = sanitize_exposition_name($exposition_name);
+
             ?>
                 <!-- Slide pour chaque exposition -->
                 <div class="slider__item">
