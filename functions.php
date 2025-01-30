@@ -250,7 +250,6 @@ function remove_wysiwyg() {
 }
 
 
-
 // ! SCRIPT SLIDER //
 
 function enqueue_slider_script()
@@ -287,11 +286,6 @@ function enqueue_gallery_script()
         null,
         true
     );
-}
-
-function remove_wysiwyg()
-{
-    remove_post_type_support('page', 'editor');
 }
 
 // ! HOOKS WORDPRESS //
