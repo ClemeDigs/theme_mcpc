@@ -3,6 +3,13 @@
 .swpm-login-widget-form {
   @include flex(column, center, center);
 
+  form {
+    > div {
+      @include flex(column, center, flex-start);
+      gap: 1rem;
+    }
+  }
+
   label {
     font-weight: 700;
   }
@@ -11,9 +18,14 @@
     @include input;
   }
 
-  .swpm-login-form-submit {
-    @include button-base;
-    background-color: $color-primary !important;
+  .swpm-login-submit {
+    @include flex(column, center, center);
+    width: 100%;
+
+    .swpm-login-form-submit {
+      @include button-base;
+      background-color: $color-primary !important;
+    }
   }
 }
 
@@ -96,5 +108,96 @@
 
   .swpm-pw-reset-submit {
     @include button-base;
+  }
+}
+
+/* ------------- CONNECTÉ ------------- */
+
+.swpm-login-widget-logged {
+  @include flex(column, flex-start, flex-start);
+  width: 90%;
+  margin: 0 auto;
+  gap: 0.5rem;
+  @include container;
+  padding: 2rem;
+
+  div {
+    @include flex(row, flex-start, center);
+    gap: 0.5rem;
+
+    &:first-child {
+      font-weight: 700;
+
+      &::after {
+        content: ":";
+      }
+    }
+  }
+  .swpm-logged-username {
+    &::after {
+      content: "" !important;
+    }
+  }
+}
+
+/* ------------- PROFILE ------------- */
+
+.swpm-edit-profile-form {
+  @include flex(column, center, center);
+  width: 90%;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 50%;
+  }
+
+  form {
+    @include flex(column, center, center);
+    width: 100%;
+
+    div {
+      width: 100%;
+      @include flex(column, center, flex-start);
+      gap: 0.5rem;
+
+      label {
+        font-weight: 700;
+      }
+
+      input {
+        @include input;
+      }
+
+      select {
+        @include input;
+      }
+    }
+  }
+
+  .swpm-membership-level-row,
+  .swpm-username-row {
+    @include flex(row, flex-start, flex-start);
+    width: fit-content;
+
+    .swpm-form-label-wrap label {
+      font-weight: 700;
+      width: 150px;
+
+      &::after {
+        content: ":";
+      }
+    }
+  }
+
+  .swpm-submit-section {
+    @include button-base;
+    width: fit-content;
+
+    button {
+      &:hover {
+        color: $color-black !important;
+        font-weight: 700;
+      }
+    }
   }
 }

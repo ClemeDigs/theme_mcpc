@@ -22,6 +22,15 @@
 </head>
 <body>
 
+<?php 
+    // Récupérer le prénom et le nom de famille avec les shortcodes
+    $first_name = do_shortcode('[swpm_show_member_info column="first_name"]');
+    $last_name = do_shortcode('[swpm_show_member_info column="last_name"]');
+
+    // Extraire la première lettre de chaque
+    $initials = strtoupper(substr($first_name, 0, 1)) . strtoupper(substr($last_name, 0, 1));
+?>
+
     <header>
         <div class="header">
             <nav class="header__content">
@@ -45,7 +54,12 @@
                     </button>
                     <button class="header__connexion">
                         <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
-                            <i class="fa-regular fa-user"></i>Connexion
+                            <i class="fa-regular fa-user"></i>
+                            <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
+                            <?php echo $initials; ?>
+                            <?php else: ?>
+                                Connexion
+                            <?php endif; ?>
                         </a>
                     </button>
                 </div>
@@ -59,10 +73,8 @@
             <div class="mobile-menu">
                 <div class="mobile-menu__header">
                     <h2>Menu</h2>
-                    <button class="header__connexion">
-                    <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
-                        <i class="fa-regular fa-user"></i>Connexion
-                    </a>
+                    <button class="btn-close">
+                        <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
                 <?php
@@ -72,6 +84,21 @@
                     'theme_location' => 'primary'
                     )); 
                 ?>
+                            <div class="mobile-menu__btns">
+                <button class="header__connexion">
+                    <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
+                        <i class="fa-regular fa-user"></i>
+                        <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
+                        <?php echo $initials; ?>
+                        <?php else: ?>
+                            Connexion
+                        <?php endif; ?>
+                    </a>
+                </button>
+                <button class="header__dons">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                </button>
+            </div>
             </div>
         </div>
     </header>
