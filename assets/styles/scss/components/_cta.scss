@@ -67,27 +67,61 @@
 .ctaSection__bonhomme {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 0;
     z-index: 10;
-    width: 70px;
-
 
     img {
-        @include cartoon-size(100px, 100px, 300px, 300px);
+        position: relative;
         width: 100%;
         height: auto;
 
-        &.bonhomme-wide {
-            width: 100px;
+        &.bonhomme-théâtre {
+            @include bonhomme-style(150px, 10px, 20px);
+            @include bonhomme-style-tablet(310px, -60px, -100px);
+        }
 
-            @include tablet {
-                width: 500px;
-            }
+        &.bonhomme-peinture {
+            @include bonhomme-style(150px, 20px, 20px);
+            @include bonhomme-style-tablet(310px, -40px, -80px);
+        }
+
+        &.bonhomme-musique {
+            @include bonhomme-style(160px, 0px, 20px);
+            @include bonhomme-style-tablet(270px, -20px, -80px);
+        }
+
+        &.bonhomme-danse {
+            @include bonhomme-style(160px, 0px, 20px);
+            @include bonhomme-style-tablet(270px, -20px, -10px);
+        }
+
+        &.bonhomme-hip-hop {
+            @include bonhomme-style(160px, 0px, 30px);
+            @include bonhomme-style-tablet(270px, -20px, -10px);
+        }
+
+        &.bonhomme-classique {
+            @include bonhomme-style(160px, 0px, 30px);
+            @include bonhomme-style-tablet(270px, -10px, -10px);
+        }
+
+        &.bonhomme-radio {
+            @include bonhomme-style-max-width(220px, 40px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 60px, -20px);
+        }
+
+        &.bonhomme-parle {
+            @include bonhomme-style-max-width(220px, 50px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 90px, -30px);
+        }
+
+        &.bonhomme-pense {
+            @include bonhomme-style-max-width(220px, 40px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 50px, -30px);
         }
     }
 
     @include tablet {
-        width: 110px;
         top: -90px;
         right: 100px;
     }

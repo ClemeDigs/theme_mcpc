@@ -208,20 +208,40 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-@mixin cartoon-size($min-width, $min-height, $max-width, $max-height) {
-  min-width: $min-width;
-  min-height: $min-height;
-  max-width: $max-width;
-  max-height: $max-height;
-  width: auto;
-  height: auto;
+@mixin input {
+  padding: 0.5rem 1rem;
+  background-color: $color-grey-p !important;
+  border-radius: 30px;
+  border: 1px solid $color-black;
+  font-family: $font-sans;
+  font-size: 1rem;
 }
 
-@mixin bonhomme-wide($min-width, $min-height, $max-width, $max-height) {
-  min-width: $min-width;
-  min-height: $min-height;
-  max-width: $max-width;
+
+@mixin bonhomme-style($max-height, $top, $right) {
   max-height: $max-height;
-  width: auto;
-  height: auto;
+  top: $top;
+  right: $right;
+}
+
+@mixin bonhomme-style-tablet($max-height, $top, $right) {
+  @include tablet {
+    max-height: $max-height;
+    top: $top;
+    right: $right;
+  }
+}
+
+@mixin bonhomme-style-max-width($max-width, $top, $right) {
+  max-width: $max-width;
+  top: $top;
+  right: $right;
+}
+
+@mixin bonhomme-style-max-width-tablet($max-width, $top, $right) {
+  @include tablet {
+    max-width: $max-width;
+    top: $top;
+    right: $right;
+  }
 }

@@ -66,7 +66,7 @@ header {
 
       > .menu-item {
         position: relative;
-        border-left: 2px solid $color-black;
+        border-left: 1px solid $color-black;
         width: 142px;
         text-align: center;
         box-sizing: border-box;
@@ -79,7 +79,7 @@ header {
           border-left: none;
 
           &:hover {
-            border-left: 2px solid $color-black;
+            border-left: 1px solid $color-black;
           }
         }
 
@@ -91,9 +91,9 @@ header {
           position: absolute;
           top: 100%;
           left: -1px;
-          border-left: 2px solid $color-black;
-          border-right: 2px solid $color-black;
-          border-bottom: 2px solid $color-black;
+          border-left: 1px solid $color-black;
+          border-right: 1px solid $color-black;
+          border-bottom: 1px solid $color-black;
           padding: 2.5rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -102,7 +102,7 @@ header {
 
           li {
             width: 100%;
-            border-top: 2px solid $color-black;
+            border-top: 1px solid $color-black;
             background-color: #fcfcfce0;
             /*             backdrop-filter: blur(20px); */
 
@@ -158,6 +158,15 @@ header {
 
     button {
       @include button-base;
+
+      a {
+        @include flex(row, flex-start, center);
+        gap: 0.5rem;
+        font-weight: 500;
+        &:hover {
+          font-weight: 500;
+        }
+      }
     }
   }
 }
@@ -188,11 +197,20 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem 1rem;
-    border-bottom: 2px solid $color-black;
+    border-bottom: 1px solid $color-black;
 
     button {
       @include button-reset;
       font-size: 1.5rem;
+
+      a {
+        @include flex(row, flex-start, center);
+        gap: 0.5rem;
+        font-weight: 500;
+        &:hover {
+          font-weight: 500;
+        }
+      }
     }
   }
 
@@ -236,5 +254,27 @@ header {
 
   .sub-menu {
     padding-left: 2rem;
+  }
+
+  &__btns {
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+    @include flex(row, center, center);
+    gap: 3rem;
+
+    button {
+      @include button-base;
+
+      a {
+        @include flex(row, flex-start, center);
+        gap: 0.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        &:hover {
+          font-weight: 400;
+        }
+      }
+    }
   }
 }
