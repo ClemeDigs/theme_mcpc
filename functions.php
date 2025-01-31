@@ -248,6 +248,40 @@ function afficher_hand($field_name, $default_image = '/assets/img/illustrations/
     echo '<img src="' . esc_url($selected_hand) . '" class="' . esc_attr($hand_class) . '" alt="Illustration d\'une main d\'artiste">';
 }
 
+// ! BANQUE IMAGES ARROWS //
+
+/**
+ * Affiche une image de flèche en fonction du choix de l'utilisateur.
+ *
+ * @param string $field_name Nom du champ ACF.
+ * @param string $default_image Chemin de l'image par défaut.
+ */
+function afficher_arrow($field_name, $default_image = '/assets/img/arrows/default_arrow.svg')
+{
+    $arrow_choice = get_field($field_name);
+
+    $arrow_options = [
+        'grosse_boucle' => get_template_directory_uri() . '/assets/img/arrows/grosse_boucle.svg',
+        'boucle' => get_template_directory_uri() . '/assets/img/arrows/boucle.svg',
+        'u' => get_template_directory_uri() . '/assets/img/arrows/u.svg',
+        'etoiles' => get_template_directory_uri() . '/assets/img/arrows/etoiles.svg'
+        // 'aucun' n'est pas nécessaire ici car nous ne voulons rien afficher dans ce cas
+    ];
+
+    // Initialisation des variables par défaut
+    $selected_arrow = get_template_directory_uri() . $default_image;
+    $arrow_class = ''; // Classe par défaut vide
+
+    if ($arrow_choice && array_key_exists($arrow_choice, $arrow_options)) {
+        $selected_arrow = $arrow_options[$arrow_choice];
+        $arrow_class = 'block__arrow-' . $arrow_choice;
+    } elseif ($arrow_choice === 'aucun') {
+        // Ne rien afficher si le choix est 'aucun'
+        return;
+    }
+
+    echo '<img src="' . esc_url($selected_arrow) . '" class="' . esc_attr($arrow_class) . '" alt="Illustration d\'une flèche">';
+}
 
 // ! BOUTON EN SAVOIR PLUS... //
 

@@ -31,6 +31,10 @@ Template Name: Notre organisme
     <?php
     get_template_part('/templates/components/slider_images');
     ?>
+
+/<?php
+    get_template_part('/templates/components/basic_block');
+    ?>
     
 </main>
 

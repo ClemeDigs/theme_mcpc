@@ -1,3 +1,52 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 @import "../partials/typographie";
+
+.block {
+  &__bonhomme {
+    @include container;
+  }
+
+  &__sections {
+    @include flex(column);
+  }
+
+  &__content {
+    padding: $p-desktop;
+  }
+
+  &__header {
+    @include flex;
+
+    h2 {
+      padding-bottom: 1.83rem;
+    }
+
+    p {
+      padding-bottom: 1.21rem;
+    }
+  }
+
+  &__section {
+    @include container;
+    @include grid-column(2);
+    align-items: center;
+    gap: 6.875rem;
+    padding: 20px 0;
+    margin-bottom: 20px;
+
+    &-image {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        @include round-border-right;
+        @include border-left;
+        padding: 20px 20px 20px 0;
+      }
+
+      &-left {
+      }
+    }
+  }
+}
