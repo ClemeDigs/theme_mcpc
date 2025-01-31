@@ -10,9 +10,9 @@ document.querySelectorAll(".slider").forEach((slider) => {
   const slides = slider.querySelectorAll(
     ":scope > .slider__images > .slider__image, :scope > .slider__images > .slider__item"
   );
-  const progressBar = slider.querySelectorAll(
-    ":scope > .slider__progress > .slider__progress-bar"
-  );
+  const progressBar = slider
+    .closest(".slider")
+    .parentElement.querySelector(".slider__progress-bar");
 
   let currentSlideIndex = 0;
 
@@ -68,12 +68,13 @@ document.querySelectorAll(".slider").forEach((slider) => {
   }
 
   function changeProgress() {
-    console.log(progressBar);
-    console.log("hello");
     if (!progressBar) return; // Vérifie si progressBar existe
+
     const visibleSlides = getVisibleSlidesCount();
-    const progressValue =
-      ((currentSlideIndex + visibleSlides) / slides.length) * 100;
+    const totalPages = Math.ceil(slides.length / visibleSlides);
+
+    const progressValue = ((currentSlideIndex + 1) / totalPages) * 100;
+
     progressBar.style.width = Math.min(progressValue, 100) + "%";
   }
 

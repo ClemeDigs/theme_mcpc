@@ -110,9 +110,9 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
-        <div class="slider__progress">
+<!--         <div class="slider__progress">
             <div class="slider__progress-bar"></div>
-        </div>
+        </div> -->
 </section>
 
 
