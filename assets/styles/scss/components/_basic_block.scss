@@ -5,22 +5,34 @@
 .block {
   &__bonhomme {
     @include container;
-    background-color: blue;
   }
 
   &__sections {
     @include flex(column);
   }
 
+  &__content {
+    padding: $p-desktop;
+  }
+
   &__header {
+    @include flex;
+
+    h2 {
+      padding-bottom: 1.83rem;
+    }
+
+    p {
+      padding-bottom: 1.21rem;
+    }
   }
 
   &__section {
     @include container;
     @include grid-column(2);
+    align-items: center;
     gap: 6.875rem;
     padding: 20px 0;
-    background-color: red;
     margin-bottom: 20px;
 
     &-image {
