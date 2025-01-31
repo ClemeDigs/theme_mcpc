@@ -71,9 +71,19 @@
     z-index: 10;
     width: 70px;
 
+
     img {
+        @include cartoon-size(100px, 100px, 300px, 300px);
         width: 100%;
         height: auto;
+
+        &.bonhomme-wide {
+            width: 100px;
+
+            @include tablet {
+                width: 500px;
+            }
+        }
     }
 
     @include tablet {
