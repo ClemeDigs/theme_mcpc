@@ -1,0 +1,100 @@
+/* ------------- SE CONNECTER ------------- */
+
+.swpm-login-widget-form {
+  @include flex(column, center, center);
+
+  label {
+    font-weight: 700;
+  }
+
+  input {
+    @include input;
+  }
+
+  .swpm-login-form-submit {
+    @include button-base;
+    background-color: $color-primary !important;
+  }
+}
+
+/* ------------- S'INSCRIRE ------------- */
+
+.swpm-registration-widget-form {
+  @include flex(column, center, center);
+  width: 90%;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 50%;
+  }
+
+  form {
+    @include flex(column, center, center);
+    width: 100%;
+
+    div {
+      width: 100%;
+      @include flex(column, center, flex-start);
+      gap: 0.5rem;
+
+      label {
+        font-weight: 700;
+      }
+
+      input {
+        @include input;
+      }
+    }
+  }
+
+  .swpm-membership-level-row {
+    @include flex(row, flex-start, flex-start);
+    gap: 2rem;
+    width: fit-content;
+
+    .swpm-form-label-wrap label {
+      font-weight: 700;
+
+      &::after {
+        content: ":";
+      }
+    }
+  }
+
+  .swpm-submit {
+    @include button-base;
+  }
+}
+
+/* ------------- RESILIER MDP ------------- */
+
+.swpm-pw-reset-widget-inside {
+  @include flex(column, center, center);
+  width: 90%;
+  margin: 0 auto;
+  gap: 0.5rem;
+
+  @include desktop {
+    width: 50%;
+  }
+
+  .swpm_label {
+    font-weight: 700;
+  }
+
+  div {
+    @include flex(column, center, center);
+    width: 100%;
+  }
+
+  .swpm-pw-reset-email-input {
+    input {
+      @include input;
+      width: 100%;
+    }
+  }
+
+  .swpm-pw-reset-submit {
+    @include button-base;
+  }
+}

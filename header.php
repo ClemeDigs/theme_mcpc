@@ -44,7 +44,9 @@
                         <i class="fa-solid fa-hand-holding-dollar"></i>Don
                     </button>
                     <button class="header__connexion">
-                        <i class="fa-regular fa-user"></i>Connexion
+                        <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
+                            <i class="fa-regular fa-user"></i>Connexion
+                        </a>
                     </button>
                 </div>
                 <button class="header__mobile-icon">
@@ -57,8 +59,10 @@
             <div class="mobile-menu">
                 <div class="mobile-menu__header">
                     <h2>Menu</h2>
-                    <button class="btn-close">
-                        <i class="fa-solid fa-xmark"></i>
+                    <button class="header__connexion">
+                    <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
+                        <i class="fa-regular fa-user"></i>Connexion
+                    </a>
                     </button>
                 </div>
                 <?php
