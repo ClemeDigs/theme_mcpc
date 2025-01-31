@@ -1,28 +1,26 @@
 <?php
-// C'est un composant qui récupère l'image
+// Fonction pour afficher une image dans un bloc
 function bloc_section_image($image) {
+    if (!empty($image) && isset($image['url'], $image['alt'])) :
 ?>
     <div class="block__section-image">
-        <?php if ($image) : ?>
-            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-        <?php endif; ?>
+        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
     </div>
 <?php
+    endif;
 }
 ?>
 
 <?php
-
+// Récupération des sections ACF
 $basic_block_sections = [
     get_field('basic-block_section_1'),
     get_field('basic-block_section_2')
 ];
 
-$choix_bonhomme = get_field('block_choix_du_bonhomme');
-
-// Filtrer les CTA vides (éviter d'afficher ceux qui ne sont pas remplis)
+// Filtrer les sections vides
 $basic_block_sections = array_filter($basic_block_sections, function ($block) {
-    return !empty($block) && is_array($block) && (
+    return is_array($block) && (
         !empty($block['block_image']) || 
         !empty($block['image_position']) || 
         !empty($block['block_arrow']) || 
@@ -37,22 +35,26 @@ if (!empty($basic_block_sections)) :
 
 <section class="block__container">
     <div class="block__bonhomme">
-        <?php afficher_bonhomme($choix_bonhomme); ?>
+        <?php afficher_bonhomme('block_choix_du_bonhomme'); ?>
     </div>
-    <div>
+    <div class="block__sections">
         <?php foreach ($basic_block_sections as $block) : ?>
             <div class="block__section">
-                <?php if ($block['image_position'] == 0) bloc_section_image($block['block_image']); ?>
-                <div>
-                    <div>
-                        <h2><?php echo esc_html($block['block_title']); ?></h2>
-                        <?php if (!empty($block['block_arrow'])) : ?>
+                <?php if (isset($block['image_position']) && $block['image_position'] == 0) bloc_section_image($block['block_image']); ?>
+                <div class="block__content">
+                    <div class="block__header">
+                        <?php if (!empty($block['block_title'])) : ?>
+                            <h2><?php echo esc_html($block['block_title']); ?></h2>
+                        <?php endif; ?>
+                        <?php if (!empty($block['block_arrow']) && isset($block['block_arrow']['url'], $block['block_arrow']['alt'])) : ?>
                             <img src="<?php echo esc_url($block['block_arrow']['url']); ?>" alt="<?php echo esc_attr($block['block_arrow']['alt']); ?>">
                         <?php endif; ?>
                     </div>
-                    <p><?php echo esc_html($block['block_text']); ?></p>
+                    <?php if (!empty($block['block_text'])) : ?>
+                        <p><?php echo esc_html($block['block_text']); ?></p>
+                    <?php endif; ?>
                 </div>
-                <?php if ($block['image_position'] == 1) bloc_section_image($block['block_image']); ?>
+                <?php if (isset($block['image_position']) && $block['image_position'] == 1) bloc_section_image($block['block_image']); ?>
             </div>
         <?php endforeach; ?>
     </div>
