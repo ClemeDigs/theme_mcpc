@@ -180,6 +180,13 @@
   transition: all 0.25s ease;
 }
 
+// Ajout d'un border pour les images : eve
+@mixin border-left {
+  border-top: 2px solid $color-black;
+  border-right: 2px solid $color-black;
+  border-bottom: 2px solid $color-black;
+}
+
 // Ajout d'un border-radius pour les images : eve
 @mixin round-border($radius: 30px) {
   border-radius: $radius;

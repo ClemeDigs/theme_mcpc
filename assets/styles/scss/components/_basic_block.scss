@@ -1,3 +1,40 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 @import "../partials/typographie";
+
+.block {
+  &__bonhomme {
+    @include container;
+    background-color: blue;
+  }
+
+  &__sections {
+    @include flex(column);
+  }
+
+  &__header {
+  }
+
+  &__section {
+    @include container;
+    @include grid-column(2);
+    gap: 6.875rem;
+    padding: 20px 0;
+    background-color: red;
+    margin-bottom: 20px;
+
+    &-image {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        @include round-border-right;
+        @include border-left;
+        padding: 20px 20px 20px 0;
+      }
+
+      &-left {
+      }
+    }
+  }
+}
