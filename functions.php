@@ -253,6 +253,14 @@ function remove_wysiwyg()
 }
 
 
+// ! FUNCTION POUR ENLEVER COMMENTS ET ARTICLES DU TABLEAU DE BORD WP //
+
+function remove_dashboard_menus() {
+    remove_menu_page('edit.php'); // Supprime "Articles"
+    remove_menu_page('edit-comments.php'); // Supprime "Commentaires"
+}
+
+
 // ! SCRIPT SLIDER //
 
 function enqueue_slider_script()
@@ -297,3 +305,4 @@ add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
+add_action('admin_menu', 'remove_dashboard_menus');
