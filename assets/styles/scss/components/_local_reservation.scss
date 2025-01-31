@@ -1,0 +1,13 @@
+.calendar {
+  @include container;
+  padding: 2rem;
+
+  &__not-connected {
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+  }
+
+  &__btn-connexion {
+    @include button-base;
+  }
+}

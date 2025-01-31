@@ -8,7 +8,7 @@ Template Name: Profile
 get_header();
 ?>
 
-<main id="main" class="main">
+<main>
 
 <?php
 echo do_shortcode('[swpm_profile_form]');
