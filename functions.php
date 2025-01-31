@@ -66,21 +66,21 @@ function create_posttype()
             'supports' => array('title', 'id'),
         )
     );
-    register_post_type(
-        'gallery',
-        array(
-            'labels' => array(
-                'name' => __('Galerie photo'),
-                'singular_name' => __('Galerie photo'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-camera',
-            'rewrite' => array('slug' => 'gallery'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id', 'thumbnail'),
-        )
-    );
+    // register_post_type(
+    //     'gallery',
+    //     array(
+    //         'labels' => array(
+    //             'name' => __('Galerie photo'),
+    //             'singular_name' => __('Galerie photo'),
+    //         ),
+    //         'public' => true,
+    //         'has_archive' => true,
+    //         'menu_icon' => 'dashicons-camera',
+    //         'rewrite' => array('slug' => 'gallery'),
+    //         'show_in_rest' => true,
+    //         'supports' => array('title', 'id', 'thumbnail'),
+    //     )
+    // );
 
     register_post_type(
         'exposition',
@@ -113,7 +113,7 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 
     $image_choices = [
         'Théâtre' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_acting.svg',
-        'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_painting.png',
+        'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_painting.svg',
         'Musique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_guitar.svg',
         'Radio' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_radio.svg',
         'Danse' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_balet.svg',
@@ -132,8 +132,10 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     if ($image_choice && array_key_exists($image_choice, $image_choices)) {
         $selected_image = $image_choices[$image_choice];
     }
+    // Ajouter une classe conditionnelle pour les bonhommes plus larges
+    $additional_class = in_array($image_choice, ['Parle', 'Pense', 'Radio']) ? ' bonhomme-wide' : '';
 
-    echo '<img src="' . esc_url($selected_image) . '" alt="Illustration d\'un bonhomme">';
+    echo '<img src="' . esc_url($selected_image) . '" alt="Bonhomme" class="bonhomme-image' . esc_attr($additional_class) . '">';
 }
 
 // ! LARGEUR DU SOUS-TITRE //
@@ -245,7 +247,8 @@ function afficher_bouton_cta($link, $label = null)
 
 // ! FUNCTION PAGE NON PERSONNALISABLE //
 
-function remove_wysiwyg() {
+function remove_wysiwyg()
+{
     remove_post_type_support('page', 'editor');
 }
 

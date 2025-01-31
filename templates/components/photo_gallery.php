@@ -1,54 +1,48 @@
 <section class="gallery-container">
-    <?php
-    // Récupérer le choix du bonhomme
-    $choix_bonhomme = get_field('gallery_choix_du_bonhome');
-    ?>
-
-    <div class="ctaSection__bonhomme">
-        <?php afficher_bonhomme('cta_choix_du_bonhome'); ?>
+    <div class="gallery__bonhomme">
+        <?php afficher_bonhomme('gallery_choix_du_bonhome'); ?>
     </div>
-
     <div class="gallery">
         <?php
-        $gallery = new WP_Query([
-            'post_type' => 'gallery',
-            'posts_per_page' => 10,
-        ]);
+        // Boucler sur les sous-groupes
+        for ($i = 1; $i <= 10; $i++) {
+            $gallery = get_field('photo_gallery_' . $i);
+            if ($gallery) :
+                $photo_id = $gallery['photo'] ?? null;
+                $legende = $gallery['legende'] ?? null;
+                $size_class = $gallery['size_class'] ?? null;
 
-        if ($gallery->have_posts()) :
-            while ($gallery->have_posts()) : $gallery->the_post();
-                $photo = get_field('photo');
-                $legende = get_field('legende');
-                $size_class = get_field('size_class');
-
-                if ($photo) :
-                    $photo_url = is_array($photo) ? $photo['url'] : $photo;
+                if ($photo_id) :
+                    $photo_url = wp_get_attachment_url($photo_id);
+                    if ($photo_url):
         ?>
-                    <div class="gallery__item <?php echo esc_attr($size_class); ?>" data-photo-url="<?php echo esc_url($photo_url); ?>" data-legende="<?php echo esc_html($legende); ?>">
-                        <div class="gallery__image-container">
-                            <img
-                                src="<?php echo esc_url($photo_url); ?>"
-                                alt="<?php the_title(); ?>"
-                                class="gallery__image">
-                            <?php if ($legende): ?>
-                                <p class="gallery__photo-caption">
-                                    <?php echo esc_html($legende); ?>
-                                </p>
-                            <?php endif; ?>
+                        <div class="gallery__item <?php echo esc_attr($size_class); ?>">
+                            <div class="gallery__image-container">
+                                <img
+                                    src="<?php echo esc_url($photo_url); ?>"
+                                    alt="<?php the_title(); ?>"
+                                    class="gallery__image">
+                                <?php if ($legende): ?>
+                                    <p class="gallery__photo-caption">
+                                        <?php echo esc_html($legende); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                    </div>
         <?php
+                    else:
+                        echo '<p>URL de la photo non trouvée pour photo_gallery_' . $i . '</p>';
+                    endif;
+                else :
+                    echo '<p>Photo non trouvée pour photo_gallery_' . $i . '</p>';
                 endif;
-            endwhile;
-        endif;
-        wp_reset_postdata();
+            else :
+                echo '<p>Groupe photo_gallery_' . $i . ' non trouvé</p>';
+            endif;
+        }
         ?>
     </div>
-
-
 </section>
-
-
 
 <div id="galleryModal" class="modal hidden">
     <span class="modal__close">&times;</span>
@@ -57,10 +51,3 @@
     <button class="modal__arrow modal__arrow--prev"><i class="fa-solid fa-chevron-left"></i></button>
     <button class="modal__arrow modal__arrow--next"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
-
-<!-- CODE POUR LIER LA GALERIE DU PLUGIN PHOTO GALLERY -->
-<!-- <section>
-<?php if (function_exists('photo_gallery')) {
-    photo_gallery(1);
-} ?>
-</section> -->

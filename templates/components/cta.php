@@ -6,9 +6,6 @@ $cta_sections = [
     get_field('cta_section_4'),
 ];
 
-
-$choix_bonhomme = get_field('cta_choix_du_bonhome');
-
 // Filtrer les CTA vides (éviter d'afficher ceux qui ne sont pas remplis)
 $cta_sections = array_filter($cta_sections, function ($cta) {
     return !empty($cta) && is_array($cta) && (!empty($cta['cta_section_photo']) || !empty($cta['cta_section_title']) || !empty($cta['cta_section_description']) || !empty($cta['cta_section_button_link']));

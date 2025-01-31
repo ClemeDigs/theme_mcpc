@@ -153,3 +153,7 @@ Call Stack:
 Call Stack:
 #0 mixin desktop components/_exposition.scss on line 186
 #1 import components/_exposition.scss main.scss on line 18
+01/31/25 1:01:44: main.scss - unclosed block: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_photo_gallery.scss on line 189, at column 0
+01/31/25 2:04:59: main.scss - Undefined mixin bonhomme-wide: components/_photo_gallery.scss on line 183, at column 9
+Call Stack:
+#0 import components/_photo_gallery.scss main.scss on line 14
