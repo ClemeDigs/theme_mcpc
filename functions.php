@@ -139,7 +139,7 @@ function create_posttype()
 // }
 
 
-function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme-classic.svg')
+function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme_classic2.svg'/* , $default_class_name = 'bonhomme-classique' */)
 {
     $image_choice = get_field($field_name);
 

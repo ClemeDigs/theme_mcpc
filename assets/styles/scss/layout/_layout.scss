@@ -41,7 +41,7 @@ main {
   padding: 100px 0;
   background-color: white;
   @include shadow;
-
+  gap: 6rem;
   /*   padding: $p-mobile;
 
   @include tablet {
@@ -51,6 +51,7 @@ main {
   @include desktop {
     /*     padding: $p-desktop; */
     padding-bottom: 250px;
+    gap: 12.5rem;
   }
 }
 
