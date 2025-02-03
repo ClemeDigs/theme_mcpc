@@ -1,0 +1,184 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.accordeon {
+    &__container {
+        @include container;
+        margin-top: 12.5rem;
+    }
+
+    &__header {
+        @include flex;
+        cursor: pointer;
+        color: $color-black;
+        background-color: $pale-grey;
+        border-bottom: 2px solid $color-black;
+        padding: 20px;
+
+
+        @include tablet {
+            padding: 40px;
+        }
+
+        @include desktop {
+            padding: 70px;
+        }
+
+        .accordeon__icon {
+            color: $color-black;
+            font-size: 2rem;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-tertiary;
+            border-bottom: 2px solid $color-tertiary;
+
+            .accordeon__icon {
+                color: $color-tertiary;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block !important;
+    }
+}
+
+.rapport {
+    @include container;
+    @include flex(column);
+    gap: 2rem;
+    padding: 40px 40px 0px 0px;
+
+    @include tablet {
+        @include grid-column(2);
+        gap: 6.875rem;
+        padding: 35px 70px 35px 0px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 470px;
+        object-fit: cover;
+        object-position: center;
+        @include round-border-right;
+        @include border-left;
+        padding: 20px 20px 20px 0;
+    }
+
+    &__content {
+        @include flex(column);
+        gap: 2.5rem;
+        width: 100%;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        align-items: flex-start;
+
+        @include tablet {
+            padding-left: 0;
+            padding-bottom: 0px;
+        }
+
+        @include desktop {
+            padding-left: 0;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__statistiques {
+        @include flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &__stat {
+        text-align: center;
+        padding: 20px;
+
+        img {
+            max-height: 105px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .btn {
+        @include button-base;
+        text-decoration: none;
+    }
+}
+
+.assemblee__bonhomme-container {
+    position: relative;
+}
+
+.assemblee__bonhomme {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+
+        &.bonhomme-théâtre {
+            @include bonhomme-style(150px, 50px, 20px);
+            @include bonhomme-style-tablet(310px, -20px, -100px);
+        }
+
+        &.bonhomme-peinture {
+            @include bonhomme-style(150px, 70px, 20px);
+            @include bonhomme-style-tablet(310px, -20px, -80px);
+        }
+
+        &.bonhomme-musique {
+            @include bonhomme-style(160px, 40px, 20px);
+            @include bonhomme-style-tablet(270px, 20px, -80px);
+        }
+
+        &.bonhomme-danse {
+            @include bonhomme-style(160px, 50px, 20px);
+            @include bonhomme-style-tablet(270px, 20px, -10px);
+        }
+
+        &.bonhomme-hip-hop {
+            @include bonhomme-style(160px, 40px, 30px);
+            @include bonhomme-style-tablet(270px, 20px, -10px);
+        }
+
+        &.bonhomme-classique {
+            @include bonhomme-style(160px, 50px, 30px);
+            @include bonhomme-style-tablet(270px, 20px, -10px);
+        }
+
+        &.bonhomme-radio {
+            @include bonhomme-style-max-width(220px, 80px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 100px, -20px);
+        }
+
+        &.bonhomme-parle {
+            @include bonhomme-style-max-width(220px, 100px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 120px, -30px);
+        }
+
+        &.bonhomme-pense {
+            @include bonhomme-style-max-width(220px, 80px, 30px);
+            @include bonhomme-style-max-width-tablet(380px, 90px, -30px);
+        }
+    }
+
+    @include tablet {
+        top: -90px;
+        right: 100px;
+    }
+}

@@ -1,0 +1,39 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.rapport-annuel {
+    &__container {}
+
+    &__content {
+        @include flex;
+        width: 100%;
+        align-items: flex-start;
+
+        @include tablet {
+            padding-left: 0;
+            padding-bottom: 0px;
+        }
+
+        @include desktop {
+            padding-left: 0;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block !important;
+    }
+
+    .btn {
+        @include button-base;
+        text-decoration: none;
+    }
+
+    &__rapport {
+        @include flex;
+    }
+}
