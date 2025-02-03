@@ -17,6 +17,11 @@ Template Name: Actualités
     get_template_part('/templates/components/subtitle');
     ?>
 
+<?php
+    get_template_part('/templates/components/juicer');
+    ?>
+
+
 </main>
 
 <?php

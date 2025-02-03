@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.juicer.io/embed/un-zeste-de-clementine-1fd227a4-3dc7-444f-bd0b-bc80d0b1a054/embed-code.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,7 +51,8 @@
             <div class="header__btns">
                 <div class="header__btns-cta">
                     <button class="header__dons">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-donation.svg" alt="Icone don">
+                        Don
                     </button>
                     <button class="header__connexion">
                         <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
@@ -96,7 +98,8 @@
                     </a>
                 </button>
                 <button class="header__dons">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>Don
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-donation.svg" alt="Icone don">
+                    Don
                 </button>
             </div>
             </div>
