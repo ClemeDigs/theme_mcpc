@@ -157,3 +157,4 @@ Call Stack:
 01/31/25 2:04:59: main.scss - Undefined mixin bonhomme-wide: components/_photo_gallery.scss on line 183, at column 9
 Call Stack:
 #0 import components/_photo_gallery.scss main.scss on line 14
+02/03/25 6:59:35: main.scss - unexpected }: failed at `` /Applications/XAMPP/xamppfiles/htdocs/mcpc/wp-content/themes/theme_mcpc/assets/styles/scss/components/_radio_bic.scss on line 83, at column 0

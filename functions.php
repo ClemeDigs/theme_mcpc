@@ -171,16 +171,6 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     echo '<img src="' . esc_url($selected_image) . '" alt="Bonhomme" class="bonhomme-image ' . esc_attr($class_name) . '">';
 }
 
-
-
-
-
-
-
-
-
-
-
 // ! LARGEUR DU SOUS-TITRE //
 
 function afficher_largeur_sous_titre($field_name)
@@ -256,34 +246,33 @@ function afficher_hand($field_name, $default_image = '/assets/img/illustrations/
  * @param string $field_name Nom du champ ACF.
  * @param string $default_image Chemin de l'image par défaut.
  */
-function afficher_arrow($field_name, $default_image = '/assets/img/arrows/default_arrow.svg')
+function afficher_arrow($field_name, $default_image = '/assets/img/illustrations/arrows/arrow_big_loop.svg')
 {
     $arrow_choice = get_field($field_name);
 
     $arrow_options = [
-        'grosse_boucle' => get_template_directory_uri() . '/assets/img/arrows/grosse_boucle.svg',
-        'boucle' => get_template_directory_uri() . '/assets/img/arrows/boucle.svg',
-        'u' => get_template_directory_uri() . '/assets/img/arrows/u.svg',
-        'etoiles' => get_template_directory_uri() . '/assets/img/arrows/etoiles.svg'
-        // 'aucun' n'est pas nécessaire ici car nous ne voulons rien afficher dans ce cas
+        'grosse_boucle' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_big_loop.svg',
+        'boucle' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_loop.svg',
+        'u' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_u.svg',
+        'etoiles' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_stars.svg'
     ];
 
     // Initialisation des variables par défaut
     $selected_arrow = get_template_directory_uri() . $default_image;
     $arrow_class = ''; // Classe par défaut vide
 
+
     if ($arrow_choice && array_key_exists($arrow_choice, $arrow_options)) {
         $selected_arrow = $arrow_options[$arrow_choice];
         $arrow_class = 'block__arrow-' . $arrow_choice;
-    } elseif ($arrow_choice === 'aucun') {
-        // Ne rien afficher si le choix est 'aucun'
+    } elseif ($arrow_choice === 'null') {
         return;
     }
 
     echo '<img src="' . esc_url($selected_arrow) . '" class="' . esc_attr($arrow_class) . '" alt="Illustration d\'une flèche">';
 }
 
-// ! BOUTON EN SAVOIR PLUS... //
+// ! BOUTONS //
 
 /**
  * Affiche un bouton "En savoir plus" si un lien est défini dans le champ ACF 'learn_more'.
@@ -299,9 +288,10 @@ function afficher_bouton_en_savoir_plus($field_name)
         $title = $link['title'] ? $link['title'] : 'En savoir plus';
         $target = $link['target'] ? $link['target'] : '_self';
 
-        echo '<a href="' . esc_url($url) . '" class="" target="' . esc_attr($target) . '">' . esc_html($title) . '</a>';
+        echo '<a href="' . esc_url($url) . '" class="button" target="' . esc_attr($target) . '">' . esc_html($title) . '</a>';
     }
 }
+
 
 /**
  * Affiche un bouton CTA avec un lien et un texte personnalisé défini dans ACF.
@@ -319,6 +309,44 @@ function afficher_bouton_cta($link, $label = null)
         $button_text = !empty($label) ? esc_html($label) : esc_html($link['title']);
 
         echo '<a href="' . $url . '" class="cta__section-content-button" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+/**
+ * Affiche un bouton BLOCK avec un lien et un texte personnalisé défini dans ACF.
+ *
+ * @param array $link Tableau contenant les infos du lien.
+ * @param string|null $label Texte du bouton choisi par le client.
+ */
+function afficher_bouton_block($link, $label = null)
+{
+    if ($link) {
+        $url = esc_url($link['url']);
+        $target = esc_attr($link['target'] ?: '_self');
+
+        // Vérifie si un label est défini, sinon utilise le titre du lien ACF
+        $button_text = !empty($label) ? esc_html($label) : esc_html($link['title']);
+
+        echo '<a href="' . $url . '" class="" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+/**
+ * Affiche un bouton BLOCK avec un lien et un texte personnalisé défini dans ACF.
+ *
+ * @param array $link Tableau contenant les infos du lien.
+ * @param string|null $label Texte du bouton choisi par le client.
+ */
+function afficher_bouton_radio($link, $label = null)
+{
+    if ($link) {
+        $url = esc_url($link['url']);
+        $target = esc_attr($link['target'] ?: '_self');
+
+        // Vérifie si un label est défini, sinon utilise le titre du lien ACF
+        $button_text = !empty($label) ? esc_html($label) : esc_html($link['title']);
+
+        echo '<a href="' . $url . '" class="" target="' . $target . '">' . $button_text . '</a>';
     }
 }
 
@@ -383,3 +411,11 @@ add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
 add_action('admin_menu', 'remove_dashboard_menus');
+
+// ! UPLOAD SVG //
+
+function autoriser_upload_svg($mime_types) {
+    $mime_types['svg'] = 'image/svg+xml';
+    return $mime_types;
+}
+add_filter('upload_mimes', 'autoriser_upload_svg');

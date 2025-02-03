@@ -18,6 +18,14 @@ Template Name: Radio Bic
     get_template_part('/templates/components/subtitle');
     ?>
 
+    <?php
+        get_template_part('/templates/components/basic_block');
+    ?>
+
+    <?php 
+        get_template_part('/templates/components/radio_bic');
+    ?>
+
     <?php 
         get_template_part('/templates/components/slider_images');
     ?>

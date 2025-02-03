@@ -1,9 +1,10 @@
 <?php
 // Fonction pour afficher une image dans un bloc
-function bloc_section_image($image) {
+function bloc_section_image($image, $image_position) {
     if (!empty($image) && isset($image['url'], $image['alt'])) :
+        $position_class = 'image-position-' . esc_attr($image_position);
 ?>
-    <div class="block__section-image">
+    <div class="block__section-image <?php echo $position_class; ?>">
         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
     </div>
 <?php
@@ -22,7 +23,7 @@ $basic_block_sections = [
 $basic_block_sections = array_filter($basic_block_sections, function ($block) {
     return is_array($block) && (
         !empty($block['block_image']) ||
-        !empty($block['image_position']) ||
+        isset($block['image_position']) ||
         !empty($block['block_arrow']) ||
         !empty($block['block_title']) ||
         !empty($block['block_text']) ||
@@ -40,24 +41,40 @@ if (!empty($basic_block_sections)) :
     <div class="block__sections">
         <?php foreach ($basic_block_sections as $block) : ?>
             <div class="block__section">
-                <?php if (isset($block['image_position']) && $block['image_position'] == 1) bloc_section_image($block['block_image']); ?>
+                <?php 
+                $image_position = isset($block['image_position']) ? intval($block['image_position']) : null; // Convertir en entier
+                if ($image_position === 1) {
+                    bloc_section_image($block['block_image'], $image_position);
+                }
+                ?>
                 <div class="block__content">
                     <div class="block__header">
                         <?php if (!empty($block['block_title'])) : ?>
                             <h2><?php echo esc_html($block['block_title']); ?></h2>
                         <?php endif; ?>
+                        <div class="block__arrow">
                         <?php 
                         // Utilisation de la nouvelle fonction afficher_arrow
                         if (!empty($block['block_arrow'])) :
                             afficher_arrow($block['block_arrow']);
                         endif;
                         ?>
+                        </div>
                     </div>
                     <?php if (!empty($block['block_text'])) : ?>
                         <p><?php echo esc_html($block['block_text']); ?></p>
                     <?php endif; ?>
+                    <?php if (!empty($block['block_link'])) : ?>
+                        <div class="block__link">
+                            <?php afficher_bouton_block($block['block_link']); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <?php if (isset($block['image_position']) && $block['image_position'] == 0) bloc_section_image($block['block_image']); ?>
+                <?php 
+                if ($image_position === 0) {
+                    bloc_section_image($block['block_image'], $image_position);
+                }
+                ?>
             </div>
         <?php endforeach; ?>
     </div>
