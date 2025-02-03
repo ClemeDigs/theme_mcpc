@@ -1,0 +1,94 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
+.radio {
+  @include flex(column, center, center);
+  padding: 100px 20px;
+  @include tablet {
+    padding: 150px 40px;
+  }
+  @include desktop {
+    padding: 200px 70px;
+  }
+
+  &__part-1 {
+    @include grid-column(4);
+    p {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__part-2 {
+    @include grid-column(4);
+    padding-left: 70px;
+    p {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__logo-1 {
+    grid-column: 1;
+    justify-self: end;
+    padding-left: 50px; // Positionner le logo dans la première colonne
+    img {
+      width: clamp(9.2rem, 50%, 10.2rem);
+      height: auto;
+    }
+  }
+
+  &__text-1 {
+    grid-column: 2 / span 3;
+    justify-items: start;
+  }
+
+  &__logo-2 {
+    grid-column: 4;
+    justify-self: end;
+    img {
+      width: clamp(10rem, 50%, 11rem);
+      height: auto;
+    }
+  }
+
+  &__text-2 {
+    grid-column: 1 / span 3;
+    justify-items: start;
+  }
+
+  &__title-1 {
+    @include flex;
+  }
+
+  &__little-arrow {
+    img {
+      width: 4.6rem;
+      height: auto;
+    }
+  }
+
+  &__big-arrow {
+    display: none;
+
+    @include tablet {
+      grid-column: 1 / -1; // Étendre l'élément sur toutes les colonnes de la grille
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%; // Ajuster la largeur de l'image à 100% de son conteneur
+        padding-bottom: 3rem;
+      }
+    }
+  }
+
+  &__link {
+    @include button-base($background: $color-quaternary);
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+    i {
+      color: $color-white;
+    }
+  }
+}
