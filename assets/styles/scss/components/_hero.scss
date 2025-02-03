@@ -8,7 +8,7 @@
 
     img {
       @include container;
-      max-height: 647px;
+      // max-height: 647px;
       margin: 0 auto;
       @include flex;
       object-fit: cover;
@@ -19,10 +19,10 @@
   &__content {
     @include container;
     padding: $p-mobile;
-    transform: translateY(-18px);
+    transform: translateY(-27px);
     @include tablet {
       padding: $p-tablet;
-      transform: translateY(-36px);
+      transform: translateY(-38px);
     }
     @include desktop {
       padding: $p-desktop;

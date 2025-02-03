@@ -3,33 +3,45 @@
 @import "../partials/typographie";
 
 .subtitle {
-  &__large {
-    width: 860px;
-  }
-
-  &__petit {
-    width: 640px;
-  }
   &__container {
-    // min-height: 265px;
+    padding: 0 20px; // Padding de 20px de chaque côté pour mobile et tablette
+    box-sizing: border-box; // Inclure le padding dans la taille totale
     margin: 0 auto;
     @include flex(column, center, center);
     gap: 1rem;
-    padding: 2.5rem 0 2rem 0;
-    position: relative;
+    padding: 2.5rem 1rem 2rem 1rem;
+    position: relative; // Nécessaire pour le positionnement absolu des éléments enfants
     @include round-border;
     @include shadow;
-    box-sizing: content-box;
     overflow: hidden;
+
+    @include tablet {
+      padding: 0 20px; // Assurez-vous que le padding est également appliqué en tablette
+    }
+  }
+
+  &__large {
+    @extend .subtitle__container;
+    width: calc(100vw - 40px);
+    max-width: 860px;
+  }
+
+  &__petit {
+    @extend .subtitle__container;
+    width: calc(100vw - 40px);
+    max-width: 640px;
   }
 
   &__title {
-    @include flex(row, flex-start, center);
+    @include flex(row, center, center);
     gap: 0.5rem;
-    padding: 1rem 3rem;
-    background-size: cover;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
 
     :first-child {
       font-weight: 400;
@@ -39,33 +51,65 @@
   &__text {
     padding: 1.5rem 0 1rem 0;
     max-width: 500px;
+    text-align: center;
   }
 
   &__learn-more {
+    // @include hidden;
     @include button-secondary;
   }
 
   &__hand {
-    position: absolute;
-    width: 30%;
-    bottom: 0rem;
-    transform: translateX(-160%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include transition;
 
     &-gros_pinceau {
-      bottom: 10%;
-      left: 10%;
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 20%;
+      transform: translateY(-270px) scaleX(-1);
+
+      @include tablet {
+        transform: translateY(-250px) scaleX(-1);
+      }
+
+      @include desktop {
+      }
     }
 
     &-palette {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      // transform: translateX(-160%);
+      bottom: -2rem;
+      left: -2rem;
+      width: 20%;
+
+      @include tablet {
+        bottom: 0;
+        left: -6rem;
+      }
+
+      @include desktop {
+        bottom: 0;
+        width: 25%;
+      }
     }
 
     &-petit_pinceau {
-      top: 0;
-      transform: translateX(-125%);
+      position: absolute;
+      top: -300px;
+      left: -30px;
+      width: 30%;
+      // transform: translate(-270px);
+
+      @include tablet {
+        top: -270px;
+      }
+
+      @include desktop {
+      }
     }
   }
 
