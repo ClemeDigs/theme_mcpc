@@ -66,21 +66,6 @@ function create_posttype()
             'supports' => array('title', 'id'),
         )
     );
-    // register_post_type(
-    //     'gallery',
-    //     array(
-    //         'labels' => array(
-    //             'name' => __('Galerie photo'),
-    //             'singular_name' => __('Galerie photo'),
-    //         ),
-    //         'public' => true,
-    //         'has_archive' => true,
-    //         'menu_icon' => 'dashicons-camera',
-    //         'rewrite' => array('slug' => 'gallery'),
-    //         'show_in_rest' => true,
-    //         'supports' => array('title', 'id', 'thumbnail'),
-    //     )
-    // );
 
     register_post_type(
         'exposition',
@@ -97,47 +82,27 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
+
+    register_post_type(
+        'liens-menu',
+        array(
+            'labels' => array(
+                'name' => __('Liens des menus'),
+                'singular_name' => __('Lien du menu'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-admin-links',
+            'rewrite' => array('slug' => 'liens-menu'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
 }
 
 
 
-// // ! BANQUE IMAGES BONHOMMES //
-
-// /**
-//  * @param string $field_name Nom du champ ACF.
-//  * @param string $default_image Chemin de l'image par défaut.
-//  */
-// function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme-classic.svg')
-// {
-//     $image_choice = get_field($field_name);
-
-//     $image_choices = [
-//         'Théâtre' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_acting2.svg',
-//         'Peinture' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_painting2.svg',
-//         'Musique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_guitar2.svg',
-//         'Radio' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_radio2.svg',
-//         'Danse' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_balet2.svg',
-//         'Hip-hop' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_hiphop2.svg',
-//         'Classique' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_classic2.svg',
-//         'Parle' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_talking2.svg',
-//         'Pense' => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_thinking2.svg',
-//     ];
-
-//     if ($image_choice === 'Aucun') {
-//         return;
-//     }
-
-//     $selected_image = get_template_directory_uri() . $default_image;
-
-//     if ($image_choice && array_key_exists($image_choice, $image_choices)) {
-//         $selected_image = $image_choices[$image_choice];
-//     }
-//     // Ajouter une classe conditionnelle pour les bonhommes plus larges
-//     $additional_class = in_array($image_choice, ['Parle', 'Pense', 'Radio']) ? ' bonhomme-wide' : '';
-
-//     echo '<img src="' . esc_url($selected_image) . '" alt="Bonhomme" class="bonhomme-image' . esc_attr($additional_class) . '">';
-// }
-
+ // ! BANQUE IMAGES BONHOMMES //
 
 function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme_classic2.svg'/* , $default_class_name = 'bonhomme-classique' */)
 {

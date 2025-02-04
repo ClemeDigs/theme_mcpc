@@ -219,10 +219,13 @@ header {
   }
 
   &__nav {
-    @include flex(column, center, flex-start);
+    @include flex(column, flex-start, flex-start);
     padding: 1rem;
     gap: 2.5rem;
     list-style: none;
+    height: 80vh;
+    overflow-x: scroll;
+    padding-bottom: 10vh;
 
     > li {
       @include flex(column, center, flex-start);
@@ -262,8 +265,9 @@ header {
 
   &__btns {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
+    right: -2.5rem;
     @include flex(row, center, center);
     gap: 3rem;
 
