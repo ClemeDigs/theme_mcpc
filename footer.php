@@ -2,6 +2,25 @@
 /* Main footer file */
 ?>
 
+<?php
+
+    $liens_menu_query = new WP_Query(array(
+        'post_type'      => 'liens-menu',
+        'posts_per_page' => 1,
+    ));
+
+    if ($liens_menu_query->have_posts()) {
+        $liens_menu_query->the_post();
+        $facebook_link = get_field('facebook_link', get_the_ID());
+        $instagram_link = get_field('instagram_link', get_the_ID());
+        wp_reset_postdata();
+    } else {
+        $facebook_link = null;
+        $instagram_link = null;
+    }
+
+?>
+
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__content">
@@ -40,14 +59,14 @@
                 <h2>NOUS SUIVRE</h2>
                 <ul class="footer__social-icons">
                     <li>
-                        <a href="https://www.facebook.com/culturebic/"
+                        <a href="<?php echo esc_url($facebook_link); ?>"
                             target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/radiobic925/"
+                        <a href="<?php echo esc_url($instagram_link); ?>"
                             target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>

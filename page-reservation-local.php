@@ -9,6 +9,11 @@ get_header();
 ?>
 
 <main>
+
+    <?php
+        get_template_part('/templates/components/hero');
+    ?>
+
     <section class="calendar">
     <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
         <?php echo do_shortcode('[calendar id="518"]'); ?>

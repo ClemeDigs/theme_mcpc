@@ -5,6 +5,6 @@
             <?php afficher_bonhomme('juicer_choix_du_bonhomme'); ?>
         </div>
     </div>
-    <div class="juicer-feed" data-feed-id="un-zeste-de-clementine-1fd227a4-3dc7-444f-bd0b-bc80d0b1a054" data-per="15">
+    <div class="juicer-feed" data-feed-id="maison-de-la-culture-du-pic-champlain" data-per="30">
     </div>
 </section>
