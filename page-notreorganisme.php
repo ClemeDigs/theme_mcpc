@@ -45,12 +45,14 @@ Template Name: Notre organisme
     </section>
 
     <?php
+    get_template_part('/templates/components/basic_block');
+    ?>
+
+    <?php
     get_template_part('/templates/components/slider_images');
     ?>
 
-/<?php
-    get_template_part('/templates/components/basic_block');
-    ?>
+
     
 </main>
 

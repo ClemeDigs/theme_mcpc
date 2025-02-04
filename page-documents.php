@@ -17,6 +17,14 @@ Template Name: Documents
     get_template_part('/templates/components/subtitle');
     ?>
 
+<?php
+    get_template_part('/templates/components/accordeon-rapports-annuels');
+    ?>
+
+<?php
+    get_template_part('/templates/components/accordeon-rapports-assembles');
+    ?>
+
 </main>
 
 <?php

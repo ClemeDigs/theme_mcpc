@@ -8,7 +8,7 @@
 
     img {
       @include container;
-      // max-height: 647px;
+      max-height: 647px;
       margin: 0 auto;
       @include flex;
       object-fit: cover;
