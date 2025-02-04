@@ -11,7 +11,8 @@ button {
   background: $red-secondary;
   color: $color-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $red-secondary;
     border: 2px solid $red-primary;
     color: $color-white;

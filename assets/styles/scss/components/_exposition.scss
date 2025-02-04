@@ -1,11 +1,84 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-.expositions {
+.exposition-now {
+  background-color: none;
   @include container;
   @include flex(column, center, center);
   gap: 2rem;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 4rem 0rem 4rem 2rem;
+    gap: 3rem;
+  }
+
+  &__item {
+    @include flex(column, center, flex-start);
+    width: 100%;
+    gap: 2rem;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-text {
+      @include flex(column, center, flex-start);
+      gap: 2rem;
+      height: 100%;
+    }
+
+    &-infos {
+      @include flex(row, space-between, center);
+      gap: 2rem;
+      width: 100%;
+      @include desktop {
+        max-width: 80%;
+      }
+
+      > div {
+        @include flex(row, center, center);
+        gap: 1rem;
+        max-width: 250px;
+      }
+    }
+
+    &-image {
+      @include border;
+      box-sizing: border-box;
+      @include round-border;
+      padding: 20px;
+      max-width: 100%;
+      @include desktop {
+        padding: 20px 0px 20px 20px;
+        border-radius: 0;
+        @include border-left;
+        @include round-border-left;
+      }
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        box-sizing: border-box;
+
+        @include desktop {
+          width: 100%;
+          height: 500px;
+          border-radius: 0;
+          @include round-border-left;
+        }
+      }
+    }
+  }
+}
+
+.expositions {
+  @include container;
+  @include flex(column, center, center);
   background-color: $color-grey-p;
+  gap: 2rem;
   padding: 4rem 2rem;
   box-sizing: border-box;
 
@@ -28,12 +101,13 @@
     }
 
     &__images {
-      @include flex(row, flex-start, center);
+      @include flex(row, flex-start, flex-start);
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
       flex-wrap: nowrap;
       box-sizing: border-box;
       scrollbar-width: none;
+      max-width: 100%;
     }
 
     &__item {
@@ -43,6 +117,7 @@
       scroll-snap-align: start;
       box-sizing: border-box;
       flex-direction: row;
+      max-width: 100%;
 
       @include desktop {
         grid-template-columns: repeat(2, 1fr);
@@ -53,15 +128,15 @@
       scroll-snap-align: start;
       @include flex(column, center, center);
       gap: 1rem;
-      border-bottom: 2px solid $color-black;
-      border-top: 2px solid $color-black;
-      border-right: 2px solid $color-black;
+      @include border;
       box-sizing: border-box;
       @include round-border;
-      padding: 0.5rem;
+      padding: 20px;
+      max-width: 100%;
       @include desktop {
-        padding: 0.5rem 0.5rem 0.5rem 0;
+        padding: 20px 20px 20px 0;
         border-radius: 0;
+        @include border-right;
         @include round-border-right;
       }
 
@@ -92,13 +167,15 @@
         &__infos-acces {
           @include flex(row, space-between, center);
           gap: 2rem;
+          width: 100%;
+          @include desktop {
+            max-width: 80%;
+          }
 
           > div {
             @include flex(row, center, center);
             gap: 1rem;
-            div {
-              @include flex(column, center, flex-start);
-            }
+            max-width: 250px;
           }
         }
       }
@@ -145,13 +222,12 @@
       width: 100%;
     }
 
-    &-date {
+    &-date,
+    &-place {
       @include flex(row, center, center);
       gap: 1rem;
-
-      div {
-        @include flex(column, center, flex-start);
-      }
+      max-width: 250px;
+      padding-left: 1rem;
     }
   }
 

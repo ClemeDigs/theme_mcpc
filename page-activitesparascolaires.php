@@ -19,7 +19,7 @@ Template Name: Activités parascolaires
     ?>
 
     <?php 
-        get_template_part('/templates/components/slider_images');
+        get_template_part('/templates/components/basic_block');
     ?>
 </main>
 

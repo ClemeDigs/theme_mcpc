@@ -42,14 +42,13 @@ main {
   background-color: white;
   @include shadow;
   gap: 6rem;
-  /*   padding: $p-mobile;
 
   @include tablet {
-    padding: $p-tablet;
-  } */
+    padding-bottom: 100px;
+    padding-top: 0;
+  }
 
   @include desktop {
-    /*     padding: $p-desktop; */
     padding-bottom: 250px;
     gap: 12.5rem;
   }

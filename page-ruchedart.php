@@ -18,6 +18,10 @@ Template Name: Ruche d'art
     get_template_part('/templates/components/subtitle');
     ?>
 
+<?php
+    get_template_part('/templates/components/basic_block');
+    ?>
+
     <?php 
         get_template_part('/templates/components/slider_images');
     ?>
