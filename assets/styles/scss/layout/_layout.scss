@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   background-color: $dark-grey;
+  overflow-x: hidden;
 }
 
 main {

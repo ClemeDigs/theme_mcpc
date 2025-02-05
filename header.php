@@ -2,13 +2,14 @@
 /* Header Template */
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://www.juicer.io/embed/un-zeste-de-clementine-1fd227a4-3dc7-444f-bd0b-bc80d0b1a054/embed-code.js" async defer></script>
+    <script type="text/javascript" src="https://www.juicer.io/embed/maison-de-la-culture-du-pic-champlain/embed-code.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,6 +28,22 @@
 <body>
 
     <?php
+
+    $liens_menu_query = new WP_Query(array(
+        'post_type'      => 'liens-menu',
+        'posts_per_page' => 1,
+    ));
+
+    if ($liens_menu_query->have_posts()) {
+        $liens_menu_query->the_post();
+        $donation_link = get_field('donation_link', get_the_ID());
+        $connexion_link = get_field('connexion_link', get_the_ID());
+        wp_reset_postdata();
+    } else {
+        $donation_link = null;
+        $connexion_link = null;
+    }
+
     // Récupérer le prénom et le nom de famille avec les shortcodes
     $first_name = do_shortcode('[swpm_show_member_info column="first_name"]');
     $last_name = do_shortcode('[swpm_show_member_info column="last_name"]');
@@ -53,20 +70,18 @@
             </nav>
             <div class="header__btns">
                 <div class="header__btns-cta">
-                    <button class="header__dons">
+                    <a href="<?php echo esc_url($donation_link); ?>" target="_blank" class="header__dons" >
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-donation.svg" alt="Icone don">
                         Don
-                    </button>
-                    <button class="header__connexion">
-                        <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
-                            <i class="fa-regular fa-user"></i>
-                            <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
-                                <?php echo $initials; ?>
-                            <?php else: ?>
-                                Connexion
-                            <?php endif; ?>
-                        </a>
-                    </button>
+                    </a>
+                    <a href="<?php echo esc_url($connexion_link); ?>" class="header__connexion">
+                        <i class="fa-regular fa-user"></i>
+                        <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
+                            <?php echo $initials; ?>
+                        <?php else: ?>
+                            Connexion
+                        <?php endif; ?>
+                    </a>
                 </div>
                 <button class="header__mobile-icon">
                     <i data-dialog="#mobile-menu" class="fa-solid fa-bars"></i>
@@ -90,20 +105,18 @@
                 ));
                 ?>
                 <div class="mobile-menu__btns">
-                    <button class="header__connexion">
-                        <a href="<?php echo get_permalink(get_page_by_path('connexion')); ?>" class="header__connexion">
-                            <i class="fa-regular fa-user"></i>
-                            <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
-                                <?php echo $initials; ?>
-                            <?php else: ?>
-                                Connexion
-                            <?php endif; ?>
-                        </a>
-                    </button>
-                    <button class="header__dons">
+                    <a href="<?php echo esc_url($connexion_link); ?>" class="header__connexion">
+                        <i class="fa-regular fa-user"></i>
+                        <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
+                            <?php echo $initials; ?>
+                        <?php else: ?>
+                            Connexion
+                        <?php endif; ?>
+                    </a>
+                    <a href="<?php echo esc_url($donation_link); ?>" class="header__dons">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-donation.svg" alt="Icone don">
                         Don
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
