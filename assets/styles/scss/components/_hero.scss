@@ -20,14 +20,17 @@
     @include container;
     padding: $p-mobile;
     transform: translateY(-27px);
+
     @include tablet {
       padding: $p-tablet;
       transform: translateY(-38px);
     }
+
     @include desktop {
       padding: $p-desktop;
       transform: translateY(-38px);
     }
+
     @include desktop-xl {
       transform: translateY(-51px);
     }

@@ -30,14 +30,8 @@
                             </div>
                         </div>
         <?php
-                    else:
-                        echo '<p>URL de la photo non trouvée pour photo_gallery_' . $i . '</p>';
                     endif;
-                else :
-                    echo '<p>Photo non trouvée pour photo_gallery_' . $i . '</p>';
                 endif;
-            else :
-                echo '<p>Groupe photo_gallery_' . $i . ' non trouvé</p>';
             endif;
         }
         ?>

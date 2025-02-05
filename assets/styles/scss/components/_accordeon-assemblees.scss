@@ -4,7 +4,6 @@
 .accordeon {
     &__container {
         @include container;
-        margin-top: 12.5rem;
     }
 
     &__header {
@@ -13,12 +12,7 @@
         color: $color-black;
         background-color: $pale-grey;
         border-bottom: 2px solid $color-black;
-        padding: 20px;
-
-
-        @include tablet {
-            padding: 40px;
-        }
+        padding: 40px;
 
         @include desktop {
             padding: 70px;
@@ -26,7 +20,7 @@
 
         .accordeon__icon {
             color: $color-black;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         &:hover,
@@ -53,41 +47,43 @@
     @include container;
     @include flex(column);
     gap: 2rem;
-    padding: 40px 40px 0px 0px;
+    margin: 20px 0;
+    padding: $p-mobile;
 
     @include tablet {
         @include grid-column(2);
         gap: 6.875rem;
-        padding: 35px 70px 35px 0px;
+        padding: 0px 70px 35px 0px;
     }
 
     &__image {
-        width: 100%;
-        height: 470px;
-        object-fit: cover;
-        object-position: center;
-        @include round-border-right;
-        @include border-left;
-        padding: 20px 20px 20px 0;
+        @include border;
+        box-sizing: border-box;
+        @include round-border;
+        padding: 20px;
+        max-width: 100%;
+
+        @include desktop {
+            padding: 20px 20px 20px 0px;
+            border-left: none;
+            @include round-border-right;
+        }
     }
 
     &__content {
+        box-sizing: border-box;
         @include flex(column);
         gap: 2.5rem;
         width: 100%;
-        padding-left: 20px;
-        padding-bottom: 30px;
-        align-items: flex-start;
+        padding: $p-mobile;
+        align-items: center;
 
         @include tablet {
             padding-left: 0;
             padding-bottom: 0px;
+            align-items: flex-start;
         }
 
-        @include desktop {
-            padding-left: 0;
-            padding-bottom: 0px;
-        }
     }
 
     &__statistiques {
@@ -99,7 +95,7 @@
 
     &__stat {
         text-align: center;
-        padding: 20px;
+        padding-bottom: 20px;
 
         img {
             max-height: 105px;
@@ -113,67 +109,66 @@
     }
 }
 
-.assemblee__bonhomme-container {
-    position: relative;
-}
-
-.assemblee__bonhomme {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-
-    img {
+.assemblee {
+    &__bonhomme-container {
         position: relative;
-        width: 100%;
-        height: auto;
-        visibility: visible;
-        opacity: 1;
+    }
 
-        &.bonhomme-théâtre {
-            @include bonhomme-style(150px, 50px, 20px);
-            @include bonhomme-style-tablet(310px, -20px, -100px);
-        }
+    &__bonhomme {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
 
-        &.bonhomme-peinture {
-            @include bonhomme-style(150px, 70px, 20px);
-            @include bonhomme-style-tablet(310px, -20px, -80px);
-        }
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
 
-        &.bonhomme-musique {
-            @include bonhomme-style(160px, 40px, 20px);
-            @include bonhomme-style-tablet(270px, 20px, -80px);
-        }
+            &.bonhomme-théâtre {
+                @include bonhomme-style(150px, -150px, 0px);
+                @include bonhomme-style-tablet(270px, -272px, -40px);
+            }
 
-        &.bonhomme-danse {
-            @include bonhomme-style(160px, 50px, 20px);
-            @include bonhomme-style-tablet(270px, 20px, -10px);
-        }
+            &.bonhomme-peinture {
+                @include bonhomme-style(150px, -150px, 0px);
+                @include bonhomme-style-tablet(270px, -272px, 0px);
+            }
 
-        &.bonhomme-hip-hop {
-            @include bonhomme-style(160px, 40px, 30px);
-            @include bonhomme-style-tablet(270px, 20px, -10px);
-        }
+            &.bonhomme-musique {
+                @include bonhomme-style(150px, -150px, 0px);
+                @include bonhomme-style-tablet(270px, -272px, 0px);
+            }
 
-        &.bonhomme-classique {
-            @include bonhomme-style(160px, 50px, 30px);
-            @include bonhomme-style-tablet(270px, 20px, -10px);
-        }
+            &.bonhomme-danse {
+                @include bonhomme-style(150px, -150px, 0px);
+                @include bonhomme-style-tablet(270px, -272px, 0px);
+            }
 
-        &.bonhomme-radio {
-            @include bonhomme-style-max-width(220px, 80px, 30px);
-            @include bonhomme-style-max-width-tablet(380px, 100px, -20px);
-        }
+            &.bonhomme-hip-hop {
+                @include bonhomme-style(150px, -150px, 10px);
+                @include bonhomme-style-tablet(270px, -272px, 10px);
+            }
 
-        &.bonhomme-parle {
-            @include bonhomme-style-max-width(220px, 100px, 30px);
-            @include bonhomme-style-max-width-tablet(380px, 120px, -30px);
-        }
+            &.bonhomme-classique {
+                @include bonhomme-style(150px, -150px, 0px);
+                @include bonhomme-style-tablet(270px, -272px, 0px);
+            }
 
-        &.bonhomme-pense {
-            @include bonhomme-style-max-width(220px, 80px, 30px);
-            @include bonhomme-style-max-width-tablet(380px, 90px, -30px);
+            &.bonhomme-radio {
+                @include bonhomme-style-max-width(180px, -110px, 20px);
+                @include bonhomme-style-max-width-tablet(380px, -200px, 0px);
+            }
+
+            &.bonhomme-parle {
+                @include bonhomme-style-max-width(180px, -90px, 20px);
+                @include bonhomme-style-max-width-tablet(380px, -200px, 0px);
+            }
+
+            &.bonhomme-pense {
+                @include bonhomme-style-max-width(180px, -100px, 20px);
+                @include bonhomme-style-max-width-tablet(380px, -210px, 0px);
+            }
         }
     }
 

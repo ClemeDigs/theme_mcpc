@@ -18,6 +18,7 @@
   border: 2px solid $color-black;
   border-radius: 30px;
   position: relative;
+
   @include desktop {
     padding: 4rem;
     gap: 3rem;
@@ -101,12 +102,14 @@
   gap: 1rem;
   max-width: 100%;
   box-sizing: border-box;
+
   @include desktop {
     gap: 3rem;
   }
 
   i {
     font-size: 1.5rem;
+
     @include desktop {
       font-size: 2rem;
     }
@@ -134,6 +137,7 @@
       object-fit: cover;
       border-radius: 30px;
       margin: 0;
+
       @include desktop {
         width: 400px;
         height: 280px;
