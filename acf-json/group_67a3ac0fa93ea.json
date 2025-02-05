@@ -1,0 +1,401 @@
+{
+    "key": "group_67a3ac0fa93ea",
+    "title": "Bénévolat",
+    "fields": [
+        {
+            "key": "field_67a3ac0fae770",
+            "label": "Choix du bonhome",
+            "name": "volunteer_choix_du_bonhome",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Classique",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67a3ac0fb215d",
+            "label": "Volunteer 1",
+            "name": "volunteer_sections_1",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67a3ac0fc8481",
+                    "label": "Volunteer_section_title",
+                    "name": "volunteer_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ac72ebd4a",
+                    "label": "Volunteer_section_subtitle",
+                    "name": "volunteer_section_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ac0fcc012",
+                    "label": "Volunteer_section_paragraph",
+                    "name": "volunteer_section_paragraph",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67a3ad097a890",
+            "label": "Volunteer 2",
+            "name": "volunteer_sections_2",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67a3ad097a891",
+                    "label": "Volunteer_section_title",
+                    "name": "volunteer_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad097a892",
+                    "label": "Volunteer_section_subtitle",
+                    "name": "volunteer_section_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad097a893",
+                    "label": "Volunteer_section_paragraph",
+                    "name": "volunteer_section_paragraph",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67a3ad24dc51e",
+            "label": "Volunteer 3",
+            "name": "volunteer_sections_3",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67a3ad24dc51f",
+                    "label": "Volunteer_section_title",
+                    "name": "volunteer_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad24dc520",
+                    "label": "Volunteer_section_subtitle",
+                    "name": "volunteer_section_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad24dc521",
+                    "label": "Volunteer_section_paragraph",
+                    "name": "volunteer_section_paragraph",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67a3ad29dc523",
+            "label": "Volunteer 4",
+            "name": "volunteer_sections_4",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_67a3ad29dc524",
+                    "label": "Volunteer_section_title",
+                    "name": "volunteer_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez le titre souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad29dc525",
+                    "label": "Volunteer_section_subtitle",
+                    "name": "volunteer_section_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67a3ad29dc526",
+                    "label": "Volunteer_section_paragraph",
+                    "name": "volunteer_section_paragraph",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Ajoutez la description souhaitée.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_67a3acc4a7be8",
+            "label": "Volunteer_section_link",
+            "name": "volunteer_section_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "allow_in_bindings": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "18"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738782471
+}

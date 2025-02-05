@@ -1,6 +1,6 @@
 {
     "key": "group_67a386457bd32",
-    "title": "Membership policy",
+    "title": "Politique aux membres",
     "fields": [
         {
             "key": "field_67a3864581998",
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738773487
+    "modified": 1738787108
 }
