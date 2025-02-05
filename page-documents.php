@@ -18,11 +18,11 @@ Template Name: Documents
     ?>
 
 <?php
-    get_template_part('/templates/components/accordeon-rapports-annuels');
+    get_template_part('/templates/components/accordeon-rapports-assembles');
     ?>
 
 <?php
-    get_template_part('/templates/components/accordeon-rapports-assembles');
+    get_template_part('/templates/components/accordeon-rapports-annuels');
     ?>
 
 </main>
