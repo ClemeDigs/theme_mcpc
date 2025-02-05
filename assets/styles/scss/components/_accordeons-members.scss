@@ -1,0 +1,137 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.members-policy {
+    &__content {
+        @include flex(column);
+        gap: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        padding: $p-mobile;
+        width: 100%;
+
+        @include tablet {
+            padding: $p-tablet;
+        }
+
+        @include desktop {
+            padding: $p-desktop;
+        }
+
+        .members-policy-item {
+            margin-bottom: 1rem;
+
+            p {
+                padding-bottom: 2rem;
+            }
+
+            .members-policy-title-text {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .members-policy-response {
+                margin: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block !important;
+    }
+}
+
+.faq {
+    &__content {
+        @include flex(column);
+        gap: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        padding: $p-mobile;
+        width: 100%;
+
+        @include tablet {
+            padding: $p-tablet;
+        }
+
+        @include desktop {
+            padding: $p-desktop;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+
+            p {
+                padding-bottom: 2rem;
+            }
+
+            .faq-question-reponses {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .faq-response {
+                margin: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block !important;
+    }
+}
+
+.advantages {
+    &__content {
+        @include flex(column);
+        gap: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        padding: $p-mobile;
+        width: 100%;
+
+        @include tablet {
+            padding: $p-tablet;
+        }
+
+        @include desktop {
+            padding: $p-desktop;
+        }
+
+        .advantages-item {
+            margin-bottom: 1rem;
+
+            p {
+                padding-bottom: 2rem;
+            }
+
+            .advantages-title-text {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .advantages-response {
+                margin: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content--active {
+        display: block !important;
+    }
+}

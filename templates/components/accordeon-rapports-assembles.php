@@ -1,10 +1,10 @@
 <?php
-$documents = new WP_Query([
-    'post_type' => 'documents',
+$rapports_assemblee = new WP_Query([
+    'post_type' => 'rapports-assemblee',
     'posts_per_page' => -1,
 ]);
 
-if ($documents->have_posts()) :
+if ($rapports_assemblee->have_posts()) :
 ?>
     <div class="accordeon__container">
         <div class="assemblee__bonhomme-container">
@@ -19,7 +19,7 @@ if ($documents->have_posts()) :
             <i class="fa-solid fa-chevron-down accordeon__icon"></i>
         </div>
         <div class="accordeon__content">
-            <?php while ($documents->have_posts()) : $documents->the_post(); ?>
+            <?php while ($rapports_assemblee->have_posts()) : $rapports_assemblee->the_post(); ?>
                 <div class="rapport">
                     <?php
                     $image = get_field('image');

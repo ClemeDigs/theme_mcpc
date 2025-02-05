@@ -292,7 +292,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "documents"
+                "value": "rapports-assemblee"
             }
         ]
     ],
@@ -305,5 +305,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738680678
+    "modified": 1738774959
 }
