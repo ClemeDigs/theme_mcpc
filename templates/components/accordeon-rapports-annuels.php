@@ -1,10 +1,10 @@
 <?php
-$documents = new WP_Query([
-    'post_type' => 'documents',
+$rapports_annuels = new WP_Query([
+    'post_type' => 'rapports-annuels',
     'posts_per_page' => -1,
 ]);
 
-if ($documents->have_posts()) :
+if ($rapports_annuels->have_posts()) :
 ?>
 
     <div class="rapports-annuel__container">
@@ -15,7 +15,7 @@ if ($documents->have_posts()) :
             <i class="fa-solid fa-chevron-down accordeon__icon"></i>
         </div>
         <div class="accordeon__content rapports-annuel__content">
-            <?php while ($documents->have_posts()) : $documents->the_post(); ?>
+            <?php while ($rapports_annuels->have_posts()) : $rapports_annuels->the_post(); ?>
                 <div class="rapport-annuel">
                     <?php
                     $titre_ra = get_field('titre_ra');

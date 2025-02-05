@@ -47,7 +47,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "documents"
+                "value": "rapports-annuels"
             }
         ]
     ],
@@ -60,5 +60,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738683857
+    "modified": 1738774847
 }
