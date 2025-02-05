@@ -1,50 +1,51 @@
 <?php
-$rapports = [
-    get_field('rapports_1'),
-    get_field('rapports_2'),
-    get_field('rapports_3'),
-    get_field('rapports_4'),
-    get_field('rapports_5')
-];
+$documents = new WP_Query([
+    'post_type' => 'documents',
+    'posts_per_page' => -1,
+]);
 
-$rapports = array_filter($rapports, function ($rapport) {
-    return !empty($rapport) && is_array($rapport) && !empty($rapport['titre_ag']);
-});
-
-if (!empty($rapports)) :
+if ($documents->have_posts()) :
 ?>
-
-    <div class="assemblee__bonhomme-container">
-        <div class="assemblee__bonhomme">
-            <?php afficher_bonhomme('assemblee_choix_du_bonhomme'); ?>
-        </div>
-    </div>
     <div class="accordeon__container">
+        <div class="assemblee__bonhomme-container">
+            <div class="assemblee__bonhomme">
+                <?php afficher_bonhomme('assemblee_choix_du_bonhomme'); ?>
+            </div>
+        </div>
         <div class="accordeon__header">
-            <h2 class="accordeon__title">
+            <h3 class="accordeon__title">
                 Rapports des Assemblées Générales Annuelles
-            </h2>
+            </h3>
             <i class="fa-solid fa-chevron-down accordeon__icon"></i>
         </div>
         <div class="accordeon__content">
-            <?php foreach ($rapports as $rapport) : ?>
+            <?php while ($documents->have_posts()) : $documents->the_post(); ?>
                 <div class="rapport">
-
-                    <?php if (!empty($rapport['image'])) : ?>
-                        <?php
-                        $image_url = wp_get_attachment_image_url($rapport['image'], 'large');
-                        ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($rapport['titre_ag']); ?>" class="rapport__image">
+                    <?php
+                    $image = get_field('image');
+                    if (!empty($image)) :
+                        $image_url = wp_get_attachment_image_url($image, 'large');
+                    ?>
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_field('titre_ag')); ?>" class="rapport__image">
                     <?php endif; ?>
+
                     <div class="rapport__content">
-                        <h3><?php echo esc_html($rapport['titre_ag']); ?></h3>
-                        <p><?php echo esc_html($rapport['description']); ?></p>
+                        <?php
+                        $titre_ag = get_field('titre_ag');
+                        $description = get_field('description');
+                        $statistiques = get_field('statistiques');
+                        $lien_document = get_field('lien_document');
+                        ?>
+                        <?php if ($titre_ag) : ?>
+                            <h3><?php echo esc_html($titre_ag); ?></h3>
+                        <?php endif; ?>
+                        <?php if ($description) : ?>
+                            <p><?php echo esc_html($description); ?></p>
+                        <?php endif; ?>
 
-                        <?php if (!empty($rapport['statistiques'])) : ?>
-
+                        <?php if (!empty($statistiques)) : ?>
                             <div class="rapport__statistiques">
                                 <?php
-
                                 $statistique_images = [
                                     1 => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_hiphop2.svg',
                                     2 => get_template_directory_uri() . '/assets/img/illustrations/bonhomme/bonhomme_guitar2.svg',
@@ -52,7 +53,7 @@ if (!empty($rapports)) :
                                 ];
 
                                 for ($j = 1; $j <= 3; $j++) :
-                                    $statistique = $rapport["statistiques"]["statistiques_$j"] ?? null;
+                                    $statistique = $statistiques["statistiques_$j"] ?? null;
                                     if (!empty($statistique) && !empty($statistique["titre_statistique_$j"])) :
                                 ?>
                                         <div class="rapport__stat">
@@ -64,16 +65,19 @@ if (!empty($rapports)) :
                                     <?php endif; ?>
                                 <?php endfor; ?>
                             </div>
-
                         <?php endif; ?>
 
-                        <a href="<?php echo esc_url($rapport["lien_document"]); ?>" class="btn" target="_blank" aria-label="Télécharger le document">
-                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Télécharger le document
-                        </a>
+                        <?php if ($lien_document) : ?>
+                            <a href="<?php echo esc_url($lien_document); ?>" class="btn" target="_blank" aria-label="Télécharger le document">
+                                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Télécharger le document
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
         </div>
     </div>
-
-<?php endif; ?>
+<?php
+endif;
+wp_reset_postdata();
+?>

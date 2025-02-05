@@ -68,6 +68,22 @@ function create_posttype()
     );
 
     register_post_type(
+        'documents',
+        array(
+            'labels' => array(
+                'name' => __('Documents'),
+                'singular_name' => __('Document'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-media-document',
+            'rewrite' => array('slug' => 'documents'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
+
+    register_post_type(
         'exposition',
         array(
             'labels' => array(
@@ -102,7 +118,7 @@ function create_posttype()
 
 
 
- // ! BANQUE IMAGES BONHOMMES //
+// ! BANQUE IMAGES BONHOMMES //
 
 function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrations/bonhomme/bonhomme_classic2.svg'/* , $default_class_name = 'bonhomme-classique' */)
 {
@@ -325,7 +341,8 @@ function remove_wysiwyg()
 
 // ! FUNCTION POUR ENLEVER COMMENTS ET ARTICLES DU TABLEAU DE BORD WP //
 
-function remove_dashboard_menus() {
+function remove_dashboard_menus()
+{
     remove_menu_page('edit.php'); // Supprime "Articles"
     remove_menu_page('edit-comments.php'); // Supprime "Commentaires"
 }
@@ -369,17 +386,30 @@ function enqueue_gallery_script()
     );
 }
 
+function enqueue_accordeon_script()
+{
+    wp_enqueue_script(
+        'accordeon',
+        get_template_directory_uri() . '/assets/js/accordeon.js',
+        array(),
+        null,
+        true
+    );
+}
+
 // ! HOOKS WORDPRESS //
 add_action('init', 'remove_wysiwyg');
 add_action('wp_enqueue_scripts', 'enqueue_slider_script');
 add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
+add_action('wp_enqueue_scripts', 'enqueue_accordeon_script');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
 add_action('admin_menu', 'remove_dashboard_menus');
 
 // ! UPLOAD SVG //
 
-function autoriser_upload_svg($mime_types) {
+function autoriser_upload_svg($mime_types)
+{
     $mime_types['svg'] = 'image/svg+xml';
     return $mime_types;
 }

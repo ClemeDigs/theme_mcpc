@@ -19,6 +19,7 @@
   @include grid-column(12);
 }
 
+
 body,
 html {
   height: 100%;
@@ -39,7 +40,7 @@ main {
   @include container;
   max-width: 1600px;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding-bottom: 100px;
   background-color: white;
   @include shadow;
   gap: 6rem;
