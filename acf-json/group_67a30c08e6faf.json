@@ -1,6 +1,6 @@
 {
     "key": "group_67a30c08e6faf",
-    "title": "Advantages",
+    "title": "Avantages",
     "fields": [
         {
             "key": "field_67a30c08ee660",
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738773637
+    "modified": 1738787133
 }
