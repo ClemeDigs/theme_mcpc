@@ -4,12 +4,12 @@
 
 .radio {
   @include flex(column, center, center);
-  padding: 100px 20px;
+  padding: 70px 20px;
   @include tablet {
-    padding: 150px 40px;
+    padding: 100px 40px;
   }
   @include desktop {
-    padding: 200px 70px;
+    padding: 100px 70px;
   }
 
   &__part-1 {

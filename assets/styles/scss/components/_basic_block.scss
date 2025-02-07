@@ -44,10 +44,6 @@
     }
   }
 
-  &__text {
-    padding-bottom: 1.5rem;
-  }
-
   &__link {
     @include button-base;
     // @include hidden;
