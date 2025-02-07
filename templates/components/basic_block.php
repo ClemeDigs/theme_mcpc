@@ -52,17 +52,16 @@ if (!empty($basic_block_sections)) :
                         <?php if (!empty($block['block_title'])) : ?>
                             <h2><?php echo esc_html($block['block_title']); ?></h2>
                         <?php endif; ?>
+                        <?php if (!empty($block['block_arrow']) && $block['block_arrow'] !== 'aucun') : ?>
                         <div class="block__arrow">
-                        <?php 
-                        // Utilisation de la nouvelle fonction afficher_arrow
-                        if (!empty($block['block_arrow'])) :
-                            afficher_arrow($block['block_arrow']);
-                        endif;
-                        ?>
+                            <?php afficher_arrow('block_arrow'); ?>
                         </div>
+                        <?php endif; ?>
                     </div>
                     <?php if (!empty($block['block_text'])) : ?>
-                        <p><?php echo esc_html($block['block_text']); ?></p>
+                        <div class="block__text">
+                        <p><?php echo ($block['block_text']); ?>
+                        </div></p>
                     <?php endif; ?>
                     <?php if (!empty($block['block_link'])) : ?>
                         <div class="block__link">

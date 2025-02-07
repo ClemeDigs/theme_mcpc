@@ -363,6 +363,20 @@ function afficher_bouton_radio($link, $label = null)
     }
 }
 
+// ! COULEUR DE FOND DU BLOC //
+
+/**
+ * Ajoute une classe conditionnelle pour le background color en fonction de la position.
+ *
+ * @param int $position La position à vérifier.
+ * @return string La classe CSS à ajouter.
+ */
+function ajouter_classe_background_acf($field_name) {
+    $condition = get_field($field_name);
+    return ($condition === true) ? 'background-color-grey' : '';
+}
+
+
 // ! FUNCTION PAGE NON PERSONNALISABLE //
 
 function remove_wysiwyg()

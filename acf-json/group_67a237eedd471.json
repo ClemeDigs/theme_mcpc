@@ -1,0 +1,234 @@
+{
+    "key": "group_67a237eedd471",
+    "title": "Bloc sans image",
+    "fields": [
+        {
+            "key": "field_67a2484cf44f1",
+            "label": "Couleur de fond",
+            "name": "block-without-img_background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Gris",
+            "ui_off_text": "Aucun",
+            "ui": 1
+        },
+        {
+            "key": "field_67a237ef969c5",
+            "label": "Choix du bonhomme haut",
+            "name": "block-without-img_choix_du_bonhomme_haut",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Classique",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67a23bfd28e47",
+            "label": "Position du bonhomme haut",
+            "name": "block-without-img_position_du_bonhomme_haut",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Gauche",
+            "ui_off_text": "Droite",
+            "ui": 1
+        },
+        {
+            "key": "field_67a23c9be814d",
+            "label": "Titre du bloc sans image",
+            "name": "block-without-img_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a23cef32322",
+            "label": "Texte du bloc sans image",
+            "name": "block-without-img_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67a23d1cb5d00",
+            "label": "Button 1 du bloc sans image",
+            "name": "block-without-img_link-1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_67a240e8b02e0",
+            "label": "Button 2 du bloc sans image",
+            "name": "block-without-img_link-2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_67a2424188e63",
+            "label": "Choix du bonhomme intérieur",
+            "name": "block-without-img_choix_du_bonhomme_int",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Classique",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67a2424788e64",
+            "label": "Position du bonhomme intérieur",
+            "name": "block-without-img_position_du_bonhomme_int",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Gauche",
+            "ui_off_text": "Droite",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738768950
+}

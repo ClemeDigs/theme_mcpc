@@ -59,7 +59,7 @@
             "ui": 1
         },
         {
-            "key": "field_679ad3f4ae875",
+            "key": "field_679e4e508adcd",
             "label": "basic-block_section_1",
             "name": "basic-block_section_1",
             "aria-label": "",
@@ -75,7 +75,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_679ad6042240a",
+                    "key": "field_679e4e508adce",
                     "label": "Image du bloc",
                     "name": "block_image",
                     "aria-label": "",
@@ -101,7 +101,7 @@
                     "preview_size": "medium"
                 },
                 {
-                    "key": "field_679ad6340a4c7",
+                    "key": "field_679e4e508adcf",
                     "label": "Position de l'image",
                     "name": "image_position",
                     "aria-label": "",
@@ -122,7 +122,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_679ad676c22cc",
+                    "key": "field_679e4e508add0",
                     "label": "Flèche du bloc",
                     "name": "block_arrow",
                     "aria-label": "",
@@ -136,13 +136,13 @@
                         "id": ""
                     },
                     "choices": {
-                        "fleche_grosse_boucle": "fleche_grosse_boucle",
-                        "fleche_boucle": "fleche_boucle",
-                        "fleche_u": "fleche_u",
+                        "grosse_boucle": "grosse_boucle",
+                        "boucle": "boucle",
+                        "u": "u",
                         "etoiles": "etoiles",
                         "aucun": "aucun"
                     },
-                    "default_value": "fleche_boucle",
+                    "default_value": "grosse_boucle",
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
@@ -152,7 +152,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_679ad5409851d",
+                    "key": "field_679e4e508add1",
                     "label": "Titre du bloc",
                     "name": "block_title",
                     "aria-label": "",
@@ -173,7 +173,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_679ad5579851e",
+                    "key": "field_679e4e508add2",
                     "label": "Texte du bloc",
                     "name": "block_text",
                     "aria-label": "",
@@ -186,15 +186,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Inscrire ici le texte lié à l'image",
+                    "default_value": "Texte",
                     "maxlength": "",
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 },
                 {
-                    "key": "field_679ad8de18425",
+                    "key": "field_679e4e508add3",
                     "label": "Button du bloc",
                     "name": "block_link",
                     "aria-label": "",
@@ -213,7 +213,7 @@
             ]
         },
         {
-            "key": "field_679bde5eb76b4",
+            "key": "field_679e4e8f17afd",
             "label": "basic-block_section_2",
             "name": "basic-block_section_2",
             "aria-label": "",
@@ -226,10 +226,10 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "sub_fields": [
                 {
-                    "key": "field_679bde5eb76b5",
+                    "key": "field_679e4e8f17afe",
                     "label": "Image du bloc",
                     "name": "block_image",
                     "aria-label": "",
@@ -255,7 +255,7 @@
                     "preview_size": "medium"
                 },
                 {
-                    "key": "field_679bde5eb76b6",
+                    "key": "field_679e4e8f17aff",
                     "label": "Position de l'image",
                     "name": "image_position",
                     "aria-label": "",
@@ -276,7 +276,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_679bde5eb76b7",
+                    "key": "field_679e4e8f17b00",
                     "label": "Flèche du bloc",
                     "name": "block_arrow",
                     "aria-label": "",
@@ -290,13 +290,13 @@
                         "id": ""
                     },
                     "choices": {
-                        "fleche_grosse_boucle": "fleche_grosse_boucle",
-                        "fleche_boucle": "fleche_boucle",
-                        "fleche_u": "fleche_u",
+                        "grosse_boucle": "grosse_boucle",
+                        "boucle": "boucle",
+                        "u": "u",
                         "etoiles": "etoiles",
                         "aucun": "aucun"
                     },
-                    "default_value": "fleche_boucle",
+                    "default_value": "grosse_boucle",
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
@@ -306,7 +306,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_679bde5eb76b8",
+                    "key": "field_679e4e8f17b01",
                     "label": "Titre du bloc",
                     "name": "block_title",
                     "aria-label": "",
@@ -327,7 +327,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_679bde5eb76b9",
+                    "key": "field_679e4e8f17b02",
                     "label": "Texte du bloc",
                     "name": "block_text",
                     "aria-label": "",
@@ -340,15 +340,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Inscrire ici le texte lié à l'image",
+                    "default_value": "Texte",
                     "maxlength": "",
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 },
                 {
-                    "key": "field_679bde5eb76ba",
+                    "key": "field_679e4e8f17b03",
                     "label": "Button du bloc",
                     "name": "block_link",
                     "aria-label": "",
@@ -385,5 +385,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738268259
+    "modified": 1738703438
 }

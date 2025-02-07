@@ -27,6 +27,10 @@ Template Name: Radio Bic
     ?>
 
     <?php 
+        get_template_part('/templates/components/block_without_image');
+    ?>
+
+    <?php 
         get_template_part('/templates/components/slider_images');
     ?>
     

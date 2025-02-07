@@ -1,0 +1,48 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/typographie";
+
+.background-color-grey {
+  background-color: $color-grey-p;
+  @include shadow-block;
+}
+
+.block-without-img {
+  &__container {
+    @include container;
+    @include flex;
+    padding: 20px;
+    @include tablet {
+      padding: 40px;
+    }
+    @include desktop {
+      padding: 70px;
+    }
+  }
+
+  &__section {
+    @include flex(column, start);
+
+    h2 {
+      padding-bottom: 2.375rem;
+    }
+    p {
+      padding-bottom: 2.3rem;
+    }
+  }
+
+  &__links {
+    @include flex(row, start);
+    gap: 50px;
+    @include tablet {
+    }
+  }
+
+  &__link-1,
+  &__link-2 {
+    @include button-base;
+    a {
+      text-decoration: none;
+    }
+  }
+}

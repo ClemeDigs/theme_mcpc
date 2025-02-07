@@ -19,7 +19,6 @@
   @include grid-column(12);
 }
 
-
 body,
 html {
   height: 100%;
@@ -44,14 +43,12 @@ main {
   background-color: white;
   @include shadow;
   gap: 6rem;
-
   @include tablet {
-    padding-bottom: 100px;
-    padding-top: 0;
+    padding: 0 0 100px 0;
   }
 
   @include desktop {
-    padding-bottom: 250px;
+    padding: 0 0 250px 0;
     gap: 12.5rem;
   }
 }
