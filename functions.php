@@ -68,16 +68,32 @@ function create_posttype()
     );
 
     register_post_type(
-        'documents',
+        'rapports-assemblee',
         array(
             'labels' => array(
-                'name' => __('Documents'),
-                'singular_name' => __('Document'),
+                'name' => __('Rapports d\'assemblée'),
+                'singular_name' => __('Rapport d\'assemblée'),
             ),
             'public' => true,
             'has_archive' => true,
             'menu_icon' => 'dashicons-media-document',
-            'rewrite' => array('slug' => 'documents'),
+            'rewrite' => array('slug' => 'rapports-assemblee'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
+
+    register_post_type(
+        'rapports-annuels',
+        array(
+            'labels' => array(
+                'name' => __('Rapports annuels'),
+                'singular_name' => __('Rapport annuel'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-media-document',
+            'rewrite' => array('slug' => 'rapports-annuels'),
             'show_in_rest' => true,
             'supports' => array('title', 'id', 'thumbnail'),
         )
@@ -414,3 +430,26 @@ function autoriser_upload_svg($mime_types)
     return $mime_types;
 }
 add_filter('upload_mimes', 'autoriser_upload_svg');
+
+
+
+// ! FUNCTION POUR AFFICHER LES ACCORDEONS //
+
+function render_accordion_section($title, $content, $container_class, $item_class, $title_class, $content_class)
+{
+    if ($content) : ?>
+        <div class="<?php echo esc_attr($container_class); ?>">
+            <div class="accordeon__header">
+                <h3 class="accordeon__title">
+                    <?php echo esc_html($title); ?>
+                </h3>
+                <i class="fa-solid fa-chevron-down accordeon__icon"></i>
+            </div>
+            <div class="accordeon__content <?php echo esc_attr($container_class . '__content'); ?>">
+                <div class="<?php echo esc_attr($item_class); ?>">
+                    <div class="<?php echo esc_attr($title_class); ?>"><?php echo $content; ?></div>
+                </div>
+            </div>
+        </div>
+<?php endif;
+}
