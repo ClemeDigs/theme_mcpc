@@ -1,0 +1,111 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.activity {
+    @include container;
+    @include flex(column, space-between, center);
+    gap: 50px;
+    padding: 20px;
+
+    @include tablet {
+        @include flex(column, space-between, flex-start);
+        padding: 40px 150px;
+
+        &__images {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: calc(100% * 3);
+            flex: 1;
+        }
+
+        &__image {
+            flex: 0 0 47%;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include desktop {
+        padding: 40px 250px;
+    }
+
+    &__title {
+        @include flex;
+        justify-content: flex-start;
+        gap: .5rem;
+
+        h3:first-child {
+            font-weight: normal;
+        }
+
+        .activity__stars {
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 60px;
+                height: 44px;
+                transform: translate(-10%, -10%);
+            }
+        }
+    }
+
+    &__details {
+        @include grid-column(2);
+        justify-content: space-between;
+
+        @include tablet {
+            width: 100%;
+            @include flex(row, space-between, flex-start);
+        }
+    }
+
+    &__detail {
+        @include flex(column);
+        gap: .5rem;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    &__icon {
+        font-size: 50px;
+    }
+
+    &__description {
+        @include flex(column, space-between, flex-start);
+        gap: 1rem;
+    }
+
+    &__button {
+        align-self: center;
+    }
+}
+
+.main-content {
+    gap: 6rem;
+
+    &.no-gap {
+        gap: 0;
+    }
+}
+
+.accordeon__header {
+    border-bottom: 2px solid $color-black;
+
+    &:hover,
+    &:focus {
+        border-bottom-color: var(--activity-color);
+
+        .accordeon__icon {
+            color: var(--activity-color);
+        }
+    }
+
+    .accordeon__icon {
+        color: $color-black;
+    }
+}

@@ -1,5 +1,3 @@
-console.log("Le script accordéon est bien chargé !");
-
 document.addEventListener("DOMContentLoaded", function () {
     const accordions = document.querySelectorAll(".accordeon__header");
 
