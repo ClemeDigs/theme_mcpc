@@ -158,12 +158,23 @@ Call Stack:
 Call Stack:
 #0 import components/_photo_gallery.scss main.scss on line 14
 02/03/25 6:59:35: main.scss - unexpected }: failed at `` /Applications/XAMPP/xamppfiles/htdocs/mcpc/wp-content/themes/theme_mcpc/assets/styles/scss/components/_radio_bic.scss on line 83, at column 0
-02/03/25 9:03:36: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 23, at column 1
-02/03/25 9:03:46: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 23, at column 1
-02/04/25 4:23:28: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 25, at column 1
-02/04/25 4:25:29: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 25, at column 1
-02/04/25 4:27:30: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 45, at column 1
-02/05/25 4:29:24: main.scss - parse error: failed at `max-height: ;` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_cta.scss on line 72, at column 5
+02/03/25 9:03:36: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 23, at column 1
+02/03/25 9:03:46: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 23, at column 1
+02/04/25 4:23:28: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 25, at column 1
+02/04/25 4:25:29: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 25, at column 1
+02/04/25 4:27:30: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\layout/_layout.scss on line 45, at column 1
+02/05/25 4:29:24: main.scss - parse error: failed at `max-height: ;
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_cta.scss on line 72, at column 5
 02/05/25 4:42:19: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_accordeon-assemblees.scss on line 187, at column 0
-02/07/25 3:14:27: main.scss - unexpected }: failed at `` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_accordeon-activities.scss on line 49, at column 2
-02/07/25 5:47:17: main.scss - parse error: failed at `{` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_accordeon-activities.scss on line 108, at column 9
+02/07/25 3:14:27: main.scss - unexpected }: failed at `
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_accordeon-activities.scss on line 49, at column 2
+02/07/25 5:47:17: main.scss - parse error: failed at `{
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\components/_accordeon-activities.scss on line 108, at column 9
+02/05/25 6:30:55: main.scss - Undefined variable $color-grey-pale: components/_contact.scss on line 54, at column 3
+Call Stack:
+#0 import components/_contact.scss main.scss on line 26

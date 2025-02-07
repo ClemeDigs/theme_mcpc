@@ -73,6 +73,24 @@
             "default_value": "",
             "allow_in_bindings": 1,
             "placeholder": ""
+        },
+        {
+            "key": "field_67a38e6555436",
+            "label": "Lien vers l'infolettre",
+            "name": "newsletter_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -93,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738706429
+    "modified": 1738772106
 }

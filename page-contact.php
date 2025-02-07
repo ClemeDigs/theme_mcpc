@@ -17,6 +17,10 @@ Template Name: Contact
     get_template_part('/templates/components/subtitle');
     ?>
 
+<?php
+    get_template_part('/templates/components/contact');
+    ?>
+
 </main>
 
 <?php

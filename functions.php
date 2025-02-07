@@ -4,12 +4,59 @@
 
 function create_posttype()
 {
+    register_post_type(
+        'activities',
+        array(
+            'labels' => array(
+                'name' => __('Activités'),
+                'singular_name' => __('Activité'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-star-filled',
+            'rewrite' => array('slug' => 'activitie'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
+
+    register_post_type(
+        'exposition',
+        array(
+            'labels' => array(
+                'name' => __('Expositions'),
+                'singular_name' => __('Exposition'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-art',
+            'rewrite' => array('slug' => 'exposition'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
+
+    register_post_type(
+        'residence_musicale',
+        array(
+            'labels' => array(
+                'name' => __('Résidences musicales'),
+                'singular_name' => __('Résidence musicale')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-format-audio',
+            'rewrite' => array('slug' => 'residence_musicale'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id'),
+        )
+    );
 
     register_post_type(
         'contact',
         array(
             'labels' => array(
-                'name' => __('Contacts'),
+                'name' => __('Contact'),
                 'singular_name' => __('Contact')
             ),
             'public' => true,
@@ -18,6 +65,22 @@ function create_posttype()
             'rewrite' => array('slug' => 'contact'),
             'show_in_rest' => true,
             'supports' => array('title', 'id'),
+        )
+    );
+
+    register_post_type(
+        'liens-menu',
+        array(
+            'labels' => array(
+                'name' => __('Liens des menus'),
+                'singular_name' => __('Lien du menu'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-admin-links',
+            'rewrite' => array('slug' => 'liens-menu'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
         )
     );
 
@@ -52,38 +115,6 @@ function create_posttype()
     );
 
     register_post_type(
-        'residence_musicale',
-        array(
-            'labels' => array(
-                'name' => __('Résidences musicales'),
-                'singular_name' => __('Résidence musicale')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-format-audio',
-            'rewrite' => array('slug' => 'residence_musicale'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id'),
-        )
-    );
-
-    register_post_type(
-        'activities',
-        array(
-            'labels' => array(
-                'name' => __('Activités'),
-                'singular_name' => __('Activité'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-star-filled',
-            'rewrite' => array('slug' => 'activitie'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id', 'thumbnail'),
-        )
-    );
-
-    register_post_type(
         'rapports-assemblee',
         array(
             'labels' => array(
@@ -110,38 +141,6 @@ function create_posttype()
             'has_archive' => true,
             'menu_icon' => 'dashicons-media-document',
             'rewrite' => array('slug' => 'rapports-annuels'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id', 'thumbnail'),
-        )
-    );
-
-    register_post_type(
-        'exposition',
-        array(
-            'labels' => array(
-                'name' => __('Expositions'),
-                'singular_name' => __('Exposition'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-art',
-            'rewrite' => array('slug' => 'exposition'),
-            'show_in_rest' => true,
-            'supports' => array('title', 'id', 'thumbnail'),
-        )
-    );
-
-    register_post_type(
-        'liens-menu',
-        array(
-            'labels' => array(
-                'name' => __('Liens des menus'),
-                'singular_name' => __('Lien du menu'),
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-admin-links',
-            'rewrite' => array('slug' => 'liens-menu'),
             'show_in_rest' => true,
             'supports' => array('title', 'id', 'thumbnail'),
         )

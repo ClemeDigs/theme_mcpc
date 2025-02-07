@@ -1,0 +1,153 @@
+{
+    "key": "group_67a38cf62f335",
+    "title": "Infolettre",
+    "fields": [
+        {
+            "key": "field_67a38cf680416",
+            "label": "Titre de section",
+            "name": "newsletter_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Infolettre",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67a38d3b80417",
+            "label": "Paragraphe 1",
+            "name": "newsletter_text_1",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67a38d6680418",
+            "label": "Paragraphe 2",
+            "name": "newsletter_text_2",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67a3905d1147e",
+            "label": "Choix de la flèche",
+            "name": "newsletter_arrow",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fleche_grosse_boucle": "fleche_grosse_boucle",
+                "fleche_boucle": "fleche_boucle",
+                "fleche_u": "fleche_u",
+                "etoiles": "etoiles",
+                "aucun": "aucun"
+            },
+            "default_value": "fleche_grosse_boucle",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67a3961ce38e3",
+            "label": "Choix du bonhomme",
+            "name": "newsletter_choix_du_bonhomme",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Théâtre": "Théâtre",
+                "Peinture": "Peinture",
+                "Musique": "Musique",
+                "Radio": "Radio",
+                "Danse": "Danse",
+                "Hip-hop": "Hip-hop",
+                "Classique": "Classique",
+                "Parle": "Parle",
+                "Pense": "Pense",
+                "Aucun": "Aucun"
+            },
+            "default_value": "Parle",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738774138
+}
