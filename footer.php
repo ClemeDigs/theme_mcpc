@@ -13,10 +13,12 @@
         $liens_menu_query->the_post();
         $facebook_link = get_field('facebook_link', get_the_ID());
         $instagram_link = get_field('instagram_link', get_the_ID());
+        $newsletter_link = get_field('newsletter_link', get_the_ID());
         wp_reset_postdata();
     } else {
         $facebook_link = null;
         $instagram_link = null;
+        $newsletter_link = get_field('newsletter_link', get_the_ID());
     }
 
 ?>
@@ -36,7 +38,7 @@
                 <div class="footer__newsletter">
                     <h2>INFOLETTRE</h2>
                     <span>Inscris-toi à notre infolettre !</span>
-                    <a href="https://app.cyberimpact.com/clients/39645/subscribe-forms/83ED11E9-8819-4F3A-9C8A-86BC5C978CF3"
+                    <a href="<?php echo esc_url($newsletter_link); ?>"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="footer__newsletter-btn">

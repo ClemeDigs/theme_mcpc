@@ -39,7 +39,7 @@ main {
   @include container;
   max-width: 1600px;
   box-sizing: border-box;
-  padding-bottom: 100px;
+  padding: 100px 0;
   background-color: white;
   @include shadow;
   gap: 6rem;
