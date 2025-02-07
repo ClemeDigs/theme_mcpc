@@ -29,11 +29,9 @@
   }
 }
 
-@mixin button-base(
-  $background: $color-primary,
+@mixin button-base($background: $color-primary,
   $color: $color-black,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
-) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;

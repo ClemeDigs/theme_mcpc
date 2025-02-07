@@ -68,6 +68,22 @@ function create_posttype()
     );
 
     register_post_type(
+        'activities',
+        array(
+            'labels' => array(
+                'name' => __('Activités'),
+                'singular_name' => __('Activité'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-star-filled',
+            'rewrite' => array('slug' => 'activitie'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
+
+    register_post_type(
         'rapports-assemblee',
         array(
             'labels' => array(
