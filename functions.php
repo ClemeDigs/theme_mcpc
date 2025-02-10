@@ -258,31 +258,35 @@ function afficher_hand($field_name, $default_image = '/assets/img/illustrations/
  * @param string $field_name Nom du champ ACF.
  * @param string $default_image Chemin de l'image par défaut.
  */
-function afficher_arrow($field_name, $default_image = '/assets/img/illustrations/arrows/arrow_big_loop.svg')
+
+function afficher_arrow($blockArrow)
 {
-    $arrow_choice = get_field($field_name);
+    if (!isset($blockArrow['block_arrow']) || $blockArrow['block_arrow'] === 'aucun') {
+        return;
+    }
+
+    $arrow_choice = $blockArrow['block_arrow'];
 
     $arrow_options = [
         'grosse_boucle' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_big_loop.svg',
         'boucle' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_loop.svg',
         'u' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_u.svg',
-        'etoiles' => get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_stars.svg'
+        'camera' => get_template_directory_uri() . '/assets/img/illustrations/arrows/camera.svg',
+        'etoiles' => get_template_directory_uri() . '/assets/img/illustrations/arrows/stars.svg'
     ];
 
-    // Initialisation des variables par défaut
-    $selected_arrow = get_template_directory_uri() . $default_image;
-    $arrow_class = ''; // Classe par défaut vide
+    // Image par défaut
+    $default_image = get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_big_loop.svg';
+    
+    // Vérifie si l'option existe, sinon prend l'image par défaut
+    $selected_arrow = $arrow_options[$arrow_choice] ?? $default_image;
 
-
-    if ($arrow_choice && array_key_exists($arrow_choice, $arrow_options)) {
-        $selected_arrow = $arrow_options[$arrow_choice];
-        $arrow_class = 'block__arrow-' . $arrow_choice;
-    } elseif ($arrow_choice === 'null') {
-        return;
-    }
+    // Générer une classe CSS pour styliser la flèche
+    $arrow_class = 'block__arrow-' . esc_attr($arrow_choice);
 
     echo '<img src="' . esc_url($selected_arrow) . '" class="' . esc_attr($arrow_class) . '" alt="Illustration d\'une flèche">';
 }
+
 
 // ! BOUTONS //
 

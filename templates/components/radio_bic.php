@@ -29,13 +29,10 @@
     </div> <!-- .radio__part-1 -->
     <div class="radio__big-arrow">
         <?php
-        $image = get_field('big_arrow_radio-bic');
-        if ($image) :
-            $image_url = $image['url'];
-            $image_alt = $image['alt'];
+        // Chemin de l'image dans le dossier assets/img/illustrations/arrows
+        $image_url = get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_radio_bic.svg';
         ?>
-        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
-        <?php endif; ?>
+        <img src="<?php echo esc_url($image_url); ?>" alt="Flèche Radio Bic">
     </div> <!-- .radio__big-arrow -->
     <div class="radio__part-2">
 

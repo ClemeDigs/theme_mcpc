@@ -55,15 +55,32 @@
   }
 
   &__learn-more {
-    // @include hidden;
-    @include button-secondary;
+    @include button-link;
+    a {
+      &:hover {
+        color: $color-tertiary;
+      }
+
+      &:active {
+        color: $color-grey;
+      }
+
+      &:disabled {
+        color: $color-grey;
+        cursor: not-allowed;
+      }
+    }
   }
 
   &__hand {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    @include transition;
+    display: none;
+    @include tablet {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @include transition;
+    }
 
     &-gros_pinceau {
       position: absolute;
