@@ -47,13 +47,17 @@
     @include container;
     @include flex(column);
     gap: 2rem;
-    margin: 20px 0;
+    margin: 30px 0;
     padding: $p-mobile;
+
+    align-items: stretch;
 
     @include tablet {
         @include grid-column(2);
         gap: 6.875rem;
-        padding: 0px 70px 35px 0px;
+        padding: 0px 70px 0px 0px;
+        margin: 50px 0;
+        max-height: 470px;
     }
 
     &__image {
@@ -62,11 +66,14 @@
         @include round-border;
         padding: 20px;
         max-width: 100%;
+        object-fit: cover;
 
-        @include desktop {
+        @include tablet {
             padding: 20px 20px 20px 0px;
             border-left: none;
             @include round-border-right;
+            height: 470px;
+            width: 100%;
         }
     }
 
@@ -83,12 +90,12 @@
             padding-bottom: 0px;
             align-items: flex-start;
         }
-
     }
 
     &__statistiques {
         @include flex;
         justify-content: space-between;
+        align-items: flex-start;
         width: 100%;
         gap: 20px;
     }
@@ -127,7 +134,7 @@
 
             &.bonhomme-théâtre {
                 @include bonhomme-style(150px, -150px, 0px);
-                @include bonhomme-style-tablet(270px, -272px, -40px);
+                @include bonhomme-style-tablet(270px, -272px, -10px);
             }
 
             &.bonhomme-peinture {

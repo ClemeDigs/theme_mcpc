@@ -6,19 +6,19 @@ $rapports_assemblee = new WP_Query([
 
 if ($rapports_assemblee->have_posts()) :
 ?>
-    <div class="accordeon__container">
+    <div class="accordeon__container" role="region" aria-labelledby="rapports-assemblees-title">
         <div class="assemblee__bonhomme-container">
             <div class="assemblee__bonhomme">
                 <?php afficher_bonhomme('assemblee_choix_du_bonhomme'); ?>
             </div>
         </div>
-        <div class="accordeon__header">
-            <h3 class="accordeon__title">
+        <div class="accordeon__header" role="button" aria-expanded="false" aria-controls="rapports-assemblees-content">
+            <h3 class="accordeon__title" id="rapports-assemblees-title">
                 Rapports des Assemblées Générales Annuelles
             </h3>
-            <i class="fa-solid fa-chevron-down accordeon__icon"></i>
+            <i class="fa-solid fa-chevron-down accordeon__icon" aria-hidden="true"></i>
         </div>
-        <div class="accordeon__content">
+        <div class="accordeon__content" id="rapports-assemblees-content">
             <?php while ($rapports_assemblee->have_posts()) : $rapports_assemblee->the_post(); ?>
                 <div class="rapport">
                     <?php

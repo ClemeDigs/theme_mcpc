@@ -2,8 +2,11 @@
 @import "../partials/mixins";
 
 .rapports-annuel__content {
-  @include flex(column);
-  gap: 20px;
+
+    @include flex(column);
+    flex-wrap: wrap;
+    gap: 20px;
+
 }
 
 .btn {
@@ -12,26 +15,32 @@
 }
 
 .rapport-annuel {
-  @include flex(column);
-  gap: 20px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  width: 100%;
+    @include flex(column);
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 
-  @include tablet {
-    @include flex;
-    padding: $p-tablet;
-  }
+    @include tablet {
+        @include flex(row, wrap);
+        padding: $p-tablet;
+        max-width: 100vw;
+    }
 
-  @include desktop {
-    padding: $p-desktop;
-  }
+    @include desktop {
+        padding: $p-desktop;
+        max-width: 100vw;
+    }
 }
 
 .accordeon {
-  &__content {
-    display: none;
-  }
+    cursor: pointer;
+
+    &__content {
+        display: none;
+    }
 
   &__content--active {
     display: block !important;

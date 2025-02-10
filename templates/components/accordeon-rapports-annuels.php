@@ -7,14 +7,14 @@ $rapports_annuels = new WP_Query([
 if ($rapports_annuels->have_posts()) :
 ?>
 
-    <div class="rapports-annuel__container">
-        <div class="accordeon__header">
-            <h3 class="accordeon__title">
+    <div class="rapports-annuel__container" role="region" aria-labelledby="rapports-annuels-title">
+        <div class="accordeon__header" role="button" aria-expanded="false" aria-controls="rapports-annuels-content">
+            <h3 class="accordeon__title" id="rapports-annuels-title">
                 Rapports Annuels
             </h3>
-            <i class="fa-solid fa-chevron-down accordeon__icon"></i>
+            <i class="fa-solid fa-chevron-down accordeon__icon" aria-hidden="true"></i>
         </div>
-        <div class="accordeon__content rapports-annuel__content">
+        <div class="accordeon__content rapports-annuel__content" id="rapports-annuels-content">
             <?php while ($rapports_annuels->have_posts()) : $rapports_annuels->the_post(); ?>
                 <div class="rapport-annuel">
                     <?php

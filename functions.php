@@ -134,8 +134,8 @@ function create_posttype()
         'rapports-annuels',
         array(
             'labels' => array(
-                'name' => __('Rapports annuels'),
-                'singular_name' => __('Rapport annuel'),
+                'name' => __('Rapport d\'activités'),
+                'singular_name' => __('Rapport d\'activité'),
             ),
             'public' => true,
             'has_archive' => true,
@@ -172,15 +172,17 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     }
 
     $selected_image = get_template_directory_uri() . $default_image;
+    $alt_text = 'Bonhomme';
 
     if ($image_choice && array_key_exists($image_choice, $image_choices)) {
         $selected_image = $image_choices[$image_choice];
+        $alt_text = 'Bonhomme ' . strtolower($image_choice);
     }
 
     // Ajouter une classe spécifique pour chaque bonhomme
     $class_name = 'bonhomme-' . strtolower(str_replace(' ', '-', $image_choice));
 
-    echo '<img src="' . esc_url($selected_image) . '" alt="Bonhomme" class="bonhomme-image ' . esc_attr($class_name) . '">';
+    echo '<img src="' . esc_url($selected_image) . '" alt="' . esc_attr($alt_text) . '" class="bonhomme-image ' . esc_attr($class_name) . '">';
 }
 
 // ! LARGEUR DU SOUS-TITRE //
@@ -374,7 +376,8 @@ function afficher_bouton_radio($link, $label = null)
  * @param int $position La position à vérifier.
  * @return string La classe CSS à ajouter.
  */
-function ajouter_classe_background_acf($field_name) {
+function ajouter_classe_background_acf($field_name)
+{
     $condition = get_field($field_name);
     return ($condition === true) ? 'background-color-grey' : '';
 }
