@@ -122,41 +122,6 @@
                     "append": ""
                 },
                 {
-                    "key": "field_6799a730fff1a",
-                    "label": "cta_section_button_label",
-                    "name": "cta_section_button_label",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Inscrire mon enfant": "Inscrire mon enfant",
-                        "Devenir bénévole": "Devenir bénévole",
-                        "Devenir membre": "Devenir membre",
-                        "En savoir plus...": "En savoir plus...",
-                        "Poser ma candidature": "Poser ma candidature",
-                        "Regarder le documentaire": "Regarder le documentaire",
-                        "Voir sur Facebook": "Voir sur Facebook",
-                        "Contact": "Contact",
-                        "Je fais un don": "Je fais un don",
-                        "Contactez-nous": "Contactez-nous"
-                    },
-                    "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
                     "key": "field_6799a6e6fff19",
                     "label": "cta_section_button_link",
                     "name": "cta_section_button_link",
@@ -258,41 +223,6 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
-                },
-                {
-                    "key": "field_6799b6c6da054",
-                    "label": "cta_section_button_label",
-                    "name": "cta_section_button_label",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Inscrire mon enfant": "Inscrire mon enfant",
-                        "Devenir bénévole": "Devenir bénévole",
-                        "Devenir membre": "Devenir membre",
-                        "En savoir plus...": "En savoir plus...",
-                        "Poser ma candidature": "Poser ma candidature",
-                        "Regarder le documentaire": "Regarder le documentaire",
-                        "Voir sur Facebook": "Voir sur Facebook",
-                        "Contact": "Contact",
-                        "Je fais un don": "Je fais un don",
-                        "Contactez-nous": "Contactez-nous"
-                    },
-                    "default_value": false,
-                    "return_format": "",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
                 },
                 {
                     "key": "field_6799b6c6da055",
@@ -398,41 +328,6 @@
                     "append": ""
                 },
                 {
-                    "key": "field_6799b6c8da05a",
-                    "label": "cta_section_button_label",
-                    "name": "cta_section_button_label",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Inscrire mon enfant": "Inscrire mon enfant",
-                        "Devenir bénévole": "Devenir bénévole",
-                        "Devenir membre": "Devenir membre",
-                        "En savoir plus...": "En savoir plus...",
-                        "Poser ma candidature": "Poser ma candidature",
-                        "Regarder le documentaire": "Regarder le documentaire",
-                        "Voir sur Facebook": "Voir sur Facebook",
-                        "Contact": "Contact",
-                        "Je fais un don": "Je fais un don",
-                        "Contactez-nous": "Contactez-nous"
-                    },
-                    "default_value": false,
-                    "return_format": "",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
                     "key": "field_6799b6c8da05b",
                     "label": "cta_section_button_link",
                     "name": "cta_section_button_link",
@@ -536,41 +431,6 @@
                     "append": ""
                 },
                 {
-                    "key": "field_6799b6cada060",
-                    "label": "cta_section_button_label",
-                    "name": "cta_section_button_label",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "Ajoutez le texte que vous souhaite voir dans le bouton.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Inscrire mon enfant": "Inscrire mon enfant",
-                        "Devenir bénévole": "Devenir bénévole",
-                        "Devenir membre": "Devenir membre",
-                        "En savoir plus...": "En savoir plus...",
-                        "Poser ma candidature": "Poser ma candidature",
-                        "Regarder le documentaire": "Regarder le documentaire",
-                        "Voir sur Facebook": "Voir sur Facebook",
-                        "Contact": "Contact",
-                        "Je fais un don": "Je fais un don",
-                        "Contactez-nous": "Contactez-nous"
-                    },
-                    "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
                     "key": "field_6799b6cada061",
                     "label": "cta_section_button_link",
                     "name": "cta_section_button_link",
@@ -608,5 +468,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738129463
+    "modified": 1739208219
 }

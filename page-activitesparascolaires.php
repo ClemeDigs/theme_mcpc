@@ -17,9 +17,14 @@ get_header();
     <?php
     get_template_part('/templates/components/subtitle');
     ?>
-
     <div class="main-content <?php echo $has_new_activity ? 'no-gap' : ''; ?>">
-        <?php get_template_part('templates/components/accordeon-activites'); ?>
+        <div class="main-content <?php echo $has_new_activity ? 'no-gap' : ''; ?>">
+            <?php get_template_part('templates/components/accordeon-activites'); ?>
+        </div>
+
+        <?php
+        get_template_part('/templates/components/accordeon-termes-activites');
+        ?>
     </div>
     <?php
     get_template_part('/templates/components/activities-just-images');

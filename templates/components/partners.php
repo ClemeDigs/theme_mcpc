@@ -14,8 +14,8 @@
                     $image_url = is_array($image) ? $image['url'] : $image;
         ?>
                     <div class="partner__logo">
-                        <a href="<?php echo esc_url($website); ?>" target="_blank">
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                        <a href="<?php echo esc_url($website); ?>" target="_blank" aria-label="Visit <?php the_title(); ?> website">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="Logo of <?php the_title(); ?>">
                         </a>
                     </div>
         <?php
@@ -32,8 +32,8 @@
                     $image_url = is_array($image) ? $image['url'] : $image;
         ?>
                     <div class="partner__logo">
-                        <a href="<?php echo esc_url($website); ?>" target="_blank">
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                        <a href="<?php echo esc_url($website); ?>" target="_blank" aria-label="Visit <?php the_title(); ?> website">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="Logo of <?php the_title(); ?>">
                         </a>
                     </div>
         <?php
