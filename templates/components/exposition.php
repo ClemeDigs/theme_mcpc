@@ -90,7 +90,9 @@ function format_date($date, $format = '%e %B %Y') {
 
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
+                $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
                 $exposition_name = get_field('exposition_name');
+                $alt_text = get_acf_image_alt($image_id, 'exposition_image1'); // Utilisation de la fonction
                 $exposition_id = sanitize_exposition_name($exposition_name);
             ?>
             <h2><?php echo $title; ?></h2>
@@ -118,11 +120,74 @@ function format_date($date, $format = '%e %B %Y') {
                 <div class="exposition-now__item-image">
                     <img 
                         src="<?php echo esc_url($image_url); ?>" 
-                        alt="<?php echo esc_attr($exposition_name); ?>"
+                        alt="<?php echo esc_attr($alt_text); ?>" 
                         data-dialog="#exposition-modal-<?php echo $exposition_id; ?>"
                     >
                 </div>
             </div>
+
+            <div class="dialog" id="exposition-modal-<?php echo $exposition_id; ?>">
+                    <div class="exposition-modal__content">
+                        <div class="exposition-modal__header">
+                            <button class="btn-close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <h2><?php the_field('exposition_name'); ?> - <?php the_field('exposition_artist_name'); ?></h2>
+                        </div>
+                        <div class="exposition-modal__infos">
+                            <div class="exposition-modal__infos-date">
+                                <i class="fa-regular fa-calendar"></i>
+                                <p>
+                                    Du <span><?php echo format_date($start_date); ?></span>
+                                    au <span><?php echo format_date($end_date); ?></span>
+                                </p>
+                            </div>
+                            <div class="exposition-modal__infos-place">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p><?php the_field('exposition_adress'); ?></p>
+                            </div>
+                        </div>
+                        <div class="exposition-modal__resume">
+                            <h3>Résumé</h3>
+                            <p><?php the_field('exposition_resume'); ?></p>
+                        </div>
+                        <!-- Slider des images de l'exposition -->
+                        <div class="exposition-modal__slider">
+                            <div class="slider">
+                                <button class="slider__btn slider__btn--previous" aria-label="Slide précédent">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <div class="slider__images">
+                                    <?php 
+                                    for ($i = 1; $i <= 6; $i++) {
+                                        $image = get_field('exposition_image' . $i);
+                                        if ($image) :
+                                            $image_url = is_array($image) ? $image['url'] : $image;
+                                            $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
+                                            $alt_text = get_acf_image_alt($image_id, 'exposition_image' . $i); // Utilisation de la fonction
+                                    ?>
+                                        <div class="slider__image">
+                                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt_text); ?>">
+                                        </div>
+                                    <?php 
+                                        endif;
+                                    }
+                                    ?>
+                                </div>
+
+                                <button class="slider__btn slider__btn--next" aria-label="Slide suivant">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider__progress">
+                                <div class="slider__progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="exposition-modal__artist">
+                            <a href="<?php echo esc_url(get_field('exposition_artist_link')); ?>" target="_blank">Visitez le site de l'artiste</a>
+                        </div>
+                    </div>
+                </div>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php else : ?>
@@ -152,6 +217,8 @@ function format_date($date, $format = '%e %B %Y') {
                     
                     if ($image) :
                         $image_url = is_array($image) ? $image['url'] : $image;
+                        $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
+                        $alt_text = get_acf_image_alt($image_id, 'exposition_image1'); // Utilisation de la fonction
                         $exposition_name = get_field('exposition_name');
                         $exposition_id = sanitize_exposition_name($exposition_name);
             ?>
@@ -160,7 +227,7 @@ function format_date($date, $format = '%e %B %Y') {
                     <div class="slider__image">
                         <img 
                             src="<?php echo esc_url($image_url); ?>" 
-                            alt="<?php echo esc_attr($exposition_name); ?>"
+                            alt="<?php echo esc_attr($alt_text); ?>"
                             data-dialog="#exposition-modal-<?php echo $exposition_id; ?>"
                         >
                     </div>
@@ -222,9 +289,11 @@ function format_date($date, $format = '%e %B %Y') {
                                         $image = get_field('exposition_image' . $i);
                                         if ($image) :
                                             $image_url = is_array($image) ? $image['url'] : $image;
+                                            $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
+                                            $alt_text = get_acf_image_alt($image_id, 'exposition_image' . $i); // Utilisation de la fonction
                                     ?>
                                         <div class="slider__image">
-                                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($exposition_name); ?>">
+                                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt_text); ?>">
                                         </div>
                                     <?php 
                                         endif;

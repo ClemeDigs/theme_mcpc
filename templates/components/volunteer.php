@@ -19,7 +19,7 @@ $cta_choix_du_bonhome = get_field('volunteer_choix_du_bonhome');
 
 if (!empty($volunteer_sections)) :
 ?>
-    <section class="volunteerSection__container">
+    <section class="volunteerSection__container" id="volunteer">
         <div class="volunteer__bonhomme">
             <?php afficher_bonhomme('volunteer_choix_du_bonhome'); ?>
         </div>

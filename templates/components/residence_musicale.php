@@ -4,10 +4,13 @@
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
             <div class="slider__images">
-                <?php
+            <?php
                 $residence_musicale = new WP_Query([
-                    'post_type' => 'residence_musicale',
+                    'post_type'      => 'residence_musicale',
                     'posts_per_page' => -1,
+                    'meta_key'       => 'residence_musicale_year', // Champ personnalisé pour le tri
+                    'orderby'        => 'meta_value_num', // Trie par valeur numérique du champ
+                    'order'          => 'DESC', // Années les plus récentes en premier
                 ]);
 
                 if ($residence_musicale->have_posts()) :
@@ -15,16 +18,18 @@
                         $image = get_field('residence_musicale_affiche');
                         if ($image) :
                             $image_url = is_array($image) ? $image['url'] : $image;
+                            $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
+                            $alt_text = get_acf_image_alt($image_id, 'residence_musicale_affiche'); // Utilisation de la fonction
                             $residence_year = esc_attr(get_field('residence_musicale_year'));
-                ?>
+                    ?>
                     <!-- Affiche -->
                     <div class="slider__image">
                         <img 
                             src="<?php echo esc_url($image_url); ?>" 
-                            alt="<?php echo esc_attr(get_the_title()); ?>"
+                            alt="<?php echo esc_attr($alt_text); ?>"
                             data-dialog="#residence-modal-<?php echo $residence_year; ?>"
                         >
-                        <h3>Résidence Musicale <?php the_field('residence_musicale_year'); ?></h3>
+                        <h3>Résidence Musicale <?php echo esc_html($residence_year); ?></h3>
                     </div>
 
                     <!-- Modale correspondante -->
@@ -67,8 +72,13 @@
                                         for ($i = 1; $i <= 6; $i++) {
                                             $image = get_field('residence_musicale_image' . $i);
                                             if ($image) {
+                                                $image_url = is_array($image) ? $image['url'] : $image;
+                                                $image_id = is_array($image) ? $image['ID'] : null; // Récupérer l'ID de l'image
+                                                $alt_text = get_acf_image_alt($image_id, 'residence_musicale_image' . $i); // Utilisation de la fonction
+
                                                 $images[] = [
-                                                    'url' => is_array($image) ? $image['url'] : $image,
+                                                    'url' => $image_url,
+                                                    'alt' => $alt_text, // Ajout du texte alternatif
                                                 ];
                                             }
                                         }
@@ -77,13 +87,14 @@
                                             foreach ($images as $image) :
                                         ?>
                                             <div class="slider__image">
-                                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php the_title(); ?>">
+                                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                             </div>
                                         <?php 
                                             endforeach;
                                         endif;
                                         ?>
                                     </div>
+
                                     <button class="slider__btn slider__btn--next" aria-label="Slide suivant">
                                         <i class="fa-solid fa-chevron-right"></i>
                                     </button>
@@ -92,11 +103,22 @@
                                     <div class="slider__progress-bar"></div>
                                 </div>
                             </div>
-                            <div class="residence-modal__article">
-                                <h3>On parle de nous !</h3>
-                                <p><?php the_field('residence_musicale_press_text'); ?></p>
-                                <a href="<?php echo esc_url(get_field('residence_musicale_press_url')); ?>" target="_blank">Voir l'article</a>
-                            </div>
+                            <?php 
+                                $text = get_field('residence_musicale_press_text'); 
+                                $url = get_field('residence_musicale_press_url');
+
+                                if ($text || $url): ?>
+                                    <div class="residence-modal__article">
+                                        <h3>On parle de nous !</h3>
+                                        <?php if ($text): ?>
+                                            <p><?php echo esc_html($text); ?></p>
+                                        <?php endif; ?>
+
+                                        <?php if ($url): ?>
+                                            <a href="<?php echo esc_url($url); ?>" target="_blank">Voir l'article</a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
                         </div>
                     </div>
                 <?php

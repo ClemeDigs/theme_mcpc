@@ -94,7 +94,7 @@ header {
           border-left: 1px solid $color-black;
           border-right: 1px solid $color-black;
           border-bottom: 1px solid $color-black;
-          padding: 2.5rem 0 0;
+          padding: 2.55rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           border-bottom-left-radius: 8px;
@@ -192,10 +192,6 @@ header {
   right: 0;
   overflow-y: scroll;
 
-  @include tablet {
-    width: 35vw;
-  }
-
   &__header {
     display: flex;
     justify-content: space-between;
@@ -224,7 +220,8 @@ header {
     gap: 2.5rem;
     list-style: none;
     height: 80vh;
-    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding-bottom: 10vh;
 
     > li {
@@ -273,16 +270,6 @@ header {
 
     a {
       @include button-base;
-
-      /* a {
-        @include flex(row, flex-start, center);
-        gap: 0.5rem;
-        font-weight: 400;
-        font-size: 14px;
-        &:hover {
-          font-weight: 400;
-        }
-      } */
     }
   }
 }

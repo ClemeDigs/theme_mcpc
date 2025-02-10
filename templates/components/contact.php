@@ -25,12 +25,12 @@
 
 ?>
 
-<section class="contact">
+<section class="contact" id="join-us">
     <div class="contact__infos">
         <div>
             <h2>Nous joindre</h2>
             <div class="contact__infos-mcpc">
-                <h3>Bureau administratif</h3>
+                <h3>Maison de la Culture du Pic Champlain</h3>
                 <div class="contact__infos-mcpc-mail">
                     <i class="fa-regular fa-envelope"></i>
                     <a href="mailto:<?php echo $mcpc_email; ?>"><?php echo $mcpc_email; ?></a>
@@ -80,12 +80,12 @@
             <a href="https://www.google.com/maps?q=<?php echo $full_address; ?>" target="_blank"><?php echo esc_html(urldecode($full_address)); ?></a>
         </div>
         <?php if (!empty($map_image_url)) : ?>
-                <img class="contact__adress-map" src="<?php echo $map_image_url; ?>" alt="<?php the_title(); ?>">
+                <img class="contact__adress-map" src="<?php echo $map_image_url; ?>" alt="Carte de l'emplacement de la MCPC">
         <?php endif; ?>
     </div>
 </section>
 
-<section class="newsletter">
+<section class="newsletter" id="newsletter">
     <div class="newsletter__bonhomme">
         <?php 
         if (!empty(get_field('newsletter_choix_du_bonhomme'))) :
