@@ -51,6 +51,11 @@
       @include round-border;
       padding: 20px;
       max-width: 100%;
+
+      @include tablet {
+        margin: 0 auto;
+      }
+
       @include desktop {
         padding: 20px 0px 20px 20px;
         border-radius: 0;
@@ -70,6 +75,129 @@
           @include round-border-left;
         }
       }
+    }
+  }
+
+  .exposition-modal__content {
+    @include flex(column, flex-start, flex-start);
+    width: 90%;
+    height: 75%;
+    background-color: $color-white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 1rem;
+    @include round-border;
+    @include desktop {
+      width: 75%;
+    }
+  }
+
+  .exposition-modal__header {
+    @include flex(column, center, flex-end);
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+
+    h2 {
+      width: 100%;
+    }
+  }
+
+  .exposition-modal__infos {
+    padding: 1rem;
+    width: 100%;
+    @include flex(row, flex-end, center);
+    gap: 0.5rem;
+    box-sizing: border-box;
+
+    @include tablet {
+      width: 100%;
+      @include flex(row, center, center);
+    }
+
+    @include desktop {
+      @include flex(row, flex-end, center);
+    }
+
+    &-date,
+    &-place {
+      @include flex(row, center, center);
+      gap: 1rem;
+      max-width: 250px;
+      padding-left: 1rem;
+    }
+  }
+
+  .exposition-modal__resume {
+    @include flex(column, flex-start, flex-start);
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .exposition-modal__slider {
+    @include flex(column, center, center);
+    gap: 1rem;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+
+    .slider {
+      padding: 0.5rem;
+      gap: 0.5rem;
+      @include flex(row, center, center);
+      @include desktop {
+        gap: 1.5rem;
+      }
+
+      .slider__images {
+        .slider__image {
+          border: none;
+          @include round-border;
+          padding: 0;
+
+          img {
+            width: 250px;
+            height: 180px;
+
+            @include desktop {
+              @include round-border;
+              width: 370px;
+              height: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .exposition-modal__artist {
+    width: 100%;
+    background-color: $color-grey-p;
+    @include flex(column, flex-start, center);
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    @include desktop {
+      padding: 2rem;
+      @include flex(column, flex-start, flex-start);
+    }
+
+    a {
+      @include button-base;
     }
   }
 }
@@ -133,6 +261,17 @@
       @include round-border;
       padding: 20px;
       max-width: 100%;
+
+      @include tablet {
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      @include desktop {
+        margin: 0;
+        width: auto;
+      }
+
       @include desktop {
         padding: 20px 20px 20px 0;
         border-radius: 0;
@@ -218,8 +357,13 @@
     gap: 0.5rem;
     box-sizing: border-box;
 
-    @include desktop {
+    @include tablet {
       width: 100%;
+      @include flex(row, center, center);
+    }
+
+    @include desktop {
+      @include flex(row, flex-end, center);
     }
 
     &-date,

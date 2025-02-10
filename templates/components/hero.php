@@ -4,9 +4,10 @@
         $image = get_field('hero_image');
         if ($image) :
             $image_url = $image['url'];
-            $image_alt = $image['alt'];
+            $image_id = $image['ID']; 
+            $image_alt = get_acf_image_alt($image_id, 'hero_image');
         ?>
-        <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt;?>">
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
 
         <?php endif; ?>
         <div class="hero__content">

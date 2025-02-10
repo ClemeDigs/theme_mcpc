@@ -376,6 +376,23 @@ function ajouter_classe_background_acf($field_name) {
 }
 
 
+// ! ALT DES IMAGES //
+
+function get_acf_image_alt($image_id, $acf_field = '') {
+    if (!$image_id) {
+        return '';
+    }
+
+    $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+    if (empty($alt) && $acf_field) {
+        $alt = get_field_object($acf_field)['label'] ?? ''; 
+    }
+
+    return esc_attr($alt);
+}
+
+
 // ! FUNCTION PAGE NON PERSONNALISABLE //
 
 function remove_wysiwyg()
@@ -467,7 +484,7 @@ add_filter('upload_mimes', 'autoriser_upload_svg');
 function render_accordion_section($title, $content, $container_class, $item_class, $title_class, $content_class)
 {
     if ($content) : ?>
-        <div class="<?php echo esc_attr($container_class); ?>">
+        <div class="<?php echo esc_attr($container_class); ?>" id="<?php echo esc_attr($container_class); ?>">
             <div class="accordeon__header">
                 <h3 class="accordeon__title">
                     <?php echo esc_html($title); ?>

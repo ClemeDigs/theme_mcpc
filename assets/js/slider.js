@@ -71,10 +71,13 @@ document.querySelectorAll(".slider").forEach((slider) => {
     if (!progressBar) return; // Vérifie si progressBar existe
 
     const visibleSlides = getVisibleSlidesCount();
-    const totalPages = Math.ceil(slides.length / visibleSlides);
+    const totalSlides = slides.length;
+    const maxScrollIndex = totalSlides - visibleSlides; // Dernière position atteignable
 
-    const progressValue = ((currentSlideIndex + 1) / totalPages) * 100;
+    // Calcul de la progression en fonction du défilement total possible
+    const progressValue = (currentSlideIndex / maxScrollIndex) * 100;
 
+    // Appliquer la progression en limitant à 100%
     progressBar.style.width = Math.min(progressValue, 100) + "%";
   }
 

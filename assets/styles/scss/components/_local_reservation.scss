@@ -3,7 +3,7 @@
   padding: 2rem;
 
   &__not-connected {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, center, center);
     gap: 1rem;
   }
 

@@ -109,6 +109,7 @@
   }
 
   .residence-modal__article {
+    width: 100%;
     background-color: $color-grey-p;
     @include flex(column, flex-start, flex-start);
     gap: 1rem;
