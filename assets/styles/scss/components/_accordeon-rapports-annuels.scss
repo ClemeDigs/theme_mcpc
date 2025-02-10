@@ -3,6 +3,7 @@
 
 .rapports-annuel__content {
     @include flex(column);
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -17,18 +18,24 @@
     margin-bottom: 40px;
     margin-top: 40px;
     width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 
     @include tablet {
-        @include flex;
+        @include flex(row, wrap);
         padding: $p-tablet;
+        max-width: 100vw;
     }
 
     @include desktop {
         padding: $p-desktop;
+        max-width: 100vw;
     }
 }
 
 .accordeon {
+    cursor: pointer;
+
     &__content {
         display: none;
     }
