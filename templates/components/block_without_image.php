@@ -1,4 +1,5 @@
-<div class="block-without-img__bonhomme">
+<div class="block-without-img__wrapper">
+<div class="block-without-img__bonhomme-haut">
         <?php afficher_bonhomme('block-without-img_choix_du_bonhomme_haut'); ?>
     </div>
 <section class="block-without-img__container<?php 
@@ -29,8 +30,9 @@
                 </div>
             </div>
         </div>
-        <div class="block-without-img__bonhomme">
+        <div class="block-without-img__bonhomme-bas">
             <?php afficher_bonhomme('block-without-img_choix_du_bonhomme_int'); ?>
         </div>
 
 </section>
+</div>

@@ -29,9 +29,11 @@
   }
 }
 
-@mixin button-base($background: $color-primary,
+@mixin button-base(
+  $background: $color-primary,
   $color: $color-black,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
+) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -69,25 +71,77 @@
   }
 }
 
-@mixin button-secondary {
-  @include button-base($color: none, $box-shadow: none);
+@mixin button-link($background: transparent, $color: $color-black) {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: $background;
+  color: $color;
+  font-family: $font-sans;
+  font-size: 14px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
 
   &:hover {
-    font-size: 900;
-    background: none;
-    border: none;
-    color: $color-black;
+    border: 2px solid transparent;
+    color: $color-tertiary;
   }
 
   &:active {
-    font-size: 900;
-    background: none;
-    color: $color-primary;
+    background: transparent;
+    color: $color-white;
   }
 
   &:disabled {
-    background: none;
-    border: none;
+    background: transparent;
+    border: 2px solid transparent;
+    color: $color-grey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@mixin button-radio(
+  $background: $color-quaternary,
+  $color: $color-white,
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
+) {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: $background;
+  color: $color;
+  box-shadow: $box-shadow;
+  font-family: $font-sans;
+  font-size: 14px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    background: $color-quaternary;
+    border: 2px solid $color-quinary;
+    color: $color-white;
+  }
+
+  &:active {
+    background: $color-quinary;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background: $color-grey-p;
+    border: 2px solid $color-grey;
     color: $color-grey;
     cursor: not-allowed;
     box-shadow: none;

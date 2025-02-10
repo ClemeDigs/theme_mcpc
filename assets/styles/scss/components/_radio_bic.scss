@@ -6,31 +6,46 @@
   @include flex(column, center, center);
   padding: 70px 20px;
   @include tablet {
-    padding: 100px 40px;
+    @include flex(column, stretch);
+    padding: 6.45rem 2.5rem;
   }
   @include desktop {
-    padding: 100px 70px;
+    padding: 3.75rem 6.45rem;
   }
 
   &__part-1 {
-    @include grid-column(4);
+    @include flex(column);
+    gap: 1rem;
+    width: calc(100vw - 20%); // 20% de moins que la largeur de l'écran
+    max-width: 1100px;
+
     p {
       padding-bottom: 1.5rem;
+    }
+    @include tablet {
+      @include flex(row);
     }
   }
 
   &__part-2 {
-    @include grid-column(4);
-    padding-left: 70px;
+    @include flex(column);
+    box-sizing: border-box;
+    gap: 1rem;
+    width: calc(100vw - 20%); // 20% de moins que la largeur de l'écran
+    max-width: 1100px;
+
     p {
       padding-bottom: 1.5rem;
+    }
+    @include tablet {
+      @include flex(row);
+      padding-right: 40px;
     }
   }
 
   &__logo-1 {
-    grid-column: 1;
-    justify-self: end;
-    padding-left: 50px; // Positionner le logo dans la première colonne
+    @include flex(column);
+    justify-self: start;
     img {
       width: clamp(9.2rem, 50%, 10.2rem);
       height: auto;
@@ -38,13 +53,16 @@
   }
 
   &__text-1 {
-    grid-column: 2 / span 3;
-    justify-items: start;
+    @include flex(column, center, center);
+    text-align: center;
+    gap: 1.175rem;
+    @include tablet {
+      @include flex(column, flex-end, flex-start);
+      text-align: left;
+    }
   }
 
   &__logo-2 {
-    grid-column: 4;
-    justify-self: end;
     img {
       width: clamp(10rem, 50%, 11rem);
       height: auto;
@@ -52,42 +70,48 @@
   }
 
   &__text-2 {
-    grid-column: 1 / span 3;
-    justify-items: start;
+    @include flex(column, center, center);
+    text-align: center;
+    gap: 1.175rem;
+    @include tablet {
+      @include flex(column, flex-end, flex-start);
+      text-align: left;
+    }
   }
 
   &__title-1 {
-    @include flex;
+    @include flex(row, flex-start, flex-end);
+    gap: 2.5rem;
+    @include tablet {
+      @include flex(row, space-between, flex-end);
+    }
   }
 
   &__little-arrow {
+    @include flex;
     img {
-      width: 4.6rem;
-      height: auto;
+      width: auto;
+      height: 4rem;
     }
   }
 
   &__big-arrow {
-    display: none;
+    width: calc(100vw - 20%); // 20% de moins que la largeur de l'écran
+    max-width: 1400px;
+    padding: 1rem 0;
+    @include flex(center);
 
     @include tablet {
-      grid-column: 1 / -1; // Étendre l'élément sur toutes les colonnes de la grille
-      display: flex;
-      justify-content: center;
       img {
-        width: 100%; // Ajuster la largeur de l'image à 100% de son conteneur
         padding-bottom: 3rem;
       }
     }
   }
 
   &__link {
-    @include button-base($background: $color-quaternary);
+    @include button-radio($color: $color-white);
     a {
-      color: $color-white;
       text-decoration: none;
-    }
-    i {
       color: $color-white;
     }
   }
