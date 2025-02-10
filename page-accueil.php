@@ -31,11 +31,6 @@ get_header();
     get_template_part('/templates/components/juicer');
     ?>
 
-
-    <?php
-    get_template_part('/templates/components/slider_images');
-    ?>
-
     <?php
     get_template_part('/templates/components/partners');
     ?>
