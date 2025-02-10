@@ -435,13 +435,6 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-accueil.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
                 "value": "page-notreorganisme.php"
             }
         ],
@@ -483,5 +476,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738443373
+    "modified": 1739158909
 }

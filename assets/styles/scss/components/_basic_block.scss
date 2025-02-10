@@ -2,10 +2,17 @@
 @import "../partials/mixins";
 @import "../partials/typographie";
 
+.background-color-grey {
+  background-color: $color-grey-p;
+  @include shadow-block;
+}
+
 .block {
   &__bonhomme {
-    @include container;
+    // @include container;
     padding: $p-mobile;
+    width: calc(100vw - 20%);
+    height: auto;
     @include tablet {
       padding: $p-tablet;
     }
@@ -14,9 +21,15 @@
     }
   }
 
+  &__header {
+    @include flex(row, space-between, flex-end);
+    gap: 2.5rem;
+  }
+
   &__sections {
     @include flex(column);
     gap: 1.175rem;
+    padding: 6.375rem 0;
     @include tablet {
       gap: 3.125rem;
     }
@@ -26,20 +39,26 @@
   }
 
   &__content {
-    padding: $p-mobile; // Padding pour le mobile
+    @include flex(column, flex-end, flex-start);
+    gap: 1.175rem;
+    padding: $p-mobile;
 
     @include tablet {
-      padding: $p-tablet; // Padding pour la tablette
+      padding: $p-tablet;
+      transform: translateY(-1.5rem);
     }
 
     @include desktop {
-      padding: $p-desktop; // Padding pour le desktop
+      padding: $p-desktop;
     }
   }
 
   &__arrow {
-    @include flex(center);
-    transform: translateY(26px);
+    @include flex(flex-end);
+    img {
+      width: auto;
+      height: 4rem;
+    }
     @include tablet {
     }
   }
@@ -47,27 +66,15 @@
   &__link {
     @include button-base;
     // @include hidden;
-    margin: 1.5rem 0;
     a {
       text-decoration: none;
-    }
-  }
-
-  &__header {
-    @include flex;
-    align-items: last baseline;
-
-    h2 {
-      padding-bottom: 2.375rem;
-    }
-    p {
-      padding-bottom: 2.3rem;
     }
   }
 
   &__section {
     @include container;
     @include flex(column);
+    gap: 2rem;
     @include tablet {
       @include grid-column(2);
       align-items: center;

@@ -38,7 +38,10 @@ if (!empty($basic_block_sections)) :
     <div class="block__bonhomme">
         <?php afficher_bonhomme('block_choix_du_bonhomme'); ?>
     </div>
-    <div class="block__sections">
+    <div class="block__sections <?php 
+    $bg_class = ajouter_classe_background_acf('block_background');
+    echo $bg_class ? ' ' . $bg_class : ''; 
+?>">
         <?php foreach ($basic_block_sections as $block) : ?>
             <div class="block__section">
                 <?php 
@@ -52,16 +55,19 @@ if (!empty($basic_block_sections)) :
                         <?php if (!empty($block['block_title'])) : ?>
                             <h2><?php echo esc_html($block['block_title']); ?></h2>
                         <?php endif; ?>
+
                         <?php if (!empty($block['block_arrow']) && $block['block_arrow'] !== 'aucun') : ?>
-                        <div class="block__arrow">
-                            <?php afficher_arrow('block_arrow'); ?>
-                        </div>
+                            <div class="block__arrow">
+                                <?php afficher_arrow(['block_arrow' => $block['block_arrow']]); ?>
+                            </div>
                         <?php endif; ?>
                     </div>
                     <?php if (!empty($block['block_text'])) : ?>
                         <div class="block__text">
-                        <p><?php echo ($block['block_text']); ?>
-                        </div></p>
+                            <p>
+                                <?php echo wp_kses($block['block_text'], array('br' => array())); ?>
+                            </p>
+                        </div>
                     <?php endif; ?>
                     <?php if (!empty($block['block_link'])) : ?>
                         <div class="block__link">

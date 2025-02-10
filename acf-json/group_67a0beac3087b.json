@@ -99,7 +99,7 @@
         {
             "key": "field_67a0c164693fd",
             "label": "Grande flèche",
-            "name": "big_arrow_radio-bic",
+            "name": "arrow_radio-bic",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -111,7 +111,7 @@
                 "id": ""
             },
             "return_format": "array",
-            "library": "uploadedTo",
+            "library": "all",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -211,9 +211,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "page-radiobic.php"
             }
         ]
     ],
@@ -226,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738600065
+    "modified": 1739146338
 }

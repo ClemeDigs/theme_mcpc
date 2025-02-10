@@ -2,14 +2,16 @@
 @import "../partials/mixins";
 
 .rapports-annuel__content {
+
     @include flex(column);
     flex-wrap: wrap;
     gap: 20px;
+
 }
 
 .btn {
-    @include button-base;
-    text-decoration: none;
+  @include button-base;
+  text-decoration: none;
 }
 
 .rapport-annuel {
@@ -40,7 +42,7 @@
         display: none;
     }
 
-    &__content--active {
-        display: block !important;
-    }
+  &__content--active {
+    display: block !important;
+  }
 }
