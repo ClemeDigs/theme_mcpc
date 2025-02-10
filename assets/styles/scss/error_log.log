@@ -191,3 +191,6 @@ Call Stack:
 02/10/25 2:37:42: main.scss - No argument named $background-color.: components/_subtitle.scss on line 58, at column 5
 Call Stack:
 #0 import components/_subtitle.scss main.scss on line 17
+02/10/25 7:29:54: main.scss - Undefined variable $primary-green: components/_accordeon-termes-activites.scss on line 4, at column 9
+Call Stack:
+#0 import components/_accordeon-termes-activites.scss main.scss on line 32
