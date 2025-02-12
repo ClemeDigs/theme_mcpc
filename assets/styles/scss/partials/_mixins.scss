@@ -314,6 +314,21 @@
   }
 }
 
+@mixin bonhomme-image-styles(
+  $class-name,
+  $max-height,
+  $max-height-tablet,
+  $max-width,
+  $max-width-tablet
+) {
+  &.#{$class-name} {
+    @include bonhomme-style($max-height, 0, 0);
+    @include bonhomme-style-tablet($max-height-tablet, 0, 0);
+    @include bonhomme-style-max-width($max-width, 0, 0);
+    @include bonhomme-style-max-width-tablet($max-width-tablet, 0, 0);
+  }
+}
+
 @mixin hidden {
   display: none;
 }

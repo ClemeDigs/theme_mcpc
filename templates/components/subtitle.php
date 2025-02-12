@@ -8,10 +8,10 @@
             <p class="subtitle__text"><?php the_field('subtitle_text'); ?></p>
         </div>
         <?php if (get_field('learn_more')) : ?>
-    <div class="subtitle__learn-more">
-        <?php afficher_bouton_en_savoir_plus('learn_more'); ?>
-    </div>
-<?php endif; ?>
+            <div class="subtitle__learn-more">
+                <?php afficher_bouton_en_savoir_plus('learn_more'); ?>
+            </div>
+        <?php endif; ?>
     </div>
     <div class="subtitle__hand">
         <?php afficher_hand('hand_choice'); ?>

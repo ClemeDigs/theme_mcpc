@@ -1,5 +1,6 @@
 <div class="block-without-img__wrapper">
-<div class="block-without-img__bonhomme-haut">
+<div class="block-without-img__bonhomme-haut <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+    $position_class ? ' ' . $position_class : ''; ?>">
         <?php afficher_bonhomme('block-without-img_choix_du_bonhomme_haut'); ?>
     </div>
 <section class="block-without-img__container<?php 
@@ -25,6 +26,11 @@
                 <?php if (get_field('block-without-img_link-2')) : ?>
                     <div class="block-without-img__link-2">
                         <?php afficher_bouton_block(get_field('block-without-img_link-2')); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (get_field('block-without-img_link-3')) : ?>
+                    <div class="block-without-img__link-3">
+                        <?php afficher_bouton_block(get_field('block-without-img_link-3')); ?>
                     </div>
                 <?php endif; ?>
                 </div>

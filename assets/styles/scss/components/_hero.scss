@@ -19,7 +19,7 @@
   &__content {
     @include container;
     padding: $p-mobile;
-    transform: translateY(-27px);
+    transform: translateY(-21px);
 
     @include tablet {
       padding: $p-tablet;

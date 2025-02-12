@@ -194,3 +194,73 @@ Call Stack:
 02/10/25 7:29:54: main.scss - Undefined variable $primary-green: components/_accordeon-termes-activites.scss on line 4, at column 9
 Call Stack:
 #0 import components/_accordeon-termes-activites.scss main.scss on line 32
+02/12/25 1:13:05: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:11: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:17: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:23: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:29: main.scss - unexpected }: failed at `` /Applications/XAMPP/xamppfiles/htdocs/mcpc/wp-content/themes/theme_mcpc/assets/styles/scss/components/_basic_block.scss on line 100, at column 0
+02/12/25 1:13:35: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:41: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:47: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:53: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:13:59: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:05: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:11: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:17: main.scss - Missing argument $top: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:23: main.scss - Only 1 argument allowed, but 3 were passed.: components/_slider_images.scss on line 40, at column 9
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+02/12/25 1:14:29: main.scss - Only 1 argument allowed, but 3 were passed.: components/_slider_images.scss on line 40, at column 9
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+02/12/25 1:14:35: main.scss - Only 1 argument allowed, but 3 were passed.: components/_slider_images.scss on line 40, at column 9
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+02/12/25 1:14:41: main.scss - Only 1 argument allowed, but 3 were passed.: components/_slider_images.scss on line 40, at column 9
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+02/12/25 1:14:47: main.scss - Only 1 argument allowed, but 3 were passed.: components/_slider_images.scss on line 40, at column 9
+Call Stack:
+#0 import components/_slider_images.scss main.scss on line 11
+02/12/25 1:14:53: main.scss - Missing argument $max-height: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:53: main.scss - Missing argument $max-height: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:14:59: main.scss - Missing argument $max-height: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:15:05: main.scss - Missing argument $max-height: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 1:15:11: main.scss - Missing argument $max-height: components/_basic_block.scss on line 21, at column 5
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19
+02/12/25 2:18:19: main.scss - Missing argument $top: components/_basic_block.scss on line 31, at column 9
+Call Stack:
+#0 import components/_basic_block.scss main.scss on line 19

@@ -35,7 +35,8 @@ if (!empty($basic_block_sections)) :
 ?>
 
 <section class="block__container">
-    <div class="block__bonhomme">
+    <div class="block__bonhomme <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+    $position_class ? ' ' . $position_class : ''; ?>">
         <?php afficher_bonhomme('block_choix_du_bonhomme'); ?>
     </div>
     <div class="block__sections <?php 
@@ -69,9 +70,14 @@ if (!empty($basic_block_sections)) :
                             </p>
                         </div>
                     <?php endif; ?>
-                    <?php if (!empty($block['block_link'])) : ?>
-                        <div class="block__link">
-                            <?php afficher_bouton_block($block['block_link']); ?>
+                    <?php if (!empty($block['block_link-1'])) : ?>
+                        <div class="block__link-1">
+                            <?php afficher_bouton_block($block['block_link-1']); ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($block['block_link-2'])) : ?>
+                        <div class="block__link-2">
+                            <?php afficher_bouton_block($block['block_link-2']); ?>
                         </div>
                     <?php endif; ?>
                 </div>

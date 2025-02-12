@@ -7,10 +7,10 @@
   padding: 70px 20px;
   @include tablet {
     @include flex(column, stretch);
-    padding: 6.45rem 2.5rem;
+    padding: 0 2.5rem;
   }
   @include desktop {
-    padding: 3.75rem 6.45rem;
+    padding: 0 6.45rem;
   }
 
   &__part-1 {

@@ -8,8 +8,8 @@ body {
 h1 {
   font-family: $font-sans;
   font-weight: bold;
-  line-height: 2rem;
-  font-size: 2.2rem;
+  line-height: 1.6rem;
+  font-size: 1.59rem;
   text-transform: uppercase;
   @include transition;
 
@@ -39,7 +39,7 @@ $xlarge: 1220px;
 h2 {
   font-family: $font-sans;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 1%;
 }
 

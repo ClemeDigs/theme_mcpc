@@ -185,6 +185,20 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
     echo '<img src="' . esc_url($selected_image) . '" alt="' . esc_attr($alt_text) . '" class="bonhomme-image ' . esc_attr($class_name) . '">';
 }
 
+// ! POSITION BONHOMME BLOCK //
+
+/**
+ * Ajoute une classe conditionnelle pour la position du bonhomme.
+ *
+ * @param int $position La position à vérifier.
+ * @return string La classe CSS à ajouter.
+ */
+function ajouter_position_bonhomme($field_name)
+{
+    $condition = get_field($field_name);
+    return ($condition === true) ? '' : 'block__bonhomme-droite';
+}
+
 // ! LARGEUR DU SOUS-TITRE //
 
 function afficher_largeur_sous_titre($field_name)
@@ -198,7 +212,7 @@ function afficher_largeur_sous_titre($field_name)
     }
 }
 
-// ! BANQUE IMAGES HINGES //
+// ! BANQUE IMAGES TACHES //
 
 /**
  * @param string $field_name Nom du champ ACF.
@@ -210,9 +224,9 @@ function get_hinge_image_url($field_name, $default_image = '/assets/img/illustra
     $hinge_choice = get_field($field_name);
 
     $hinge_options = [
-        'hinge_1' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_01.svg',
-        'hinge_2' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_02.svg',
-        'hinge_3' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_03.svg',
+        'tache_1' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_01.svg',
+        'tache_2' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_02.svg',
+        'tache_3' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_03.svg',
     ];
 
     $selected_hinge = get_template_directory_uri() . $default_image;
@@ -278,8 +292,9 @@ function afficher_arrow($blockArrow)
     ];
 
     // Image par défaut
-    $default_image = get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_big_loop.svg';
-
+    // Image par défaut (aucune image)
+    $default_image = '';
+    
     // Vérifie si l'option existe, sinon prend l'image par défaut
     $selected_arrow = $arrow_options[$arrow_choice] ?? $default_image;
 
