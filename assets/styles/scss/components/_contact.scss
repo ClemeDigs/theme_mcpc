@@ -105,7 +105,7 @@
         @include bonhomme-style-max-width-tablet(200px, -230px, 60vw);
         @include desktop {
           top: -230px;
-          right: 70vw;
+          right: calc(50vw + 200px);
         }
       }
 
@@ -116,7 +116,7 @@
         @include bonhomme-style-max-width-tablet(200px, -230px, 60vw);
         @include desktop {
           top: -230px;
-          right: 70vw;
+          right: calc(50vw + 200px);
         }
       }
 
@@ -127,7 +127,7 @@
         @include bonhomme-style-max-width-tablet(170px, -236px, 60vw);
         @include desktop {
           top: -236px;
-          right: 70vw;
+          right: calc(50vw + 180px);
         }
       }
 
@@ -138,7 +138,7 @@
         @include bonhomme-style-max-width-tablet(160px, -260px, 60vw);
         @include desktop {
           top: -260px;
-          right: 70vw;
+          right: calc(50vw + 180px);
         }
       }
 
@@ -150,7 +150,7 @@
         @include desktop {
           max-width: 130px;
           top: -260px;
-          right: 70vw;
+          right: calc(50vw + 150px);
         }
       }
 
@@ -162,7 +162,7 @@
         @include desktop {
           max-width: 130px;
           top: -268px;
-          right: 70vw;
+          right: calc(50vw + 150px);
         }
       }
 
@@ -173,7 +173,7 @@
         @include bonhomme-style-max-width-tablet(380px, -180px, 52vw);
         @include desktop {
           top: -180px;
-          right: 55vw;
+          right: calc(50vw + 100px);
         }
       }
 
@@ -184,7 +184,7 @@
         @include bonhomme-style-max-width-tablet(380px, -170px, 40vw);
         @include desktop {
           top: -170px;
-          right: 50vw;
+          right: calc(50vw + 50px);
         }
       }
 
@@ -193,7 +193,7 @@
         @include bonhomme-style-max-width-tablet(380px, -200px, 45vw);
         @include desktop {
           top: -200px;
-          right: 60vw;
+          right: calc(50vw + 120px);
         }
       }
     }

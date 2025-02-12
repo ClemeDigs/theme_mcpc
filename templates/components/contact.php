@@ -106,6 +106,13 @@
             <p><?php the_field('newsletter_text_1');?></p>
             <p><?php the_field('newsletter_text_2');?></p>
         </div>
+        <?php
+            $liens_menu = get_posts([
+                'post_type'      => 'liens-menu',
+                'posts_per_page' => 1, 
+            ]);
+            $newsletter_link = !empty($liens_menu) ? get_field('newsletter_link', $liens_menu[0]->ID) : '';
+            ?>
         <a href="<?php echo esc_url($newsletter_link); ?>"
             target="_blank"
             rel="noopener noreferrer"

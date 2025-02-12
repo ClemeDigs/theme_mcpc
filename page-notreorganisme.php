@@ -21,7 +21,7 @@ Template Name: Notre organisme
     <section class="bloc-ca-members">
         <div class="bloc-ca-members__image">
             <h2>
-                <span><?php the_field('team_img_title1'); ?></span>
+                <span class="text-regular"><?php the_field('team_img_title1'); ?></span>
                 <span><?php the_field('team_img_title2'); ?></span>
             </h2>
             <?php
@@ -35,7 +35,7 @@ Template Name: Notre organisme
             <?php endif; ?>
         </div>
         <div class="bloc-ca-members__cards">
-            <h2>Les membres du CA</h2>
+            <h2>Notre équipe</h2>
             <div class="ca-members">
                 <?php 
                     get_template_part('/templates/components/ca-members');

@@ -104,18 +104,11 @@
                                 </div>
                             </div>
                             <?php 
-                                $text = get_field('residence_musicale_press_text'); 
-                                $url = get_field('residence_musicale_press_url');
-
-                                if ($text || $url): ?>
+                                $text = get_field('residence_musicale_press'); 
+                                if ($text): ?>
                                     <div class="residence-modal__article">
-                                        <h3>On parle de nous !</h3>
                                         <?php if ($text): ?>
-                                            <p><?php echo esc_html($text); ?></p>
-                                        <?php endif; ?>
-
-                                        <?php if ($url): ?>
-                                            <a href="<?php echo esc_url($url); ?>" target="_blank">Voir l'article</a>
+                                            <?php echo $text; ?>
                                         <?php endif; ?>
                                     </div>
                                 <?php endif; ?>
