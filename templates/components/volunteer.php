@@ -15,32 +15,33 @@ $volunteer_sections = array_filter($volunteer_sections, function ($section) {
 });
 
 $volunteer_section_link = get_field('volunteer_section_link');
+$volunteer_section_link_2 = get_field('volunteer_section_link_2');
 $cta_choix_du_bonhome = get_field('volunteer_choix_du_bonhome');
 
 if (!empty($volunteer_sections)) :
-?>
-    <section class="volunteerSection__container" id="volunteer">
-        <div class="volunteer__bonhomme">
-            <?php afficher_bonhomme('volunteer_choix_du_bonhome'); ?>
-        </div>
-        <?php foreach ($volunteer_sections as $section) : ?>
-            <div class="volunteer__section">
-                <?php if (!empty($section['volunteer_section_title'])) : ?>
-                    <h2 class="volunteer__section-title"><?php echo esc_html($section['volunteer_section_title']); ?></h2>
-                <?php endif; ?>
-                <?php if (!empty($section['volunteer_section_subtitle'])) : ?>
-                    <span class="volunteer__section-subtitle"><?php echo esc_html($section['volunteer_section_subtitle']); ?></span>
-                <?php endif; ?>
-                <?php if (!empty($section['volunteer_section_paragraph'])) : ?>
-                    <p class="volunteer__section-paragraph"><?php echo esc_html($section['volunteer_section_paragraph']); ?></p>
-                <?php endif; ?>
+?><div>
+        <section class="volunteerSection__container" id="volunteer">
+            <div class="volunteer__bonhomme">
+                <?php afficher_bonhomme('volunteer_choix_du_bonhome'); ?>
             </div>
-        <?php endforeach; ?>
+            <?php foreach ($volunteer_sections as $section) : ?>
+                <div class="volunteer__section">
+                    <?php if (!empty($section['volunteer_section_title'])) : ?>
+                        <h2 class="volunteer__section-title"><?php echo esc_html($section['volunteer_section_title']); ?></h2>
+                    <?php endif; ?>
+                    <?php if (!empty($section['volunteer_section_subtitle'])) : ?>
+                        <span class="volunteer__section-subtitle"><?php echo esc_html($section['volunteer_section_subtitle']); ?></span>
+                    <?php endif; ?>
+                    <?php if (!empty($section['volunteer_section_paragraph'])) : ?>
+                        <p class="volunteer__section-paragraph"><?php echo esc_html($section['volunteer_section_paragraph']); ?></p>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        </section>
+        <div class="volunteer__section-links">
+            <button class="volunteer__section-link"> <?php afficher_bouton_benevoltat_general($volunteer_section_link); ?></button>
+            <button class="volunteer__section-link"> <?php afficher_bouton_benevoltat_residences($volunteer_section_link_2); ?></button>
 
-        <?php if (!empty($volunteer_section_link)) : ?>
-            <div class="volunteer__section-link">
-                <a href="<?php echo esc_url($volunteer_section_link); ?>" class="btn btn-primary">Devenir bénévole</a>
-            </div>
-        <?php endif; ?>
-    </section>
+        </div>
+    </div>
 <?php endif; ?>

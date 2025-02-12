@@ -279,7 +279,7 @@ function afficher_arrow($blockArrow)
 
     // Image par défaut
     $default_image = get_template_directory_uri() . '/assets/img/illustrations/arrows/arrow_big_loop.svg';
-    
+
     // Vérifie si l'option existe, sinon prend l'image par défaut
     $selected_arrow = $arrow_options[$arrow_choice] ?? $default_image;
 
@@ -330,6 +330,7 @@ function afficher_bouton_cta($link, $label = null)
     }
 }
 
+
 /**
  * Affiche un bouton BLOCK avec un lien et un texte personnalisé défini dans ACF.
  *
@@ -368,6 +369,57 @@ function afficher_bouton_radio($link, $label = null)
     }
 }
 
+
+/**
+ * Affiche un bouton pour le modal de la newsletter.
+ *
+ * @param array $link Tableau contenant les infos du lien ACF.
+ */
+function afficher_bouton_modal_newsletter($link)
+{
+    if ($link && isset($link['url'])) {
+        $url = esc_url($link['url']);
+        $target = !empty($link['target']) ? esc_attr($link['target']) : '_self';
+        $button_text = esc_html($link['title'] ?: "S'inscrire maintenant");
+
+        echo '<a href="' . $url . '" class="modal-newsletter-button" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+/**
+ * Affiche un bouton avec un lien donné.
+ *
+ * @param array|string $link Tableau contenant les infos du lien ACF ou une URL directe.
+ */
+function afficher_bouton_benevoltat_general($link)
+{
+    if ($link && isset($link['url'])) {
+        $url = esc_url($link['url']);
+        $target = !empty($link['target']) ? esc_attr($link['target']) : '_self';
+        $button_text = esc_html($link['title'] ?: "Devenir Bénévole");
+
+        echo '<a href="' . $url . '" class="benevolat-general-button" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+/**
+ * Affiche un bouton avec un lien donné.
+ *
+ * @param array|string $link Tableau contenant les infos du lien ACF ou une URL directe.
+ */
+function afficher_bouton_benevoltat_residences($link)
+{
+    if ($link && isset($link['url'])) {
+        $url = esc_url($link['url']);
+        $target = !empty($link['target']) ? esc_attr($link['target']) : '_self';
+        $button_text = esc_html($link['title'] ?: "Bénévolat Residences Musicales");
+
+        echo '<a href="' . $url . '" class="benevolat-residences-button" target="' . $target . '">' . $button_text . '</a>';
+    }
+}
+
+
+
 // ! COULEUR DE FOND DU BLOC //
 
 /**
@@ -385,7 +437,8 @@ function ajouter_classe_background_acf($field_name)
 
 // ! ALT DES IMAGES //
 
-function get_acf_image_alt($image_id, $acf_field = '') {
+function get_acf_image_alt($image_id, $acf_field = '')
+{
     if (!$image_id) {
         return '';
     }
@@ -393,7 +446,7 @@ function get_acf_image_alt($image_id, $acf_field = '') {
     $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 
     if (empty($alt) && $acf_field) {
-        $alt = get_field_object($acf_field)['label'] ?? ''; 
+        $alt = get_field_object($acf_field)['label'] ?? '';
     }
 
     return esc_attr($alt);
@@ -454,7 +507,7 @@ function enqueue_gallery_script()
         true
     );
 }
-
+// ! SCRIPT ACCORDEONS //
 function enqueue_accordeon_script()
 {
     wp_enqueue_script(
@@ -465,6 +518,18 @@ function enqueue_accordeon_script()
         true
     );
 }
+// ! SCRIPT MODAL-NEWSLETTER //
+function enqueue_custom_scripts()
+{
+    wp_enqueue_script(
+        'pop-up-newsletter',
+        get_template_directory_uri() . '/assets/js/pop-up_newsletter.js',
+        array(),
+        null,
+        true
+    );
+}
+
 
 // ! HOOKS WORDPRESS //
 add_action('init', 'remove_wysiwyg');
@@ -473,6 +538,7 @@ add_action('wp_enqueue_scripts', 'enqueue_gallery_script');
 add_action('init', 'create_posttype');
 add_action('wp_enqueue_scripts', 'enqueue_accordeon_script');
 add_action('wp_enqueue_scripts', 'enqueue_dialog_script');
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 add_action('admin_menu', 'remove_dashboard_menus');
 
 // ! UPLOAD SVG //

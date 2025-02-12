@@ -55,7 +55,7 @@
             "sub_fields": [
                 {
                     "key": "field_67a3ac0fc8481",
-                    "label": "Volunteer_section_title",
+                    "label": "Titre section bénévolat",
                     "name": "volunteer_section_title",
                     "aria-label": "",
                     "type": "text",
@@ -76,7 +76,7 @@
                 },
                 {
                     "key": "field_67a3ac72ebd4a",
-                    "label": "Volunteer_section_subtitle",
+                    "label": "Soustitre section bénévolat",
                     "name": "volunteer_section_subtitle",
                     "aria-label": "",
                     "type": "text",
@@ -97,7 +97,7 @@
                 },
                 {
                     "key": "field_67a3ac0fcc012",
-                    "label": "Volunteer_section_paragraph",
+                    "label": "Description",
                     "name": "volunteer_section_paragraph",
                     "aria-label": "",
                     "type": "textarea",
@@ -114,12 +114,12 @@
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 }
             ]
         },
         {
-            "key": "field_67a3ad097a890",
+            "key": "field_67ace7fefd7be",
             "label": "Volunteer 2",
             "name": "volunteer_sections_2",
             "aria-label": "",
@@ -135,8 +135,8 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_67a3ad097a891",
-                    "label": "Volunteer_section_title",
+                    "key": "field_67ace7fefd7bf",
+                    "label": "Titre section bénévolat",
                     "name": "volunteer_section_title",
                     "aria-label": "",
                     "type": "text",
@@ -156,8 +156,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad097a892",
-                    "label": "Volunteer_section_subtitle",
+                    "key": "field_67ace7fefd7c0",
+                    "label": "Soustitre section bénévolat",
                     "name": "volunteer_section_subtitle",
                     "aria-label": "",
                     "type": "text",
@@ -177,8 +177,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad097a893",
-                    "label": "Volunteer_section_paragraph",
+                    "key": "field_67ace7fefd7c1",
+                    "label": "Description",
                     "name": "volunteer_section_paragraph",
                     "aria-label": "",
                     "type": "textarea",
@@ -195,12 +195,12 @@
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 }
             ]
         },
         {
-            "key": "field_67a3ad24dc51e",
+            "key": "field_67ace800fd7c2",
             "label": "Volunteer 3",
             "name": "volunteer_sections_3",
             "aria-label": "",
@@ -216,8 +216,8 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_67a3ad24dc51f",
-                    "label": "Volunteer_section_title",
+                    "key": "field_67ace800fd7c3",
+                    "label": "Titre section bénévolat",
                     "name": "volunteer_section_title",
                     "aria-label": "",
                     "type": "text",
@@ -237,8 +237,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad24dc520",
-                    "label": "Volunteer_section_subtitle",
+                    "key": "field_67ace800fd7c4",
+                    "label": "Soustitre section bénévolat",
                     "name": "volunteer_section_subtitle",
                     "aria-label": "",
                     "type": "text",
@@ -258,8 +258,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad24dc521",
-                    "label": "Volunteer_section_paragraph",
+                    "key": "field_67ace800fd7c5",
+                    "label": "Description",
                     "name": "volunteer_section_paragraph",
                     "aria-label": "",
                     "type": "textarea",
@@ -276,12 +276,12 @@
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 }
             ]
         },
         {
-            "key": "field_67a3ad29dc523",
+            "key": "field_67ace802fd7c6",
             "label": "Volunteer 4",
             "name": "volunteer_sections_4",
             "aria-label": "",
@@ -297,8 +297,8 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_67a3ad29dc524",
-                    "label": "Volunteer_section_title",
+                    "key": "field_67ace802fd7c7",
+                    "label": "Titre section bénévolat",
                     "name": "volunteer_section_title",
                     "aria-label": "",
                     "type": "text",
@@ -318,8 +318,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad29dc525",
-                    "label": "Volunteer_section_subtitle",
+                    "key": "field_67ace802fd7c8",
+                    "label": "Soustitre section bénévolat",
                     "name": "volunteer_section_subtitle",
                     "aria-label": "",
                     "type": "text",
@@ -339,8 +339,8 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a3ad29dc526",
-                    "label": "Volunteer_section_paragraph",
+                    "key": "field_67ace802fd7c9",
+                    "label": "Description",
                     "name": "volunteer_section_paragraph",
                     "aria-label": "",
                     "type": "textarea",
@@ -357,13 +357,13 @@
                     "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "br"
                 }
             ]
         },
         {
             "key": "field_67a3acc4a7be8",
-            "label": "Volunteer_section_link",
+            "label": "Lien bénévolat general",
             "name": "volunteer_section_link",
             "aria-label": "",
             "type": "link",
@@ -375,7 +375,24 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_67acdd786c4e0",
+            "label": "Lien bénévolat Residences Musicales",
+            "name": "volunteer_section_link_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
             "allow_in_bindings": 1
         }
     ],
@@ -397,5 +414,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738782471
+    "modified": 1739388265
 }

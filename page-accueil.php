@@ -11,6 +11,9 @@ get_header();
 <main>
 
     <?php
+    get_template_part('/templates/components/pop-up_newsletter'); ?>
+
+    <?php
     get_template_part('/templates/components/hero');
     ?>
 
@@ -23,11 +26,11 @@ get_header();
     get_template_part('/templates/components/cta');
     ?>
 
-<?php
+    <?php
     get_template_part('/templates/components/basic_block');
     ?>
 
-<?php
+    <?php
     get_template_part('/templates/components/juicer');
     ?>
 
