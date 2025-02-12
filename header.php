@@ -34,14 +34,20 @@
         'posts_per_page' => 1,
     ));
 
+    $radio_img_url = ''; // Définition par défaut
+
     if ($liens_menu_query->have_posts()) {
         $liens_menu_query->the_post();
         $donation_link = get_field('donation_link', get_the_ID());
         $connexion_link = get_field('connexion_link', get_the_ID());
+        $radio_link = get_field('radio_link', get_the_ID());
+        $radio_img = get_field('radio_img', get_the_ID());
         wp_reset_postdata();
-    } else {
-        $donation_link = null;
-        $connexion_link = null;
+
+        // Vérifier si $radio_img est un tableau et récupérer l'URL
+        if (is_array($radio_img) && isset($radio_img['url'])) {
+            $radio_img_url = esc_url($radio_img['url']); 
+        }
     }
 
     // Récupérer le prénom et le nom de famille avec les shortcodes
@@ -50,6 +56,7 @@
 
     // Extraire la première lettre de chaque
     $initials = strtoupper(substr($first_name, 0, 1)) . strtoupper(substr($last_name, 0, 1));
+
     ?>
 
     <header>
@@ -61,7 +68,7 @@
                     </a>
                 </div>
                 <?php
-                wp_nav_menu($arg = array(
+                wp_nav_menu(array(
                     'menu' => 'Header',
                     'menu_class' => 'header__nav',
                     'theme_location' => 'primary'
@@ -82,7 +89,20 @@
                             Connexion
                         <?php endif; ?>
                     </a>
-                </div>
+<!--                     <button class="header__btn-music">
+                        <div class="header__radio-img">
+                            <?php if (!empty($radio_img_url)) : ?>
+                                <img src="<?php echo $radio_img_url; ?>" alt="Radio Image">
+                            <?php endif; ?>
+                        </div>
+                    </button>
+                    <div class="header__radio">
+                        <a href="<?php echo esc_url($radio_link); ?>" target="_blank" id="header__radio-btn" >
+                            <i class="fa-brands fa-soundcloud"></i>
+                            Écouter
+                        </a>
+                    </div>
+                </div> -->
                 <button class="header__mobile-icon">
                     <i data-dialog="#mobile-menu" class="fa-solid fa-bars"></i>
                 </button>

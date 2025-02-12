@@ -145,6 +145,22 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
+
+    register_post_type(
+        'testimonials',
+        array(
+            'labels' => array(
+                'name' => __('Livre d\'or'),
+                'singular_name' => __('Livre d\'or'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-testimonial',
+            'rewrite' => array('slug' => 'testimonials'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
 }
 
 

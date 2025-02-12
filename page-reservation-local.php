@@ -16,7 +16,11 @@ get_header();
 
     <section class="calendar">
     <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
-        <?php echo do_shortcode('[calendar id="518"]'); ?>
+        <div class="responsive-calendar">
+    <iframe 
+    <iframe src="https://calendar.google.com/calendar/embed?src=maisonculturebic%40gmail.com&ctz=America%2FToronto" style="border: 0" frameborder="0" scrolling="no"></iframe>
+    </iframe>
+</div>
     <?php else: ?>
         <div class="calendar__not-connected">
             <h2><?php the_field('connexion_title'); ?></h2>

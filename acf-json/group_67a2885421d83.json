@@ -39,6 +39,50 @@
             "placeholder": ""
         },
         {
+            "key": "field_67abccd815e85",
+            "label": "Header - Logo de la radio",
+            "name": "radio_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_67abca926521e",
+            "label": "Header - Lien du bouton radio",
+            "name": "radio_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        },
+        {
             "key": "field_67a28bf17e2b9",
             "label": "Footer - Lien vers Facebook",
             "name": "facebook_link",
@@ -111,5 +155,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738772106
+    "modified": 1739312372
 }

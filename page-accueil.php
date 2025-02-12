@@ -34,6 +34,10 @@ get_header();
     get_template_part('/templates/components/juicer');
     ?>
 
+<?php
+    get_template_part('/templates/components/testimonials');
+    ?>
+
     <?php
     get_template_part('/templates/components/partners');
     ?>

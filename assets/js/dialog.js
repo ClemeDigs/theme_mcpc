@@ -1,3 +1,11 @@
+window.addEventListener("load", function () {
+  if (typeof juicer !== "undefined") {
+    setTimeout(() => {
+      juicer.relayout(); // Forcer le recalcul de la grille Juicer
+    }, 500);
+  }
+});
+
 // Sélection de toutes les modales et de tous les boutons close
 /**
  * @type {HTMLElement[]}
