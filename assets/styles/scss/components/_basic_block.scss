@@ -4,20 +4,104 @@
 
 .background-color-grey {
   background-color: $color-grey-p;
+  padding: 6.375rem 0;
   @include shadow-block;
+  @include tablet {
+    gap: 3.125rem;
+  }
+  @include desktop {
+    gap: 6.875rem;
+  }
 }
 
 .block {
+  // position: relative;
   &__bonhomme {
-    // @include container;
+    @include flex(row, flex-start, flex-start);
+    // position: absolute;
+    // transform: translateY(-100%);
     padding: $p-mobile;
-    width: calc(100vw - 20%);
-    height: auto;
+
+    img {
+      //   position: relative;
+      @include transition;
+
+      @include bonhomme-image-styles(
+        "bonhomme-théâtre",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-peinture",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-musique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-danse",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-hip-hop",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-classique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-radio",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-parle",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-pense",
+        null,
+        null,
+        220px,
+        380px
+      );
+    }
+
     @include tablet {
       padding: $p-tablet;
+      @include container;
     }
+
     @include desktop {
       padding: $p-desktop;
+    }
+
+    &-droite {
+      @include flex(row, flex-end);
     }
   }
 
@@ -28,14 +112,6 @@
 
   &__sections {
     @include flex(column);
-    gap: 1.175rem;
-    padding: 6.375rem 0;
-    @include tablet {
-      gap: 3.125rem;
-    }
-    @include desktop {
-      gap: 6.875rem;
-    }
   }
 
   &__content {
@@ -63,7 +139,8 @@
     }
   }
 
-  &__link {
+  &__link-1,
+  &__link-2 {
     @include button-base;
     // @include hidden;
     a {

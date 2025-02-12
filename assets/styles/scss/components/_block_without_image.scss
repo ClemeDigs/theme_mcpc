@@ -17,7 +17,7 @@
   }
   &__container {
     @include container;
-    @include flex(column);
+    @include flex(column, space-between, center);
     padding: 20px;
     gap: 2rem;
     @include tablet {
@@ -30,8 +30,9 @@
   }
 
   &__section {
-    @include flex(column, center, center);
+    @include flex(column, space-between, center);
     text-align: center;
+    flex-grow: 1;
 
     h2 {
       padding-bottom: 2.375rem;
@@ -60,26 +61,175 @@
     }
   }
 
-  &__bonhomme-bas {
-    @include flex(center);
+  &__bonhomme-haut {
+    // position: relative;
+    @include flex(row, flex-start, flex-start);
+    // position: absolute;
+    // transform: translateY(-100%);
+
     img {
-      width: 300px; // Ajuster la largeur de l'image à 100% de son conteneur
-      height: auto;
+      //   position: relative;
+      @include transition;
+
+      @include bonhomme-image-styles(
+        "bonhomme-théâtre",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-peinture",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-musique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-danse",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-hip-hop",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-classique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-radio",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-parle",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-pense",
+        null,
+        null,
+        220px,
+        380px
+      );
     }
+
     @include tablet {
-      padding: 0 40px; // Supprimer le padding en tablette et
+      padding: $p-tablet;
+      @include container;
+    }
+
+    @include desktop {
+      padding: $p-desktop;
+    }
+
+    &-droite {
+      @include flex(row, flex-end);
     }
   }
 
-  &__bonhomme-haut {
-    @include flex(center);
+  &__bonhomme-bas {
+    @include flex(row, flex-end, flex-end);
     img {
-      width: 300px; // Ajuster la largeur de l'image à 100% de son conteneur
-      height: auto;
+      //   position: relative;
+      @include transition;
+
+      @include bonhomme-image-styles(
+        "bonhomme-théâtre",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-peinture",
+        150px,
+        310px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-musique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-danse",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-hip-hop",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-classique",
+        160px,
+        270px,
+        null,
+        null
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-radio",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-parle",
+        null,
+        null,
+        220px,
+        380px
+      );
+      @include bonhomme-image-styles(
+        "bonhomme-pense",
+        null,
+        null,
+        220px,
+        380px
+      );
     }
+
     @include tablet {
-      @include flex(row, flex-start);
-      padding: 0 40px; // Supprimer le padding en tablette et
+      @include container;
     }
+  }
+}
+
+.bonhomme-radio {
+  transform: translateY(0.9rem);
+  @include tablet {
+    transform: translateY(1.5rem);
   }
 }

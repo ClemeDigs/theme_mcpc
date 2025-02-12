@@ -4,19 +4,18 @@
 
 .subtitle {
   &__container {
-    padding: 0 20px; // Padding de 20px de chaque côté pour mobile et tablette
-    box-sizing: border-box; // Inclure le padding dans la taille totale
+    box-sizing: border-box;
     margin: 0 auto;
     @include flex(column, center, center);
-    gap: 1rem;
+    // gap: 1rem;
     padding: 2.5rem 1rem 2rem 1rem;
-    position: relative; // Nécessaire pour le positionnement absolu des éléments enfants
+    position: relative;
     @include round-border;
     @include shadow;
     overflow: hidden;
 
     @include tablet {
-      padding: 0 20px; // Assurez-vous que le padding est également appliqué en tablette
+      padding: 0 20px;
     }
   }
 
@@ -74,9 +73,10 @@
 
   &__hand {
     display: none;
+    position: absolute;
+    box-sizing: border-box;
     @include tablet {
-      display: block;
-      position: relative;
+      display: inline;
       width: 100%;
       height: 100%;
       @include transition;
@@ -85,48 +85,33 @@
     &-gros_pinceau {
       position: absolute;
       top: 0;
-      right: -20px;
-      width: 20%;
-      transform: translateY(-270px) scaleX(-1);
-
-      @include tablet {
-        transform: translateY(-250px) scaleX(-1);
-      }
-
-      @include desktop {
-      }
+      right: 0;
+      width: 23%;
     }
 
     &-palette {
       position: absolute;
-      bottom: -2rem;
-      left: -2rem;
+      bottom: 0;
+      left: -3rem;
       width: 20%;
+      @include transition;
 
       @include tablet {
         bottom: 0;
-        left: -6rem;
+        left: -2.5rem;
       }
 
       @include desktop {
-        bottom: 0;
+        left: -6rem;
         width: 25%;
       }
     }
 
     &-petit_pinceau {
       position: absolute;
-      top: -300px;
-      left: -30px;
+      top: -1.5rem;
+      left: -2rem;
       width: 30%;
-      // transform: translate(-270px);
-
-      @include tablet {
-        top: -270px;
-      }
-
-      @include desktop {
-      }
     }
   }
 
