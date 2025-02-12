@@ -1,4 +1,9 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/becmaweb/mcpc.becmaweb.ca/wp-content/themes/theme_mcpc
-    - /bin/cp -R /home/becmaweb/repositories/theme_mcpc/* $DEPLOYPATH
+    - export REPOPATH=/home/becmaweb/repositories/theme_mcpc
+    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
+    - /bin/chmod 755 ${DEPLOYPATH}
+    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
+    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
