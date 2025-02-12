@@ -27,9 +27,6 @@ get_header();
         ?>
     </div>
     <?php
-    get_template_part('/templates/components/activities-just-images');
-    ?>
-    <?php
     get_template_part('/templates/components/basic_block');
     ?>
 </main>

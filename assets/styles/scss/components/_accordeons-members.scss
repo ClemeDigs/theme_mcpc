@@ -3,6 +3,7 @@
 
 .members-policy {
     &__content {
+        @include container;
         @include flex(column);
         gap: 20px;
         margin-bottom: 40px;
@@ -48,6 +49,7 @@
 
 .faq {
     &__content {
+        @include container;
         @include flex(column);
         gap: 20px;
         margin-bottom: 40px;
@@ -93,6 +95,7 @@
 
 .advantages {
     &__content {
+        @include container;
         @include flex(column);
         gap: 20px;
         margin-bottom: 40px;

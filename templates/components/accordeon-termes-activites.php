@@ -17,16 +17,20 @@ $termes_and_conditions = get_field('termes_and_conditions');
             <div class="activity__title">
                 <h3><?php echo esc_html($section_title); ?></h3>
             </div>
-            <div class="activity__details">
-                <div class="activity__detail">
-                    <i class="fa-regular fa-calendar activity__icon" aria-hidden="true"></i>
-                    <div>
-                        <span>
-                            <?php echo esc_html($periode_inscription); ?>
-                        </span>
+
+            <?php if (!empty($periode_inscription)) : ?>
+                <div class="activity__details">
+                    <div class="activity__detail">
+                        <i class="fa-regular fa-calendar activity__icon" aria-hidden="true"></i>
+                        <div>
+                            <span>
+                                <?php echo esc_html($periode_inscription); ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
+
             <div class="activity__description">
                 <p><?php echo wp_kses_post($termes_and_conditions); ?></p>
             </div>

@@ -187,5 +187,12 @@ footer {
         }
       }
     }
+
+    &__copyright {
+      padding: 1.5rem;
+      color: $color-white;
+      @include flex($justify: center);
+      font-size: 0.8rem;
+    }
   }
 }

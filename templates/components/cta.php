@@ -31,7 +31,11 @@ if (!empty($cta_sections)) :
                 <div class="cta__section-content">
                     <h2 class="cta__section-content-title"><?php echo esc_html($cta['cta_section_title']); ?></h2>
                     <p class="cta__section-description corps-texte"><?php echo esc_html($cta['cta_section_description']); ?></p>
-                    <?php afficher_bouton_cta($cta['cta_section_button_link']); ?>
+                    <div class="cta__section-buttons">
+                        <button> <?php afficher_bouton_cta($cta['cta_section_button_link']); ?></button>
+                        <button> <?php afficher_bouton_cta($cta['cta_section_button_link_2']); ?></button>
+
+                    </div>
                 </div>
             </div>
         <?php endforeach; ?>

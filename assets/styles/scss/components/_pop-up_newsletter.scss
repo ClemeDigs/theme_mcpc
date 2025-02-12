@@ -1,0 +1,103 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.modal {
+    @include flex(column, center, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    // transform: scale(0.8);
+    @include transition(0.3s, ease);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    .modal-content {
+        background: $color-white;
+
+        width: 90%;
+        max-width: 500px;
+        padding: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+        position: relative;
+        @include round-border;
+        @include flex(column, flex-start, flex-start);
+        @include shadow-block;
+
+        @include tablet {
+            width: 80%;
+            max-width: 700px;
+            padding: 4rem;
+        }
+
+        @include desktop {
+            width: 50%;
+            max-width: 900px;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+            color: $color-black;
+        }
+
+        p {
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            color: $color-black;
+        }
+
+        .modal-newsletter-button {
+            @include button-base;
+            display: block;
+            text-align: center;
+            margin: 15px auto 0;
+            color: $color-black;
+            text-decoration: none;
+        }
+
+        .close-modal {
+            @include button-reset;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
+            color: $color-black;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-bonhomme {
+    @include flex(row, center, center);
+    transform: scaleX(-1);
+    width: 100%;
+    margin-bottom: 15px;
+
+    img {
+        max-width: 180px;
+        height: auto;
+
+        @include tablet {
+            max-width: 200px;
+        }
+
+        @include desktop {
+            max-width: 250px;
+        }
+    }
+}

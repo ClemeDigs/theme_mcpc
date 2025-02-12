@@ -37,19 +37,25 @@
             margin-top: 1rem;
         }
     }
+}
 
-    .volunteer__section-link {
-        grid-column: span 2;
-        text-align: center;
+.volunteer__section-link {
+    text-align: center;
+    @include button-base;
+    font-weight: 600;
 
-        .btn {
-            @include button-base;
-            text-decoration-line: none;
-            font-weight: 600;
-        }
+    a {
+        text-decoration: none;
     }
 }
 
+.volunteer__section-links {
+    padding-top: 40px;
+    @include flex(row, center, center);
+    text-align: center;
+    gap: 40px;
+    padding: 20px;
+}
 
 .volunteer__bonhomme {
     position: absolute;

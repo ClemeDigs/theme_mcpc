@@ -1,6 +1,6 @@
 {
     "key": "group_67aa474bb52d0",
-    "title": "Activités parascolaires termes et conditions",
+    "title": "Accordéon termes, conditions ou informations utiles",
     "fields": [
         {
             "key": "field_67aa474bbb1e4",
@@ -93,6 +93,13 @@
                 "operator": "==",
                 "value": "11"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "13"
+            }
         ]
     ],
     "menu_order": 0,
@@ -104,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739214743
+    "modified": 1739336501
 }

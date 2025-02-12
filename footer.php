@@ -4,22 +4,22 @@
 
 <?php
 
-    $liens_menu_query = new WP_Query(array(
-        'post_type'      => 'liens-menu',
-        'posts_per_page' => 1,
-    ));
+$liens_menu_query = new WP_Query(array(
+    'post_type'      => 'liens-menu',
+    'posts_per_page' => 1,
+));
 
-    if ($liens_menu_query->have_posts()) {
-        $liens_menu_query->the_post();
-        $facebook_link = get_field('facebook_link', get_the_ID());
-        $instagram_link = get_field('instagram_link', get_the_ID());
-        $newsletter_link = get_field('newsletter_link', get_the_ID());
-        wp_reset_postdata();
-    } else {
-        $facebook_link = null;
-        $instagram_link = null;
-        $newsletter_link = get_field('newsletter_link', get_the_ID());
-    }
+if ($liens_menu_query->have_posts()) {
+    $liens_menu_query->the_post();
+    $facebook_link = get_field('facebook_link', get_the_ID());
+    $instagram_link = get_field('instagram_link', get_the_ID());
+    $newsletter_link = get_field('newsletter_link', get_the_ID());
+    wp_reset_postdata();
+} else {
+    $facebook_link = null;
+    $instagram_link = null;
+    $newsletter_link = get_field('newsletter_link', get_the_ID());
+}
 
 ?>
 
@@ -56,6 +56,9 @@
                     'theme_location' => 'primary'
                 ));
                 ?>
+                <div class="footer__copyright">
+                    <span>&copy; <?php echo date('Y'); ?> Maison de la Culture du Pic Champlain. Tous droits réservés.</span>
+                </div>
             </div>
             <div class="footer__social">
                 <h2>NOUS SUIVRE</h2>
@@ -77,6 +80,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
 </footer>
 

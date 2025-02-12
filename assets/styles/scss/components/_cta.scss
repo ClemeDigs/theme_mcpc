@@ -4,10 +4,10 @@
 .cta__section {
     @include flex(column);
     gap: 20px;
-    background-color: $color-white;
     max-width: 100%;
     align-items: flex-start;
     height: 100%;
+
 
     &-photo {
         width: 100%;
@@ -32,6 +32,7 @@
         }
 
         &-button {
+
             @include button-base;
             text-decoration-line: none;
             font-weight: 600;
@@ -43,7 +44,7 @@
     @include container;
     position: relative;
     padding: $p-mobile;
-
+    margin-top: 6rem; //a revoir pour le bonhomme
     @include flex(column);
     gap: 50px;
 
@@ -51,7 +52,6 @@
         @include grid-column(2);
         align-items: stretch;
         padding: $p-tablet;
-
     }
 
     @include desktop {
@@ -59,7 +59,6 @@
         align-items: stretch;
         row-gap: 90px;
         padding: $p-desktop;
-
     }
 }
 
@@ -124,4 +123,9 @@
         top: -90px;
         right: 100px;
     }
+}
+
+.cta__section-buttons {
+    @include flex;
+    gap: 20px;
 }
