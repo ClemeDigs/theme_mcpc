@@ -85,39 +85,41 @@
     </div>
 </section>
 
-<section class="newsletter" id="newsletter">
-    <div class="newsletter__bonhomme">
-        <?php 
-        if (!empty(get_field('newsletter_choix_du_bonhomme'))) :
-            afficher_bonhomme('newsletter_choix_du_bonhomme');
-        endif;
-        ?>
-    </div>
-    <div class="newsletter__arrow">
-        <?php 
-        if (!empty(get_field('newsletter_arrow'))) :
-            afficher_arrow('newsletter_arrow');
-        endif;
-        ?>
-    </div>
-    <div class="newsletter__content">
-        <h2><?php the_field('newsletter_title');?></h2>
-        <div class="newsletter__content-text">
-            <p><?php the_field('newsletter_text_1');?></p>
-            <p><?php the_field('newsletter_text_2');?></p>
+
+<section class="newsletter__parent">
+<div class="newsletter__bonhomme block__bonhomme <?php
+            $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+            echo $position_class ? ' ' . $position_class : '';
+            ?>">
+            <?php afficher_bonhomme('newsletter_choix_du_bonhomme'); ?>
         </div>
-        <?php
-            $liens_menu = get_posts([
-                'post_type'      => 'liens-menu',
-                'posts_per_page' => 1, 
-            ]);
-            $newsletter_link = !empty($liens_menu) ? get_field('newsletter_link', $liens_menu[0]->ID) : '';
+    <div class="newsletter">
+        <div class="newsletter__arrow">
+            <?php 
+            if (!empty(get_field('newsletter_arrow'))) :
+                afficher_arrow('newsletter_arrow');
+            endif;
             ?>
-        <a href="<?php echo esc_url($newsletter_link); ?>"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__newsletter-btn">
-            S'inscrire <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        </div>
+        <div class="newsletter__content">
+            <h2><?php the_field('newsletter_title');?></h2>
+            <div class="newsletter__content-text">
+                <p><?php the_field('newsletter_text_1');?></p>
+                <p><?php the_field('newsletter_text_2');?></p>
+            </div>
+            <?php
+                $liens_menu = get_posts([
+                    'post_type'      => 'liens-menu',
+                    'posts_per_page' => 1, 
+                ]);
+                $newsletter_link = !empty($liens_menu) ? get_field('newsletter_link', $liens_menu[0]->ID) : '';
+                ?>
+            <a href="<?php echo esc_url($newsletter_link); ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__newsletter-btn">
+                S'inscrire <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 </section>

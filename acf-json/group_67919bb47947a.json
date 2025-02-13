@@ -38,6 +38,27 @@
             "placeholder": ""
         },
         {
+            "key": "field_67ae47d97dcc6",
+            "label": "Position du bonhomme",
+            "name": "block_position_du_bonhomme",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Gauche",
+            "ui_off_text": "Droite",
+            "ui": 1
+        },
+        {
             "key": "field_67919bb48efff",
             "label": "Titre du carrousel 1",
             "name": "slider_title1",
@@ -435,6 +456,13 @@
             {
                 "param": "page_template",
                 "operator": "==",
+                "value": "page-accueil.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
                 "value": "page-notreorganisme.php"
             }
         ],
@@ -476,5 +504,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739158909
+    "modified": 1739475354
 }

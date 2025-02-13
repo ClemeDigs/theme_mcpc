@@ -1,7 +1,10 @@
 .testimonial {
   @include container;
-  padding: 2rem;
+  padding: 1rem;
   background-color: $color-grey-p;
+  @include tablet {
+    padding: 2rem;
+  }
 
   h2 {
     padding-bottom: 2rem;
@@ -29,9 +32,6 @@
     &__item {
       flex: 0 0 auto;
       scroll-snap-align: start;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-width: 400px;
     }
 
@@ -57,15 +57,21 @@
   }
 
   &__comment {
-    padding: 2rem;
+    padding: 1rem;
     @include flex(column, center, center);
     text-align: center;
     gap: 2rem;
     background-color: white;
     border-radius: 30px;
     @include shadow;
-    width: 400px;
-    height: 500px;
+    width: 280px;
+    height: 600px;
+
+    @include tablet {
+      width: 400px;
+      height: 500px;
+      padding: 2rem;
+    }
 
     &-image {
       padding: 20px;
