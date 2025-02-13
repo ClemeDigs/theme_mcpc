@@ -191,7 +191,7 @@ function format_date($date, $format = '%e %B %Y') {
             <?php endif; ?>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>Aucune exposition à venir ou en cours pour le moment. Revenez bientôt pour découvrir nos nouvelles expositions !</p>
+        <h3>Aucune exposition à venir ou en cours pour le moment. Revenez bientôt pour découvrir nos nouvelles expositions !</h3>
     <?php endif; ?>
     <?php wp_reset_postdata(); ?>
 </section>

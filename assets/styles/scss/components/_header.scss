@@ -10,12 +10,60 @@ header {
   justify-content: center;
   z-index: 100;
   text-transform: uppercase;
+  @include flex(column, flex-start, flex-start);
+
+  .radio__wrapper {
+    width: 100%;
+    background-color: $color-white;
+    @include shadow;
+    position: relative;
+  }
+
+  .radio {
+    width: 100%;
+    padding: 0.5rem 20px 0.5rem 238px;
+    box-sizing: border-box;
+    @include container;
+    @include flex(row, flex-end, center);
+
+    @include tablet {
+      padding: 0.5rem 40px 0.5rem 258px;
+    }
+
+    @include desktop {
+      padding: 0.5rem 70px 0.5rem 278px;
+      @include flex(row, space-between, center);
+    }
+
+    &__text {
+      display: none;
+      @include desktop {
+        display: inline;
+      }
+    }
+
+    &__cta {
+      @include flex(row, center, flex-start);
+      gap: 1rem;
+
+      &-img {
+        img {
+          width: 42px;
+        }
+      }
+
+      &-btn {
+        @include button-radio;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   width: 100%;
   padding: $p-mobile;
   box-sizing: border-box;
@@ -37,11 +85,16 @@ header {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 1rem;
-    height: 80px;
+    height: 120px;
     box-sizing: border-box;
+    position: absolute;
+    z-index: 110;
+    top: 0;
+    @include shadow;
   }
 
   &__image {
+    padding-top: 40px;
     height: 50px;
   }
 
@@ -65,6 +118,7 @@ header {
 
   .header__nav {
     display: none;
+    padding-left: calc(170px + 1rem);
   }
 
   @include desktop-xl {
@@ -102,7 +156,7 @@ header {
           border-left: 1px solid $color-black;
           border-right: 1px solid $color-black;
           border-bottom: 1px solid $color-black;
-          padding: 2.55rem 0 0;
+          padding: 1.9rem 0 0;
           list-style: none;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           border-bottom-left-radius: 8px;
@@ -179,76 +233,6 @@ header {
     }
   }
 }
-
-.header__btn-music {
-  padding: 0 1rem;
-
-  &:hover + .header__radio,
-  &:hover ~ .header__radio {
-    @include flex(row, space-between, center);
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.header__radio {
-  opacity: 0;
-  visibility: hidden;
-  box-sizing: border-box;
-  padding: 1rem;
-  position: absolute;
-  background-color: #fcfcfce0;
-  right: -2.5rem;
-  bottom: -96px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  transition: all 0.3s;
-  #header__radio-btn {
-    @include button-radio;
-  }
-
-  &-img {
-    background-color: $color-white;
-    padding: 0.3rem;
-    border-radius: 8px;
-    border: 1px solid $color-black;
-    transition: all 0.3s;
-
-    &:hover {
-      @include shadow;
-      border: 2px solid $color-black;
-    }
-
-    img {
-      width: 42px;
-    }
-  }
-}
-
-/* .header__radio {
-  @include flex(row, space-between, center);
-  gap: 0.5rem;
-  padding: 0;
-  #header__radio-btn {
-    @include button-radio;
-  }
-
-  &-img {
-    @include flex(row, center, center);
-    width: 100%;
-
-    div {
-      background-color: $color-white;
-      padding: 0.2rem;
-      border-radius: 8px;
-      border: 1px solid $color-black;
-
-      img {
-        width: 42px;
-      }
-    }
-  }
-} */
 
 .header__mobile-icon {
   font-size: 2rem;

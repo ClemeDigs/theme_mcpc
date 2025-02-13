@@ -1,6 +1,6 @@
 {
     "key": "group_67accd67336b2",
-    "title": "Livre d'or",
+    "title": "Témoignages",
     "fields": [
         {
             "key": "field_67accd67a4674",
@@ -64,7 +64,7 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "maxlength": 320,
             "allow_in_bindings": 0,
             "rows": "",
             "placeholder": "",
@@ -89,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739388820
+    "modified": 1739399555
 }

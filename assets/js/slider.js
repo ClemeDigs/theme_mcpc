@@ -35,10 +35,14 @@ document.querySelectorAll(".slider").forEach((slider) => {
 
   function nextSlide() {
     const visibleSlides = getVisibleSlidesCount();
-    currentSlideIndex = Math.min(
-      slides.length - visibleSlides,
-      currentSlideIndex + 1
-    );
+    const maxIndex = slides.length - visibleSlides;
+
+    if (currentSlideIndex < maxIndex) {
+      currentSlideIndex++;
+    } else {
+      currentSlideIndex = maxIndex;
+    }
+
     updateSlidePosition();
     changeProgress();
     hideBtns();
