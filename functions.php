@@ -215,6 +215,7 @@ function ajouter_position_bonhomme($field_name)
     return ($condition === true) ? '' : 'block__bonhomme-droite';
 }
 
+
 // ! LARGEUR DU SOUS-TITRE //
 
 function afficher_largeur_sous_titre($field_name)
@@ -310,7 +311,7 @@ function afficher_arrow($blockArrow)
     // Image par défaut
     // Image par défaut (aucune image)
     $default_image = '';
-    
+
     // Vérifie si l'option existe, sinon prend l'image par défaut
     $selected_arrow = $arrow_options[$arrow_choice] ?? $default_image;
 

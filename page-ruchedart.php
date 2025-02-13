@@ -21,13 +21,13 @@ get_header();
     <?php
     get_template_part('/templates/components/basic_block');
     ?>
-    <!-- 
-    <?php
-    get_template_part('/templates/components/slider_images');
-    ?>  -->
     <?php
     get_template_part('/templates/components/accordeon-termes-activites');
     ?>
+    <?php
+    get_template_part('/templates/components/slider_images');
+    ?>
+
 
 </main>
 

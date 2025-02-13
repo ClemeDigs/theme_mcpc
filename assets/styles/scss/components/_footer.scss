@@ -134,17 +134,24 @@ footer {
       }
     }
 
+    &__nav-container {
+      @include flex(column, $align: center);
+
+      @include tablet {
+        @include flex($direction: column, $align: flex-start);
+      }
+    }
+
     &__nav {
       @include flex(column);
       font-size: .8rem;
-      gap: 20px;
+      gap: 10px;
       list-style: none;
       text-transform: uppercase;
       padding: 0;
 
       @include tablet {
-        gap: 20px;
-        @include flex($direction: row, $justify: flex-start, $align: center);
+        @include flex(column, $align: flex-start);
       }
 
       & a {
@@ -189,7 +196,7 @@ footer {
     }
 
     &__copyright {
-      padding: 1.5rem;
+      padding-top: .5rem;
       color: $color-white;
       @include flex($justify: center);
       font-size: 0.8rem;

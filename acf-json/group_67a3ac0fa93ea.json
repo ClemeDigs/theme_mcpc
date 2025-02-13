@@ -38,6 +38,27 @@
             "placeholder": ""
         },
         {
+            "key": "field_67ad75d1fd7c1",
+            "label": "Position du bonhomme",
+            "name": "block_position_du_bonhomme",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Gauche",
+            "ui_off_text": "Droite",
+            "ui": 1
+        },
+        {
             "key": "field_67a3ac0fb215d",
             "label": "Volunteer 1",
             "name": "volunteer_sections_1",
@@ -414,5 +435,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739388265
+    "modified": 1739421514
 }
