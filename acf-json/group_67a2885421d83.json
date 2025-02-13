@@ -65,6 +65,27 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_67ae2923e996d",
+            "label": "Header - Texte d'accompagnement de la radio",
+            "name": "radio_header_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 85,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67abca926521e",
             "label": "Header - Lien du bouton radio",
             "name": "radio_link",
@@ -155,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739312372
+    "modified": 1739473324
 }

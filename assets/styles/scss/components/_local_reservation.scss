@@ -31,3 +31,17 @@
   height: 100%;
   border: none;
 }
+
+.calendar .mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.calendar .desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

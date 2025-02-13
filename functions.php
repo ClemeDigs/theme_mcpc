@@ -150,8 +150,8 @@ function create_posttype()
         'testimonials',
         array(
             'labels' => array(
-                'name' => __('Livre d\'or'),
-                'singular_name' => __('Livre d\'or'),
+                'name' => __('Témoignages'),
+                'singular_name' => __('Témoignage'),
             ),
             'public' => true,
             'has_archive' => true,

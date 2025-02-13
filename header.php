@@ -34,7 +34,7 @@
         'posts_per_page' => 1,
     ));
 
-    $radio_img_url = ''; // Définition par défaut
+    $radio_img_url = ''; 
 
     if ($liens_menu_query->have_posts()) {
         $liens_menu_query->the_post();
@@ -42,24 +42,40 @@
         $connexion_link = get_field('connexion_link', get_the_ID());
         $radio_link = get_field('radio_link', get_the_ID());
         $radio_img = get_field('radio_img', get_the_ID());
+        $radio_text = get_field('radio_header_text', get_the_ID());
         wp_reset_postdata();
 
-        // Vérifier si $radio_img est un tableau et récupérer l'URL
         if (is_array($radio_img) && isset($radio_img['url'])) {
             $radio_img_url = esc_url($radio_img['url']); 
         }
     }
 
-    // Récupérer le prénom et le nom de famille avec les shortcodes
     $first_name = do_shortcode('[swpm_show_member_info column="first_name"]');
     $last_name = do_shortcode('[swpm_show_member_info column="last_name"]');
 
-    // Extraire la première lettre de chaque
     $initials = strtoupper(substr($first_name, 0, 1)) . strtoupper(substr($last_name, 0, 1));
 
     ?>
 
     <header>
+        <div class="radio__wrapper">
+            <div class="radio">
+                <div class="radio__text">
+                    <p><?php echo $radio_text; ?></p>
+                </div>
+                <div class="radio__cta">
+                    <div class="radio__cta-img">
+                        <?php if (!empty($radio_img_url)) : ?>
+                            <img src="<?php echo $radio_img_url; ?>" alt="Radio Image">
+                        <?php endif; ?>
+                    </div>
+                    <a class="radio__cta-btn" href="<?php echo esc_url($radio_link); ?>" target="_blank" >
+                        <i class="fa-brands fa-soundcloud"></i>
+                        Écouter
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="header">
             <nav class="header__content">
                 <div class="header__logo">
@@ -89,24 +105,10 @@
                             Connexion
                         <?php endif; ?>
                     </a>
-<!--                     <button class="header__btn-music">
-                        <div class="header__radio-img">
-                            <?php if (!empty($radio_img_url)) : ?>
-                                <img src="<?php echo $radio_img_url; ?>" alt="Radio Image">
-                            <?php endif; ?>
-                        </div>
-                    </button>
-                    <div class="header__radio">
-                        <a href="<?php echo esc_url($radio_link); ?>" target="_blank" id="header__radio-btn" >
-                            <i class="fa-brands fa-soundcloud"></i>
-                            Écouter
-                        </a>
-                    </div>
-                </div> -->
-                <button class="header__mobile-icon">
-                    <i data-dialog="#mobile-menu" class="fa-solid fa-bars"></i>
-                </button>
             </div>
+            <button class="header__mobile-icon">
+                <i data-dialog="#mobile-menu" class="fa-solid fa-bars"></i>
+            </button>
         </div>
 
         <div id="mobile-menu" class="dialog mobile-menu__dialog">

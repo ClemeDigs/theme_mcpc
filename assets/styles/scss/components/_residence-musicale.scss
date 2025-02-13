@@ -20,6 +20,16 @@
         height: 456px;
         width: 300px;
         object-fit: cover;
+        transition: all 0.3s;
+        &:hover,
+        &:focus {
+          @include shadow;
+        }
+
+        &:hover + h3,
+        &:focus + h3 {
+          text-decoration: underline;
+        }
 
         @include desktop {
           height: 640px;
