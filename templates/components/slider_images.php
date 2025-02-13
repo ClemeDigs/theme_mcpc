@@ -1,8 +1,11 @@
 <section class="bloc-slider-parent">
+    <div class="bloc-slider__bonhomme block__bonhomme <?php
+        $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+        echo $position_class ? ' ' . $position_class : '';
+        ?>">
+        <?php afficher_bonhomme('slider_choix_du_bonhomme'); ?>
+    </div>
     <div class="bloc-slider">
-        <div class="bloc-slider__bonhomme">
-            <?php afficher_bonhomme('slider_choix_du_bonhomme'); ?>
-        </div>
         <div class="slider__text">
             <div class="slider__title">
                 <h2><?php the_field('slider_title1');?></h2>

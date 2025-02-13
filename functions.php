@@ -72,8 +72,8 @@ function create_posttype()
         'liens-menu',
         array(
             'labels' => array(
-                'name' => __('Liens des menus'),
-                'singular_name' => __('Lien du menu'),
+                'name' => __('Personnalisation des menus'),
+                'singular_name' => __('Personnalisation des menus'),
             ),
             'public' => true,
             'has_archive' => true,

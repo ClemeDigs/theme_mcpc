@@ -12,7 +12,6 @@
 
 .bloc-slider {
   @include flex(column, center, flex-start);
-  margin-top: 9.7rem;
   gap: 2rem;
   padding: 1rem;
   border: 2px solid $color-black;
@@ -22,64 +21,6 @@
   @include desktop {
     padding: 4rem;
     gap: 3rem;
-  }
-
-  &__bonhomme {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-
-    img {
-      position: relative;
-      width: 100%;
-      height: auto;
-
-      &.bonhomme-théâtre {
-        @include bonhomme-style(150px, -150px, 0px);
-        @include bonhomme-style-tablet(270px, -272px, -40px);
-      }
-
-      &.bonhomme-peinture {
-        @include bonhomme-style(150px, -150px, 0px);
-        @include bonhomme-style-tablet(270px, -272px, 0px);
-      }
-
-      &.bonhomme-musique {
-        @include bonhomme-style(150px, -150px, 0px);
-        @include bonhomme-style-tablet(270px, -272px, 0px);
-      }
-
-      &.bonhomme-danse {
-        @include bonhomme-style(150px, -150px, 0px);
-        @include bonhomme-style-tablet(270px, -272px, 0px);
-      }
-
-      &.bonhomme-hip-hop {
-        @include bonhomme-style(150px, -150px, 10px);
-        @include bonhomme-style-tablet(270px, -272px, 10px);
-      }
-
-      &.bonhomme-classique {
-        @include bonhomme-style(150px, -150px, 0px);
-        @include bonhomme-style-tablet(270px, -272px, 0px);
-      }
-
-      &.bonhomme-radio {
-        @include bonhomme-style-max-width(180px, -110px, 20px);
-        @include bonhomme-style-max-width-tablet(380px, -200px, 0px);
-      }
-
-      &.bonhomme-parle {
-        @include bonhomme-style-max-width(180px, -90px, 20px);
-        @include bonhomme-style-max-width-tablet(380px, -200px, 0px);
-      }
-
-      &.bonhomme-pense {
-        @include bonhomme-style-max-width(180px, -100px, 20px);
-        @include bonhomme-style-max-width-tablet(380px, -210px, 0px);
-      }
-    }
   }
 
   .slider__text {
@@ -159,4 +100,66 @@
       transition: width 0.3s ease-in-out;
     }
   }
+}
+
+.bloc-slider__bonhomme .block__bonhomme {
+  @include flex(row, flex-start, flex-start);
+  padding: $p-mobile;
+
+  img {
+    @include transition;
+    transform: scaleX(-1);
+    @include bonhomme-image-styles(
+      "bonhomme-théâtre",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-peinture",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-musique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
+    @include bonhomme-image-styles(
+      "bonhomme-hip-hop",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-classique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
+  }
+
+  @include tablet {
+    padding: $p-tablet;
+    @include container;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
+}
+
+.block__bonhomme-droite {
+  @include flex(row, flex-end, flex-end);
 }
