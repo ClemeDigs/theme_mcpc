@@ -38,6 +38,27 @@
             "placeholder": ""
         },
         {
+            "key": "field_67ad7621c54a4",
+            "label": "Position du bonhomme",
+            "name": "position_du_bonhomme",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Gauche",
+            "ui_off_text": "Droite",
+            "ui": 1
+        },
+        {
             "key": "field_679c52371ec52",
             "label": "Photo gallery 1",
             "name": "photo_gallery_1",
@@ -1937,5 +1958,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739340079
+    "modified": 1739421539
 }

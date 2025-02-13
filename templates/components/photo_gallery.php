@@ -1,8 +1,12 @@
 <section class="gallery-container" role="region" aria-labelledby="gallery-heading">
-    <h2 id="gallery-heading" class="sr-only">Photo Gallery</h2>
-    <div class="gallery__bonhomme">
+    <div class="block__bonhomme block__bonhomme--gallery
+    <?php
+    $position_class = ajouter_position_bonhomme('block_position_du_bonhomme_gallery');
+    echo $position_class ? ' ' . $position_class : '';
+    ?>">
         <?php afficher_bonhomme('gallery_choix_du_bonhome'); ?>
     </div>
+
     <div class="gallery">
         <?php
         // Boucler sur les sous-groupes

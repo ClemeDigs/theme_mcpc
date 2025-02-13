@@ -29,11 +29,9 @@
   }
 }
 
-@mixin button-base(
-  $background: $color-primary,
+@mixin button-base($background: $color-primary,
   $color: $color-black,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
-) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -55,6 +53,10 @@
     background: $green-primary;
     border: 2px solid $green-secondary;
     color: $color-black;
+  }
+
+  &:focus {
+    outline: 1px solid $green-secondary;
   }
 
   &:active {
@@ -106,11 +108,9 @@
   }
 }
 
-@mixin button-radio(
-  $background: $color-quaternary,
+@mixin button-radio($background: $color-quaternary,
   $color: $color-white,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
-) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -132,6 +132,10 @@
     background: $color-quaternary;
     border: 2px solid $color-quinary;
     color: $color-white;
+  }
+
+  &:focus {
+    outline: 1px solid $color-quinary;
   }
 
   &:active {
@@ -162,6 +166,10 @@
 
   &:hover {
     color: $green-primary;
+  }
+
+  &:focus {
+    outline: 1px solid $green-primary;
   }
 
   &:active {
@@ -314,13 +322,11 @@
   }
 }
 
-@mixin bonhomme-image-styles(
-  $class-name,
+@mixin bonhomme-image-styles($class-name,
   $max-height,
   $max-height-tablet,
   $max-width,
-  $max-width-tablet
-) {
+  $max-width-tablet) {
   &.#{$class-name} {
     @include bonhomme-style($max-height, 0, 0);
     @include bonhomme-style-tablet($max-height-tablet, 0, 0);

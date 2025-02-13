@@ -48,7 +48,7 @@ if ($liens_menu_query->have_posts()) {
             </div>
         </div>
         <div class="footer__bottom">
-            <div>
+            <div class="footer__nav-container">
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'Footer',

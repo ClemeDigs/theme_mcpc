@@ -20,10 +20,16 @@ $cta_choix_du_bonhome = get_field('volunteer_choix_du_bonhome');
 
 if (!empty($volunteer_sections)) :
 ?><div>
+        <div class="block__bonhomme block__bonhomme--volunteer
+    <?php
+    $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+    echo $position_class ? ' ' . $position_class : '';
+    ?>">
+            <?php afficher_bonhomme('volunteer_choix_du_bonhome'); ?>
+        </div>
+
         <section class="volunteerSection__container" id="volunteer">
-            <div class="volunteer__bonhomme">
-                <?php afficher_bonhomme('volunteer_choix_du_bonhome'); ?>
-            </div>
+
             <?php foreach ($volunteer_sections as $section) : ?>
                 <div class="volunteer__section">
                     <?php if (!empty($section['volunteer_section_title'])) : ?>

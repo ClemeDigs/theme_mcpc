@@ -12,32 +12,39 @@ $cta_sections = array_filter($cta_sections, function ($cta) {
 });
 
 if (!empty($cta_sections)) :
-?>
-    <section class="ctaSection__container">
-        <div class="ctaSection__bonhomme">
+?> <div>
+        <div class="block__bonhomme block__bonhomme--cta
+<?php
+    $position_class = ajouter_position_bonhomme('block_position_du_bonhomme_cta');
+    echo $position_class ? ' ' . $position_class : '';
+?>">
             <?php afficher_bonhomme('cta_choix_du_bonhome'); ?>
         </div>
-        <?php foreach ($cta_sections as $cta) : ?>
-            <div class="cta__section">
-                <?php
-                $image_id = isset($cta['cta_section_photo']) ? $cta['cta_section_photo'] : null;
-                $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : null;
-                ?>
+        <section class="ctaSection__container">
 
-                <?php if (!empty($image_url)) : ?>
-                    <img class="cta__section-photo" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($cta['cta_section_title']); ?>">
-                <?php endif; ?>
 
-                <div class="cta__section-content">
-                    <h2 class="cta__section-content-title"><?php echo esc_html($cta['cta_section_title']); ?></h2>
-                    <p class="cta__section-description corps-texte"><?php echo esc_html($cta['cta_section_description']); ?></p>
-                    <div class="cta__section-buttons">
-                        <button> <?php afficher_bouton_cta($cta['cta_section_button_link']); ?></button>
-                        <button> <?php afficher_bouton_cta($cta['cta_section_button_link_2']); ?></button>
+            <?php foreach ($cta_sections as $cta) : ?>
+                <div class="cta__section">
+                    <?php
+                    $image_id = isset($cta['cta_section_photo']) ? $cta['cta_section_photo'] : null;
+                    $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : null;
+                    ?>
 
+                    <?php if (!empty($image_url)) : ?>
+                        <img class="cta__section-photo" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($cta['cta_section_title']); ?>">
+                    <?php endif; ?>
+
+                    <div class="cta__section-content">
+                        <h2 class="cta__section-content-title"><?php echo esc_html($cta['cta_section_title']); ?></h2>
+                        <p class="cta__section-description corps-texte"><?php echo esc_html($cta['cta_section_description']); ?></p>
+                        <div class="cta__section-buttons">
+                            <button> <?php afficher_bouton_cta($cta['cta_section_button_link']); ?></button>
+                            <button> <?php afficher_bouton_cta($cta['cta_section_button_link_2']); ?></button>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </section>
+            <?php endforeach; ?>
+        </section>
+    </div>
 <?php endif; ?>
