@@ -35,7 +35,7 @@ if (!empty($basic_block_sections)) :
 ?>
 
 <section class="block__container">
-    <div class="block__bonhomme <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
+    <div class="block__bonhomme-reg <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
     $position_class ? ' ' . $position_class : ''; ?>">
         <?php afficher_bonhomme('block_choix_du_bonhomme'); ?>
     </div>
@@ -46,7 +46,7 @@ if (!empty($basic_block_sections)) :
         <?php foreach ($basic_block_sections as $block) : ?>
             <div class="block__section">
                 <?php 
-                $image_position = isset($block['image_position']) ? intval($block['image_position']) : null; // Convertir en entier
+                $image_position = isset($block['image_position']) ? intval($block['image_position']) : null;
                 if ($image_position === 1) {
                     bloc_section_image($block['block_image'], $image_position);
                 }
