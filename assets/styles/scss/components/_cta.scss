@@ -32,7 +32,6 @@
         }
 
         &-button {
-
             @include button-base;
             text-decoration-line: none;
             font-weight: 600;
@@ -51,6 +50,7 @@
         @include grid-column(2);
         align-items: stretch;
         padding: $p-tablet;
+        row-gap: 90px;
     }
 
     @include desktop {
@@ -73,7 +73,6 @@
     img {
         @include transition;
         transform: scaleX(-1);
-
         @include bonhomme-image-styles("bonhomme-théâtre", 150px, 310px, null, null);
         @include bonhomme-image-styles("bonhomme-peinture", 150px, 310px, null, null);
         @include bonhomme-image-styles("bonhomme-musique", 160px, 270px, null, null);
@@ -95,6 +94,10 @@
     }
 }
 
-.block__bonhomme-droite {
+.block__bonhomme--cta .block__bonhomme-droite {
     @include flex(row, flex-end, flex-end);
+
+    img {
+        transform: scaleX(1);
+    }
 }

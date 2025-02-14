@@ -18,10 +18,11 @@ get_header();
     <?php
     get_template_part('/templates/components/subtitle');
     ?>
-
-    <?php
-    get_template_part('/templates/components/block_without_image');
-    ?>
+    <div class="bwt-flip">
+        <?php
+        get_template_part('/templates/components/block_without_image');
+        ?>
+    </div>
     <div class="main-content <?php echo $has_new_activity ? 'no-gap' : ''; ?>">
         <div class="main-content <?php echo $has_new_activity ? 'no-gap' : ''; ?>">
             <?php get_template_part('templates/components/accordeon-activites'); ?>

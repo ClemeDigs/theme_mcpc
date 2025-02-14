@@ -188,7 +188,10 @@
     }
 }
 
-.block__bonhomme-droite {
+.block__bonhomme--gallery .block__bonhomme-droite {
     @include flex(row, flex-end, flex-end);
 
+    img {
+        transform: scaleX(1);
+    }
 }

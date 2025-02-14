@@ -14,15 +14,13 @@ $cta_sections = array_filter($cta_sections, function ($cta) {
 if (!empty($cta_sections)) :
 ?> <div>
         <div class="block__bonhomme block__bonhomme--cta
-<?php
-    $position_class = ajouter_position_bonhomme('block_position_du_bonhomme_cta');
-    echo $position_class ? ' ' . $position_class : '';
-?>">
+            <?php
+            $position_class = ajouter_position_bonhomme('block_position_du_bonhomme_cta');
+            echo $position_class ? ' ' . $position_class : '';
+            ?>">
             <?php afficher_bonhomme('cta_choix_du_bonhome'); ?>
         </div>
         <section class="ctaSection__container">
-
-
             <?php foreach ($cta_sections as $cta) : ?>
                 <div class="cta__section">
                     <?php
@@ -36,7 +34,7 @@ if (!empty($cta_sections)) :
 
                     <div class="cta__section-content">
                         <h2 class="cta__section-content-title"><?php echo esc_html($cta['cta_section_title']); ?></h2>
-                        <p class="cta__section-description corps-texte"><?php echo esc_html($cta['cta_section_description']); ?></p>
+                        <p class="cta__section-description corps-texte"><?php echo wp_kses($cta['cta_section_description'], array('br' => array())); ?></p>
                         <div class="cta__section-buttons">
                             <button> <?php afficher_bouton_cta($cta['cta_section_button_link']); ?></button>
                             <button> <?php afficher_bouton_cta($cta['cta_section_button_link_2']); ?></button>

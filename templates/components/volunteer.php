@@ -39,7 +39,7 @@ if (!empty($volunteer_sections)) :
                         <span class="volunteer__section-subtitle"><?php echo esc_html($section['volunteer_section_subtitle']); ?></span>
                     <?php endif; ?>
                     <?php if (!empty($section['volunteer_section_paragraph'])) : ?>
-                        <p class="volunteer__section-paragraph"><?php echo esc_html($section['volunteer_section_paragraph']); ?></p>
+                        <p class="volunteer__section-paragraph"><?php echo wp_kses($section['volunteer_section_paragraph'], array('br' => array())); ?></p>
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>
