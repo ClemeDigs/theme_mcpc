@@ -1,16 +1,16 @@
-<!-- <?php
-        $ruche = new WP_Query([
-            'post_type' => 'ruche',
-            'posts_per_page' => -1,
-        ]);
+<?php
+$ruche = new WP_Query([
+    'post_type' => 'ruche',
+    'posts_per_page' => -1,
+]);
 
-        if ($ruche->have_posts()) :
-        ?>
+if ($ruche->have_posts()) :
+?>
     <?php while ($ruche->have_posts()) : $ruche->the_post(); ?>
         <?php
-                $ruche_color = get_field('activity_color');
+        $ruche_color = get_field('activity_color');
         ?>
-        <div class="activities__container" style="--activity-color: <?php echo esc_attr(ruche_color); ?>;">
+        <div class="activities__container" style="--activity-color: <?php echo esc_attr($ruche_color); ?>;">
             <div class="accordeon__header" role="button" aria-expanded="false" aria-controls="content-<?php the_ID(); ?>">
                 <h3 class="accordeon__title">
                     <?php the_field('titre_de_laccordeon'); ?>
@@ -69,7 +69,7 @@
                                 </span>
                                 <span>
                                     <?php if ($ruche_time_window) : ?>
-                                        <?php echo esc_html($activity_time_window); ?><br>
+                                        <?php echo esc_html($ruche_time_window); ?><br>
                                     <?php endif; ?> </span>
                             </div>
                         </div>
@@ -136,6 +136,6 @@
         </div>
     <?php endwhile; ?>
 <?php
-        endif;
-        wp_reset_postdata();
-?> -->
+endif;
+wp_reset_postdata();
+?>

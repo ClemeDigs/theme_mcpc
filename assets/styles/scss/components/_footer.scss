@@ -130,7 +130,7 @@ footer {
       gap: 40px;
 
       @include desktop {
-        @include flex;
+        @include flex($align: flex-end);
       }
     }
 
