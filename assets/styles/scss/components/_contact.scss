@@ -123,13 +123,13 @@
   }
 }
 
-.newsletter__bonhomme .block__bonhomme {
+.newsletter__bonhomme.block__bonhomme {
   @include flex(row, flex-start, flex-start);
   padding: $p-mobile;
 
   img {
+    transform: scaleX(1);
     @include transition;
-    transform: scaleX(-1);
     @include bonhomme-image-styles(
       "bonhomme-théâtre",
       150px,
@@ -181,6 +181,9 @@
   }
 }
 
-.block__bonhomme-droite {
+.newsletter__bonhomme.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
+  img {
+    transform: scaleX(-1);
+  }
 }

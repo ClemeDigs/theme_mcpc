@@ -1,11 +1,11 @@
 {
-    "key": "group_67a30c08e6faf",
-    "title": "Avantages",
+    "key": "group_67aea5c9ba435",
+    "title": "Utilisation du calendrier",
     "fields": [
         {
-            "key": "field_67a30c08ee660",
-            "label": "Titre et texte",
-            "name": "advantages_title_text",
+            "key": "field_67aea5c99f791",
+            "label": "Utilisation du calendrier",
+            "name": "calendar_title_text",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -17,7 +17,7 @@
                 "id": ""
             },
             "default_value": "",
-            "allow_in_bindings": 1,
+            "allow_in_bindings": 0,
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -27,9 +27,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "12"
+                "value": "page-reservation-local.php"
             }
         ]
     ],
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739485804
+    "modified": 1739498993
 }

@@ -1,6 +1,12 @@
 .calendar {
   @include container;
   padding: 2rem;
+  @include flex(column, flex-start, flex-start);
+  gap: 2rem;
+
+  &-utilisation {
+    width: 100%;
+  }
 
   &__not-connected {
     @include flex(column, center, center);
