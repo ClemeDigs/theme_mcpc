@@ -17,12 +17,8 @@
 
 .block {
   &__bonhomme-reg {
-    @include flex(row, flex-start, flex-start);
     padding: $p-mobile;
     @include transition;
-    img {
-      transform: scaleX(1);
-    }
 
     img {
       @include bonhomme-image-styles(
@@ -210,10 +206,17 @@
   }
 }
 
-.block__bonhomme-droite {
+.block__bonhomme-reg.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
   img {
     transform: scaleX(-1);
+  }
+}
+
+.block__bonhomme-reg.block__bonhomme-gauche {
+  @include flex(row, flex-start, flex-start);
+  img {
+    transform: scaleX(1);
   }
 }
 

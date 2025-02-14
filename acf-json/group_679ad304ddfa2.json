@@ -3,27 +3,6 @@
     "title": "Bloc texte photo de base",
     "fields": [
         {
-            "key": "field_67a90e3c637fa",
-            "label": "Couleur de fond",
-            "name": "block_background",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui_on_text": "Gris",
-            "ui_off_text": "Aucun",
-            "ui": 1
-        },
-        {
             "key": "field_679ad3056c0ee",
             "label": "Choix du bonhomme",
             "name": "block_choix_du_bonhomme",
@@ -160,7 +139,6 @@
                         "grosse_boucle": "grosse_boucle",
                         "boucle": "boucle",
                         "u": "u",
-                        "camera": "camera",
                         "etoiles": "etoiles",
                         "aucun": "aucun"
                     },
@@ -235,7 +213,7 @@
             ]
         },
         {
-            "key": "field_67a8fde060e17",
+            "key": "field_679e4e8f17afd",
             "label": "basic-block_section_2",
             "name": "basic-block_section_2",
             "aria-label": "",
@@ -248,10 +226,10 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "sub_fields": [
                 {
-                    "key": "field_67a8fde060e18",
+                    "key": "field_679e4e8f17afe",
                     "label": "Image du bloc",
                     "name": "block_image",
                     "aria-label": "",
@@ -277,7 +255,7 @@
                     "preview_size": "medium"
                 },
                 {
-                    "key": "field_67a8fde060e19",
+                    "key": "field_679e4e8f17aff",
                     "label": "Position de l'image",
                     "name": "image_position",
                     "aria-label": "",
@@ -298,7 +276,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_67a8fde060e1a",
+                    "key": "field_679e4e8f17b00",
                     "label": "Flèche du bloc",
                     "name": "block_arrow",
                     "aria-label": "",
@@ -315,7 +293,6 @@
                         "grosse_boucle": "grosse_boucle",
                         "boucle": "boucle",
                         "u": "u",
-                        "camera": "camera",
                         "etoiles": "etoiles",
                         "aucun": "aucun"
                     },
@@ -329,7 +306,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_67a8fde060e1b",
+                    "key": "field_679e4e8f17b01",
                     "label": "Titre du bloc",
                     "name": "block_title",
                     "aria-label": "",
@@ -350,7 +327,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_67a8fde060e1c",
+                    "key": "field_679e4e8f17b02",
                     "label": "Texte du bloc",
                     "name": "block_text",
                     "aria-label": "",
@@ -371,7 +348,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_67a8fde060e1d",
+                    "key": "field_679e4e8f17b03",
                     "label": "Button du bloc",
                     "name": "block_link",
                     "aria-label": "",
@@ -408,5 +385,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739133555
+    "modified": 1739545836
 }

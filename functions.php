@@ -235,7 +235,7 @@ function ajouter_position_bonhomme($field_name)
     return ($condition === true) ? 'block__bonhomme-gauche' : 'block__bonhomme-droite';
 }
 
-// ! LARGEUR DU SOUS-TITRE //s
+// ! LARGEUR DU SOUS-TITRE //
 
 function afficher_largeur_sous_titre($field_name)
 {
