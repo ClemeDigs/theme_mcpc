@@ -15,7 +15,6 @@
   @include container;
   position: relative;
   @include flex(column, center, flex-start);
-  gap: 1rem;
   padding-top: 2rem;
   width: 100% !important;
   min-height: 500px;
@@ -28,16 +27,17 @@
 
   h2 {
     padding-left: 2rem;
+    padding-bottom: 1rem;
   }
 }
 
-.juicer__bonhomme .block__bonhomme {
+.juicer__bonhomme.block__bonhomme {
   @include flex(row, flex-start, flex-start);
   padding: $p-mobile;
 
   img {
     @include transition;
-    transform: scaleX(-1);
+    transform: scaleX(1);
     @include bonhomme-image-styles(
       "bonhomme-théâtre",
       150px,
@@ -89,6 +89,9 @@
   }
 }
 
-.juicer__bonhomme .block__bonhomme .block__bonhomme-droite {
+.juicer__bonhomme.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
+  img {
+    transform: scaleX(-1);
+  }
 }

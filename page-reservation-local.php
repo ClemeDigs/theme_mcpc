@@ -27,6 +27,10 @@ get_header();
             </iframe>
         </div>
 
+        <?php
+        get_template_part('/templates/components/calendar-utilisation');
+        ?>
+
     <?php else: ?>
         <div class="calendar__not-connected">
             <h2><?php the_field('connexion_title'); ?></h2>
