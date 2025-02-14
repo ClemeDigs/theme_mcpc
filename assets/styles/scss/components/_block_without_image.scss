@@ -72,7 +72,6 @@
   &__bonhomme-haut {
     @include flex(row, flex-start, flex-start);
     padding: $p-mobile;
-
     @include transition;
 
     img {
@@ -228,15 +227,15 @@
   }
 }
 
-.block__bonhomme-droite {
+.block-without-img__bonhomme-haut.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
   img {
     transform: scaleX(-1);
   }
 }
 
-.block__bonhomme-gauche {
-  @include flex(row, flex-end, flex-end);
+.block-without-img__bonhomme-haut.block__bonhomme-gauche {
+  @include flex(row, flex-start, flex-start);
   img {
     transform: scaleX(1);
   }
