@@ -6,14 +6,6 @@
   position: relative;
   padding-top: 5rem;
 
-  @include tablet {
-    padding-top: 8rem;
-  }
-
-  // @include desktop {
-  //     margin: $p-desktop;
-  // }
-
   .partner__slider {
     @include flex;
     gap: 20px;

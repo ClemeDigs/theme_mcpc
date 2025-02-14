@@ -126,9 +126,9 @@
                     "label": "cta_section_description",
                     "name": "cta_section_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "Ajoutez la description souhaitée.",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -137,10 +137,10 @@
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_6799a6e6fff19",
@@ -246,9 +246,9 @@
                     "label": "cta_section_description",
                     "name": "cta_section_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "Ajoutez la description souhaitée.",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -257,10 +257,10 @@
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_67acf7cff64ee",
@@ -366,9 +366,9 @@
                     "label": "cta_section_description",
                     "name": "cta_section_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "Ajoutez la description souhaitée.",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -377,10 +377,10 @@
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_67acf7d2f64f4",
@@ -486,9 +486,9 @@
                     "label": "cta_section_description",
                     "name": "cta_section_description",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "Ajoutez la description souhaitée.",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -497,10 +497,10 @@
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_67acf7d3f64fa",
@@ -557,5 +557,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739421563
+    "modified": 1739496560
 }

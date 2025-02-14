@@ -7,10 +7,12 @@ $rapports_assemblee = new WP_Query([
 if ($rapports_assemblee->have_posts()) :
 ?>
     <div class="accordeon__container" role="region" aria-labelledby="rapports-assemblees-title">
-        <div class="assemblee__bonhomme-container">
-            <div class="assemblee__bonhomme">
-                <?php afficher_bonhomme('assemblee_choix_du_bonhomme'); ?>
-            </div>
+        <div class="block__bonhomme block__bonhomme--assemblee
+            <?php
+            $position_class = ajouter_position_bonhomme('block_position_du_bonhomme_assemblee');
+            echo $position_class ? ' ' . $position_class : '';
+            ?>">
+            <?php afficher_bonhomme('assemblee_choix_du_bonhomme'); ?>
         </div>
         <div class="accordeon__header" role="button" aria-expanded="false" aria-controls="rapports-assemblees-content">
             <h3 class="accordeon__title" id="rapports-assemblees-title">

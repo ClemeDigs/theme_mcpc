@@ -109,3 +109,7 @@
         color: $color-black;
     }
 }
+
+.bwt-flip .block-without-img__bonhomme-bas {
+    transform: scaleX(-1);
+}

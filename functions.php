@@ -19,6 +19,21 @@ function create_posttype()
             'supports' => array('title', 'id', 'thumbnail'),
         )
     );
+    register_post_type(
+        'ruche',
+        array(
+            'labels' => array(
+                'name' => __('Ruche d\'art'),
+                'singular_name' => __('Ruche d\'art'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-buddicons-replies',
+            'rewrite' => array('slug' => 'ruche'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id', 'thumbnail'),
+        )
+    );
 
     register_post_type(
         'exposition',
@@ -212,11 +227,14 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 function ajouter_position_bonhomme($field_name)
 {
     $condition = get_field($field_name);
-    return ($condition === true) ? '' : 'block__bonhomme-droite';
+
+    // Convertir la valeur en booléen strict
+    $condition = filter_var($condition, FILTER_VALIDATE_BOOLEAN);
+
+    return ($condition === true) ? 'block__bonhomme-gauche' : 'block__bonhomme-droite';
 }
 
-
-// ! LARGEUR DU SOUS-TITRE //
+// ! LARGEUR DU SOUS-TITRE //s
 
 function afficher_largeur_sous_titre($field_name)
 {
