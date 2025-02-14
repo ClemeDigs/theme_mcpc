@@ -264,5 +264,7 @@ Call Stack:
 02/12/25 2:18:19: main.scss - Missing argument $top: components/_basic_block.scss on line 31, at column 9
 Call Stack:
 #0 import components/_basic_block.scss main.scss on line 19
-02/14/25 2:34:46: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 34, at column 1
-02/14/25 2:36:47: main.scss - parse error: failed at `<<<<<<< Updated upstream` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 34, at column 1
+02/14/25 2:34:46: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 34, at column 1
+02/14/25 2:36:47: main.scss - parse error: failed at `<<<<<<< Updated upstream
+` C:\xampp\htdocs\mcpc\wp-content\themes\theme_mcpc\assets\styles\scss\main.scss on line 34, at column 1

@@ -15,6 +15,14 @@
       @include flex(column, flex-start, flex-start);
     }
   }
+
+  &__content {
+    @include flex(column, center, center);
+    @include tablet {
+      @include flex(column, flex-start, flex-start);
+    }
+  }
+
   &__container {
     @include container;
     @include flex(column, space-between, center);
@@ -62,15 +70,13 @@
   }
 
   &__bonhomme-haut {
-    // position: relative;
     @include flex(row, flex-start, flex-start);
-    // position: absolute;
-    // transform: translateY(-100%);
+    padding: $p-mobile;
+
+    @include transition;
 
     img {
-      //   position: relative;
-      @include transition;
-
+      transform: scaleX(1);
       @include bonhomme-image-styles(
         "bonhomme-théâtre",
         150px,
@@ -118,7 +124,8 @@
         null,
         null,
         220px,
-        380px
+        380px,
+        1rem
       );
       @include bonhomme-image-styles(
         "bonhomme-parle",
@@ -144,18 +151,12 @@
     @include desktop {
       padding: $p-desktop;
     }
-
-    &-droite {
-      @include flex(row, flex-end);
-    }
   }
 
   &__bonhomme-bas {
     @include flex(row, flex-end, flex-end);
+    @include transition;
     img {
-      //   position: relative;
-      @include transition;
-
       @include bonhomme-image-styles(
         "bonhomme-théâtre",
         150px,
@@ -227,9 +228,16 @@
   }
 }
 
-.bonhomme-radio {
-  transform: translateY(0.9rem);
-  @include tablet {
-    transform: translateY(1.5rem);
+.block__bonhomme-droite {
+  @include flex(row, flex-end, flex-end);
+  img {
+    transform: scaleX(-1);
+  }
+}
+
+.block__bonhomme-gauche {
+  @include flex(row, flex-end, flex-end);
+  img {
+    transform: scaleX(1);
   }
 }

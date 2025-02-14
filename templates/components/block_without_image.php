@@ -1,12 +1,11 @@
 <div class="block-without-img__wrapper">
-<div class="block-without-img__bonhomme-haut <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
-    $position_class ? ' ' . $position_class : ''; ?>">
-        <?php afficher_bonhomme('block-without-img_choix_du_bonhomme_haut'); ?>
+<div class="block-without-img__bonhomme-haut">
+    <?php afficher_bonhomme('block-without-img_choix_du_bonhomme_haut'); ?>
     </div>
-<section class="block-without-img__container<?php 
+    <section class="block-without-img__container<?php 
     $bg_class = ajouter_classe_background_acf('block-without-img_background');
-    echo $bg_class ? ' ' . $bg_class : ''; 
-?>">
+    echo $bg_class ? ' ' . esc_attr($bg_class) : ''; 
+    ?>">
         <div class="block-without-img__section">
             <div class="block-without-img__content">
                 <div class="block-without-img__header">
@@ -42,3 +41,5 @@
 
 </section>
 </div>
+
+

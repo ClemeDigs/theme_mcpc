@@ -29,9 +29,11 @@
   }
 }
 
-@mixin button-base($background: $color-primary,
+@mixin button-base(
+  $background: $color-primary,
   $color: $color-black,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
+) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -108,9 +110,11 @@
   }
 }
 
-@mixin button-radio($background: $color-quaternary,
+@mixin button-radio(
+  $background: $color-quaternary,
   $color: $color-white,
-  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)) {
+  $box-shadow: 3px 2px 4.8px 0px rgba(16, 23, 0, 0.25)
+) {
   display: inline-flex;
   padding: 10px 16px;
   justify-content: center;
@@ -322,16 +326,20 @@
   }
 }
 
-@mixin bonhomme-image-styles($class-name,
+@mixin bonhomme-image-styles(
+  $class-name,
   $max-height,
   $max-height-tablet,
   $max-width,
-  $max-width-tablet) {
+  $max-width-tablet,
+  $position: 1
+) {
   &.#{$class-name} {
     @include bonhomme-style($max-height, 0, 0);
     @include bonhomme-style-tablet($max-height-tablet, 0, 0);
     @include bonhomme-style-max-width($max-width, 0, 0);
     @include bonhomme-style-max-width-tablet($max-width-tablet, 0, 0);
+    transform: translateY($position);
   }
 }
 

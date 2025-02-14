@@ -18,7 +18,7 @@
             },
             "message": "",
             "default_value": 0,
-            "allow_in_bindings": 0,
+            "allow_in_bindings": 1,
             "ui_on_text": "Gris",
             "ui_off_text": "Aucun",
             "ui": 1
@@ -57,27 +57,6 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_67a23bfd28e47",
-            "label": "Position du bonhomme haut",
-            "name": "block-without-img_position_du_bonhomme_haut",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui_on_text": "Gauche",
-            "ui_off_text": "Droite",
-            "ui": 1
         },
         {
             "key": "field_67a23c9be814d",
@@ -156,6 +135,23 @@
             "allow_in_bindings": 1
         },
         {
+            "key": "field_67ad4d008a7d4",
+            "label": "Button 3 du bloc sans image",
+            "name": "block-without-img_link-3",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
             "key": "field_67a2424188e63",
             "label": "Choix du bonhomme intérieur",
             "name": "block-without-img_choix_du_bonhomme_int",
@@ -181,7 +177,7 @@
                 "Pense": "Pense",
                 "Aucun": "Aucun"
             },
-            "default_value": "Classique",
+            "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -215,9 +211,16 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "page-residencesmusicales.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-radiobic.php"
             }
         ]
     ],
@@ -230,5 +233,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739132634
+    "modified": 1739499659
 }

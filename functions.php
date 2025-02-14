@@ -218,12 +218,13 @@ function afficher_bonhomme($field_name, $default_image = '/assets/img/illustrati
 
 // ! POSITION BONHOMME BLOCK //
 
-/**
+/** 
  * Ajoute une classe conditionnelle pour la position du bonhomme.
- *
+
  * @param int $position La position à vérifier.
  * @return string La classe CSS à ajouter.
  */
+
 function ajouter_position_bonhomme($field_name)
 {
     $condition = get_field($field_name);
