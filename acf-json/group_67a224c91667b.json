@@ -68,7 +68,7 @@
             "allow_in_bindings": 0,
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_67a224c93bc42",
@@ -305,5 +305,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739496163
+    "modified": 1739503711
 }
