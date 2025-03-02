@@ -20,6 +20,7 @@ if (!empty($cta_sections)) :
             ?>">
             <?php afficher_bonhomme('cta_choix_du_bonhome'); ?>
         </div>
+        
         <section class="ctaSection__container">
             <?php foreach ($cta_sections as $cta) : ?>
                 <div class="cta__section">

@@ -73,7 +73,6 @@
 
   img {
     @include transition;
-    transform: scaleX(-1);
     @include bonhomme-image-styles(
       "bonhomme-théâtre",
       150px,
@@ -125,9 +124,15 @@
   }
 }
 
-.block__bonhomme--cta .block__bonhomme-droite {
+.block__bonhomme--cta.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
+  img {
+    transform: scaleX(-1);
+  }
+}
 
+.block__bonhomme--cta.block__bonhomme-gauche {
+  @include flex(row, flex-start, flex-start);
   img {
     transform: scaleX(1);
   }
