@@ -109,42 +109,32 @@
   img {
     @include transition;
     transform: scaleX(1);
-    @include bonhomme-image-styles(
-      "bonhomme-théâtre",
+    @include bonhomme-image-styles("bonhomme-théâtre",
       150px,
       310px,
       null,
-      null
-    );
-    @include bonhomme-image-styles(
-      "bonhomme-peinture",
+      null);
+    @include bonhomme-image-styles("bonhomme-peinture",
       150px,
       310px,
       null,
-      null
-    );
-    @include bonhomme-image-styles(
-      "bonhomme-musique",
+      null);
+    @include bonhomme-image-styles("bonhomme-musique",
       160px,
       270px,
       null,
-      null
-    );
+      null);
     @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
-    @include bonhomme-image-styles(
-      "bonhomme-hip-hop",
+    @include bonhomme-image-styles("bonhomme-hip-hop",
       160px,
       270px,
       null,
-      null
-    );
-    @include bonhomme-image-styles(
-      "bonhomme-classique",
+      null);
+    @include bonhomme-image-styles("bonhomme-classique",
       160px,
       270px,
       null,
-      null
-    );
+      null);
     @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
     @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
     @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
@@ -162,7 +152,27 @@
 
 .bloc-slider__bonhomme.block__bonhomme-droite {
   @include flex(row, flex-end, flex-end);
+
   img {
     transform: scaleX(-1);
+  }
+}
+
+.slider__image.slider__residences img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+
+  @include desktop {
+    width: 400px;
+    height: 280px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
