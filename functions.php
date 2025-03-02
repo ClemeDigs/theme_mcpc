@@ -260,9 +260,9 @@ function get_hinge_image_url($field_name, $default_image = '/assets/img/illustra
     $hinge_choice = get_field($field_name);
 
     $hinge_options = [
-        'tache_1' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_01.svg',
-        'tache_2' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_02.svg',
-        'tache_3' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_03.svg',
+        'hinge_1' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_01.svg',
+        'hinge_2' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_02.svg',
+        'hinge_3' => get_template_directory_uri() . '/assets/img/illustrations/hinge/hinge_03.svg',
     ];
 
     $selected_hinge = get_template_directory_uri() . $default_image;
@@ -348,16 +348,16 @@ function afficher_arrow($blockArrow)
  *
  * @param string $field_name Nom du champ ACF.
  */
+
 function afficher_bouton_en_savoir_plus($field_name)
 {
     $link = get_field($field_name);
-
     if ($link) {
-        $url = $link['url'];
-        $title = $link['title'] ? $link['title'] : 'En savoir plus';
-        $target = $link['target'] ? $link['target'] : '_self';
+        $url = esc_url($link['url']);
+        $title = $link['title'] ? esc_html($link['title']) : 'En savoir plus';
+        $target = !empty($link['target']) ? esc_attr($link['target']) : '_self';
 
-        echo '<a href="' . esc_url($url) . '" class="button" target="' . esc_attr($target) . '">' . esc_html($title) . '</a>';
+        echo '<a href="' . $url . '" class="button" target="' . $target . '">' . $title . '</a>';
     }
 }
 
@@ -397,7 +397,7 @@ function afficher_bouton_block($link, $label = null)
         // Vérifie si un label est défini, sinon utilise le titre du lien ACF
         $button_text = !empty($label) ? esc_html($label) : esc_html($link['title']);
 
-        echo '<a href="' . $url . '" class="" target="' . $target . '">' . $button_text . '</a>';
+        echo '<a href="' . $url . '" class="button-link" target="' . $target . '">' . $button_text . '</a>';
     }
 }
 

@@ -1,389 +1,423 @@
 {
-    "key": "group_679ad304ddfa2",
-    "title": "Bloc texte photo de base",
-    "fields": [
+  "key": "group_679ad304ddfa2",
+  "title": "Bloc texte photo de base",
+  "fields": [
+    {
+      "key": "field_679ad3056c0ee",
+      "label": "Choix du bonhomme",
+      "name": "block_choix_du_bonhomme",
+      "aria-label": "",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "Théâtre": "Théâtre",
+        "Peinture": "Peinture",
+        "Musique": "Musique",
+        "Radio": "Radio",
+        "Danse": "Danse",
+        "Hip-hop": "Hip-hop",
+        "Classique": "Classique",
+        "Parle": "Parle",
+        "Pense": "Pense",
+        "Aucun": "Aucun"
+      },
+      "default_value": "Classique",
+      "return_format": "value",
+      "multiple": 0,
+      "allow_null": 0,
+      "allow_in_bindings": 1,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": ""
+    },
+    {
+      "key": "field_679ad398548e7",
+      "label": "Position du bonhomme haut",
+      "name": "block_position_du_bonhomme",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "allow_in_bindings": 0,
+      "ui_on_text": "Gauche",
+      "ui_off_text": "Droite",
+      "ui": 1
+    },
+    {
+      "key": "field_679e4e508adcd",
+      "label": "basic-block_section_1",
+      "name": "basic-block_section_1",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
         {
-            "key": "field_679ad3056c0ee",
-            "label": "Choix du bonhomme",
-            "name": "block_choix_du_bonhomme",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Théâtre": "Théâtre",
-                "Peinture": "Peinture",
-                "Musique": "Musique",
-                "Radio": "Radio",
-                "Danse": "Danse",
-                "Hip-hop": "Hip-hop",
-                "Classique": "Classique",
-                "Parle": "Parle",
-                "Pense": "Pense",
-                "Aucun": "Aucun"
-            },
-            "default_value": "Classique",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+          "key": "field_679e4e508adce",
+          "label": "Image du bloc",
+          "name": "block_image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "allow_in_bindings": 0,
+          "preview_size": "medium"
         },
         {
-            "key": "field_679ad398548e7",
-            "label": "Position du bonhomme haut",
-            "name": "block_position_du_bonhomme",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui_on_text": "Gauche",
-            "ui_off_text": "Droite",
-            "ui": 1
+          "key": "field_679e4e508adcf",
+          "label": "Position de l'image",
+          "name": "image_position",
+          "aria-label": "",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "message": "",
+          "default_value": 0,
+          "allow_in_bindings": 0,
+          "ui_on_text": "Gauche",
+          "ui_off_text": "Droite",
+          "ui": 1
         },
         {
-            "key": "field_679e4e508adcd",
-            "label": "basic-block_section_1",
-            "name": "basic-block_section_1",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_679e4e508adce",
-                    "label": "Image du bloc",
-                    "name": "block_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium"
-                },
-                {
-                    "key": "field_679e4e508adcf",
-                    "label": "Position de l'image",
-                    "name": "image_position",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "allow_in_bindings": 0,
-                    "ui_on_text": "Gauche",
-                    "ui_off_text": "Droite",
-                    "ui": 1
-                },
-                {
-                    "key": "field_679e4e508add0",
-                    "label": "Flèche du bloc",
-                    "name": "block_arrow",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "grosse_boucle": "grosse_boucle",
-                        "boucle": "boucle",
-                        "u": "u",
-                        "etoiles": "etoiles",
-                        "aucun": "aucun"
-                    },
-                    "default_value": "grosse_boucle",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_679e4e508add1",
-                    "label": "Titre du bloc",
-                    "name": "block_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Titre",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_679e4e508add2",
-                    "label": "Texte du bloc",
-                    "name": "block_text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Texte",
-                    "maxlength": "",
-                    "allow_in_bindings": 1,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_679e4e508add3",
-                    "label": "Button du bloc",
-                    "name": "block_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 0
-                }
-            ]
+          "key": "field_679e4e508add0",
+          "label": "Flèche du bloc",
+          "name": "block_arrow",
+          "aria-label": "",
+          "type": "select",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "grosse_boucle": "grosse_boucle",
+            "boucle": "boucle",
+            "u": "u",
+            "etoiles": "etoiles",
+            "aucun": "aucun"
+          },
+          "default_value": "grosse_boucle",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "allow_in_bindings": 1,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
         },
         {
-            "key": "field_679e4e8f17afd",
-            "label": "basic-block_section_2",
-            "name": "basic-block_section_2",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "sub_fields": [
-                {
-                    "key": "field_679e4e8f17afe",
-                    "label": "Image du bloc",
-                    "name": "block_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium"
-                },
-                {
-                    "key": "field_679e4e8f17aff",
-                    "label": "Position de l'image",
-                    "name": "image_position",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "allow_in_bindings": 0,
-                    "ui_on_text": "Gauche",
-                    "ui_off_text": "Droite",
-                    "ui": 1
-                },
-                {
-                    "key": "field_679e4e8f17b00",
-                    "label": "Flèche du bloc",
-                    "name": "block_arrow",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "grosse_boucle": "grosse_boucle",
-                        "boucle": "boucle",
-                        "u": "u",
-                        "etoiles": "etoiles",
-                        "aucun": "aucun"
-                    },
-                    "default_value": "grosse_boucle",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_679e4e8f17b01",
-                    "label": "Titre du bloc",
-                    "name": "block_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Titre",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_679e4e8f17b02",
-                    "label": "Texte du bloc",
-                    "name": "block_text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Texte",
-                    "maxlength": "",
-                    "allow_in_bindings": 1,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_679e4e8f17b03",
-                    "label": "Button du bloc",
-                    "name": "block_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 0
-                }
-            ]
+          "key": "field_679e4e508add1",
+          "label": "Titre du bloc",
+          "name": "block_title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Titre",
+          "maxlength": "",
+          "allow_in_bindings": 0,
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_679e4e508add2",
+          "label": "Texte du bloc",
+          "name": "block_text",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Texte",
+          "maxlength": "",
+          "allow_in_bindings": 1,
+          "rows": "",
+          "placeholder": "",
+          "new_lines": "br"
+        },
+        {
+          "key": "field_679e4e508add3_1",
+          "label": "Bouton du bloc 1",
+          "name": "block_link-1",
+          "aria-label": "",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "allow_in_bindings": 0
+        },
+        {
+          "key": "field_679e4e508add3_2",
+          "label": "Bouton du bloc 2",
+          "name": "block_link-2",
+          "aria-label": "",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "allow_in_bindings": 0
         }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "modified": 1739545836
+      ]
+    },
+    {
+      "key": "field_679e4e8f17afd",
+      "label": "basic-block_section_2",
+      "name": "basic-block_section_2",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "sub_fields": [
+        {
+          "key": "field_679e4e8f17afe",
+          "label": "Image du bloc",
+          "name": "block_image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "allow_in_bindings": 0,
+          "preview_size": "medium"
+        },
+        {
+          "key": "field_679e4e8f17aff",
+          "label": "Position de l'image",
+          "name": "image_position",
+          "aria-label": "",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "message": "",
+          "default_value": 0,
+          "allow_in_bindings": 0,
+          "ui_on_text": "Gauche",
+          "ui_off_text": "Droite",
+          "ui": 1
+        },
+        {
+          "key": "field_679e4e8f17b00",
+          "label": "Flèche du bloc",
+          "name": "block_arrow",
+          "aria-label": "",
+          "type": "select",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "grosse_boucle": "grosse_boucle",
+            "boucle": "boucle",
+            "u": "u",
+            "etoiles": "etoiles",
+            "aucun": "aucun"
+          },
+          "default_value": "grosse_boucle",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "allow_in_bindings": 1,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_679e4e8f17b01",
+          "label": "Titre du bloc",
+          "name": "block_title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Titre",
+          "maxlength": "",
+          "allow_in_bindings": 0,
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_679e4e8f17b02",
+          "label": "Texte du bloc",
+          "name": "block_text",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Texte",
+          "maxlength": "",
+          "allow_in_bindings": 1,
+          "rows": "",
+          "placeholder": "",
+          "new_lines": "br"
+        },
+        {
+          "key": "field_679e4e8f17b03_1",
+          "label": "Bouton du bloc 1",
+          "name": "block_link-1",
+          "aria-label": "",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "allow_in_bindings": 0
+        },
+        {
+          "key": "field_679e4e8f17b03_2",
+          "label": "Bouton du bloc 2",
+          "name": "block_link-2",
+          "aria-label": "",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "allow_in_bindings": 0
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1739545836
 }

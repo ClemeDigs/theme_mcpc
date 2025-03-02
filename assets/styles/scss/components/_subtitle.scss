@@ -5,17 +5,16 @@
 .subtitle {
   &__container {
     box-sizing: border-box;
-    margin: 0 auto;
     @include flex(column, center, center);
-    // gap: 1rem;
-    padding: 2.5rem 1rem 2rem 1rem;
+    @include container;
+    padding: 1rem 1rem 2rem 1rem;
     position: relative;
     @include round-border;
     @include shadow;
     overflow: hidden;
 
     @include tablet {
-      padding: 0 20px;
+      padding: 2rem 1.25rem;
     }
   }
 
@@ -54,8 +53,11 @@
   }
 
   &__learn-more {
-    @include button-link;
+    z-index: 1000;
+    text-transform: uppercase;
+
     a {
+      @include transition;
       &:hover {
         color: $color-tertiary;
       }
@@ -117,7 +119,6 @@
 
   &__content {
     position: relative;
-    padding-top: 1rem;
     @include flex(column, center, center);
     gap: 1rem;
   }

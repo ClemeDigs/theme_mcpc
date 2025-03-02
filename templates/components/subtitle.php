@@ -9,7 +9,7 @@
         </div>
         <?php if (get_field('learn_more')) : ?>
             <div class="subtitle__learn-more">
-                <?php afficher_bouton_en_savoir_plus('learn_more'); ?>
+            <?php echo afficher_bouton_en_savoir_plus('learn_more'); ?>
             </div>
         <?php endif; ?>
     </div>

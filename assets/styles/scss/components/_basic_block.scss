@@ -143,7 +143,6 @@
   &__link-1,
   &__link-2 {
     @include button-base;
-    // @include hidden;
     a {
       text-decoration: none;
     }
@@ -219,91 +218,3 @@
     transform: scaleX(1);
   }
 }
-
-// .block {
-//   &__bonhomme-reg {
-//     @include flex(row, flex-start, flex-start);
-//     padding: $p-mobile;
-//     @include transition;
-//     img {
-//       transform: scaleX(1);
-//     }
-
-//     img {
-//       @include bonhomme-image-styles(
-//         "bonhomme-théâtre",
-//         150px,
-//         310px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-peinture",
-//         150px,
-//         310px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-musique",
-//         160px,
-//         270px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-danse",
-//         160px,
-//         270px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-hip-hop",
-//         160px,
-//         270px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-classique",
-//         160px,
-//         270px,
-//         null,
-//         null
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-radio",
-//         null,
-//         null,
-//         220px,
-//         380px,
-//         1rem
-//       );
-
-//       @include bonhomme-image-styles(
-//         "bonhomme-parle",
-//         null,
-//         null,
-//         220px,
-//         380px
-//       );
-//       @include bonhomme-image-styles(
-//         "bonhomme-pense",
-//         null,
-//         null,
-//         220px,
-//         380px
-//       );
-//     }
-
-//     @include tablet {
-//       padding: $p-tablet;
-//       @include container;
-//     }
-
-//     @include desktop {
-//       padding: $p-desktop;
-//     }
-//   }
-// }
