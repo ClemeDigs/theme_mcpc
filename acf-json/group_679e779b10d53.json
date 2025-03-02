@@ -57,27 +57,6 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_67ae43f555632",
-            "label": "Position du bonhomme",
-            "name": "block_position_du_bonhomme",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui_on_text": "Gauche",
-            "ui_off_text": "Droite",
-            "ui": 1
         }
     ],
     "location": [
@@ -105,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739474264
+    "modified": 1740949822
 }

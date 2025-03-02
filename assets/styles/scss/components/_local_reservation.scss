@@ -1,8 +1,16 @@
 .calendar {
   @include container;
-  padding: 2rem;
-  @include flex(column, flex-start, flex-start);
+  padding: $p-mobile;
+  @include flex(column, center, center);
   gap: 2rem;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
 
   &-utilisation {
     width: 100%;
@@ -11,6 +19,7 @@
   &__not-connected {
     @include flex(column, center, center);
     gap: 1rem;
+    width: 100%;
   }
 
   &__btn-connexion {

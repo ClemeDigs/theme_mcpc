@@ -51,14 +51,12 @@
   transition: all 0.3s ease;
   border: 2px solid transparent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $green-primary;
     border: 2px solid $green-secondary;
     color: $color-black;
-  }
-
-  &:focus {
-    outline: 1px solid $green-secondary;
+    outline: none;
   }
 
   &:active {
@@ -90,10 +88,13 @@
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid transparent;
+  transition: all 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 2px solid transparent;
     color: $color-tertiary;
+    outline: none;
   }
 
   &:active {
@@ -132,14 +133,12 @@
   transition: all 0.3s ease;
   border: 2px solid transparent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $color-quaternary;
     border: 2px solid $color-quinary;
     color: $color-white;
-  }
-
-  &:focus {
-    outline: 1px solid $color-quinary;
+    outline: none;
   }
 
   &:active {
@@ -168,12 +167,10 @@
   cursor: pointer;
   transition: all 0.3s;
 
-  &:hover {
-    color: $green-primary;
-  }
-
+  &:hover,
   &:focus {
-    outline: 1px solid $green-primary;
+    color: $green-primary;
+    outline: none;
   }
 
   &:active {
@@ -190,6 +187,7 @@
   a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s;
 
     &:link {
       color: $color-black;
@@ -197,7 +195,8 @@
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: $green-secondary;
     }
 
