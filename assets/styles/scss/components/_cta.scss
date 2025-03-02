@@ -2,109 +2,133 @@
 @import "../partials/mixins";
 
 .cta__section {
-    @include flex(column);
-    gap: 20px;
-    max-width: 100%;
-    align-items: flex-start;
-    height: 100%;
+  @include flex(column);
+  gap: 20px;
+  max-width: 100%;
+  align-items: flex-start;
+  height: 100%;
 
+  &-photo {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 30px;
+  }
 
-    &-photo {
-        width: 100%;
-        object-fit: cover;
-        height: 300px;
-        border-radius: 30px;
+  &-content {
+    @include flex(column, $align: flex-start);
+    gap: 10px;
+    flex-grow: 1;
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $color-black;
     }
 
-    &-content {
-        @include flex(column, $align: flex-start);
-        gap: 10px;
-        flex-grow: 1;
-
-        &-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: $color-black;
-        }
-
-        &-description {
-            flex-grow: 1;
-        }
-
-        &-button {
-            @include button-base;
-            text-decoration-line: none;
-            font-weight: 600;
-        }
+    &-description {
+      flex-grow: 1;
     }
+
+    &-button {
+      @include button-base;
+      @include transition;
+      text-decoration-line: none;
+      font-weight: 600;
+    }
+  }
 }
 
 .ctaSection__container {
-    @include container;
-    position: relative;
-    padding: $p-mobile;
-    @include flex(column);
-    gap: 50px;
+  @include container;
+  position: relative;
+  padding: $p-mobile;
+  @include flex(column);
+  gap: 50px;
 
-    @include tablet {
-        @include grid-column(2);
-        align-items: stretch;
-        padding: $p-tablet;
-        row-gap: 90px;
-    }
+  @include tablet {
+    @include grid-column(2);
+    align-items: stretch;
+    padding: $p-tablet;
+    row-gap: 90px;
+  }
 
-    @include desktop {
-        @include grid-column(2);
-        align-items: stretch;
-        row-gap: 90px;
-        padding: $p-desktop;
-    }
+  @include desktop {
+    @include grid-column(2);
+    align-items: stretch;
+    row-gap: 90px;
+    padding: $p-desktop;
+  }
 }
 
 .cta__section-buttons {
-    @include flex;
-    gap: 20px;
+  @include flex;
+  gap: 20px;
 }
 
 .block__bonhomme--cta {
-    padding: $p-mobile;
+  @include flex(row, flex-start, flex-start);
+  padding: $p-mobile;
+  @include transition;
+
+  img {
     @include transition;
+    transform: scaleX(-1);
+    @include bonhomme-image-styles(
+      "bonhomme-théâtre",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-peinture",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-musique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
+    @include bonhomme-image-styles(
+      "bonhomme-hip-hop",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-classique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
+  }
 
-    img {
-        @include transition;
-        @include bonhomme-image-styles("bonhomme-théâtre", 150px, 310px, null, null);
-        @include bonhomme-image-styles("bonhomme-peinture", 150px, 310px, null, null);
-        @include bonhomme-image-styles("bonhomme-musique", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-hip-hop", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-classique", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
-        @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
-        @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
-    }
+  @include tablet {
+    padding: $p-tablet;
+    @include container;
+  }
 
-    @include tablet {
-        padding: $p-tablet;
-        @include container;
-    }
-
-    @include desktop {
-        padding: $p-desktop;
-    }
+  @include desktop {
+    padding: $p-desktop;
+  }
 }
 
-.block__bonhomme-reg.block__bonhomme-droite {
-    @include flex(row, flex-end, flex-end);
+.block__bonhomme--cta .block__bonhomme-droite {
+  @include flex(row, flex-end, flex-end);
 
-    img {
-        transform: scaleX(-1);
-    }
-}
-
-.block__bonhomme-reg.block__bonhomme-gauche {
-    @include flex(row, flex-start, flex-start);
-
-    img {
-        transform: scaleX(1);
-    }
+  img {
+    transform: scaleX(1);
+  }
 }

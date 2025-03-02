@@ -229,8 +229,8 @@
 }
 
 // Ajout d'une transition smooth pour le responsive : eve
-@mixin transition($duration: 0.25s, $easing: ease) {
-  transition: all 0.25s ease;
+@mixin transition($duration: 0.3s, $easing: ease, $property: all) {
+  transition: $property $duration $easing;
 }
 
 // Ajout d'un border pour les images : eve

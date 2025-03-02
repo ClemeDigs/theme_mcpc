@@ -27,7 +27,8 @@ $basic_block_sections = array_filter($basic_block_sections, function ($block) {
         !empty($block['block_arrow']) ||
         !empty($block['block_title']) ||
         !empty($block['block_text']) ||
-        !empty($block['block_link'])
+        !empty($block['block_link-1']) ||
+        !empty($block['block_link-2'])
     );
 });
 
@@ -70,9 +71,14 @@ if (!empty($basic_block_sections)) :
                             </p>
                         </div>
                     <?php endif; ?>
+                    <?php 
+                    // Vérifiez les champs block_link-1 et block_link-2
+                    if (isset($block['block_link-1'])) 
+                    if (isset($block['block_link-2'])) 
+                    ?>
                     <?php if (!empty($block['block_link-1'])) : ?>
                         <div class="block__link-1">
-                            <?php afficher_bouton_block($block['block_link-1']); ?>
+                            <?php affichier_bouton_block($block['block_link-1']); ?>
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($block['block_link-2'])) : ?>
