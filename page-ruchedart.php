@@ -21,14 +21,20 @@ get_header();
     <div class="main-content <?php echo $has_new_activity ? 'no-gap' : ''; ?>">
         <?php
         get_template_part('/templates/components/accordeon-ruche');
-        ?> </div>
+        ?>
     </div>
+
+<?php
+    get_template_part('/templates/components/block_without_image');
+    ?>
+
+<?php
+    get_template_part('/templates/components/block_without_image');
+    ?>
 
     <?php
     get_template_part('/templates/components/basic_block');
     ?>
-
-
     <?php
     get_template_part('/templates/components/slider_images');
     ?>

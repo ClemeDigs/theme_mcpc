@@ -40,7 +40,7 @@
         {
             "key": "field_67ae47d97dcc6",
             "label": "Position du bonhomme",
-            "name": "block_position_du_bonhomme",
+            "name": "slider_position_du_bonhomme",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -504,5 +504,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739475354
+    "modified": 1740949352
 }

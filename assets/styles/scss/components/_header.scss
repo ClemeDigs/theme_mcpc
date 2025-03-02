@@ -37,6 +37,9 @@ header {
 
     &__text {
       display: none;
+      p {
+        font-size: 14px;
+      }
       @include desktop {
         display: inline;
       }

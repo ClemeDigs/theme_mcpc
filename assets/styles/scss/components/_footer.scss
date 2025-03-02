@@ -8,6 +8,7 @@ footer {
     color: $color-white;
     text-decoration: none;
     font-weight: 400;
+    transition: all 0.3s;
 
     &:hover {
       color: $color-primary;
@@ -22,7 +23,6 @@ footer {
       left: 0px;
       color: $color-white;
       padding: 20px;
-
 
       @include tablet {
         padding: 30px 40px;
@@ -84,6 +84,7 @@ footer {
       @include flex(flex-start);
       gap: 10px;
       color: $color-white;
+      transition: all 0.3s;
 
       &:hover {
         color: $color-primary;
@@ -108,7 +109,6 @@ footer {
       // }
 
       &-btn {
-
         @include button-base;
         @include flex;
         gap: 8px;
@@ -122,6 +122,7 @@ footer {
         color: $color-black;
         font-weight: 600;
         transition: max-width 0.3s ease-in-out;
+        transition: all 0.3s;
 
         i {
           font-size: 1.2rem;
@@ -148,7 +149,7 @@ footer {
 
     &__nav {
       @include flex(column);
-      font-size: .8rem;
+      font-size: 0.8rem;
       gap: 10px;
       list-style: none;
       text-transform: uppercase;
@@ -184,6 +185,7 @@ footer {
 
       & a {
         color: $color-white;
+        transition: all 0.3s;
 
         &:hover {
           color: $color-primary;
@@ -200,14 +202,13 @@ footer {
     }
 
     &__copyright {
-      padding-top: .5rem;
+      padding-top: 0.5rem;
       color: $color-white;
       @include flex($justify: center);
       font-size: 0.8rem;
     }
   }
 }
-
 .footer__newsletter-btn {
   width: auto;
   max-width: 100%;

@@ -14,10 +14,8 @@ function bloc_section_image($image, $image_position) {
 
 <?php
 // Récupération des sections ACF
-$basic_block_sections = [
-    get_field('basic-block_section_1'),
-    get_field('basic-block_section_2')
-];
+$section_1 = get_field('basic-block_section_1');
+$section_2 = get_field('basic-block_section_2');
 
 // Filtrer les sections vides
 $basic_block_sections = array_filter($basic_block_sections, function ($block) {
@@ -31,13 +29,20 @@ $basic_block_sections = array_filter($basic_block_sections, function ($block) {
         !empty($block['block_link-2'])
     );
 });
+// Vérifier si le second bloc contient une image ou du texte
+$section_2_valid = is_array($section_2) && (
+    !empty($section_2['block_image']) ||
+    !empty($section_2['block_text'])
+);
+
+// Construire le tableau des sections valides
+$basic_block_sections = array_filter([$section_1, $section_2_valid ? $section_2 : null]);
 
 if (!empty($basic_block_sections)) :
 ?>
 
 <section class="block__container">
-    <div class="block__bonhomme-reg <?php echo $position_class = ajouter_position_bonhomme('block_position_du_bonhomme');
-    $position_class ? ' ' . $position_class : ''; ?>">
+    <div class="block__bonhomme-reg <?php echo esc_attr(ajouter_position_bonhomme('block_position_du_bonhomme')); ?>">
         <?php afficher_bonhomme('block_choix_du_bonhomme'); ?>
     </div>
     <div class="block__sections <?php 

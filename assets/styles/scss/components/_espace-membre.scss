@@ -2,6 +2,16 @@
 
 .swpm-login-widget-form {
   @include flex(column, center, center);
+  @include container;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
 
   form {
     > div {
@@ -35,9 +45,16 @@
   @include flex(column, center, center);
   width: 90%;
   margin: 0 auto;
+  @include container;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
 
   @include desktop {
-    width: 50%;
+    width: 60%;
+    padding: $p-desktop;
   }
 
   form {
@@ -85,9 +102,16 @@
   width: 90%;
   margin: 0 auto;
   gap: 0.5rem;
+  @include container;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
 
   @include desktop {
-    width: 50%;
+    padding: $p-desktop;
+    width: 60%;
   }
 
   .swpm_label {
@@ -119,7 +143,15 @@
   margin: 0 auto;
   gap: 0.5rem;
   @include container;
-  padding: 2rem;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
 
   div {
     @include flex(row, flex-start, center);
@@ -146,9 +178,16 @@
   @include flex(column, center, center);
   width: 90%;
   margin: 0 auto;
+  @include container;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
 
   @include desktop {
-    width: 50%;
+    padding: $p-desktop;
+    width: 60%;
   }
 
   form {

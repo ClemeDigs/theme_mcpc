@@ -1,7 +1,15 @@
 .politique-confidentialite,
 .conditions-utilisation {
   @include container;
-  padding: 2rem;
   @include flex(column, flex-start, flex-start);
   gap: 2rem;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
 }
