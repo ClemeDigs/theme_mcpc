@@ -59,7 +59,7 @@ if ($rapports_assemblee->have_posts()) :
                                     if (!empty($statistique) && !empty($statistique["titre_statistique_$j"])) :
                                 ?>
                                         <div class="rapport__stat">
-                                            <img src="<?php echo esc_url($statistique_images[$j]); ?>"
+                                            <img class="bonhome_stats" src="<?php echo esc_url($statistique_images[$j]); ?>"
                                                 alt="<?php echo esc_attr($statistique["titre_statistique_$j"]); ?>">
                                             <p><?php echo esc_html($statistique["titre_statistique_$j"]); ?></p>
                                             <h3><?php echo esc_html($statistique["nombre_statistique_$j"]); ?></h3>
