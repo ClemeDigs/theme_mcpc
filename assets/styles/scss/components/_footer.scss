@@ -23,6 +23,7 @@ footer {
       color: $color-white;
       padding: 20px;
 
+
       @include tablet {
         padding: 30px 40px;
       }
@@ -53,6 +54,8 @@ footer {
       @include flex(column, $justify: center, $align: center);
       gap: 50px;
       padding-bottom: 50px;
+      width: 100%;
+      max-width: 100%;
 
       @include tablet {
         padding-bottom: 110px;
@@ -100,11 +103,12 @@ footer {
         gap: 32px;
       }
 
-      @include desktop {
-        transform: translateX(-40px);
-      }
+      // @include desktop {
+      //   transform: translateX(-40px);
+      // }
 
       &-btn {
+
         @include button-base;
         @include flex;
         gap: 8px;
@@ -137,7 +141,7 @@ footer {
     &__nav-container {
       @include flex(column, $align: center);
 
-      @include tablet {
+      @include desktop {
         @include flex($direction: column, $align: flex-start);
       }
     }
@@ -150,7 +154,7 @@ footer {
       text-transform: uppercase;
       padding: 0;
 
-      @include tablet {
+      @include desktop {
         @include flex(column, $align: flex-start);
       }
 
@@ -202,4 +206,10 @@ footer {
       font-size: 0.8rem;
     }
   }
+}
+
+.footer__newsletter-btn {
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }

@@ -67,12 +67,11 @@
 }
 
 .block__bonhomme--cta {
-    @include flex(row, flex-start, flex-start);
     padding: $p-mobile;
+    @include transition;
 
     img {
         @include transition;
-        transform: scaleX(-1);
         @include bonhomme-image-styles("bonhomme-théâtre", 150px, 310px, null, null);
         @include bonhomme-image-styles("bonhomme-peinture", 150px, 310px, null, null);
         @include bonhomme-image-styles("bonhomme-musique", 160px, 270px, null, null);
@@ -94,8 +93,16 @@
     }
 }
 
-.block__bonhomme--cta .block__bonhomme-droite {
+.block__bonhomme-reg.block__bonhomme-droite {
     @include flex(row, flex-end, flex-end);
+
+    img {
+        transform: scaleX(-1);
+    }
+}
+
+.block__bonhomme-reg.block__bonhomme-gauche {
+    @include flex(row, flex-start, flex-start);
 
     img {
         transform: scaleX(1);
