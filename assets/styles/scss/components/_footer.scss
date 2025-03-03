@@ -206,9 +206,16 @@ footer {
       color: $color-white;
       @include flex($justify: center);
       font-size: 0.8rem;
+      text-align: center;
+
+      @include desktop {
+        text-align: left;
+      }
     }
   }
 }
+
+
 .footer__newsletter-btn {
   width: auto;
   max-width: 100%;
