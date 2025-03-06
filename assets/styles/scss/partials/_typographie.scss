@@ -39,8 +39,12 @@ $xlarge: 1220px;
 h2 {
   font-family: $font-sans;
   font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 1%;
+  font-size: 1rem;
+  letter-spacing: 0%;
+  @include tablet {
+    font-size: 1.5rem;
+    letter-spacing: 1%;
+  }
 }
 
 h3 {

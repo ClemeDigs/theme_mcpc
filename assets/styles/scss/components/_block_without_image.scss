@@ -55,9 +55,11 @@
   }
 
   &__links {
-    @include flex(row, start);
-    gap: 50px;
+    @include flex(column);
+    gap: 2rem;
     @include tablet {
+      @include flex(row, start);
+      gap: 3.125rem;
     }
   }
 

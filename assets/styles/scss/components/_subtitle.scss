@@ -24,15 +24,15 @@
     max-width: 860px;
   }
 
-  &__petit {
+  &__small {
     @extend .subtitle__container;
-    width: calc(100vw - 40px);
+    width: calc(100vw - 60px);
     max-width: 640px;
   }
 
   &__title {
     @include flex(row, center, center);
-    gap: 0.5rem;
+    gap: 0.2rem;
     padding: 1rem 0.5rem;
     text-align: center;
     background-size: contain;
@@ -40,6 +40,9 @@
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
+    @include tablet {
+      gap: 0.5rem;
+    }
 
     :first-child {
       font-weight: 400;
@@ -53,7 +56,7 @@
   }
 
   &__learn-more {
-    z-index: 1000;
+    z-index: 90;
     text-transform: uppercase;
 
     a {
