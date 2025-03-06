@@ -25,6 +25,7 @@ header {
     box-sizing: border-box;
     @include container;
     @include flex(row, flex-end, center);
+    gap: 1rem;
 
     @include tablet {
       padding: 0.5rem 40px 0.5rem 258px;
@@ -52,6 +53,9 @@ header {
       &-img {
         img {
           width: 42px;
+          @media screen and (max-width: 360px) {
+            display: none;
+          }
         }
       }
 
@@ -87,18 +91,24 @@ header {
     border-bottom: 1px solid $color-black;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding: 1rem;
+    padding: 1.4rem 0.6rem 0.6rem 0.6rem;
     height: 120px;
     box-sizing: border-box;
     position: absolute;
     z-index: 110;
     top: 0;
     @include shadow;
+    @media screen and (min-width: 400px) {
+      padding: 1rem;
+    }
   }
 
   &__image {
     padding-top: 40px;
-    height: 50px;
+    height: 40px;
+    @media screen and (min-width: 400px) {
+      height: 50px;
+    }
   }
 
   a {
@@ -327,12 +337,18 @@ header {
   }
 
   &__btns {
-    width: 100%;
+    width: 80%;
     position: fixed;
     bottom: 2rem;
-    right: -2.5rem;
+    right: 0;
     @include flex(row, center, center);
-    gap: 3rem;
+    gap: 1rem;
+    border-top: 1px solid $color-black;
+    padding-top: 1rem;
+    background-color: $color-white;
+    @include tablet {
+      gap: 3rem;
+    }
 
     a {
       @include button-base;
