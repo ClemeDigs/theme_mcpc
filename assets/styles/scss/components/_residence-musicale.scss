@@ -106,11 +106,11 @@
       .slider__images {
         .slider__image {
           img {
-            width: 300px;
+            width: 270px;
             height: 200px;
             @include desktop {
-              width: 380px;
-              height: 280px;
+              width: 340px;
+              height: 240px;
             }
           }
         }

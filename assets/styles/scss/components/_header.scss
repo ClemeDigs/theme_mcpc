@@ -36,6 +36,10 @@ header {
       @include flex(row, space-between, center);
     }
 
+    @media screen and (min-width: 1220px) and (max-width: 1310px) {
+      padding: 0.5rem 70px 0.5rem 230px;
+    }
+
     &__text {
       display: none;
       p {
@@ -101,6 +105,10 @@ header {
     @media screen and (min-width: 400px) {
       padding: 1rem;
     }
+
+    @media screen and (min-width: 1220px) and (max-width: 1310px) {
+      padding: 1.3rem 0.7rem 0.7rem;
+    }
   }
 
   &__image {
@@ -108,6 +116,11 @@ header {
     height: 40px;
     @media screen and (min-width: 400px) {
       height: 50px;
+    }
+
+    @media screen and (min-width: 1220px) and (max-width: 1310px) {
+      height: 38px;
+      padding-top: 42px;
     }
   }
 
@@ -132,6 +145,10 @@ header {
   .header__nav {
     display: none;
     padding-left: calc(170px + 1rem);
+
+    @media screen and (min-width: 1220px) and (max-width: 1310px) {
+      padding-left: calc(128px + 1rem);
+    }
   }
 
   @include desktop-xl {
@@ -234,6 +251,13 @@ header {
 
     a {
       @include button-base;
+
+      img,
+      i {
+        @media screen and (min-width: 1220px) and (max-width: 1310px) {
+          display: none;
+        }
+      }
 
       a {
         @include flex(row, flex-start, center);
@@ -352,6 +376,13 @@ header {
 
     a {
       @include button-base;
+
+      img,
+      i {
+        @media screen and (max-width: 350px) {
+          display: none;
+        }
+      }
     }
   }
 }

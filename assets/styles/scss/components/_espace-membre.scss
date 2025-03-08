@@ -127,6 +127,7 @@
     input {
       @include input;
       width: 100%;
+      box-sizing: border-box;
     }
   }
 
@@ -173,6 +174,18 @@
 }
 
 /* ------------- PROFILE ------------- */
+.swpm-profile-update-success {
+  @include container;
+  padding: $p-mobile;
+
+  @include tablet {
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    padding: $p-desktop;
+  }
+}
 
 .swpm-edit-profile-form {
   @include flex(column, center, center);
@@ -204,6 +217,7 @@
       }
 
       input {
+        box-sizing: border-box;
         @include input;
       }
 

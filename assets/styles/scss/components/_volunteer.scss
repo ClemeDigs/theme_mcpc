@@ -2,88 +2,118 @@
 @import "../partials/mixins";
 
 .volunteerSection__container {
-    @include container;
-    position: relative;
-    padding: $p-mobile;
+  @include container;
+  position: relative;
+  padding: $p-mobile;
+  margin-top: 10px;
 
-    @include flex(column);
-    gap: 40px;
+  @include flex(column);
+  gap: 40px;
 
-    @include tablet {
-        @include grid-column(2);
-        align-items: stretch;
-        padding: $p-tablet;
+  @include tablet {
+    @include grid-column(2);
+    align-items: stretch;
+    padding: $p-tablet;
+  }
+
+  @include desktop {
+    @include grid-column(2);
+    align-items: stretch;
+    row-gap: 40px;
+    padding: $p-desktop;
+  }
+
+  .volunteer__section {
+    &-title {
+      margin-bottom: 1rem;
     }
 
-    @include desktop {
-        @include grid-column(2);
-        align-items: stretch;
-        row-gap: 40px;
-        padding: $p-desktop;
+    &-paragraph {
+      margin-top: 1rem;
     }
-
-    .volunteer__section {
-        &-title {
-            margin-bottom: 1rem;
-        }
-
-        &-paragraph {
-            margin-top: 1rem;
-        }
-    }
+  }
 }
 
 .volunteer__section-link {
-    text-align: center;
-    @include button-base;
-    font-weight: 600;
+  text-align: center;
+  @include button-base;
+  font-weight: 600;
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 
 .volunteer__section-links {
-    padding-top: 40px;
-    @include flex(row, center, center);
-    text-align: center;
-    gap: 40px;
-    padding: 20px;
+  padding-top: 40px;
+  @include flex(row, center, center);
+  text-align: center;
+  gap: 40px;
+  padding: 20px;
 }
 
 .block__bonhomme--volunteer {
-    @include flex(row, flex-start, flex-start);
-    padding: $p-mobile;
+  @include flex(row, flex-start, flex-start);
+  padding: $p-mobile;
 
+  img {
+    @include transition;
+    transform: scaleX(1);
+    @include bonhomme-image-styles(
+      "bonhomme-théâtre",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-peinture",
+      150px,
+      310px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-musique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
+    @include bonhomme-image-styles(
+      "bonhomme-hip-hop",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles(
+      "bonhomme-classique",
+      160px,
+      270px,
+      null,
+      null
+    );
+    @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
+    @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
+  }
 
-    img {
-        @include transition;
-        transform: scaleX(1);
-        @include bonhomme-image-styles("bonhomme-théâtre", 150px, 310px, null, null);
-        @include bonhomme-image-styles("bonhomme-peinture", 150px, 310px, null, null);
-        @include bonhomme-image-styles("bonhomme-musique", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-danse", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-hip-hop", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-classique", 160px, 270px, null, null);
-        @include bonhomme-image-styles("bonhomme-radio", null, null, 220px, 380px);
-        @include bonhomme-image-styles("bonhomme-parle", null, null, 220px, 380px);
-        @include bonhomme-image-styles("bonhomme-pense", null, null, 220px, 380px);
-    }
+  @include tablet {
+    padding: $p-tablet;
+    @include container;
+  }
 
-    @include tablet {
-        padding: $p-tablet;
-        @include container;
-    }
-
-    @include desktop {
-        padding: $p-desktop;
-    }
+  @include desktop {
+    padding: $p-desktop;
+  }
 }
 
 .block__bonhomme--volunteer .block__bonhomme-gauche {
-    @include flex(row, flex-start, flex-start);
+  @include flex(row, flex-start, flex-start);
 
-    img {
-        transform: scaleX(-1);
-    }
+  img {
+    transform: scaleX(-1);
+  }
 }

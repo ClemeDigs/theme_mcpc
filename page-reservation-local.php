@@ -8,6 +8,7 @@ Template Name: Reservation du local
 get_header();
 ?>
 
+
 <main>
 
     <?php
@@ -16,6 +17,10 @@ get_header();
 
     <section class="calendar">
     <?php if (SwpmMemberUtils::is_member_logged_in()): ?>
+
+        <?php
+        get_template_part('/templates/components/calendar-utilisation');
+        ?>
 
         <div class="responsive-calendar mobile">
             <iframe src="https://calendar.google.com/calendar/embed?src=maisonculturebic%40gmail.com&ctz=America%2FToronto&mode=AGENDA" style="border: 0" frameborder="0" scrolling="no"></iframe>
@@ -26,10 +31,6 @@ get_header();
             <iframe src="https://calendar.google.com/calendar/embed?src=maisonculturebic%40gmail.com&ctz=America%2FToronto" style="border: 0" frameborder="0" scrolling="no"></iframe>
             </iframe>
         </div>
-
-        <?php
-        get_template_part('/templates/components/calendar-utilisation');
-        ?>
 
     <?php else: ?>
         <div class="calendar__not-connected">

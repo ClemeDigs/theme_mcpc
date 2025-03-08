@@ -13,6 +13,11 @@ h1 {
   text-transform: uppercase;
   @include transition;
 
+  @media screen and (max-width: 384px) {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
   @include tablet {
     line-height: 2.8rem;
     font-size: 3rem;
@@ -50,15 +55,21 @@ h2 {
 h3 {
   font-family: $font-sans;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 0%;
+  @include tablet {
+    font-size: 1.25rem;
+  }
 }
 
 h4 {
   font-family: $font-sans;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1rem;
   letter-spacing: 0%;
+  @include tablet {
+    font-size: 1.125rem;
+  }
 }
 
 h5 {

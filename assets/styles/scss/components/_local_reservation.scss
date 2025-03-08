@@ -1,8 +1,6 @@
-.calendar {
+.responsive-calendar {
   @include container;
   padding: $p-mobile;
-  @include flex(column, center, center);
-  gap: 2rem;
 
   @include tablet {
     padding: $p-tablet;
@@ -11,19 +9,52 @@
   @include desktop {
     padding: $p-desktop;
   }
+}
+
+.calendar {
+  @include container;
+  @include flex(column, center, center);
+  gap: 5rem;
 
   &-utilisation {
     width: 100%;
+
+    &__content {
+      @include container;
+      padding: 20px;
+
+      @include tablet {
+        padding: 40px;
+      }
+
+      @include desktop {
+        padding: 70px;
+      }
+    }
+
+    ol {
+      padding-left: 20px;
+    }
   }
 
   &__not-connected {
     @include flex(column, center, center);
     gap: 1rem;
     width: 100%;
+    padding: $p-mobile;
+
+    @include tablet {
+      padding: $p-tablet;
+    }
+
+    @include desktop {
+      padding: $p-desktop;
+    }
   }
 
   &__btn-connexion {
     @include button-base;
+    text-decoration: none;
   }
 }
 
