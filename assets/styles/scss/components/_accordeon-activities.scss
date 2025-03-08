@@ -78,6 +78,13 @@
   &__description {
     @include flex(column, space-between, flex-start);
     gap: 1rem;
+
+    ul {
+      padding-left: 20px;
+      @include tablet {
+        padding-left: 0px;
+      }
+    }
   }
 
   &__button {

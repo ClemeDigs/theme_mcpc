@@ -39,18 +39,22 @@ main {
   @include container;
   max-width: 1600px;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding: 140px 0 100px 0;
   background-color: white;
   @include shadow;
   gap: 2.5rem;
 
+  @media screen and (min-width: 500px) {
+    padding: 60px 0 100px 0;
+  }
+
   @include tablet {
-    padding: 0 0 100px 0;
+    padding: 60px 0 100px 0;
     gap: 5rem;
   }
 
   @include desktop {
-    padding: 0 0 250px 0;
+    padding: 60px 0 250px 0;
     gap: 6rem;
   }
 }

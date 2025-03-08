@@ -10,10 +10,11 @@
     @include flex;
     gap: 20px;
     max-width: 100%;
-    animation: scroll 20s linear infinite;
+    animation: scroll 12s linear infinite;
 
     @include tablet {
       gap: 40px;
+      animation: scroll 20s linear infinite;
     }
   }
 
